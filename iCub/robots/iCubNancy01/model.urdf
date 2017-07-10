@@ -7,7 +7,7 @@
             <inertia ixx="0.07472" ixy="-3.6e-06" ixz="-4.705e-05" iyy="0.08145" iyz="0.004567" izz="0.01306" />
         </inertial>
         <visual>
-            <origin xyz="-0.0055 -6.93889e-18 -3.55271e-18" rpy="0 -1.5708 1.5708" />
+            <origin xyz="-0.0055 0 -9.99853e-30" rpy="0 -1.5708 1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_chest.dae" scale="1 1 1" />
             </geometry>
@@ -17,7 +17,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="-0.0055 -6.93889e-18 -3.55271e-18" rpy="0 -1.5708 1.5708" />
+            <origin xyz="-0.0055 0 -9.99853e-30" rpy="0 -1.5708 1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_chest.dae" scale="1 1 1" />
             </geometry>
@@ -44,7 +44,7 @@
             <inertia ixx="0" ixy="0" ixz="2.40741e-35" iyy="0" iyz="0" izz="0" />
         </inertial>
         <visual>
-            <origin xyz="0.0045 -0.0235 9.42472e-13" rpy="0 1.5708 -1.5708" />
+            <origin xyz="0.0045 -0.0235 9.4248e-13" rpy="0 1.5708 -1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_head.dae" scale="1 1 1" />
             </geometry>
@@ -54,7 +54,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.0045 -0.0235 9.42472e-13" rpy="0 1.5708 -1.5708" />
+            <origin xyz="0.0045 -0.0235 9.4248e-13" rpy="0 1.5708 -1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_head.dae" scale="1 1 1" />
             </geometry>
@@ -74,7 +74,7 @@
             <inertia ixx="4.76593" ixy="9.7426e-06" ixz="2.68085e-05" iyy="0.0040935" iyz="-0.000353796" izz="0.0036688" />
         </inertial>
         <visual>
-            <origin xyz="-0.001555 -5.54343e-12 0.0009175" rpy="1.5708 1.53106e-11 1.53105e-11" />
+            <origin xyz="-0.001555 -5.54326e-12 0.0009175" rpy="1.5708 1.53104e-11 1.531e-11" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_l_ankle_1.dae" scale="1 1 1" />
             </geometry>
@@ -84,7 +84,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="-0.001555 -5.54343e-12 0.0009175" rpy="1.5708 1.53106e-11 1.53105e-11" />
+            <origin xyz="-0.001555 -5.54326e-12 0.0009175" rpy="1.5708 1.53104e-11 1.531e-11" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_l_ankle_1.dae" scale="1 1 1" />
             </geometry>
@@ -111,7 +111,7 @@
             <inertia ixx="0.00167275" ixy="-4.51893e-06" ixz="0.000567785" iyy="0.00320869" iyz="-6.62361e-07" izz="0.00208378" />
         </inertial>
         <visual>
-            <origin xyz="0.0044175 -5.54341e-12 -0.062945" rpy="0 1.5708 -2.0414e-11" />
+            <origin xyz="0.0044175 -5.54325e-12 -0.062945" rpy="0 1.5708 -2.04135e-11" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_l_foot.dae" scale="1 1 1" />
             </geometry>
@@ -121,7 +121,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.0044175 -5.54341e-12 -0.062945" rpy="0 1.5708 -2.0414e-11" />
+            <origin xyz="0.0044175 -5.54325e-12 -0.062945" rpy="0 1.5708 -2.04135e-11" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_l_foot.dae" scale="1 1 1" />
             </geometry>
@@ -141,7 +141,7 @@
             <inertia ixx="0.000765393" ixy="4.337e-06" ixz="2.39e-07" iyy="0.000164578" iyz="1.9381e-05" izz="0.00069806" />
         </inertial>
         <visual>
-            <origin xyz="-0.000143922 -1.25974e-12 0.0204334" rpy="0 1.5708 1.5708" />
+            <origin xyz="-0.000143922 -1.25962e-12 0.0204334" rpy="0 1.5708 1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_l_forearm.dae" scale="1 1 1" />
             </geometry>
@@ -151,7 +151,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="-0.000143922 -1.25974e-12 0.0204334" rpy="0 1.5708 1.5708" />
+            <origin xyz="-0.000143922 -1.25962e-12 0.0204334" rpy="0 1.5708 1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_l_forearm.dae" scale="1 1 1" />
             </geometry>
@@ -178,7 +178,7 @@
             <inertia ixx="0.000157143" ixy="1.278e-05" ixz="4.823e-06" iyy="0.000247995" iyz="-1.8188e-05" izz="0.000380535" />
         </inertial>
         <visual>
-            <origin xyz="-1.25973e-12 0.0204334 -0.000143922" rpy="5.10271e-12 -2.64186e-12 1.49622e-11" />
+            <origin xyz="-1.25956e-12 0.0204334 -0.000143922" rpy="5.10317e-12 -2.6417e-12 1.49618e-11" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_l_hand.dae" scale="1 1 1" />
             </geometry>
@@ -188,7 +188,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="-1.25973e-12 0.0204334 -0.000143922" rpy="5.10271e-12 -2.64186e-12 1.49622e-11" />
+            <origin xyz="-1.25956e-12 0.0204334 -0.000143922" rpy="5.10317e-12 -2.6417e-12 1.49618e-11" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_l_hand.dae" scale="1 1 1" />
             </geometry>
@@ -261,7 +261,7 @@
             <inertia ixx="0.0154559" ixy="-0.0013903" ixz="-0.0039454" iyy="0.070277" iyz="0.00071995" izz="0.0659645" />
         </inertial>
         <visual>
-            <origin xyz="0.010945 0.0009175 2.2823e-12" rpy="-3.14159 -2.33487e-16 1.5708" />
+            <origin xyz="0.010945 0.0009175 2.28223e-12" rpy="-3.14159 -1.22465e-16 1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_l_shank.dae" scale="1 1 1" />
             </geometry>
@@ -271,7 +271,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.010945 0.0009175 2.2823e-12" rpy="-3.14159 -2.33487e-16 1.5708" />
+            <origin xyz="0.010945 0.0009175 2.28223e-12" rpy="-3.14159 -1.22465e-16 1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_l_shank.dae" scale="1 1 1" />
             </geometry>
@@ -284,7 +284,7 @@
             <inertia ixx="5.4421e-05" ixy="9e-09" ixz="0" iyy="9.331e-06" iyz="-1.7e-08" izz="5.4862e-05" />
         </inertial>
         <visual>
-            <origin xyz="3.08642e-14 0.109285 -0.00521101" rpy="0 1.5708 -1.5708" />
+            <origin xyz="3.0892e-14 0.109285 -0.00521101" rpy="0 1.5708 -1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_l_shoulder_1.dae" scale="1 1 1" />
             </geometry>
@@ -294,7 +294,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="3.08642e-14 0.109285 -0.00521101" rpy="0 1.5708 -1.5708" />
+            <origin xyz="3.0892e-14 0.109285 -0.00521101" rpy="0 1.5708 -1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_l_shoulder_1.dae" scale="1 1 1" />
             </geometry>
@@ -344,7 +344,7 @@
             <inertia ixx="0.000408" ixy="-1.08e-06" ixz="-2.29e-06" iyy="0.00038" iyz="3.57e-06" izz="0.00026" />
         </inertial>
         <visual>
-            <origin xyz="-0.0204334 0.000143922 -0.068" rpy="1.15274e-11 4.92958e-12 -1.309" />
+            <origin xyz="-0.0204334 0.000143922 -0.068" rpy="1.15272e-11 4.92943e-12 -1.309" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_l_arm.dae" scale="1 1 1" />
             </geometry>
@@ -354,7 +354,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="-0.0204334 0.000143922 -0.068" rpy="1.15274e-11 4.92958e-12 -1.309" />
+            <origin xyz="-0.0204334 0.000143922 -0.068" rpy="1.15272e-11 4.92943e-12 -1.309" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_l_arm.dae" scale="1 1 1" />
             </geometry>
@@ -404,7 +404,7 @@
             <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
         </inertial>
         <visual>
-            <origin xyz="-5.55112e-17 9.62889e-13 -0.0055" rpy="0 -1.5708 -1.5708" />
+            <origin xyz="0 9.62893e-13 -0.0055" rpy="0 -1.5708 -1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_neck_1.dae" scale="1 1 1" />
             </geometry>
@@ -414,7 +414,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="-5.55112e-17 9.62889e-13 -0.0055" rpy="0 -1.5708 -1.5708" />
+            <origin xyz="0 9.62893e-13 -0.0055" rpy="0 -1.5708 -1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_neck_1.dae" scale="1 1 1" />
             </geometry>
@@ -427,7 +427,7 @@
             <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
         </inertial>
         <visual>
-            <origin xyz="-9.62885e-13 0.0055 0.0235" rpy="0 -1.5708 1.5708" />
+            <origin xyz="-9.62893e-13 0.0055 0.0235" rpy="0 -1.5708 1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_neck_2.dae" scale="1 1 1" />
             </geometry>
@@ -437,7 +437,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="-9.62885e-13 0.0055 0.0235" rpy="0 -1.5708 1.5708" />
+            <origin xyz="-9.62893e-13 0.0055 0.0235" rpy="0 -1.5708 1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_neck_2.dae" scale="1 1 1" />
             </geometry>
@@ -450,7 +450,7 @@
             <inertia ixx="4.76593" ixy="9.7426e-06" ixz="-2.68085e-05" iyy="0.0040935" iyz="0.000353796" izz="0.0036688" />
         </inertial>
         <visual>
-            <origin xyz="-0.001555 -1.08717e-12 -0.0009175" rpy="-1.5708 -1.53106e-11 5.10376e-12" />
+            <origin xyz="-0.001555 -1.0871e-12 -0.0009175" rpy="-1.5708 -1.53104e-11 5.10353e-12" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_r_ankle_1.dae" scale="1 1 1" />
             </geometry>
@@ -460,7 +460,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="-0.001555 -1.08717e-12 -0.0009175" rpy="-1.5708 -1.53106e-11 5.10376e-12" />
+            <origin xyz="-0.001555 -1.0871e-12 -0.0009175" rpy="-1.5708 -1.53104e-11 5.10353e-12" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_r_ankle_1.dae" scale="1 1 1" />
             </geometry>
@@ -487,7 +487,7 @@
             <inertia ixx="0.00167275" ixy="4.51893e-06" ixz="0.000567784" iyy="0.00320869" iyz="6.62535e-07" izz="0.00208378" />
         </inertial>
         <visual>
-            <origin xyz="0.0044175 1.08716e-12 -0.062945" rpy="0 1.5708 3.14159" />
+            <origin xyz="0.0044175 1.08709e-12 -0.062945" rpy="0 1.5708 3.14159" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_r_foot.dae" scale="1 1 1" />
             </geometry>
@@ -497,7 +497,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.0044175 1.08716e-12 -0.062945" rpy="0 1.5708 3.14159" />
+            <origin xyz="0.0044175 1.08709e-12 -0.062945" rpy="0 1.5708 3.14159" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_r_foot.dae" scale="1 1 1" />
             </geometry>
@@ -517,7 +517,7 @@
             <inertia ixx="0.000766" ixy="5.66e-06" ixz="1.4e-06" iyy="0.000164" iyz="1.82e-05" izz="0.000699" />
         </inertial>
         <visual>
-            <origin xyz="0.000143922 -1.07214e-12 -0.0204334" rpy="0 1.5708 1.5708" />
+            <origin xyz="0.000143922 -1.07219e-12 -0.0204334" rpy="0 1.5708 1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_r_forearm.dae" scale="1 1 1" />
             </geometry>
@@ -527,7 +527,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.000143922 -1.07214e-12 -0.0204334" rpy="0 1.5708 1.5708" />
+            <origin xyz="0.000143922 -1.07219e-12 -0.0204334" rpy="0 1.5708 1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_r_forearm.dae" scale="1 1 1" />
             </geometry>
@@ -554,7 +554,7 @@
             <inertia ixx="0.000154" ixy="1.26e-05" ixz="-6.08e-06" iyy="0.00025" iyz="1.76e-05" izz="0.000378" />
         </inertial>
         <visual>
-            <origin xyz="1.0721e-12 0.0204334 0.000143922" rpy="1.53098e-11 2.00656e-11 -3.14159" />
+            <origin xyz="1.0723e-12 0.0204334 0.000143922" rpy="1.53095e-11 2.00652e-11 -3.14159" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_r_hand.dae" scale="1 1 1" />
             </geometry>
@@ -564,7 +564,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="1.0721e-12 0.0204334 0.000143922" rpy="1.53098e-11 2.00656e-11 -3.14159" />
+            <origin xyz="1.0723e-12 0.0204334 0.000143922" rpy="1.53095e-11 2.00652e-11 -3.14159" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_r_hand.dae" scale="1 1 1" />
             </geometry>
@@ -607,7 +607,7 @@
             <inertia ixx="0.0253646" ixy="1.2116e-06" ixz="0.000491081" iyy="0.0272714" iyz="1.15713e-05" izz="0.0041739" />
         </inertial>
         <visual>
-            <origin xyz="0 0 0" rpy="0 -1.5708 1.02066e-11" />
+            <origin xyz="0 0 0" rpy="0 -1.5708 1.02065e-11" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_r_hip_2.dae" scale="1 1 1" />
             </geometry>
@@ -617,7 +617,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0 0 0" rpy="0 -1.5708 1.02066e-11" />
+            <origin xyz="0 0 0" rpy="0 -1.5708 1.02065e-11" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_r_hip_2.dae" scale="1 1 1" />
             </geometry>
@@ -637,7 +637,7 @@
             <inertia ixx="0.0154559" ixy="-0.0013903" ixz="0.0039454" iyy="0.070277" iyz="-0.00071995" izz="0.0659645" />
         </inertial>
         <visual>
-            <origin xyz="0.010945 0.0009175 -8.32667e-17" rpy="3.14159 -1.14424e-17 1.5708" />
+            <origin xyz="0.010945 0.0009175 -5.55112e-17" rpy="3.14159 -1.22465e-16 1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_r_shank.dae" scale="1 1 1" />
             </geometry>
@@ -647,7 +647,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.010945 0.0009175 -8.32667e-17" rpy="3.14159 -1.14424e-17 1.5708" />
+            <origin xyz="0.010945 0.0009175 -5.55112e-17" rpy="3.14159 -1.22465e-16 1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_r_shank.dae" scale="1 1 1" />
             </geometry>
@@ -660,7 +660,7 @@
             <inertia ixx="0.000123" ixy="2.1e-08" ixz="-1e-09" iyy="2.44e-05" iyz="4.22e-06" izz="0.000113" />
         </inertial>
         <visual>
-            <origin xyz="-3.08642e-14 0.109285 0.00521101" rpy="0 1.5708 1.5708" />
+            <origin xyz="-3.08364e-14 0.109285 0.00521101" rpy="0 1.5708 1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_r_shoulder_1.dae" scale="1 1 1" />
             </geometry>
@@ -670,7 +670,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="-3.08642e-14 0.109285 0.00521101" rpy="0 1.5708 1.5708" />
+            <origin xyz="-3.08364e-14 0.109285 0.00521101" rpy="0 1.5708 1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_r_shoulder_1.dae" scale="1 1 1" />
             </geometry>
@@ -683,7 +683,7 @@
             <inertia ixx="0.000137" ixy="-4.53e-07" ixz="2.03e-07" iyy="8.3e-05" iyz="2.07e-05" izz="9.93e-05" />
         </inertial>
         <visual>
-            <origin xyz="-0.00154529 -0.00521101 -1.11181e-12" rpy="0 -1.5708 1.5708" />
+            <origin xyz="-0.00154529 -0.00521101 -1.11175e-12" rpy="0 -1.5708 1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_r_shoulder_2.dae" scale="1 1 1" />
             </geometry>
@@ -693,7 +693,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="-0.00154529 -0.00521101 -1.11181e-12" rpy="0 -1.5708 1.5708" />
+            <origin xyz="-0.00154529 -0.00521101 -1.11175e-12" rpy="0 -1.5708 1.5708" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_r_shoulder_2.dae" scale="1 1 1" />
             </geometry>
@@ -720,7 +720,7 @@
             <inertia ixx="0.000408" ixy="-1.08e-06" ixz="-2.29e-06" iyy="0.00038" iyz="3.57e-06" izz="0.00026" />
         </inertial>
         <visual>
-            <origin xyz="-0.0204334 -0.000143922 -0.068" rpy="-3.14159 -1.51363e-11 1.309" />
+            <origin xyz="-0.0204334 -0.000143922 -0.068" rpy="-3.14159 -1.51359e-11 1.309" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_r_arm.dae" scale="1 1 1" />
             </geometry>
@@ -730,7 +730,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="-0.0204334 -0.000143922 -0.068" rpy="-3.14159 -1.51363e-11 1.309" />
+            <origin xyz="-0.0204334 -0.000143922 -0.068" rpy="-3.14159 -1.51359e-11 1.309" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_r_arm.dae" scale="1 1 1" />
             </geometry>
@@ -810,7 +810,7 @@
             <inertia ixx="0.0004544" ixy="-4.263e-05" ixz="-3.889e-08" iyy="0.001141" iyz="0" izz="0.001236" />
         </inertial>
         <visual>
-            <origin xyz="0 0 0" rpy="-1.5708 5.10314e-12 1.11022e-16" />
+            <origin xyz="0 0 0" rpy="-1.5708 5.10303e-12 1.30216e-23" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/visual/icub_lap_belt_1.dae" scale="1 1 1" />
             </geometry>
@@ -820,7 +820,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0 0 0" rpy="-1.5708 5.10314e-12 1.11022e-16" />
+            <origin xyz="0 0 0" rpy="-1.5708 5.10303e-12 1.30216e-23" />
             <geometry>
                 <mesh filename="package://iCub/meshes/upmc/collision/icub_simple_collision_lap_belt_1.dae" scale="1 1 1" />
             </geometry>
