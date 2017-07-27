@@ -1,4 +1,4 @@
-<robot name="ICUB_2-5_BB_SIM_MODEL">
+<robot name="iCub">
   <link name="root_link">
     <inertial>
       <origin xyz="0.0248821 0.000103947 -0.0440806" rpy="1.57079632679 0 -1.57079632679"/>
@@ -49,7 +49,7 @@
     <parent link="root_link"/>
     <child link="r_hip_1"/>
     <limit effort="50000" lower="-0.523598775598" upper="1.4835298642" velocity="50000"/>
-    <dynamics damping="0.223"/>
+    <dynamics damping="0.223" friction="0.0"/>
   </joint>
   <link name="r_hip_2">
     <inertial>
@@ -79,7 +79,7 @@
     <parent link="r_hip_1"/>
     <child link="r_hip_2"/>
     <limit effort="50000" lower="0.0" upper="1.57079632679" velocity="50000"/>
-    <dynamics damping="0.223"/>
+    <dynamics damping="0.223" friction="0.0"/>
   </joint>
   <link name="r_hip_3">
     <inertial>
@@ -137,7 +137,7 @@
     <parent link="r_hip_3"/>
     <child link="r_upper_leg"/>
     <limit effort="50000" lower="-1.2217304764" upper="1.2217304764" velocity="50000"/>
-    <dynamics damping="0.223"/>
+    <dynamics damping="0.223" friction="0.0"/>
   </joint>
   <link name="r_lower_leg">
     <inertial>
@@ -167,7 +167,7 @@
     <parent link="r_upper_leg"/>
     <child link="r_lower_leg"/>
     <limit effort="50000" lower="-1.74532925199" upper="0.0" velocity="50000"/>
-    <dynamics damping="0.223"/>
+    <dynamics damping="0.223" friction="0.0"/>
   </joint>
   <link name="r_ankle_1">
     <inertial>
@@ -197,7 +197,7 @@
     <parent link="r_lower_leg"/>
     <child link="r_ankle_1"/>
     <limit effort="50000" lower="-0.349065850399" upper="0.523598775598" velocity="50000"/>
-    <dynamics damping="0.223"/>
+    <dynamics damping="0.223" friction="0.0"/>
   </joint>
   <link name="r_ankle_2">
     <inertial>
@@ -225,7 +225,7 @@
     <parent link="r_ankle_1"/>
     <child link="r_ankle_2"/>
     <limit effort="50000" lower="-0.349065850399" upper="0.349065850399" velocity="50000"/>
-    <dynamics damping="0.223"/>
+    <dynamics damping="0.223" friction="0.0"/>
   </joint>
   <link name="r_foot">
     <inertial>
@@ -290,7 +290,7 @@
     <parent link="root_link"/>
     <child link="l_hip_1"/>
     <limit effort="50000" lower="-0.523598775598" upper="1.4835298642" velocity="50000"/>
-    <dynamics damping="0.223"/>
+    <dynamics damping="0.223" friction="0.0"/>
   </joint>
   <link name="l_hip_2">
     <inertial>
@@ -320,7 +320,7 @@
     <parent link="l_hip_1"/>
     <child link="l_hip_2"/>
     <limit effort="50000" lower="0.0" upper="1.57079632679" velocity="50000"/>
-    <dynamics damping="0.223"/>
+    <dynamics damping="0.223" friction="0.0"/>
   </joint>
   <link name="l_hip_3">
     <inertial>
@@ -376,7 +376,7 @@
     <parent link="l_hip_3"/>
     <child link="l_upper_leg"/>
     <limit effort="50000" lower="-1.2217304764" upper="1.2217304764" velocity="50000"/>
-    <dynamics damping="0.223"/>
+    <dynamics damping="0.223" friction="0.0"/>
   </joint>
   <link name="l_lower_leg">
     <inertial>
@@ -404,7 +404,7 @@
     <parent link="l_upper_leg"/>
     <child link="l_lower_leg"/>
     <limit effort="50000" lower="-1.74532925199" upper="0.0" velocity="50000"/>
-    <dynamics damping="0.223"/>
+    <dynamics damping="0.223" friction="0.0"/>
   </joint>
   <link name="l_ankle_1">
     <inertial>
@@ -432,7 +432,7 @@
     <parent link="l_lower_leg"/>
     <child link="l_ankle_1"/>
     <limit effort="50000" lower="-0.349065850399" upper="0.523598775598" velocity="50000"/>
-    <dynamics damping="0.223"/>
+    <dynamics damping="0.223" friction="0.0"/>
   </joint>
   <link name="l_ankle_2">
     <inertial>
@@ -460,7 +460,7 @@
     <parent link="l_ankle_1"/>
     <child link="l_ankle_2"/>
     <limit effort="50000" lower="-0.349065850399" upper="0.349065850399" velocity="50000"/>
-    <dynamics damping="0.223"/>
+    <dynamics damping="0.223" friction="0.0"/>
   </joint>
   <link name="l_foot">
     <inertial>
@@ -521,7 +521,7 @@
     <parent link="root_link"/>
     <child link="torso_1"/>
     <limit effort="50000" lower="-0.349065850399" upper="1.2217304764" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="torso_2">
     <inertial>
@@ -549,7 +549,7 @@
     <parent link="torso_1"/>
     <child link="torso_2"/>
     <limit effort="50000" lower="-0.523598775598" upper="0.523598775598" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="chest">
     <inertial>
@@ -577,7 +577,7 @@
     <parent link="torso_2"/>
     <child link="chest"/>
     <limit effort="50000" lower="-0.872664625997" upper="0.872664625997" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="r_shoulder_1">
     <inertial>
@@ -605,7 +605,7 @@
     <parent link="chest"/>
     <child link="r_shoulder_1"/>
     <limit effort="50000" lower="-1.66678943565" upper="0.174532925199" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="r_shoulder_2">
     <inertial>
@@ -633,7 +633,7 @@
     <parent link="r_shoulder_1"/>
     <child link="r_shoulder_2"/>
     <limit effort="50000" lower="0.0" upper="2.80648943721" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="r_shoulder_3">
     <inertial>
@@ -661,7 +661,7 @@
     <parent link="r_shoulder_2"/>
     <child link="r_shoulder_3"/>
     <limit effort="50000" lower="-0.645771823238" upper="1.3962634016" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="r_upper_arm">
     <inertial>
@@ -715,7 +715,7 @@
     <parent link="r_upper_arm"/>
     <child link="r_elbow_1"/>
     <limit effort="50000" lower="0.261799387799" upper="1.85004900711" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="r_forearm">
     <inertial>
@@ -743,7 +743,7 @@
     <parent link="r_elbow_1"/>
     <child link="r_forearm"/>
     <limit effort="50000" lower="-1.0471975512" upper="1.0471975512" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="r_forearm_skin_0"/>
   <joint name="r_forearm_skin_0_fixed_joint" type="fixed">
@@ -946,7 +946,7 @@
     <parent link="r_forearm"/>
     <child link="r_wrist_1"/>
     <limit effort="50000" lower="-1.3962634016" upper="0.436332312999" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="r_hand">
     <inertial>
@@ -974,7 +974,7 @@
     <parent link="r_wrist_1"/>
     <child link="r_hand"/>
     <limit effort="50000" lower="-0.349065850399" upper="0.436332312999" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="r_hand_dh_frame"/>
   <joint name="r_hand_dh_frame_fixed_joint" type="fixed">
@@ -1009,7 +1009,7 @@
     <parent link="chest"/>
     <child link="l_shoulder_1"/>
     <limit effort="50000" lower="-1.66678943565" upper="0.174532925199" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="l_shoulder_2">
     <inertial>
@@ -1037,7 +1037,7 @@
     <parent link="l_shoulder_1"/>
     <child link="l_shoulder_2"/>
     <limit effort="50000" lower="0.0" upper="2.80648943721" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="l_shoulder_3">
     <inertial>
@@ -1065,7 +1065,7 @@
     <parent link="l_shoulder_2"/>
     <child link="l_shoulder_3"/>
     <limit effort="50000" lower="-0.645771823238" upper="1.3962634016" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="l_upper_arm">
     <inertial>
@@ -1119,7 +1119,7 @@
     <parent link="l_upper_arm"/>
     <child link="l_elbow_1"/>
     <limit effort="50000" lower="0.261799387799" upper="1.85004900711" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="l_forearm">
     <inertial>
@@ -1147,7 +1147,7 @@
     <parent link="l_elbow_1"/>
     <child link="l_forearm"/>
     <limit effort="50000" lower="-1.0471975512" upper="1.0471975512" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="l_forearm_skin_0"/>
   <joint name="l_forearm_skin_0_fixed_joint" type="fixed">
@@ -1350,7 +1350,7 @@
     <parent link="l_forearm"/>
     <child link="l_wrist_1"/>
     <limit effort="50000" lower="-1.3962634016" upper="0.436332312999" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="l_hand">
     <inertial>
@@ -1378,7 +1378,7 @@
     <parent link="l_wrist_1"/>
     <child link="l_hand"/>
     <limit effort="50000" lower="-0.349065850399" upper="0.436332312999" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="l_hand_dh_frame"/>
   <joint name="l_hand_dh_frame_fixed_joint" type="fixed">
@@ -1413,7 +1413,7 @@
     <parent link="chest"/>
     <child link="neck_1"/>
     <limit effort="50000" lower="-0.698131700798" upper="0.383972435439" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="neck_2">
     <inertial>
@@ -1441,7 +1441,7 @@
     <parent link="neck_1"/>
     <child link="neck_2"/>
     <limit effort="50000" lower="-0.349065850399" upper="0.349065850399" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="head">
     <inertial>
@@ -1469,7 +1469,7 @@
     <parent link="neck_2"/>
     <child link="head"/>
     <limit effort="50000" lower="-0.872664625997" upper="0.872664625997" velocity="50000"/>
-    <dynamics damping="0.06"/>
+    <dynamics damping="0.06" friction="0.0"/>
   </joint>
   <link name="imu_frame"/>
   <joint name="imu_frame_fixed_joint" type="fixed">
@@ -1478,6 +1478,113 @@
     <child link="imu_frame"/>
     <dynamics damping="0.1"/>
   </joint>
+  <link name="base_link"/>
+  <joint name="base_fixed_joint" type="fixed">
+  <origin xyz="0 0 0" rpy="0 -0 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="root_link"/>
+</joint>
+  <link name="l_foot_dh_frame"/>
+  <joint name="l_foot_dh_frame_fixed_joint" type="fixed">
+  <origin xyz="0.0 0 0.004" rpy="0 1.5708 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="l_foot"/>
+  <child link="l_foot_dh_frame"/>
+</joint>
+  <link name="r_foot_dh_frame"/>
+  <joint name="r_foot_dh_frame_fixed_joint" type="fixed">
+  <origin xyz="0.0 0 0.004" rpy="0 1.5708 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="r_foot"/>
+  <child link="r_foot_dh_frame"/>
+</joint>
+  <gazebo reference="r_arm_ft_sensor">
+  <disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="l_arm_ft_sensor">
+  <disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="r_leg_ft_sensor">
+  <disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="l_leg_ft_sensor">
+  <disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="r_foot_ft_sensor">
+  <disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="l_foot_ft_sensor">
+  <disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="l_foot">
+  <collision> <surface> <bounce>
+    <restitution_coefficient>0</restitution_coefficient>
+    <threshold>100000</threshold>
+  </bounce> </surface> </collision>
+  <maxContacts>4</maxContacts>
+  <kp>18000000</kp>
+  <kd>100</kd>
+  <maxVel>100</maxVel>
+  <minDepth>0.0001</minDepth>
+  <mu1>1</mu1>
+  <mu2>1</mu2>
+  <fdir1>0 0 0</fdir1>
+</gazebo>
+  <gazebo reference="r_foot">
+  <collision> <surface> <bounce>
+    <restitution_coefficient>0</restitution_coefficient>
+    <threshold>100000</threshold>
+  </bounce> </surface> </collision>
+  <maxContacts>4</maxContacts>
+  <kp>18000000</kp>
+  <kd>100</kd>
+  <maxVel>100</maxVel>
+  <minDepth>0.0001</minDepth>
+  <mu1>1</mu1>
+  <mu2>1</mu2>
+  <fdir1>0 0 0</fdir1>
+</gazebo>
+  <gazebo>
+<plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
+  <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_left_leg_mtb.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
+  <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_right_leg_mtb.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
+  <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_left_arm_mtb.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
+  <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_right_arm_mtb.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
+  <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_torso_mtb.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="controlboard_torso" filename="libgazebo_yarp_controlboard.so">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_torso.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="controlboard_head_without_eyes" filename="libgazebo_yarp_controlboard.so">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_head_without_eyes.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="controlboard_left_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
+    <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.698</initialConfiguration>
+</plugin>
+<plugin name="controlboard_right_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
+    <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.698</initialConfiguration>
+</plugin>
+<plugin name="controlboard_right_leg" filename="libgazebo_yarp_controlboard.so">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_leg.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="controlboard_left_leg" filename="libgazebo_yarp_controlboard.so">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_leg.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="apply_external_wrench" filename="libgazebo_yarp_externalwrench.so">
+     <robotNamefromConfigFile>model://iCub/conf/gazebo_icub_robotname.ini</robotNamefromConfigFile>
+</plugin>
+</gazebo>
   <gazebo reference="l_leg_ft_sensor">
     <sensor name="l_leg_ft_sensor" type="force_torque">
       <always_on>1</always_on>
@@ -1761,13 +1868,13 @@
     <sensor name="r_upper_arm_mtb_acc_2b10" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
-      <pose>-0.0412194 0.029588 0.0295279 1.57079546365 1.57078381225 -2.68257161165</pose>
+      <pose>-0.0412194 0.029588 0.0295279 1.57079546365 1.57078381225 -2.68257161162</pose>
       <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_upper_arm_mtb_acc_2b10" type="accelerometer">
     <parent link="r_upper_arm"/>
-    <origin rpy="1.57079546365 1.57078381225 -2.68257161165" xyz="-0.0412194 0.029588 0.0295279"/>
+    <origin rpy="1.57079546365 1.57078381225 -2.68257161162" xyz="-0.0412194 0.029588 0.0295279"/>
   </sensor>
   <gazebo reference="r_upper_arm">
     <sensor name="r_upper_arm_mtb_acc_2b11" type="imu">
@@ -1869,13 +1976,13 @@
     <sensor name="l_upper_arm_mtb_acc_1b12" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
-      <pose>-0.0412194 -0.029588 0.0049921 -1.5707971899 -1.57078381225 2.68257161159</pose>
+      <pose>-0.0412194 -0.029588 0.0049921 -1.57079718993 -1.57078381225 2.68257161162</pose>
       <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_upper_arm_mtb_acc_1b12" type="accelerometer">
     <parent link="l_upper_arm"/>
-    <origin rpy="-1.5707971899 -1.57078381225 2.68257161159" xyz="-0.0412194 -0.029588 0.0049921"/>
+    <origin rpy="-1.57079718993 -1.57078381225 2.68257161162" xyz="-0.0412194 -0.029588 0.0049921"/>
   </sensor>
   <gazebo reference="l_upper_arm">
     <sensor name="l_upper_arm_mtb_acc_1b13" type="imu">
@@ -2082,13 +2189,13 @@
     <sensor name="r_lower_leg_mtb_acc_11b8" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
-      <pose>-0.0055283 -0.004318 0.05362922 -0.244346164565 2.80911040963e-05 1.57090899435</pose>
+      <pose>-0.0055283 -0.004318 0.05362922 -0.244346164565 2.80911040962e-05 1.57090899435</pose>
       <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_lower_leg_mtb_acc_11b8" type="accelerometer">
     <parent link="r_lower_leg"/>
-    <origin rpy="-0.244346164565 2.80911040963e-05 1.57090899435" xyz="-0.0055283 -0.004318 0.05362922"/>
+    <origin rpy="-0.244346164565 2.80911040962e-05 1.57090899435" xyz="-0.0055283 -0.004318 0.05362922"/>
   </sensor>
   <gazebo reference="r_lower_leg">
     <sensor name="r_lower_leg_mtb_acc_11b9" type="imu">
@@ -2106,13 +2213,13 @@
     <sensor name="r_lower_leg_mtb_acc_11b10" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
-      <pose>-0.0325465 -0.043468 0.0278945 -1.30899714732 4.4408920985e-16 1.57079632679</pose>
+      <pose>-0.0325465 -0.043468 0.0278945 -1.30899714732 3.88578058619e-16 1.57079632679</pose>
       <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_lower_leg_mtb_acc_11b10" type="accelerometer">
     <parent link="r_lower_leg"/>
-    <origin rpy="-1.30899714732 4.4408920985e-16 1.57079632679" xyz="-0.0325465 -0.043468 0.0278945"/>
+    <origin rpy="-1.30899714732 3.88578058619e-16 1.57079632679" xyz="-0.0325465 -0.043468 0.0278945"/>
   </sensor>
   <gazebo reference="r_lower_leg">
     <sensor name="r_lower_leg_mtb_acc_11b11" type="imu">
@@ -2200,13 +2307,13 @@
     <sensor name="l_upper_leg_mtb_acc_10b1" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
-      <pose>0.031565 0.049332 0.04200163 0.837758036961 -8.62912829653e-05 1.57087402394</pose>
+      <pose>0.031565 0.049332 0.04200163 0.837758036961 -8.62912829651e-05 1.57087402394</pose>
       <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_upper_leg_mtb_acc_10b1" type="accelerometer">
     <parent link="l_upper_leg"/>
-    <origin rpy="0.837758036961 -8.62912829653e-05 1.57087402394" xyz="0.031565 0.049332 0.04200163"/>
+    <origin rpy="0.837758036961 -8.62912829651e-05 1.57087402394" xyz="0.031565 0.049332 0.04200163"/>
   </sensor>
   <gazebo reference="l_upper_leg">
     <sensor name="l_upper_leg_mtb_acc_10b2" type="imu">
@@ -2375,86 +2482,4 @@
     <parent link="l_foot"/>
     <origin rpy="0.0 -0.0 1.57079632679" xyz="0.0805224 0.0118072 -0.001215"/>
   </sensor>
-  <link name="base_link"/>
-  <joint name="base_fixed_joint" type="fixed">
-  <origin xyz="0 0 0" rpy="0 -0 0"/>
-  <axis xyz="0 0 0"/>
-  <parent link="base_link"/>
-  <child link="root_link"/>
-</joint>
-  <link name="l_foot_dh_frame"/>
-  <joint name="l_foot_dh_frame_fixed_joint" type="fixed">
-  <origin xyz="0.0 0 0.004" rpy="0 1.5708 0"/>
-  <axis xyz="0 0 0"/>
-  <parent link="l_foot"/>
-  <child link="l_foot_dh_frame"/>
-</joint>
-  <link name="r_foot_dh_frame"/>
-  <joint name="r_foot_dh_frame_fixed_joint" type="fixed">
-  <origin xyz="0.0 0 0.004" rpy="0 1.5708 0"/>
-  <axis xyz="0 0 0"/>
-  <parent link="r_foot"/>
-  <child link="r_foot_dh_frame"/>
-</joint>
-  <gazebo reference="r_arm_ft_sensor">
-  <disableFixedJointLumping>true</disableFixedJointLumping>
-</gazebo>
-  <gazebo reference="r_arm_ft_sensor">
-  <disableFixedJointLumping>true</disableFixedJointLumping>
-</gazebo>
-  <gazebo reference="l_arm_ft_sensor">
-  <disableFixedJointLumping>true</disableFixedJointLumping>
-</gazebo>
-  <gazebo reference="r_leg_ft_sensor">
-  <disableFixedJointLumping>true</disableFixedJointLumping>
-</gazebo>
-  <gazebo reference="l_leg_ft_sensor">
-  <disableFixedJointLumping>true</disableFixedJointLumping>
-</gazebo>
-  <gazebo reference="r_foot_ft_sensor">
-  <disableFixedJointLumping>true</disableFixedJointLumping>
-</gazebo>
-  <gazebo reference="l_foot_ft_sensor">
-  <disableFixedJointLumping>true</disableFixedJointLumping>
-</gazebo>
-  <gazebo>
-<plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
-  <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_left_leg_mtb.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
-  <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_right_leg_mtb.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
-  <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_left_arm_mtb.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
-  <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_right_arm_mtb.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
-  <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_torso_mtb.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="controlboard_torso" filename="libgazebo_yarp_controlboard.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_torso.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="controlboard_head_without_eyes" filename="libgazebo_yarp_controlboard.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_head_without_eyes.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="controlboard_left_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
-    <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.698</initialConfiguration>
-</plugin>
-<plugin name="controlboard_right_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
-    <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.698</initialConfiguration>
-</plugin>
-<plugin name="controlboard_right_leg" filename="libgazebo_yarp_controlboard.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_leg.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="controlboard_left_leg" filename="libgazebo_yarp_controlboard.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_leg.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="apply_external_wrench" filename="libgazebo_yarp_externalwrench.so">
-     <robotNamefromConfigFile>model://iCub/conf/gazebo_icub_robotname.ini</robotNamefromConfigFile>
-</plugin>
-</gazebo>
 </robot>
