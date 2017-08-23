@@ -459,7 +459,7 @@
   </link>
   <joint name="r_ankle_pitch" type="revolute">
     <origin xyz="-0.0268325 -0.2005 0" rpy="0 0 0"/>
-    <axis xyz="-1.0 -0.0 -0.0"/>
+    <axis xyz="1.0 0.0 0.0"/>
     <parent link="r_lower_leg"/>
     <child link="r_ankle_1"/>
     <limit effort="50000" lower="-0.610865238198" upper="0.610865238198" velocity="50000"/>
