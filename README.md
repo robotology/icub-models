@@ -1,6 +1,6 @@
 # icub-models
 
-Repository containing models automatically generated from the CAD file by [icub-model-generator](https://github.com/robotology-playground/icub-model-generator).
+Repository containing models [automatically](https://github.com/robotology-playground/icub-model-generator/blob/master/.travis.yml#L76) generated from the CAD file by [icub-model-generator](https://github.com/robotology-playground/icub-model-generator).
 
 ## Usage
 
@@ -30,7 +30,6 @@ If `<icub-models>` is the location of the repo, some folders need to be appended
 ```sh
 export YARP_DATA_DIRS=${YARP_DATA_DIRS}:<icub-models>/build/iCub
 export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:<icub-models>/build
-export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:<icub-models>/build/iCub:<icub-models>/build/iCub/robots:<icub-models>/build
 ```
 
 ### By installing the models
@@ -49,5 +48,10 @@ Once the models are installed into a given prefix, edit the env variables as fol
 ```sh
 export YARP_DATA_DIRS=${YARP_DATA_DIRS}:<prefix>/share/iCub
 export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:<prefix>/share
-export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:<prefix>/share/iCub:<prefix>/share/iCub/robots:<prefix>/share
 ```
+#### Use the models with Gazebo
+In order to use these models in Gazebo, set up the simulation environment following the instructions provided in the [icub-gazebo](https://github.com/robotology/icub-gazebo) repository, and add the following line to your ``.bashrc``:
+```
+export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:<prefix>/share/iCub/robots:<prefix>/share
+```
+Note that it is still a **Work In Progress**. See the issue https://github.com/robotology-playground/icub-models/issues/7
