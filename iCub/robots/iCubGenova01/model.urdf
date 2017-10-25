@@ -1879,6 +1879,102 @@
      <robotNamefromConfigFile>model://iCub/conf/gazebo_icub_robotname.ini</robotNamefromConfigFile>
 </plugin>
 </gazebo>
+  <gazebo reference="r_hip_pitch">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_hip_roll">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_hip_yaw">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_knee">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_ankle_pitch">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_ankle_roll">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_hip_pitch">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_hip_roll">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_hip_yaw">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_knee">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_ankle_pitch">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_ankle_roll">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="torso_pitch">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="torso_roll">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="torso_yaw">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_shoulder_pitch">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_shoulder_roll">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_shoulder_yaw">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_elbow">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_wrist_prosup">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_wrist_pitch">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_wrist_yaw">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_shoulder_pitch">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_shoulder_roll">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_shoulder_yaw">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_elbow">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_wrist_prosup">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_wrist_pitch">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_wrist_yaw">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="neck_pitch">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="neck_roll">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="neck_yaw">
+   <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
   <gazebo reference="l_leg_ft_sensor">
     <sensor name="l_leg_ft_sensor" type="force_torque">
       <always_on>1</always_on>
