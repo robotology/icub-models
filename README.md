@@ -49,9 +49,22 @@ Once the models are installed into a given prefix, edit the env variables as fol
 export YARP_DATA_DIRS=${YARP_DATA_DIRS}:<prefix>/share/iCub
 export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:<prefix>/share
 ```
-#### Use the models with Gazebo
+### Use the models with Gazebo
 In order to use these models in Gazebo, set up the simulation environment following the instructions provided in the [icub-gazebo](https://github.com/robotology/icub-gazebo) repository, and add the following line to your ``.bashrc``:
 ```
 export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:<prefix>/share/iCub/robots:<prefix>/share
 ```
 Note that it is still a **Work In Progress**. See the issue https://github.com/robotology-playground/icub-models/issues/7
+
+## Change the orientation of the root frame
+The iCub robot `root frame` is defined as [`x-backward`][1], meaning that the x-axis points behind the robot. Nevertheless, in the robotics community, sometimes the root frame of a robot is defined as [`x-forward`][2]. As a consequence, to use the iCub models with software developed for the `x-forward` configuration (e.g. [IHMC-ORS][3]), might be necessary to quickly update the root frame orientation.  
+For this purpose, locate the joint `<joint name="base_fixed_joint" type="fixed">` in the `URDF` model and perform the following substitution in the `origin` section:
+
+```
+-  <origin xyz="0 0 0" rpy="0 -0 0"/>
++  <origin xyz="0 0 0" rpy="0 -0 3.14159265358979323846"/>
+```
+
+[1]:http://wiki.icub.org/wiki/ICubForwardKinematics
+[2]:http://www.ros.org/reps/rep-0103.html#axis-orientation
+[3]:https://github.com/ihmcrobotics/ihmc-open-robotics-software
