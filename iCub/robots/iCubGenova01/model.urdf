@@ -1855,24 +1855,6 @@
 <plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
   <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_torso_mtb.ini</yarpConfigurationFile>
 </plugin>
-<plugin name="left_leg_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_leg_ft.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="left_foot_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_foot_ft.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="right_leg_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_leg_ft.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="right_foot_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_foot_ft.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="left_arm_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_arm_ft.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="right_arm_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_arm_ft.ini</yarpConfigurationFile>
-</plugin>
 <plugin name="controlboard_torso" filename="libgazebo_yarp_controlboard.so">
     <yarpConfigurationFile>model://iCub/conf/gazebo_icub_torso.ini</yarpConfigurationFile>
 </plugin>
