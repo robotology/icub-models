@@ -1856,27 +1856,27 @@
   <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_torso_mtb.ini</yarpConfigurationFile>
 </plugin>
 <plugin name="controlboard_torso" filename="libgazebo_yarp_controlboard.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_torso.ini</yarpConfigurationFile>
+  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_torso.ini</yarpConfigurationFile>
 </plugin>
 <plugin name="controlboard_head_without_eyes" filename="libgazebo_yarp_controlboard.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_head_without_eyes.ini</yarpConfigurationFile>
+  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_head_without_eyes.ini</yarpConfigurationFile>
 </plugin>
 <plugin name="controlboard_left_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
-    <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.698</initialConfiguration>
+  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
+  <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.698</initialConfiguration>
 </plugin>
 <plugin name="controlboard_right_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
-    <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.698</initialConfiguration>
+  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
+  <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.698</initialConfiguration>
 </plugin>
 <plugin name="controlboard_right_leg" filename="libgazebo_yarp_controlboard.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_leg.ini</yarpConfigurationFile>
+  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_leg.ini</yarpConfigurationFile>
 </plugin>
 <plugin name="controlboard_left_leg" filename="libgazebo_yarp_controlboard.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_leg.ini</yarpConfigurationFile>
+  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_leg.ini</yarpConfigurationFile>
 </plugin>
 <plugin name="apply_external_wrench" filename="libgazebo_yarp_externalwrench.so">
-     <robotNamefromConfigFile>model://iCub/conf/gazebo_icub_robotname.ini</robotNamefromConfigFile>
+  <robotNamefromConfigFile>model://iCub/conf/gazebo_icub_robotname.ini</robotNamefromConfigFile>
 </plugin>
 </gazebo>
   <gazebo reference="r_hip_pitch">
@@ -1983,6 +1983,9 @@
         <frame>child</frame>
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
+      <plugin name="left_leg_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
+  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_leg_ft.ini</yarpConfigurationFile>
+</plugin>
     </sensor>
   </gazebo>
   <sensor name="l_leg_ft_sensor" type="force_torque">
@@ -2000,6 +2003,9 @@
         <frame>child</frame>
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
+      <plugin name="right_leg_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
+  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_leg_ft.ini</yarpConfigurationFile>
+</plugin>
     </sensor>
   </gazebo>
   <sensor name="r_leg_ft_sensor" type="force_torque">
@@ -2017,6 +2023,9 @@
         <frame>child</frame>
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
+      <plugin name="left_foot_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
+  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_foot_ft.ini</yarpConfigurationFile>
+</plugin>
     </sensor>
   </gazebo>
   <sensor name="l_foot_ft_sensor" type="force_torque">
@@ -2034,6 +2043,9 @@
         <frame>child</frame>
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
+      <plugin name="right_foot_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
+  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_foot_ft.ini</yarpConfigurationFile>
+</plugin>
     </sensor>
   </gazebo>
   <sensor name="r_foot_ft_sensor" type="force_torque">
@@ -2051,6 +2063,9 @@
         <frame>child</frame>
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
+      <plugin name="left_arm_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
+  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_arm_ft.ini</yarpConfigurationFile>
+</plugin>
     </sensor>
   </gazebo>
   <sensor name="l_arm_ft_sensor" type="force_torque">
@@ -2068,6 +2083,9 @@
         <frame>child</frame>
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
+      <plugin name="right_arm_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
+  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_arm_ft.ini</yarpConfigurationFile>
+</plugin>
     </sensor>
   </gazebo>
   <sensor name="r_arm_ft_sensor" type="force_torque">
