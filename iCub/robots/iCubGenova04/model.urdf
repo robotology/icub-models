@@ -1863,11 +1863,11 @@
 </plugin>
 <plugin name="controlboard_left_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
   <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
-  <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.698</initialConfiguration>
+  <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
 </plugin>
 <plugin name="controlboard_right_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
   <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
-  <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.698</initialConfiguration>
+  <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
 </plugin>
 <plugin name="controlboard_right_leg" filename="libgazebo_yarp_controlboard.so">
   <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_leg.ini</yarpConfigurationFile>
