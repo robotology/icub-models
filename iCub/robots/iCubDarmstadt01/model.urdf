@@ -523,9 +523,9 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.03 0.005 0.014" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.0472089996186 -0.0701000001907 -0.647438000286" rpy="-1.57079632679 0 -1.57079632679"/>
       <geometry>
-        <box size="0.16 0.072 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_sole_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -770,9 +770,9 @@
       <material name="yellow"/>
     </visual>
     <collision>
-      <origin xyz="0.03 -0.005 0.014" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.0472089996186 0.0701000001908 -0.647438000286" rpy="-1.57079632679 0 -1.57079632679"/>
       <geometry>
-        <box size="0.16 0.072 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_sole_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>

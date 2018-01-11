@@ -49,7 +49,7 @@
     <parent link="root_link"/>
     <child link="r_hip_1"/>
     <limit effort="55.5" lower="-0.785398163397" upper="2.33874119767" velocity="5.1"/>
-    <dynamics damping="0.223" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="r_hip_2">
     <inertial>
@@ -79,7 +79,7 @@
     <parent link="r_hip_1"/>
     <child link="r_hip_2"/>
     <limit effort="37.0" lower="-0.349065850399" upper="2.09439510239" velocity="7.64"/>
-    <dynamics damping="0.223" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="r_hip_3">
     <inertial>
@@ -137,7 +137,7 @@
     <parent link="r_hip_3"/>
     <child link="r_upper_leg"/>
     <limit effort="37.0" lower="-1.3962634016" upper="1.3962634016" velocity="7.64"/>
-    <dynamics damping="0.223" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="r_upper_leg_back_contact"/>
   <joint name="r_upper_leg_back_contact_fixed_joint" type="fixed">
@@ -181,7 +181,7 @@
     <parent link="r_upper_leg"/>
     <child link="r_lower_leg"/>
     <limit effort="37.0" lower="-2.16420827247" upper="0.0698131700798" velocity="7.64"/>
-    <dynamics damping="0.223" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="r_lower_leg_skin_0"/>
   <joint name="r_lower_leg_skin_0_fixed_joint" type="fixed">
@@ -477,7 +477,7 @@
     <parent link="r_lower_leg"/>
     <child link="r_ankle_1"/>
     <limit effort="37.0" lower="-0.610865238198" upper="0.610865238198" velocity="7.64"/>
-    <dynamics damping="0.223" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="r_ankle_2">
     <inertial>
@@ -505,7 +505,7 @@
     <parent link="r_ankle_1"/>
     <child link="r_ankle_2"/>
     <limit effort="37.0" lower="-0.436332312999" upper="0.436332312999" velocity="7.64"/>
-    <dynamics damping="0.223" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="r_foot">
     <inertial>
@@ -570,7 +570,7 @@
     <parent link="root_link"/>
     <child link="l_hip_1"/>
     <limit effort="55.5" lower="-0.785398163397" upper="2.33874119767" velocity="5.1"/>
-    <dynamics damping="0.223" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="l_hip_2">
     <inertial>
@@ -600,7 +600,7 @@
     <parent link="l_hip_1"/>
     <child link="l_hip_2"/>
     <limit effort="37.0" lower="-0.349065850399" upper="2.09439510239" velocity="7.64"/>
-    <dynamics damping="0.223" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="l_hip_3">
     <inertial>
@@ -656,7 +656,7 @@
     <parent link="l_hip_3"/>
     <child link="l_upper_leg"/>
     <limit effort="37.0" lower="-1.3962634016" upper="1.3962634016" velocity="7.64"/>
-    <dynamics damping="0.223" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="l_upper_leg_back_contact"/>
   <joint name="l_upper_leg_back_contact_fixed_joint" type="fixed">
@@ -698,7 +698,7 @@
     <parent link="l_upper_leg"/>
     <child link="l_lower_leg"/>
     <limit effort="37.0" lower="-2.16420827247" upper="0.0698131700798" velocity="7.64"/>
-    <dynamics damping="0.223" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="l_ankle_1">
     <inertial>
@@ -726,7 +726,7 @@
     <parent link="l_lower_leg"/>
     <child link="l_ankle_1"/>
     <limit effort="37.0" lower="-0.610865238198" upper="0.610865238198" velocity="7.64"/>
-    <dynamics damping="0.223" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="l_ankle_2">
     <inertial>
@@ -754,7 +754,7 @@
     <parent link="l_ankle_1"/>
     <child link="l_ankle_2"/>
     <limit effort="37.0" lower="-0.436332312999" upper="0.436332312999" velocity="7.64"/>
-    <dynamics damping="0.223" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="l_foot">
     <inertial>
@@ -815,7 +815,7 @@
     <parent link="root_link"/>
     <child link="torso_1"/>
     <limit effort="50000" lower="-0.349065850399" upper="1.2217304764" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="torso_2">
     <inertial>
@@ -843,7 +843,7 @@
     <parent link="torso_1"/>
     <child link="torso_2"/>
     <limit effort="50000" lower="-0.523598775598" upper="0.523598775598" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="chest">
     <inertial>
@@ -871,7 +871,7 @@
     <parent link="torso_2"/>
     <child link="chest"/>
     <limit effort="50000" lower="-0.872664625997" upper="0.872664625997" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="r_shoulder_1">
     <inertial>
@@ -899,7 +899,7 @@
     <parent link="chest"/>
     <child link="r_shoulder_1"/>
     <limit effort="50000" lower="-1.66678943565" upper="0.174532925199" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="r_shoulder_2">
     <inertial>
@@ -927,7 +927,7 @@
     <parent link="r_shoulder_1"/>
     <child link="r_shoulder_2"/>
     <limit effort="50000" lower="0.0" upper="2.80648943721" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="r_shoulder_3">
     <inertial>
@@ -955,7 +955,7 @@
     <parent link="r_shoulder_2"/>
     <child link="r_shoulder_3"/>
     <limit effort="50000" lower="-0.645771823238" upper="1.3962634016" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="r_upper_arm">
     <inertial>
@@ -1009,7 +1009,7 @@
     <parent link="r_upper_arm"/>
     <child link="r_elbow_1"/>
     <limit effort="50000" lower="0.261799387799" upper="1.85004900711" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="r_forearm">
     <inertial>
@@ -1037,7 +1037,7 @@
     <parent link="r_elbow_1"/>
     <child link="r_forearm"/>
     <limit effort="50000" lower="-1.0471975512" upper="1.0471975512" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="r_forearm_skin_0"/>
   <joint name="r_forearm_skin_0_fixed_joint" type="fixed">
@@ -1240,7 +1240,7 @@
     <parent link="r_forearm"/>
     <child link="r_wrist_1"/>
     <limit effort="50000" lower="-1.3962634016" upper="0.436332312999" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="r_hand">
     <inertial>
@@ -1268,7 +1268,7 @@
     <parent link="r_wrist_1"/>
     <child link="r_hand"/>
     <limit effort="50000" lower="-0.349065850399" upper="0.436332312999" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="r_hand_dh_frame"/>
   <joint name="r_hand_dh_frame_fixed_joint" type="fixed">
@@ -1303,7 +1303,7 @@
     <parent link="chest"/>
     <child link="l_shoulder_1"/>
     <limit effort="50000" lower="-1.66678943565" upper="0.174532925199" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="l_shoulder_2">
     <inertial>
@@ -1331,7 +1331,7 @@
     <parent link="l_shoulder_1"/>
     <child link="l_shoulder_2"/>
     <limit effort="50000" lower="0.0" upper="2.80648943721" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="l_shoulder_3">
     <inertial>
@@ -1359,7 +1359,7 @@
     <parent link="l_shoulder_2"/>
     <child link="l_shoulder_3"/>
     <limit effort="50000" lower="-0.645771823238" upper="1.3962634016" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="l_upper_arm">
     <inertial>
@@ -1413,7 +1413,7 @@
     <parent link="l_upper_arm"/>
     <child link="l_elbow_1"/>
     <limit effort="50000" lower="0.261799387799" upper="1.85004900711" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="l_forearm">
     <inertial>
@@ -1441,7 +1441,7 @@
     <parent link="l_elbow_1"/>
     <child link="l_forearm"/>
     <limit effort="50000" lower="-1.0471975512" upper="1.0471975512" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="l_forearm_skin_0"/>
   <joint name="l_forearm_skin_0_fixed_joint" type="fixed">
@@ -1644,7 +1644,7 @@
     <parent link="l_forearm"/>
     <child link="l_wrist_1"/>
     <limit effort="50000" lower="-1.3962634016" upper="0.436332312999" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="l_hand">
     <inertial>
@@ -1672,7 +1672,7 @@
     <parent link="l_wrist_1"/>
     <child link="l_hand"/>
     <limit effort="50000" lower="-0.349065850399" upper="0.436332312999" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="l_hand_dh_frame"/>
   <joint name="l_hand_dh_frame_fixed_joint" type="fixed">
@@ -1707,7 +1707,7 @@
     <parent link="chest"/>
     <child link="neck_1"/>
     <limit effort="50000" lower="-0.698131700798" upper="0.383972435439" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="neck_2">
     <inertial>
@@ -1735,7 +1735,7 @@
     <parent link="neck_1"/>
     <child link="neck_2"/>
     <limit effort="50000" lower="-0.349065850399" upper="0.349065850399" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="head">
     <inertial>
@@ -1763,7 +1763,7 @@
     <parent link="neck_2"/>
     <child link="head"/>
     <limit effort="50000" lower="-0.872664625997" upper="0.872664625997" velocity="50000"/>
-    <dynamics damping="0.06" friction="0.0"/>
+    <dynamics damping="1.0" friction="0.0"/>
   </joint>
   <link name="imu_frame"/>
   <joint name="imu_frame_fixed_joint" type="fixed">
