@@ -573,7 +573,7 @@
   </link>
   <joint name="l_hip_pitch" type="revolute">
     <origin xyz="0.0064515 -0.026 -0.119913" rpy="0 0 -3.14159265359"/>
-    <axis xyz="-2.22044604925e-16 -1.0 -0.0"/>
+    <axis xyz="-2.22044604925e-16 -1.0 0.0"/>
     <parent link="root_link"/>
     <child link="l_hip_1"/>
     <limit effort="55.5" lower="-0.785398163397" upper="2.33874119767" velocity="5.1"/>
@@ -701,7 +701,7 @@
   </link>
   <joint name="l_knee" type="revolute">
     <origin xyz="0 0 -0.145825" rpy="0 0 0"/>
-    <axis xyz="-2.22044604925e-16 -1.0 -0.0"/>
+    <axis xyz="-2.22044604925e-16 -1.0 0.0"/>
     <parent link="l_upper_leg"/>
     <child link="l_lower_leg"/>
     <limit effort="37.0" lower="-2.16420827247" upper="0.0698131700798" velocity="7.64"/>
