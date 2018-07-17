@@ -516,7 +516,7 @@
       <inertia ixx="0.00120946" ixy="3.74585e-07" ixz="-5.78759e-05" iyy="0.00141439" iyz="-7.80325e-06" izz="0.000273599"/>
     </inertial>
     <visual>
-      <origin xyz="0.0472089996186 -0.0701000001907 -0.647438000286" rpy="-1.57079632679 0 -1.57079632679"/>
+      <origin xyz="0.0472089996187 -0.0701000001907 -0.647438000286" rpy="-1.57079632679 0 -1.57079632679"/>
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_sole_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -525,7 +525,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0472089996186 -0.0701000001907 -0.647438000286" rpy="-1.57079632679 0 -1.57079632679"/>
+      <origin xyz="0.0472089996187 -0.0701000001907 -0.647438000286" rpy="-1.57079632679 0 -1.57079632679"/>
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_sole_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
