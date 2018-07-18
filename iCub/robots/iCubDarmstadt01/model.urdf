@@ -544,6 +544,181 @@
     <child link="r_sole"/>
     <dynamics damping="0.1"/>
   </joint>
+  <link name="r_sole_skin_0"/>
+  <joint name="r_sole_skin_0_fixed_joint" type="fixed">
+    <origin xyz="0.0604767 -0.0254106 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_0"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_1"/>
+  <joint name="r_sole_skin_1_fixed_joint" type="fixed">
+    <origin xyz="0.0788511 -0.0194404 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_1"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_2"/>
+  <joint name="r_sole_skin_2_fixed_joint" type="fixed">
+    <origin xyz="0.0932087 -0.032368 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_2"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_3"/>
+  <joint name="r_sole_skin_3_fixed_joint" type="fixed">
+    <origin xyz="0.1115831 -0.0263978 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_3"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_4"/>
+  <joint name="r_sole_skin_4_fixed_joint" type="fixed">
+    <origin xyz="0.1156 -0.0075 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_4"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_8"/>
+  <joint name="r_sole_skin_8_fixed_joint" type="fixed">
+    <origin xyz="0.1052593 0.0243254 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_8"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_9"/>
+  <joint name="r_sole_skin_9_fixed_joint" type="fixed">
+    <origin xyz="0.0909017 0.037253 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_9"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_10"/>
+  <joint name="r_sole_skin_10_fixed_joint" type="fixed">
+    <origin xyz="0.0725273 0.031283 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_10"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_11"/>
+  <joint name="r_sole_skin_11_fixed_joint" type="fixed">
+    <origin xyz="0.0685104 0.012385 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_11"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_12"/>
+  <joint name="r_sole_skin_12_fixed_joint" type="fixed">
+    <origin xyz="0.082868 -0.0005426 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_12"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_13"/>
+  <joint name="r_sole_skin_13_fixed_joint" type="fixed">
+    <origin xyz="0.1012424 0.0054276 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_13"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_14"/>
+  <joint name="r_sole_skin_14_fixed_joint" type="fixed">
+    <origin xyz="0.05013603 0.0064148 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_14"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_15"/>
+  <joint name="r_sole_skin_15_fixed_joint" type="fixed">
+    <origin xyz="0.04611917 -0.012483 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_15"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_17"/>
+  <joint name="r_sole_skin_17_fixed_joint" type="fixed">
+    <origin xyz="-0.0296855 0.033257 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_17"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_18"/>
+  <joint name="r_sole_skin_18_fixed_joint" type="fixed">
+    <origin xyz="-0.0480599 0.027287 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_18"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_19"/>
+  <joint name="r_sole_skin_19_fixed_joint" type="fixed">
+    <origin xyz="-0.0520767 0.0083892 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_19"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_20"/>
+  <joint name="r_sole_skin_20_fixed_joint" type="fixed">
+    <origin xyz="-0.0377192 -0.0045384 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_20"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_21"/>
+  <joint name="r_sole_skin_21_fixed_joint" type="fixed">
+    <origin xyz="0.0357785 0.0193424 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_21"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_22"/>
+  <joint name="r_sole_skin_22_fixed_joint" type="fixed">
+    <origin xyz="0.0277448 -0.0184532 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_22"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_24"/>
+  <joint name="r_sole_skin_24_fixed_joint" type="fixed">
+    <origin xyz="-0.0049872 -0.0114958 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_24"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_25"/>
+  <joint name="r_sole_skin_25_fixed_joint" type="fixed">
+    <origin xyz="0.0133872 -0.0055256 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_25"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_26"/>
+  <joint name="r_sole_skin_26_fixed_joint" type="fixed">
+    <origin xyz="0.0174041 0.0133722 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_26"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_27"/>
+  <joint name="r_sole_skin_27_fixed_joint" type="fixed">
+    <origin xyz="0.0030465 0.0262998 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_27"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_28"/>
+  <joint name="r_sole_skin_28_fixed_joint" type="fixed">
+    <origin xyz="-0.0153279 0.0203296 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_28"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_sole_skin_29"/>
+  <joint name="r_sole_skin_29_fixed_joint" type="fixed">
+    <origin xyz="-0.0193448 0.0014318 0.0075" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_sole_skin_29"/>
+    <dynamics damping="0.1"/>
+  </joint>
   <link name="l_hip_1">
     <inertial>
       <origin xyz="-0.0005108 0.0380923 -8.3e-05" rpy="1.57079632679 0 1.57079632679"/>
@@ -799,6 +974,181 @@
     <origin xyz="0.0035 0 0.004" rpy="-3.14159265359 0 0"/>
     <parent link="l_foot"/>
     <child link="l_sole"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_0"/>
+  <joint name="l_sole_skin_0_fixed_joint" type="fixed">
+    <origin xyz="0.0932087 0.032368 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_0"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_1"/>
+  <joint name="l_sole_skin_1_fixed_joint" type="fixed">
+    <origin xyz="0.0788511 0.0194399 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_1"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_2"/>
+  <joint name="l_sole_skin_2_fixed_joint" type="fixed">
+    <origin xyz="0.0604767 0.0254106 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_2"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_3"/>
+  <joint name="l_sole_skin_3_fixed_joint" type="fixed">
+    <origin xyz="0.04611917 0.0124825 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_3"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_4"/>
+  <joint name="l_sole_skin_4_fixed_joint" type="fixed">
+    <origin xyz="0.05013603 -0.0064148 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_4"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_8"/>
+  <joint name="l_sole_skin_8_fixed_joint" type="fixed">
+    <origin xyz="0.0725273 -0.031283 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_8"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_9"/>
+  <joint name="l_sole_skin_9_fixed_joint" type="fixed">
+    <origin xyz="0.0909017 -0.037254 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_9"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_10"/>
+  <joint name="l_sole_skin_10_fixed_joint" type="fixed">
+    <origin xyz="0.1052593 -0.0243254 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_10"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_11"/>
+  <joint name="l_sole_skin_11_fixed_joint" type="fixed">
+    <origin xyz="0.1012424 -0.0054281 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_11"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_12"/>
+  <joint name="l_sole_skin_12_fixed_joint" type="fixed">
+    <origin xyz="0.082868 0.0005426 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_12"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_13"/>
+  <joint name="l_sole_skin_13_fixed_joint" type="fixed">
+    <origin xyz="0.0685104 -0.0123855 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_13"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_14"/>
+  <joint name="l_sole_skin_14_fixed_joint" type="fixed">
+    <origin xyz="0.1156 0.0074995 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_14"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_15"/>
+  <joint name="l_sole_skin_15_fixed_joint" type="fixed">
+    <origin xyz="0.1115831 0.0263973 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_15"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_17"/>
+  <joint name="l_sole_skin_17_fixed_joint" type="fixed">
+    <origin xyz="-0.0377192 0.0045384 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_17"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_18"/>
+  <joint name="l_sole_skin_18_fixed_joint" type="fixed">
+    <origin xyz="-0.0520767 -0.0083897 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_18"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_19"/>
+  <joint name="l_sole_skin_19_fixed_joint" type="fixed">
+    <origin xyz="-0.0480599 -0.027287 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_19"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_20"/>
+  <joint name="l_sole_skin_20_fixed_joint" type="fixed">
+    <origin xyz="-0.0296855 -0.033258 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_20"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_21"/>
+  <joint name="l_sole_skin_21_fixed_joint" type="fixed">
+    <origin xyz="0.0277448 0.0184532 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_21"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_22"/>
+  <joint name="l_sole_skin_22_fixed_joint" type="fixed">
+    <origin xyz="0.0357785 -0.0193429 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_22"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_24"/>
+  <joint name="l_sole_skin_24_fixed_joint" type="fixed">
+    <origin xyz="0.0030465 -0.0263003 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_24"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_25"/>
+  <joint name="l_sole_skin_25_fixed_joint" type="fixed">
+    <origin xyz="0.0174041 -0.0133722 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_25"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_26"/>
+  <joint name="l_sole_skin_26_fixed_joint" type="fixed">
+    <origin xyz="0.0133872 0.0055251 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_26"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_27"/>
+  <joint name="l_sole_skin_27_fixed_joint" type="fixed">
+    <origin xyz="-0.0049872 0.0114958 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_27"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_28"/>
+  <joint name="l_sole_skin_28_fixed_joint" type="fixed">
+    <origin xyz="-0.0193448 -0.0014323 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_28"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_sole_skin_29"/>
+  <joint name="l_sole_skin_29_fixed_joint" type="fixed">
+    <origin xyz="-0.0153279 -0.0203296 0.0075" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_sole_skin_29"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="torso_1">
