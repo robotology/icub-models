@@ -18,16 +18,16 @@ macro(SUBDIRLIST result curdir)
 endmacro()
 
 # Copy the iCub folder in the build tree
-file(COPY ${CMAKE_SOURCE_DIR}/iCub DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iCub DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 # Generate and move in the build tree the model.config for each robot
-SUBDIRLIST(ROBOTS_NAMES ${CMAKE_BINARY_DIR}/iCub/robots)
+SUBDIRLIST(ROBOTS_NAMES ${CMAKE_CURRENT_BINARY_DIR}/iCub/robots)
 foreach (ROBOT_DIRNAME ${ROBOTS_NAMES})
   set(ROBOT_NAME ${ROBOT_DIRNAME})
-  configure_file(${CMAKE_SOURCE_DIR}/model.config.in
-                 ${CMAKE_BINARY_DIR}/iCub/robots/${ROBOT_NAME}/model.config
+  configure_file(${CMAKE_CURRENT_SOURCE_DIR}/model.config.in
+                 ${CMAKE_CURRENT_BINARY_DIR}/iCub/robots/${ROBOT_NAME}/model.config
                  @ONLY)
 endforeach()
 
 # Install the whole iCub directory
-install(DIRECTORY ${CMAKE_BINARY_DIR}/iCub DESTINATION share)
+install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/iCub DESTINATION share)
