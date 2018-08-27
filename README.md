@@ -54,6 +54,8 @@ In order to use these models in Gazebo, set up the simulation environment follow
 ```
 export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:<prefix>/share/iCub/robots:<prefix>/share
 ```
+Note that only the models that are known to work fine with the default physics engine settings of Gazebo (`iCubGazeboV2_5` and `iCubGazeboV2_5_plus`)
+are installed. If you want to make available in Gazebo all the models, enable the `ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS` CMake option.
 Note that it is still a **Work In Progress**. See the issue https://github.com/robotology-playground/icub-models/issues/7
 
 ## Change the orientation of the root frame

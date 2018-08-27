@@ -2,7 +2,7 @@
 # Authors: Silvio Traversaro
 # CopyPolicy: Released under the terms of the LGPLv2.1 or later, see LGPL.TXT
 
-cmake_minimum_required(VERSION 2.8.9)
+cmake_minimum_required(VERSION 3.5)
 
 project(icub-models)
 
@@ -20,13 +20,31 @@ endmacro()
 # Copy the iCub folder in the build tree
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iCub DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
-# Generate and move in the build tree the model.config for each robot
+# Add the model.config just for a limited number of models that are known
+# to work in Gazebo, unless the ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS option
+# is enabled
+option(ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS OFF)
+
+# Note: all the models run in Gazebo, but this two are the only one that
+# run with the default physics settings of Gazebo, see issue
+# https://github.com/robotology/icub-model-generator/issues/52 for more info
+set(GAZEBO_SUPPORTED_MODELS "")
+list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5")
+list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5_plus")
+
 SUBDIRLIST(ROBOTS_NAMES ${CMAKE_CURRENT_BINARY_DIR}/iCub/robots)
 foreach (ROBOT_DIRNAME ${ROBOTS_NAMES})
   set(ROBOT_NAME ${ROBOT_DIRNAME})
-  configure_file(${CMAKE_CURRENT_SOURCE_DIR}/model.config.in
-                 ${CMAKE_CURRENT_BINARY_DIR}/iCub/robots/${ROBOT_NAME}/model.config
-                 @ONLY)
+  set(ROBOT_MODEL_CONFIG_FILE "${CMAKE_CURRENT_BINARY_DIR}/iCub/robots/${ROBOT_NAME}/model.config")
+  if(ROBOT_NAME IN_LIST GAZEBO_SUPPORTED_MODELS OR ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS)
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/model.config.in
+                   ${ROBOT_MODEL_CONFIG_FILE}
+                   @ONLY)
+  else()
+    # Cleanup is before ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS was set to ON
+    file(REMOVE ${ROBOT_MODEL_CONFIG_FILE})
+  endif()
+
 endforeach()
 
 # Install the whole iCub directory
