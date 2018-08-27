@@ -18,7 +18,7 @@ macro(SUBDIRLIST result curdir)
 endmacro()
 
 # Copy the iCub folder in the build tree
-file(COPY ${CMAKE_SOURCE_DIR}/iCub DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iCub DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 # Add the model.config just for a limited number of models that are known
 # to work in Gazebo, unless the ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS option
@@ -32,19 +32,20 @@ set(GAZEBO_SUPPORTED_MODELS "")
 list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5")
 list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5_plus")
 
-SUBDIRLIST(ROBOTS_NAMES ${CMAKE_BINARY_DIR}/iCub/robots)
+SUBDIRLIST(ROBOTS_NAMES ${CMAKE_CURRENT_BINARY_DIR}/iCub/robots)
 foreach (ROBOT_DIRNAME ${ROBOTS_NAMES})
   set(ROBOT_NAME ${ROBOT_DIRNAME})
-  set(ROBOT_MODEL_CONFIG_FILE "${CMAKE_BINARY_DIR}/iCub/robots/${ROBOT_NAME}/model.config")
+  set(ROBOT_MODEL_CONFIG_FILE "${CMAKE_CURRENT_BINARY_DIR}/iCub/robots/${ROBOT_NAME}/model.config")
   if(ROBOT_NAME IN_LIST GAZEBO_SUPPORTED_MODELS OR ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS)
-    configure_file(${CMAKE_SOURCE_DIR}/model.config.in
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/model.config.in
                    ${ROBOT_MODEL_CONFIG_FILE}
                    @ONLY)
   else()
     # Cleanup is before ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS was set to ON
     file(REMOVE ${ROBOT_MODEL_CONFIG_FILE})
   endif()
+
 endforeach()
 
 # Install the whole iCub directory
-install(DIRECTORY ${CMAKE_BINARY_DIR}/iCub DESTINATION share)
+install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/iCub DESTINATION share)
