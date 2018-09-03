@@ -613,12 +613,12 @@
   </joint>
   <link name="l_hip_3">
     <inertial>
-      <origin xyz="-0.0001229 -0.0002823 0.008718" rpy="-1.57079632679 0 -1.57079632679"/>
+      <origin xyz="-0.000123 -0.0002823 0.008718" rpy="-1.57079632679 0 -1.57079632679"/>
       <mass value="0.126212"/>
       <inertia ixx="3.27938e-05" ixy="2.67901e-07" ixz="-4.41463e-09" iyy="5.69957e-05" iyz="3.32338e-08" izz="3.26449e-05"/>
     </inertial>
     <visual>
-      <origin xyz="0.043709 0.0701 -0.226213" rpy="-1.57079632679 0 -1.57079632679"/>
+      <origin xyz="0.0437089998093 0.0701 -0.226213" rpy="-1.57079632679 0 -1.57079632679"/>
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_upper_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -627,14 +627,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.043709 0.0701 -0.226213" rpy="-1.57079632679 0 -1.57079632679"/>
+      <origin xyz="0.0437089998093 0.0701 -0.226213" rpy="-1.57079632679 0 -1.57079632679"/>
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_upper_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
   <joint name="l_leg_ft_sensor" type="fixed">
-    <origin xyz="-0.0008575 0 -0.0743" rpy="-3.14159265359 0 -1.57079632679"/>
+    <origin xyz="-0.0008575 0 -0.0743" rpy="3.14159265359 0 0"/>
     <parent link="l_hip_2"/>
     <child link="l_hip_3"/>
     <dynamics damping="0.1"/>
@@ -662,7 +662,7 @@
     </collision>
   </link>
   <joint name="l_hip_yaw" type="revolute">
-    <origin xyz="0 0 0.0144" rpy="-3.14159265359 0 -1.57079632679"/>
+    <origin xyz="0 0 0.0144" rpy="-3.14159265359 0 0"/>
     <axis xyz="0.0 2.22044604925e-16 1.0"/>
     <parent link="l_hip_3"/>
     <child link="l_upper_leg"/>
@@ -690,7 +690,7 @@
       <inertia ixx="0.00423698606499" ixy="-0.000239615181423" ixz="6.76166218238e-05" iyy="0.00152221313636" iyz="-0.00023314283575" izz="0.00457007183207"/>
     </inertial>
     <visual>
-      <origin xyz="0.0437089998093 -0.0701000001907 0.386638" rpy="1.57079632679 0 1.57079632679"/>
+      <origin xyz="0.0437089998093 -0.0701000001908 0.386638" rpy="1.57079632679 0 1.57079632679"/>
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_shank_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -699,7 +699,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0437089998093 -0.0701000001907 0.386638" rpy="1.57079632679 0 1.57079632679"/>
+      <origin xyz="0.0437089998093 -0.0701000001908 0.386638" rpy="1.57079632679 0 1.57079632679"/>
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_shank_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -750,7 +750,7 @@
       <inertia ixx="0.000327646" ixy="-7.94989e-08" ixz="8.24551e-09" iyy="0.000244632" iyz="2.0701e-05" izz="0.000155777"/>
     </inertial>
     <visual>
-      <origin xyz="-0.109742724423 -0.0701000001902 0.578444502203" rpy="1.30899714732 0 1.57079632679"/>
+      <origin xyz="-0.109742724423 -0.0701000001908 0.578444502203" rpy="1.30899714732 0 1.57079632679"/>
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_foot_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -759,7 +759,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.109742724423 -0.0701000001902 0.578444502203" rpy="1.30899714732 0 1.57079632679"/>
+      <origin xyz="-0.109742724423 -0.0701000001908 0.578444502203" rpy="1.30899714732 0 1.57079632679"/>
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_foot_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -780,7 +780,7 @@
       <inertia ixx="0.00109523" ixy="2.85562e-07" ixz="3.69444e-05" iyy="0.00125599" iyz="5.08349e-06" izz="0.000215553"/>
     </inertial>
     <visual>
-      <origin xyz="-0.106242804521 0.0701000001701 -0.638744844389" rpy="-1.83259551889 0 -1.57079632679"/>
+      <origin xyz="-0.106242804521 0.07010000017 -0.63874484439" rpy="-1.83259551889 0 -1.57079632679"/>
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_sole_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -789,7 +789,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.106242804521 0.0701000001701 -0.638744844389" rpy="-1.83259551889 0 -1.57079632679"/>
+      <origin xyz="-0.106242804521 0.07010000017 -0.63874484439" rpy="-1.83259551889 0 -1.57079632679"/>
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_sole_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -2933,25 +2933,25 @@
     <sensor name="l_foot_mtb_acc_10b12" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
-      <pose>0.11352174596 0.000812199758047 -0.0233781571811 0.261799192098 -3.52495810318e-15 1.57079632679</pose>
+      <pose>0.11352174596 0.000812199758026 -0.0233781571811 0.261799192098 -2.70894418009e-14 1.57079632679</pose>
       <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_foot_mtb_acc_10b12" type="accelerometer">
     <parent link="l_foot"/>
-    <origin rpy="0.261799192098 -3.52495810318e-15 1.57079632679" xyz="0.11352174596 0.000812199758047 -0.0233781571811"/>
+    <origin rpy="0.261799192098 -2.70894418009e-14 1.57079632679" xyz="0.11352174596 0.000812199758026 -0.0233781571811"/>
   </sensor>
   <gazebo reference="l_foot">
     <sensor name="l_foot_mtb_acc_10b13" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
-      <pose>0.0893735989544 0.011812199825 -0.0169076861979 0.261799192098 -3.52495810318e-15 1.57079632679</pose>
+      <pose>0.0893735989544 0.011812199825 -0.0169076861979 0.261799192098 -2.70894418009e-14 1.57079632679</pose>
       <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_foot_mtb_acc_10b13" type="accelerometer">
     <parent link="l_foot"/>
-    <origin rpy="0.261799192098 -3.52495810318e-15 1.57079632679" xyz="0.0893735989544 0.011812199825 -0.0169076861979"/>
+    <origin rpy="0.261799192098 -2.70894418009e-14 1.57079632679" xyz="0.0893735989544 0.011812199825 -0.0169076861979"/>
   </sensor>
   <gazebo reference="root_link">
     <sensor name="root_link_imu_acc" type="imu">
