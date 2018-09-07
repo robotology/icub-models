@@ -1,14 +1,14 @@
 <robot name="iCub">
   <link name="root_link">
     <inertial>
-      <origin xyz="0.0248821 0.000103947 -0.0440806" rpy="1.57079632679 0 -1.57079632679"/>
-      <mass value="5.09143"/>
-      <inertia ixx="0.0139679" ixy="-5.93488e-06" ixz="-1.55458e-05" iyy="0.0202112" iyz="-0.00170968" izz="0.0249124"/>
+      <origin xyz="0.0256127 0.000177073 -0.0445339" rpy="1.57079632679 0 -1.57079632679"/>
+      <mass value="5.12739"/>
+      <inertia ixx="0.0145428" ixy="-3.37917e-05" ixz="-3.74897e-05" iyy="0.0206942" iyz="-0.00196027" izz="0.0252204"/>
     </inertial>
     <visual>
       <origin xyz="-0.0364 0 0.032" rpy="1.57079632679 0 -1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_root_link_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_root_link_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -17,10 +17,17 @@
     <collision>
       <origin xyz="-0.0364 0 0.032" rpy="1.57079632679 0 -1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_root_link_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_root_link_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
+  <link name="root_link_imu_frame"/>
+  <joint name="root_link_imu_frame_fixed_joint" type="fixed">
+    <origin xyz="0.085155 -0.011 -0.112309" rpy="-2.09439521059 0 -1.57079632679"/>
+    <parent link="root_link"/>
+    <child link="root_link_imu_frame"/>
+    <dynamics damping="0.1"/>
+  </joint>
   <link name="r_hip_1">
     <inertial>
       <origin xyz="-0.0005145 -0.0380753 -7.1e-05" rpy="1.57079632679 0 1.57079632679"/>
@@ -30,7 +37,7 @@
     <visual>
       <origin xyz="0.0428515000001 0.026 0.151913" rpy="1.57079632679 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_hip_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_hip_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="black">
         <color rgba="0 0 0 1"/>
@@ -39,7 +46,7 @@
     <collision>
       <origin xyz="0.0428515000001 0.026 0.151913" rpy="1.57079632679 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_hip_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_hip_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -60,7 +67,7 @@
     <visual>
       <origin xyz="0.0428514998094 0.0701 0.151913" rpy="1.57079632679 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_hip_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_hip_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="red">
         <color rgba="1 0 0 1"/>
@@ -69,7 +76,7 @@
     <collision>
       <origin xyz="0.0428514998094 0.0701 0.151913" rpy="1.57079632679 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_hip_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_hip_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -90,7 +97,7 @@
     <visual>
       <origin xyz="0.0437089998094 -0.0701 -0.226213" rpy="-1.57079632679 0 -1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_upper_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_upper_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="blue">
         <color rgba="0 0 1 1"/>
@@ -99,7 +106,7 @@
     <collision>
       <origin xyz="0.0437089998094 -0.0701 -0.226213" rpy="-1.57079632679 0 -1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_upper_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_upper_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -118,7 +125,7 @@
     <visual>
       <origin xyz="0.0437089998094 0.0701 0.240813" rpy="1.57079632679 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="yellow">
         <color rgba="1 1 0 1"/>
@@ -127,7 +134,7 @@
     <collision>
       <origin xyz="0.0437089998094 0.0701 0.240813" rpy="1.57079632679 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -162,7 +169,7 @@
     <visual>
       <origin xyz="0.0437089998094 0.0701000001907 0.386638" rpy="1.57079632679 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_shank_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_shank_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="pink">
         <color rgba="1 0 1 1"/>
@@ -171,7 +178,7 @@
     <collision>
       <origin xyz="0.0437089998094 0.0701000001907 0.386638" rpy="1.57079632679 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_shank_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_shank_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -451,59 +458,59 @@
   </joint>
   <link name="r_ankle_1">
     <inertial>
-      <origin xyz="0.0151436 -0.0008686 4.2e-05" rpy="1.57079632679 0 1.57079632679"/>
+      <origin xyz="0.015143405474 -0.0008685 4.28590827205e-05" rpy="1.30899714732 0 1.57079632679"/>
       <mass value="0.6803"/>
-      <inertia ixx="0.000404618848932" ixy="7.49819286945e-07" ixz="-3.01349467691e-05" iyy="0.000448633654664" iyz="2.5726697409e-06" izz="0.000308235939139"/>
+      <inertia ixx="0.000404620739232" ixy="8.52348884459e-06" ixz="-2.89135903191e-05" iyy="0.000437939678154" iyz="3.73303951794e-05" izz="0.000318928194184"/>
     </inertial>
     <visual>
-      <origin xyz="0.0437089998094 0.0701000001907 0.587138" rpy="1.57079632679 0 1.57079632679"/>
+      <origin xyz="-0.109742724245 0.0701000001907 0.57844450225" rpy="1.30899714732 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_ankle_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_ankle_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="cyan">
         <color rgba="0 1 1 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0437089998094 0.0701000001907 0.587138" rpy="1.57079632679 0 1.57079632679"/>
+      <origin xyz="-0.109742724245 0.0701000001907 0.57844450225" rpy="1.30899714732 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_ankle_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_ankle_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
   <joint name="r_ankle_pitch" type="revolute">
-    <origin xyz="0 0 -0.2005" rpy="0 0 0"/>
-    <axis xyz="2.22044604925e-16 1.0 0.0"/>
+    <origin xyz="0 0 -0.2005" rpy="0 0.26179917948 0"/>
+    <axis xyz="-6.66133814775e-16 1.0 4.4408920985e-16"/>
     <parent link="r_lower_leg"/>
     <child link="r_ankle_1"/>
-    <limit effort="37.0" lower="-0.610865238198" upper="0.610865238198" velocity="7.64"/>
+    <limit effort="37.0" lower="-0.872664625997" upper="0.349065850399" velocity="7.64"/>
     <dynamics damping="0.223" friction="0.0"/>
   </joint>
   <link name="r_ankle_2">
     <inertial>
-      <origin xyz="0.0007673 -8.20000000001e-06 -0.038202" rpy="1.57079632679 0 1.57079632679"/>
-      <mass value="0.267485"/>
-      <inertia ixx="0.000335682" ixy="-7.53335e-08" ixz="2.93681e-08" iyy="0.00025387" iyz="-4.26218e-07" izz="0.000154833"/>
+      <origin xyz="0.00114521577532 -8.29999999999e-06 -0.0385118541074" rpy="1.30899714732 0 1.57079632679"/>
+      <mass value="0.265337"/>
+      <inertia ixx="0.000327646" ixy="-7.94989e-08" ixz="8.24551e-09" iyy="0.000244632" iyz="2.0701e-05" izz="0.000155777"/>
     </inertial>
     <visual>
-      <origin xyz="0.0437089996186 0.0701000001907 0.587138" rpy="1.57079632679 0 1.57079632679"/>
+      <origin xyz="-0.109742724423 0.0701000001907 0.578444502203" rpy="1.30899714732 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_foot_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_foot_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0437089996186 0.0701000001907 0.587138" rpy="1.57079632679 0 1.57079632679"/>
+      <origin xyz="-0.109742724423 0.0701000001907 0.578444502203" rpy="1.30899714732 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_foot_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_foot_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
   <joint name="r_ankle_roll" type="revolute">
     <origin xyz="0 0 0" rpy="0 0 0"/>
-    <axis xyz="-1.0 0.0 -2.22044604925e-16"/>
+    <axis xyz="-1.00000015612 -6.0136540192e-16 1.19793949732e-07"/>
     <parent link="r_ankle_1"/>
     <child link="r_ankle_2"/>
     <limit effort="37.0" lower="-0.436332312999" upper="0.436332312999" velocity="7.64"/>
@@ -511,212 +518,37 @@
   </joint>
   <link name="r_foot">
     <inertial>
-      <origin xyz="0.0336001 0.0053719 -0.001147" rpy="-1.57079632679 0 -1.57079632679"/>
-      <mass value="0.382866"/>
-      <inertia ixx="0.00120946" ixy="3.74585e-07" ixz="-5.78759e-05" iyy="0.00141439" iyz="-7.80325e-06" izz="0.000273599"/>
+      <origin xyz="0.0397797426436 0.00455369999491 -0.00631181659" rpy="-1.83259550782 0 -1.57079632679"/>
+      <mass value="0.357881"/>
+      <inertia ixx="0.00109611" ixy="-2.9193e-07" ixz="-3.70109e-05" iyy="0.00125706" iyz="5.10952e-06" izz="0.000215359"/>
     </inertial>
     <visual>
-      <origin xyz="0.0472089996187 -0.0701000001907 -0.647438000286" rpy="-1.57079632679 0 -1.57079632679"/>
+      <origin xyz="-0.106242797474 -0.0701000001884 -0.638744845568" rpy="-1.83259550782 0 -1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_sole_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_sole_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="white">
         <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0472089996187 -0.0701000001907 -0.647438000286" rpy="-1.57079632679 0 -1.57079632679"/>
+      <origin xyz="-0.106242797474 -0.0701000001884 -0.638744845568" rpy="-1.83259550782 0 -1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_sole_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_sole_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
   <joint name="r_foot_ft_sensor" type="fixed">
-    <origin xyz="-0.0035 0 -0.0605" rpy="3.14159265359 0 0"/>
+    <origin xyz="-0.00349992806597 0 -0.0605003432802" rpy="3.14159265242 0 0"/>
     <parent link="r_ankle_2"/>
     <child link="r_foot"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="r_sole"/>
   <joint name="r_sole_fixed_joint" type="fixed">
-    <origin xyz="0.0035 0 0.004" rpy="-3.14159265359 0 0"/>
+    <origin xyz="0.0214502260596 0 0.00669127665248" rpy="-3.14159265359 0.261799181028 0"/>
     <parent link="r_foot"/>
     <child link="r_sole"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_0"/>
-  <joint name="r_sole_skin_0_fixed_joint" type="fixed">
-    <origin xyz="0.0604767 -0.0254106 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_0"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_1"/>
-  <joint name="r_sole_skin_1_fixed_joint" type="fixed">
-    <origin xyz="0.0788511 -0.0194404 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_1"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_2"/>
-  <joint name="r_sole_skin_2_fixed_joint" type="fixed">
-    <origin xyz="0.0932087 -0.032368 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_2"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_3"/>
-  <joint name="r_sole_skin_3_fixed_joint" type="fixed">
-    <origin xyz="0.1115831 -0.0263978 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_3"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_4"/>
-  <joint name="r_sole_skin_4_fixed_joint" type="fixed">
-    <origin xyz="0.1156 -0.0075 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_4"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_8"/>
-  <joint name="r_sole_skin_8_fixed_joint" type="fixed">
-    <origin xyz="0.1052593 0.0243254 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_8"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_9"/>
-  <joint name="r_sole_skin_9_fixed_joint" type="fixed">
-    <origin xyz="0.0909017 0.037253 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_9"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_10"/>
-  <joint name="r_sole_skin_10_fixed_joint" type="fixed">
-    <origin xyz="0.0725273 0.031283 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_10"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_11"/>
-  <joint name="r_sole_skin_11_fixed_joint" type="fixed">
-    <origin xyz="0.0685104 0.012385 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_11"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_12"/>
-  <joint name="r_sole_skin_12_fixed_joint" type="fixed">
-    <origin xyz="0.082868 -0.0005426 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_12"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_13"/>
-  <joint name="r_sole_skin_13_fixed_joint" type="fixed">
-    <origin xyz="0.1012424 0.0054276 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_13"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_14"/>
-  <joint name="r_sole_skin_14_fixed_joint" type="fixed">
-    <origin xyz="0.05013603 0.0064148 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_14"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_15"/>
-  <joint name="r_sole_skin_15_fixed_joint" type="fixed">
-    <origin xyz="0.04611917 -0.012483 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_15"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_17"/>
-  <joint name="r_sole_skin_17_fixed_joint" type="fixed">
-    <origin xyz="-0.0296855 0.033257 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_17"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_18"/>
-  <joint name="r_sole_skin_18_fixed_joint" type="fixed">
-    <origin xyz="-0.0480599 0.027287 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_18"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_19"/>
-  <joint name="r_sole_skin_19_fixed_joint" type="fixed">
-    <origin xyz="-0.0520767 0.0083892 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_19"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_20"/>
-  <joint name="r_sole_skin_20_fixed_joint" type="fixed">
-    <origin xyz="-0.0377192 -0.0045384 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_20"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_21"/>
-  <joint name="r_sole_skin_21_fixed_joint" type="fixed">
-    <origin xyz="0.0357785 0.0193424 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_21"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_22"/>
-  <joint name="r_sole_skin_22_fixed_joint" type="fixed">
-    <origin xyz="0.0277448 -0.0184532 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_22"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_24"/>
-  <joint name="r_sole_skin_24_fixed_joint" type="fixed">
-    <origin xyz="-0.0049872 -0.0114958 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_24"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_25"/>
-  <joint name="r_sole_skin_25_fixed_joint" type="fixed">
-    <origin xyz="0.0133872 -0.0055256 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_25"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_26"/>
-  <joint name="r_sole_skin_26_fixed_joint" type="fixed">
-    <origin xyz="0.0174041 0.0133722 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_26"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_27"/>
-  <joint name="r_sole_skin_27_fixed_joint" type="fixed">
-    <origin xyz="0.0030465 0.0262998 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_27"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_28"/>
-  <joint name="r_sole_skin_28_fixed_joint" type="fixed">
-    <origin xyz="-0.0153279 0.0203296 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_28"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="r_sole_skin_29"/>
-  <joint name="r_sole_skin_29_fixed_joint" type="fixed">
-    <origin xyz="-0.0193448 0.0014318 0.0075" rpy="0 0 0"/>
-    <parent link="r_foot"/>
-    <child link="r_sole_skin_29"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="l_hip_1">
@@ -728,7 +560,7 @@
     <visual>
       <origin xyz="0.0428515000001 -0.026 0.151913" rpy="1.57079632679 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_hip_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_hip_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dblue">
         <color rgba="0 0 0.8 1"/>
@@ -737,7 +569,7 @@
     <collision>
       <origin xyz="0.0428515000001 -0.026 0.151913" rpy="1.57079632679 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_hip_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_hip_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -758,7 +590,7 @@
     <visual>
       <origin xyz="0.0428514998093 -0.0701 0.151913" rpy="1.57079632679 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_hip_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_hip_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dgreen">
         <color rgba="0.1 0.8 0.1 1"/>
@@ -767,7 +599,7 @@
     <collision>
       <origin xyz="0.0428514998093 -0.0701 0.151913" rpy="1.57079632679 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_hip_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_hip_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -788,7 +620,7 @@
     <visual>
       <origin xyz="0.0437089998093 0.0701 -0.226213" rpy="-1.57079632679 0 -1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_upper_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_upper_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -797,7 +629,7 @@
     <collision>
       <origin xyz="0.0437089998093 0.0701 -0.226213" rpy="-1.57079632679 0 -1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_upper_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_upper_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -816,7 +648,7 @@
     <visual>
       <origin xyz="0.0437089998093 -0.0701 0.240813" rpy="1.57079632679 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -825,7 +657,7 @@
     <collision>
       <origin xyz="0.0437089998093 -0.0701 0.240813" rpy="1.57079632679 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -860,7 +692,7 @@
     <visual>
       <origin xyz="0.0437089998093 -0.0701000001908 0.386638" rpy="1.57079632679 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_shank_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_shank_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="black">
         <color rgba="0 0 0 1"/>
@@ -869,7 +701,7 @@
     <collision>
       <origin xyz="0.0437089998093 -0.0701000001908 0.386638" rpy="1.57079632679 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_shank_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_shank_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -883,59 +715,59 @@
   </joint>
   <link name="l_ankle_1">
     <inertial>
-      <origin xyz="0.015153 0.0009021 4.2e-05" rpy="1.57079632679 0 1.57079632679"/>
+      <origin xyz="0.015152971856 0.0009021 4.23165565592e-05" rpy="1.30899714732 0 1.57079632679"/>
       <mass value="0.6798"/>
-      <inertia ixx="0.000404474297345" ixy="-1.13226038781e-06" ixz="3.04665105776e-05" iyy="0.00044788735407" iyz="2.57265834141e-06" izz="0.000307603045377"/>
+      <inertia ixx="0.000404476185531" ixy="-8.97867775832e-06" ixz="2.91348460473e-05" iyy="0.000437201502871" iyz="3.73020626807e-05" izz="0.000318287954629"/>
     </inertial>
     <visual>
-      <origin xyz="0.0437089998093 -0.0701000001908 0.587138" rpy="1.57079632679 0 1.57079632679"/>
+      <origin xyz="-0.109742724245 -0.0701000001908 0.57844450225" rpy="1.30899714732 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_ankle_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_ankle_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="red">
         <color rgba="1 0 0 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0437089998093 -0.0701000001908 0.587138" rpy="1.57079632679 0 1.57079632679"/>
+      <origin xyz="-0.109742724245 -0.0701000001908 0.57844450225" rpy="1.30899714732 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_ankle_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_ankle_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
   <joint name="l_ankle_pitch" type="revolute">
-    <origin xyz="0 0 -0.2005" rpy="0 0 0"/>
-    <axis xyz="2.22044604925e-16 1.0 0.0"/>
+    <origin xyz="0 0 -0.2005" rpy="0 0.26179917948 0"/>
+    <axis xyz="-6.66133814775e-16 1.0 4.4408920985e-16"/>
     <parent link="l_lower_leg"/>
     <child link="l_ankle_1"/>
-    <limit effort="37.0" lower="-0.610865238198" upper="0.610865238198" velocity="7.64"/>
+    <limit effort="37.0" lower="-0.872664625997" upper="0.349065850399" velocity="7.64"/>
     <dynamics damping="0.223" friction="0.0"/>
   </joint>
   <link name="l_ankle_2">
     <inertial>
-      <origin xyz="0.0007673 -8.2e-06 -0.038202" rpy="1.57079632679 0 1.57079632679"/>
-      <mass value="0.267485"/>
-      <inertia ixx="0.000335682" ixy="-7.53335e-08" ixz="2.93681e-08" iyy="0.00025387" iyz="-4.26218e-07" izz="0.000154833"/>
+      <origin xyz="0.00114521577532 -8.29999999997e-06 -0.0385118541074" rpy="1.30899714732 0 1.57079632679"/>
+      <mass value="0.265337"/>
+      <inertia ixx="0.000327646" ixy="-7.94989e-08" ixz="8.24551e-09" iyy="0.000244632" iyz="2.0701e-05" izz="0.000155777"/>
     </inertial>
     <visual>
-      <origin xyz="0.0437089996186 -0.0701000001908 0.587138" rpy="1.57079632679 0 1.57079632679"/>
+      <origin xyz="-0.109742724423 -0.0701000001908 0.578444502203" rpy="1.30899714732 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_foot_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_foot_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="blue">
         <color rgba="0 0 1 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0437089996186 -0.0701000001908 0.587138" rpy="1.57079632679 0 1.57079632679"/>
+      <origin xyz="-0.109742724423 -0.0701000001908 0.578444502203" rpy="1.30899714732 0 1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_foot_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_foot_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
   <joint name="l_ankle_roll" type="revolute">
     <origin xyz="0 0 0" rpy="0 0 0"/>
-    <axis xyz="1.0 0.0 2.22044604925e-16"/>
+    <axis xyz="1.00000015612 6.0136540192e-16 -1.19793949732e-07"/>
     <parent link="l_ankle_1"/>
     <child link="l_ankle_2"/>
     <limit effort="37.0" lower="-0.436332312999" upper="0.436332312999" velocity="7.64"/>
@@ -943,238 +775,63 @@
   </joint>
   <link name="l_foot">
     <inertial>
-      <origin xyz="0.0336668 -0.0053736 -0.001164" rpy="-1.57079632679 0 -1.57079632679"/>
-      <mass value="0.382968"/>
-      <inertia ixx="0.00121242" ixy="-3.69533e-07" ixz="5.79273e-05" iyy="0.00141712" iyz="-7.64972e-06" izz="0.000273846"/>
+      <origin xyz="0.0397509320401 -0.00455370006547 -0.00632583757567" rpy="-1.83259551889 0 -1.57079632679"/>
+      <mass value="0.357881"/>
+      <inertia ixx="0.00109523" ixy="2.85562e-07" ixz="3.69444e-05" iyy="0.00125599" iyz="5.08349e-06" izz="0.000215553"/>
     </inertial>
     <visual>
-      <origin xyz="0.0472089996186 0.0701000001908 -0.647438000286" rpy="-1.57079632679 0 -1.57079632679"/>
+      <origin xyz="-0.106242804521 0.07010000017 -0.63874484439" rpy="-1.83259551889 0 -1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_sole_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_sole_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="yellow">
         <color rgba="1 1 0 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0472089996186 0.0701000001908 -0.647438000286" rpy="-1.57079632679 0 -1.57079632679"/>
+      <origin xyz="-0.106242804521 0.07010000017 -0.63874484439" rpy="-1.83259551889 0 -1.57079632679"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_sole_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_sole_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
   <joint name="l_foot_ft_sensor" type="fixed">
-    <origin xyz="-0.0035 0 -0.0605" rpy="3.14159265359 0 0"/>
+    <origin xyz="-0.00349992806597 0 -0.0605003432802" rpy="-3.14159264324 0 0"/>
     <parent link="l_ankle_2"/>
     <child link="l_foot"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="l_sole"/>
   <joint name="l_sole_fixed_joint" type="fixed">
-    <origin xyz="0.0035 0 0.004" rpy="-3.14159265359 0 0"/>
+    <origin xyz="0.0214502260596 0 0.00669127665248" rpy="-3.14159265359 0.261799192098 0"/>
     <parent link="l_foot"/>
     <child link="l_sole"/>
     <dynamics damping="0.1"/>
   </joint>
-  <link name="l_sole_skin_0"/>
-  <joint name="l_sole_skin_0_fixed_joint" type="fixed">
-    <origin xyz="0.0932087 0.032368 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_0"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_1"/>
-  <joint name="l_sole_skin_1_fixed_joint" type="fixed">
-    <origin xyz="0.0788511 0.0194399 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_1"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_2"/>
-  <joint name="l_sole_skin_2_fixed_joint" type="fixed">
-    <origin xyz="0.0604767 0.0254106 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_2"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_3"/>
-  <joint name="l_sole_skin_3_fixed_joint" type="fixed">
-    <origin xyz="0.04611917 0.0124825 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_3"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_4"/>
-  <joint name="l_sole_skin_4_fixed_joint" type="fixed">
-    <origin xyz="0.05013603 -0.0064148 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_4"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_8"/>
-  <joint name="l_sole_skin_8_fixed_joint" type="fixed">
-    <origin xyz="0.0725273 -0.031283 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_8"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_9"/>
-  <joint name="l_sole_skin_9_fixed_joint" type="fixed">
-    <origin xyz="0.0909017 -0.037254 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_9"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_10"/>
-  <joint name="l_sole_skin_10_fixed_joint" type="fixed">
-    <origin xyz="0.1052593 -0.0243254 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_10"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_11"/>
-  <joint name="l_sole_skin_11_fixed_joint" type="fixed">
-    <origin xyz="0.1012424 -0.0054281 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_11"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_12"/>
-  <joint name="l_sole_skin_12_fixed_joint" type="fixed">
-    <origin xyz="0.082868 0.0005426 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_12"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_13"/>
-  <joint name="l_sole_skin_13_fixed_joint" type="fixed">
-    <origin xyz="0.0685104 -0.0123855 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_13"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_14"/>
-  <joint name="l_sole_skin_14_fixed_joint" type="fixed">
-    <origin xyz="0.1156 0.0074995 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_14"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_15"/>
-  <joint name="l_sole_skin_15_fixed_joint" type="fixed">
-    <origin xyz="0.1115831 0.0263973 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_15"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_17"/>
-  <joint name="l_sole_skin_17_fixed_joint" type="fixed">
-    <origin xyz="-0.0377192 0.0045384 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_17"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_18"/>
-  <joint name="l_sole_skin_18_fixed_joint" type="fixed">
-    <origin xyz="-0.0520767 -0.0083897 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_18"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_19"/>
-  <joint name="l_sole_skin_19_fixed_joint" type="fixed">
-    <origin xyz="-0.0480599 -0.027287 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_19"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_20"/>
-  <joint name="l_sole_skin_20_fixed_joint" type="fixed">
-    <origin xyz="-0.0296855 -0.033258 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_20"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_21"/>
-  <joint name="l_sole_skin_21_fixed_joint" type="fixed">
-    <origin xyz="0.0277448 0.0184532 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_21"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_22"/>
-  <joint name="l_sole_skin_22_fixed_joint" type="fixed">
-    <origin xyz="0.0357785 -0.0193429 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_22"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_24"/>
-  <joint name="l_sole_skin_24_fixed_joint" type="fixed">
-    <origin xyz="0.0030465 -0.0263003 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_24"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_25"/>
-  <joint name="l_sole_skin_25_fixed_joint" type="fixed">
-    <origin xyz="0.0174041 -0.0133722 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_25"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_26"/>
-  <joint name="l_sole_skin_26_fixed_joint" type="fixed">
-    <origin xyz="0.0133872 0.0055251 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_26"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_27"/>
-  <joint name="l_sole_skin_27_fixed_joint" type="fixed">
-    <origin xyz="-0.0049872 0.0114958 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_27"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_28"/>
-  <joint name="l_sole_skin_28_fixed_joint" type="fixed">
-    <origin xyz="-0.0193448 -0.0014323 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_28"/>
-    <dynamics damping="0.1"/>
-  </joint>
-  <link name="l_sole_skin_29"/>
-  <joint name="l_sole_skin_29_fixed_joint" type="fixed">
-    <origin xyz="-0.0153279 -0.0203296 0.0075" rpy="0 0 0"/>
-    <parent link="l_foot"/>
-    <child link="l_sole_skin_29"/>
-    <dynamics damping="0.1"/>
-  </joint>
   <link name="torso_1">
     <inertial>
-      <origin xyz="0.0270921359 0.02914798 -0.0004398" rpy="0 0 0"/>
+      <origin xyz="0.0269806359 0.02914798 -0.0004398" rpy="0 0 0"/>
       <mass value="0.67144"/>
       <inertia ixx="0.00040911" ixy="-1.04522e-06" ixz="-1.02516e-06" iyy="0.000384141" iyz="6.50708e-06" izz="0.000299445"/>
     </inertial>
     <visual>
-      <origin xyz="0.0270462998093 0.032 0.0364" rpy="0 0 0"/>
+      <origin xyz="0.0269347998093 0.032 0.0364" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_lap_belt_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_lap_belt_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="pink">
         <color rgba="1 0 1 1"/>
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0270462998093 0.032 0.0364" rpy="0 0 0"/>
+      <origin xyz="0.0269347998093 0.032 0.0364" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_lap_belt_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_lap_belt_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
   <joint name="torso_pitch" type="revolute">
-    <origin xyz="0 0.0270463 0" rpy="1.57079632679 0 -1.57079632679"/>
+    <origin xyz="0 0.0269348 0" rpy="1.57079632679 0 -1.57079632679"/>
     <axis xyz="1.0 0.0 0.0"/>
     <parent link="root_link"/>
     <child link="torso_1"/>
@@ -1190,7 +847,7 @@
     <visual>
       <origin xyz="0 0.1433 0.0386531" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_lap_belt_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_lap_belt_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="cyan">
         <color rgba="0 1 1 1"/>
@@ -1199,12 +856,12 @@
     <collision>
       <origin xyz="0 0.1433 0.0386531" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_lap_belt_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_lap_belt_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
   <joint name="torso_roll" type="revolute">
-    <origin xyz="0.0270462998093 0.032 -0.0573446" rpy="0 0 0"/>
+    <origin xyz="0.0269347998093 0.032 -0.0573446" rpy="0 0 0"/>
     <axis xyz="0.0 0.0 -1.0"/>
     <parent link="torso_1"/>
     <child link="torso_2"/>
@@ -1220,7 +877,7 @@
     <visual>
       <origin xyz="0 0.0928 -0.024189" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_chest_bb_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_chest_bb_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -1229,7 +886,7 @@
     <collision>
       <origin xyz="0 0.0928 -0.024189" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_chest_bb_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_chest_bb_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -1250,7 +907,7 @@
     <visual>
       <origin xyz="0.0990079253076 0 -0.0265292487558" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_shoulder_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_shoulder_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="white">
         <color rgba="1 1 1 1"/>
@@ -1259,7 +916,7 @@
     <collision>
       <origin xyz="0.0990079253076 0 -0.0265292487558" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_shoulder_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_shoulder_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -1280,7 +937,7 @@
     <visual>
       <origin xyz="0.106587808568 2.31914715418e-07 -0.0407392121175" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_shoulder_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_shoulder_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dblue">
         <color rgba="0 0 0.8 1"/>
@@ -1289,7 +946,7 @@
     <collision>
       <origin xyz="0.106587808568 2.31914715418e-07 -0.0407392121175" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_shoulder_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_shoulder_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -1310,7 +967,7 @@
     <visual>
       <origin xyz="0.131933879164 0 -0.0353515667647" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_upper_arm_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_upper_arm_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dgreen">
         <color rgba="0.1 0.8 0.1 1"/>
@@ -1319,7 +976,7 @@
     <collision>
       <origin xyz="0.131933879164 0 -0.0353515667647" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_upper_arm_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_upper_arm_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -1340,7 +997,7 @@
     <visual>
       <origin xyz="-0.015 0 -0.1933" rpy="0 1.30899700697 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_elbow_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_elbow_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -1349,7 +1006,7 @@
     <collision>
       <origin xyz="-0.015 0 -0.1933" rpy="0 1.30899700697 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_elbow_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_elbow_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -1368,7 +1025,7 @@
     <visual>
       <origin xyz="0.259390463317 0.0224999 -0.0850325886962" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_elbow_prosup_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_elbow_prosup_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -1377,7 +1034,7 @@
     <collision>
       <origin xyz="0.259390463317 0.0224999 -0.0850325886962" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_elbow_prosup_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_elbow_prosup_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -1398,7 +1055,7 @@
     <visual>
       <origin xyz="0.296886967375 0 -0.0795506015227" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_forearm_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_forearm_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="black">
         <color rgba="0 0 0 1"/>
@@ -1407,7 +1064,7 @@
     <collision>
       <origin xyz="0.296886967375 0 -0.0795506015227" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_forearm_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_forearm_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -1603,7 +1260,7 @@
     <visual>
       <origin xyz="0.400392176248 -7.00000000009e-06 -0.104748304516" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_wrist_pitch_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_wrist_pitch_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="red">
         <color rgba="1 0 0 1"/>
@@ -1612,7 +1269,7 @@
     <collision>
       <origin xyz="0.400392176248 -7.00000000009e-06 -0.104748304516" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_wrist_pitch_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_wrist_pitch_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -1633,7 +1290,7 @@
     <visual>
       <origin xyz="0.399758069749 0.0194929 -0.107114822834" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_hand_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_hand_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="blue">
         <color rgba="0 0 1 1"/>
@@ -1642,7 +1299,7 @@
     <collision>
       <origin xyz="0.399758069749 0.0194929 -0.107114822834" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_hand_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_hand_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -1670,7 +1327,7 @@
     <visual>
       <origin xyz="-0.120257482 0 -0.032223" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_shoulder_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_shoulder_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="yellow">
         <color rgba="1 1 0 1"/>
@@ -1679,7 +1336,7 @@
     <collision>
       <origin xyz="-0.120257482 0 -0.032223" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_shoulder_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_shoulder_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -1700,7 +1357,7 @@
     <visual>
       <origin xyz="-0.106586691581 1.10800934344e-07 -0.040743380771" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_shoulder_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_shoulder_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="pink">
         <color rgba="1 0 1 1"/>
@@ -1709,7 +1366,7 @@
     <collision>
       <origin xyz="-0.106586691581 1.10800934344e-07 -0.040743380771" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_shoulder_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_shoulder_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -1730,7 +1387,7 @@
     <visual>
       <origin xyz="-0.131901037685 0 -0.0353427669194" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_upper_arm_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_upper_arm_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="cyan">
         <color rgba="0 1 1 1"/>
@@ -1739,7 +1396,7 @@
     <collision>
       <origin xyz="-0.131901037685 0 -0.0353427669194" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_upper_arm_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_upper_arm_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -1760,7 +1417,7 @@
     <visual>
       <origin xyz="-0.015 0 -0.1933" rpy="0 -1.30899700697 -3.14159265359"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_elbow_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_elbow_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -1769,7 +1426,7 @@
     <collision>
       <origin xyz="-0.015 0 -0.1933" rpy="0 -1.30899700697 -3.14159265359"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_elbow_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_elbow_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -1788,7 +1445,7 @@
     <visual>
       <origin xyz="-0.259390463317 0.0339999 -0.0850325886962" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_elbow_prosup_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_elbow_prosup_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="white">
         <color rgba="1 1 1 1"/>
@@ -1797,7 +1454,7 @@
     <collision>
       <origin xyz="-0.259390463317 0.0339999 -0.0850325886962" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_elbow_prosup_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_elbow_prosup_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -1818,7 +1475,7 @@
     <visual>
       <origin xyz="-0.296886967375 0 -0.0795506015227" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_forearm_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_forearm_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dblue">
         <color rgba="0 0 0.8 1"/>
@@ -1827,7 +1484,7 @@
     <collision>
       <origin xyz="-0.296886967375 0 -0.0795506015227" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_forearm_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_forearm_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -2023,7 +1680,7 @@
     <visual>
       <origin xyz="-0.400314530555 -7.00000000009e-06 -0.105038082269" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_wrist_pitch_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_wrist_pitch_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="dgreen">
         <color rgba="0.1 0.8 0.1 1"/>
@@ -2032,7 +1689,7 @@
     <collision>
       <origin xyz="-0.400314530555 -7.00000000009e-06 -0.105038082269" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_wrist_pitch_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_wrist_pitch_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -2053,7 +1710,7 @@
     <visual>
       <origin xyz="-0.399680424055 0.0194929 -0.107404600587" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_hand_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_hand_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -2062,7 +1719,7 @@
     <collision>
       <origin xyz="-0.399680424055 0.0194929 -0.107404600587" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_hand_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_hand_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -2090,7 +1747,7 @@
     <visual>
       <origin xyz="0.0142999998093 -0.079997 -0.0295008" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_neck_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_neck_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -2099,7 +1756,7 @@
     <collision>
       <origin xyz="0.0142999998093 -0.079997 -0.0295008" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_neck_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_neck_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -2120,7 +1777,7 @@
     <visual>
       <origin xyz="0 -0.089497 -0.05030077" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_neck_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_neck_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="black">
         <color rgba="0 0 0 1"/>
@@ -2129,7 +1786,7 @@
     <collision>
       <origin xyz="0 -0.089497 -0.05030077" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_neck_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_neck_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -2150,7 +1807,7 @@
     <visual>
       <origin xyz="0 -0.067153 -0.0295008" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_head_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_head_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="red">
         <color rgba="1 0 0 1"/>
@@ -2159,7 +1816,7 @@
     <collision>
       <origin xyz="0 -0.067153 -0.0295008" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_head_prt-binary.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_head_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -3051,25 +2708,25 @@
     <sensor name="r_foot_mtb_acc_11b12" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
-      <pose>0.1034794 -0.0008122 -0.001215 1.46487522971e-16 2.22044521133e-16 -1.57079604303</pose>
+      <pose>0.111543529757 -0.00081220000825 -0.0228480961814 -0.261799181028 7.34434721372e-08 -1.5707960527</pose>
       <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_foot_mtb_acc_11b12" type="accelerometer">
     <parent link="r_foot"/>
-    <origin rpy="1.46487522971e-16 2.22044521133e-16 -1.57079604303" xyz="0.1034794 -0.0008122 -0.001215"/>
+    <origin rpy="-0.261799181028 7.34434721372e-08 -1.5707960527" xyz="0.111543529757 -0.00081220000825 -0.0228480961814"/>
   </sensor>
   <gazebo reference="r_foot">
     <sensor name="r_foot_mtb_acc_11b13" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
-      <pose>0.0784794 -0.0118122 -0.001215 2.22044604925e-16 2.22044604925e-16 -1.57079632679</pose>
+      <pose>0.087395382748 -0.0118122000083 -0.0163776250973 -0.261799181028 1.55431223448e-15 -1.57079632679</pose>
       <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_foot_mtb_acc_11b13" type="accelerometer">
     <parent link="r_foot"/>
-    <origin rpy="2.22044604925e-16 2.22044604925e-16 -1.57079632679" xyz="0.0784794 -0.0118122 -0.001215"/>
+    <origin rpy="-0.261799181028 1.55431223448e-15 -1.57079632679" xyz="0.087395382748 -0.0118122000083 -0.0163776250973"/>
   </sensor>
   <gazebo reference="l_upper_leg">
     <sensor name="l_upper_leg_ems_acc_eb6" type="imu">
@@ -3276,25 +2933,39 @@
     <sensor name="l_foot_mtb_acc_10b12" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
-      <pose>0.1055274 0.0008122 -0.001215 0.0 -0.0 1.57079632679</pose>
+      <pose>0.11352174596 0.000812199758026 -0.0233781571811 0.261799192098 -2.70894418009e-14 1.57079632679</pose>
       <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_foot_mtb_acc_10b12" type="accelerometer">
     <parent link="l_foot"/>
-    <origin rpy="0.0 -0.0 1.57079632679" xyz="0.1055274 0.0008122 -0.001215"/>
+    <origin rpy="0.261799192098 -2.70894418009e-14 1.57079632679" xyz="0.11352174596 0.000812199758026 -0.0233781571811"/>
   </sensor>
   <gazebo reference="l_foot">
     <sensor name="l_foot_mtb_acc_10b13" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
-      <pose>0.0805274 0.0118122 -0.001215 0.0 -0.0 1.57079632679</pose>
+      <pose>0.0893735989544 0.011812199825 -0.0169076861979 0.261799192098 -2.70894418009e-14 1.57079632679</pose>
       <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_foot_mtb_acc_10b13" type="accelerometer">
     <parent link="l_foot"/>
-    <origin rpy="0.0 -0.0 1.57079632679" xyz="0.0805274 0.0118122 -0.001215"/>
+    <origin rpy="0.261799192098 -2.70894418009e-14 1.57079632679" xyz="0.0893735989544 0.011812199825 -0.0169076861979"/>
+  </sensor>
+  <gazebo reference="root_link">
+    <sensor name="root_link_imu_acc" type="imu">
+      <always_on>1</always_on>
+      <update_rate>400</update_rate>
+      <pose>0.085155 -0.011 -0.112309 -2.09439521059 -3.88578058619e-16 -1.57079632679</pose>
+      <plugin name="root_link_xsens_imu_plugin" filename="libgazebo_yarp_imu.so">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_xsens_inertial.ini</yarpConfigurationFile>
+</plugin>
+    </sensor>
+  </gazebo>
+  <sensor name="root_link_imu_acc" type="accelerometer">
+    <parent link="root_link"/>
+    <origin rpy="-2.09439521059 -3.88578058619e-16 -1.57079632679" xyz="0.085155 -0.011 -0.112309"/>
   </sensor>
   <gazebo>
     <pose>0.0 0.0 0.63 0.0 0.0 3.14</pose>
