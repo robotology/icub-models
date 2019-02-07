@@ -2281,6 +2281,9 @@
 <plugin name="controlboard_left_leg" filename="libgazebo_yarp_controlboard.so">
   <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_leg.ini</yarpConfigurationFile>
 </plugin>
+<plugin name='controlboard_wholebody_ros' filename='libgazebo_yarp_controlboard.so'>
+  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_wholebody_ros.ini</yarpConfigurationFile>
+</plugin>
 <plugin name="apply_external_wrench" filename="libgazebo_yarp_externalwrench.so">
   <robotNamefromConfigFile>model://iCub/conf/gazebo_icub_robotname.ini</robotNamefromConfigFile>
 </plugin>
