@@ -31,9 +31,18 @@ yarprobotstatepublisher --name-prefix icub --tf-prefix /icub/ --model model.urdf
   roslaunch iCub iCubRviz.launch
 ```
 
-The main parameter a user has to ensure for correct visualization is the `TF Prefix`. The default value set inside the `iCubRviz.rviz` configuration value is `icub`. The value of the parameter should match the `--tf-prefix` of `yarprobotstatepublisher` for rviz to get the correct transforms to visualize the model.
+The following two parameters are important to ensure correct visualization:
 
-https://user-images.githubusercontent.com/6505998/62283354-ab409d80-b451-11e9-9811-bd9158548e3e.png
+- Under `Global Options`, `Fixed Frame` field is the frame name with respect to
+  which all the other frames transforms are give. The default value set inside the `iCubRviz.rviz` configuration value is `icub/root_link`.
+
+  ![Selection_001](https://user-images.githubusercontent.com/6505998/62306298-e064e400-b481-11e9-9b5e-c665b5aaa5ff.png)
+
+
+- The next parameter is under `Robot Model`, `TF Prefix`. The default value set inside the `iCubRviz.rviz` configuration value is `icub`.
+  The value of the parameter should match the `--tf-prefix` of `yarprobotstatepublisher` for rviz to get the correct transforms to visualize the model.
+
+  ![Screenshot from 2019-08-01 11-37-26](https://user-images.githubusercontent.com/6505998/62283354-ab409d80-b451-11e9-9811-bd9158548e3e.png)
 
 The contents of this directory are tested on:
 
