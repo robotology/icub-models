@@ -20,6 +20,9 @@ endmacro()
 # Copy the iCub folder in the build tree
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iCub DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
+# Copy the ros folder
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/ros DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/iCub)
+
 # Add the model.config just for a limited number of models that are known
 # to work in Gazebo, unless the ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS option
 # is enabled
