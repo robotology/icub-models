@@ -1857,21 +1857,33 @@
   <child link="r_foot_dh_frame"/>
 </joint>
   <gazebo reference="r_arm_ft_sensor">
+  <preserveFixedJoint>true</preserveFixedJoint>
+  <!-- For compatibility with SDFormat < 4.4 -->
   <disableFixedJointLumping>true</disableFixedJointLumping>
 </gazebo>
   <gazebo reference="l_arm_ft_sensor">
+  <preserveFixedJoint>true</preserveFixedJoint>
+  <!-- For compatibility with SDFormat < 4.4 -->
   <disableFixedJointLumping>true</disableFixedJointLumping>
 </gazebo>
   <gazebo reference="r_leg_ft_sensor">
+  <preserveFixedJoint>true</preserveFixedJoint>
+  <!-- For compatibility with SDFormat < 4.4 -->
   <disableFixedJointLumping>true</disableFixedJointLumping>
 </gazebo>
   <gazebo reference="l_leg_ft_sensor">
+  <preserveFixedJoint>true</preserveFixedJoint>
+  <!-- For compatibility with SDFormat < 4.4 -->
   <disableFixedJointLumping>true</disableFixedJointLumping>
 </gazebo>
   <gazebo reference="r_foot_ft_sensor">
+  <preserveFixedJoint>true</preserveFixedJoint>
+  <!-- For compatibility with SDFormat < 4.4 -->
   <disableFixedJointLumping>true</disableFixedJointLumping>
 </gazebo>
   <gazebo reference="l_foot_ft_sensor">
+  <preserveFixedJoint>true</preserveFixedJoint>
+  <!-- For compatibility with SDFormat < 4.4 -->
   <disableFixedJointLumping>true</disableFixedJointLumping>
 </gazebo>
   <gazebo reference="l_foot">
