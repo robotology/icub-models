@@ -39,13 +39,27 @@ SUBDIRLIST(ROBOTS_NAMES ${CMAKE_CURRENT_BINARY_DIR}/iCub/robots)
 foreach (ROBOT_DIRNAME ${ROBOTS_NAMES})
   set(ROBOT_NAME ${ROBOT_DIRNAME})
   set(ROBOT_MODEL_CONFIG_FILE "${CMAKE_CURRENT_BINARY_DIR}/iCub/robots/${ROBOT_NAME}/model.config")
+  set(ROBOT_FIXED_MODEL_FOLDER "${CMAKE_CURRENT_BINARY_DIR}/iCub/robots/${ROBOT_NAME}_fixed")
+  set(ROBOT_FIXED_MODEL_CONFIG_FILE "${ROBOT_FIXED_MODEL_FOLDER}/model.config")
+  set(ROBOT_FIXED_MODEL_SDF_FILE "${ROBOT_FIXED_MODEL_FOLDER}/${ROBOT_NAME}_fixed.sdf")
+
   if(ROBOT_NAME IN_LIST GAZEBO_SUPPORTED_MODELS OR ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS)
     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/model.config.in
                    ${ROBOT_MODEL_CONFIG_FILE}
                    @ONLY)
+
+    file(MAKE_DIRECTORY ${ROBOT_FIXED_MODEL_FOLDER})
+
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/fixed_model.config.in
+                   ${ROBOT_FIXED_MODEL_CONFIG_FILE}
+                   @ONLY)
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/fixed_model.sdf.in
+                   ${ROBOT_FIXED_MODEL_SDF_FILE}
+                   @ONLY)
   else()
     # Cleanup is before ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS was set to ON
     file(REMOVE ${ROBOT_MODEL_CONFIG_FILE})
+    file(REMOVE_RECURSE ${ROBOT_FIXED_MODEL_FOLDER})
   endif()
 
 endforeach()

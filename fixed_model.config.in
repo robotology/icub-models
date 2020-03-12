@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+    <name>@ROBOT_NAME@_fixed (no hands)</name>
+    <version>1.0</version>
+    <sdf version='1.5'>@ROBOT_NAME@_fixed.sdf</sdf>
+    <author>
+        <name>Stefano Dafarra</name>
+        <email>stefano.dafarra@iit.it</email>
+    </author>
+    <description>Model for the iCub humanoid robot, fixed on the air. For more information check icub.org</description>
+</model>

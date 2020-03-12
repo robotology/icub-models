@@ -1,0 +1,14 @@
+<?xml version='1.0'?>
+<sdf version='1.5'>
+  <model name="iCub_fixed_no_hands">
+    <include>
+      <uri>model://@ROBOT_NAME@</uri>
+      <pose>0.0 0 1.0 0 0 3.14</pose>
+    </include>
+
+    <joint name="fixed" type="fixed">
+      <parent>world</parent>
+      <child>iCub::base_link</child>
+    </joint>
+  </model>
+</sdf>
