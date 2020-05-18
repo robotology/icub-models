@@ -2,6 +2,8 @@
 
 Repository containing models [automatically](https://github.com/robotology-playground/icub-model-generator/blob/master/.travis.yml#L76) generated from the CAD file by [icub-model-generator](https://github.com/robotology-playground/icub-model-generator).
 
+The model contained in this repo are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0) ](https://creativecommons.org/licenses/by-sa/4.0/).
+
 ## Usage
 
 The model in the repo can be used either directly from the repo, or by installing them.
