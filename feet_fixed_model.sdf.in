@@ -1,5 +1,5 @@
 <?xml version='1.0'?>
-<sdf version='1.5'>
+<sdf version='@ICUB_MODELS_SDF_VERSION@'>
   <model name="iCub_feet_fixed">
     <include>
       <uri>model://@ROBOT_NAME@</uri>
