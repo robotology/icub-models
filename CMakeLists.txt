@@ -28,7 +28,7 @@ file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/ros DESTINATION ${CMAKE_CURRENT_BINARY_DIR
 # is enabled
 option(ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS OFF)
 
-# Workaround for https://github.com/robotology/icub-models/issues/39 and 
+# Workaround for https://github.com/robotology/icub-models/issues/39 and
 # https://github.com/osrf/gazebo/issues/2728
 set(ICUB_MODELS_SDF_VERSION "1.5")
 find_package(GAZEBO QUIET)
@@ -97,3 +97,7 @@ endforeach()
 
 # Install the whole iCub directory
 install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/iCub DESTINATION share)
+
+# Install the whole iCub_manual directory within share/iCub
+# Please do not remove the trailing '/' in 'iCub_manual/'
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/ DESTINATION share/iCub)
