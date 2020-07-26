@@ -2745,10 +2745,6 @@
        <yarpConfigurationFile>model://iCub/conf/gazebo_icub_inertial.ini</yarpConfigurationFile>
      </plugin>
   </sensor>
-  <sensor name="head_imu_acc_1x1" type="accelerometer">
-    <parent link="head"/>
-    <origin rpy="-1.57079632679 1.57079632679 0.0" xyz="0.00950000019074 0.133444 0.0093"/>
-  </sensor>
 </gazebo>
 <gazebo reference="r_hip_pitch">
    <implicitSpringDamper>1</implicitSpringDamper>
