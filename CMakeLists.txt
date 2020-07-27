@@ -20,6 +20,12 @@ endmacro()
 # Copy the iCub folder in the build tree
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iCub DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
+# Copy the iCub_manual folder in the build tree
+SUBDIRLIST(subdirs ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual)
+foreach(subdir ${subdirs})
+  file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/${subdir}/ DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/iCub/${subdir})
+endforeach()
+
 # Copy the ros folder
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/ros DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/iCub)
 
@@ -44,7 +50,7 @@ list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5")
 list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5_plus")
 
 SUBDIRLIST(ROBOTS_NAMES ${CMAKE_CURRENT_BINARY_DIR}/iCub/robots)
-foreach (ROBOT_DIRNAME ${ROBOTS_NAMES})
+foreach(ROBOT_DIRNAME ${ROBOTS_NAMES})
   set(ROBOT_NAME ${ROBOT_DIRNAME})
   set(ROBOT_MODEL_CONFIG_FILE "${CMAKE_CURRENT_BINARY_DIR}/iCub/robots/${ROBOT_NAME}/model.config")
 
@@ -92,12 +98,21 @@ foreach (ROBOT_DIRNAME ${ROBOTS_NAMES})
     file(REMOVE_RECURSE ${ROBOT_FIXED_MODEL_FOLDER})
     file(REMOVE_RECURSE ${ROBOT_FEET_FIXED_MODEL_FOLDER})
   endif()
+endforeach()
 
+# Deal with manually generated models
+set(GAZEBO_SUPPORTED_MODELS "")
+list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5_visuomanip")
+
+SUBDIRLIST(ROBOTS_NAMES ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/robots)
+foreach(ROBOT_NAME ${ROBOTS_NAMES})
+  if(ROBOT_NAME IN_LIST GAZEBO_SUPPORTED_MODELS)
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/robots/${ROBOT_NAME}/model.config
+                   ${CMAKE_CURRENT_BINARY_DIR}/iCub/robots/${ROBOT_NAME}/model.config
+                   @ONLY)
+  endif()
 endforeach()
 
 # Install the whole iCub directory
 install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/iCub DESTINATION share)
 
-# Install the whole iCub_manual directory within share/iCub
-# Please do not remove the trailing '/' in 'iCub_manual/'
-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/ DESTINATION share/iCub)
