@@ -842,7 +842,7 @@
         <limit effort="80" velocity="100" lower="-1.02974" upper="1.02974" />
     </joint>
     <joint name="chest_skin_frame_fixed_joint" type="fixed">
-        <origin xyz="0.00231 0.1933 -1.18362e-17" rpy="-1.8747e-33 5.77686e-66 6.16298e-33" />
+        <origin xyz="-0.0055 -0.032 3.36778e-19" rpy="1.5708 -1.22465e-16 -3.14159" />
         <axis xyz="0 0 0" />
         <parent link="chest" />
         <child link="chest_skin_frame" />
