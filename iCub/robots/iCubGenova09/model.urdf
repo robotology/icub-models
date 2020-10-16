@@ -1,0 +1,442 @@
+<robot name="iCub">
+  <link name="root_link">
+    <inertial>
+      <origin xyz="0.00317113 -0.00014949699999999998 0.025427000000000033" rpy="0 0 -1.5707963267948966"/>
+      <mass value="2.67135"/>
+      <inertia ixx="0.00428489" ixy="-2.2116e-06" ixz="-1.21946e-05" iyy="0.0045869" iyz="0.00016074" izz="0.00249045"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.313858" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="sim_icub3_root_link_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="green">
+        <color rgba="0 1 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.313858" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="sim_icub3_root_link_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="torso_1">
+    <inertial>
+      <origin xyz="-0.00752632 0.000684313 0.05308400000000002" rpy="0 0 -1.5707963267948966"/>
+      <mass value="1.81255"/>
+      <inertia ixx="0.00354354" ixy="5.48743e-06" ixz="8.16841e-06" iyy="0.00272482" iyz="-0.000326014" izz="0.00215923"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.25335800000000014" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="sim_icub3_torso_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.25335800000000014" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="sim_icub3_torso_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="torso_roll" type="revolute">
+    <origin xyz="0 0 0.0605" rpy="0 0 0"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <parent link="root_link"/>
+    <child link="torso_1"/>
+    <limit effort="50000" lower="-0.4014257279586958" upper="0.4014257279586958" velocity="120.0"/>
+    <dynamics damping="0.06" friction="0.0"/>
+  </joint>
+  <link name="torso_2">
+    <inertial>
+      <origin xyz="0.0006802240000000001 0.0015534 0.05118500000000001" rpy="0 0 -1.5707963267948966"/>
+      <mass value="1.45349"/>
+      <inertia ixx="0.00226311" ixy="-1.7788e-06" ixz="-0.000118559" iyy="0.00286571" iyz="1.47721e-05" izz="0.00163638"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.18085800000000013" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="sim_icub3_torso_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.18085800000000013" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="sim_icub3_torso_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="torso_pitch" type="revolute">
+    <origin xyz="0 0 0.07250000000000001" rpy="0 0 0"/>
+    <axis xyz="0.0 -1.0 0.0"/>
+    <parent link="torso_1"/>
+    <child link="torso_2"/>
+    <limit effort="50000" lower="-0.3141592653589793" upper="0.7853981633974483" velocity="120.0"/>
+    <dynamics damping="0.06" friction="0.0"/>
+  </joint>
+  <link name="chest">
+    <inertial>
+      <origin xyz="-0.0133964 -0.000262139 0.0551337" rpy="0 0 -1.5707963267948966"/>
+      <mass value="5.75757"/>
+      <inertia ixx="0.0255632" ixy="-5.31274e-05" ixz="9.38021e-05" iyy="0.0261369" iyz="-0.000610637" izz="0.0222276"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.11638800000000012" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="sim_icub3_chest_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.11638800000000012" rpy="0 0 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="sim_icub3_chest_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="torso_yaw" type="revolute">
+    <origin xyz="0 0 0.06447000000000001" rpy="0 0 0"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <parent link="torso_2"/>
+    <child link="chest"/>
+    <limit effort="50000" lower="-0.7504915783575618" upper="0.7504915783575618" velocity="120.0"/>
+    <dynamics damping="0.06" friction="0.0"/>
+  </joint>
+  <link name="l_shoulder_1">
+    <inertial>
+      <origin xyz="0.00029182766222172335 0.057230906807805036 0.0005026028256971786" rpy="-0.06688747999488329 -0.24445247956182184 -1.3007776604108252"/>
+      <mass value="1.45562"/>
+      <inertia ixx="0.00109517" ixy="0.000611891" ixz="0.000565594" iyy="0.00306956" iyz="-0.000159546" izz="0.00307951"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.030411223821871745 -0.029140477504781638 0.01909576654023967" rpy="-0.06688747999488329 -0.24445247956182184 -1.3007776604108252"/>
+      <geometry>
+        <mesh filename="sim_icub3_l_shoulder_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="yellow">
+        <color rgba="1 1 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.030411223821871745 -0.029140477504781638 0.01909576654023967" rpy="-0.06688747999488329 -0.24445247956182184 -1.3007776604108252"/>
+      <geometry>
+        <mesh filename="sim_icub3_l_shoulder_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_shoulder_pitch" type="revolute">
+    <origin xyz="-0.020835100000000002 0.0397423 0.1052029" rpy="0.2532616237670649 -1.1982921379466467e-07 -0.26179930185680106"/>
+    <axis xyz="-3.3231509266596455e-07 -0.9999999783534343 -1.4456511512603564e-07"/>
+    <parent link="chest"/>
+    <child link="l_shoulder_1"/>
+    <limit effort="50000" lower="-1.53588974175501" upper="0.22689280275926285" velocity="120.0"/>
+    <dynamics damping="0.06" friction="0.0"/>
+  </joint>
+  <link name="l_shoulder_2">
+    <inertial>
+      <origin xyz="0.003293362025486902 0.0002563804707528261 -0.027865685757097337" rpy="-0.0715644949880594 -0.06196998841864678 -1.295357449823658"/>
+      <mass value="0.322126"/>
+      <inertia ixx="0.000311039" ixy="-3.5032e-05" ixz="-2.4436e-05" iyy="0.000216027" iyz="-5.52877e-05" izz="0.00022365"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.02639309786919335 -0.14153112610649204 -0.007252397644602098" rpy="-0.0715644949880594 -0.06196998841864678 -1.295357449823658"/>
+      <geometry>
+        <mesh filename="sim_icub3_l_shoulder_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="pink">
+        <color rgba="1 0 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.02639309786919335 -0.14153112610649204 -0.007252397644602098" rpy="-0.0715644949880594 -0.06196998841864678 -1.295357449823658"/>
+      <geometry>
+        <mesh filename="sim_icub3_l_shoulder_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_shoulder_roll" type="revolute">
+    <origin xyz="0.004992849332498911 0.11149983845605199 0.00026865023223796025" rpy="-0.17453296136691587 -0.05374759926346641 0"/>
+    <axis xyz="-0.9999998262417685 -2.0348252625938444e-07 4.023022846062156e-08"/>
+    <parent link="l_shoulder_1"/>
+    <child link="l_shoulder_2"/>
+    <limit effort="50000" lower="0.20943951023931956" upper="2.792526803190927" velocity="120.0"/>
+    <dynamics damping="0.06" friction="0.0"/>
+  </joint>
+  <link name="l_shoulder_3">
+    <inertial>
+      <origin xyz="-4.416264022005789e-06 9.587749727052453e-05 -0.007326213473011087" rpy="-0.0715644949880594 -0.06196998841864678 -1.295357449823658"/>
+      <mass value="0.256128"/>
+      <inertia ixx="7.10321e-05" ixy="-3.76336e-07" ixz="2.93189e-06" iyy="7.06105e-05" iyz="-3.52325e-06" izz="0.000119948"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.03074323102617168 -0.1415314893638154 0.04704764107945962" rpy="-0.0715644949880594 -0.06196998841864678 -1.295357449823658"/>
+      <geometry>
+        <mesh filename="sim_icub3_l_shoulder_3_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="cyan">
+        <color rgba="0 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.03074323102617168 -0.1415314893638154 0.04704764107945962" rpy="-0.0715644949880594 -0.06196998841864678 -1.295357449823658"/>
+      <geometry>
+        <mesh filename="sim_icub3_l_shoulder_3_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_shoulder_yaw" type="fixed">
+    <origin xyz="-0.004350133156978318 3.632573233602887e-07 -0.05430003872406172" rpy="0 0 0"/>
+    <parent link="l_shoulder_2"/>
+    <child link="l_shoulder_3"/>
+    <limit effort="50000" lower="-0.8726646259971648" upper="1.3962634015954636" velocity="120.0"/>
+    <dynamics damping="0.06" friction="0.0"/>
+  </joint>
+  <link name="l_upper_arm">
+    <inertial>
+      <origin xyz="0.006736834478024374 -0.021799255751033003 -0.04590612014684704" rpy="-0.0715644949880594 -0.06196998841864678 -1.295357449823658"/>
+      <mass value="2.07167"/>
+      <inertia ixx="0.0038606" ixy="0.000215061" ixz="-5.23479e-05" iyy="0.018139" iyz="0.000254564" izz="0.0161052"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.030743149468679273 -0.14153106591133116 0.06954758245258388" rpy="-0.0715644949880594 -0.06196998841864678 -1.295357449823658"/>
+      <geometry>
+        <mesh filename="sim_icub3_l_upperarm_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="green">
+        <color rgba="0 1 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.030743149468679273 -0.14153106591133116 0.06954758245258388" rpy="-0.0715644949880594 -0.06196998841864678 -1.295357449823658"/>
+      <geometry>
+        <mesh filename="sim_icub3_l_upperarm_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_arm_ft_sensor" type="continuous">
+    <origin xyz="0 -4.2345248449371375e-07 -0.022499941373124423" rpy="0 0 0"/>
+    <axis xyz="-2.2276474049102235e-08 4.393786247302041e-08 1.0000002566182309"/>
+    <parent link="l_shoulder_3"/>
+    <child link="l_upper_arm"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_shoulder_1">
+    <inertial>
+      <origin xyz="0.00026441971857374055 -0.05747129038042943 0.0004210903629773867" rpy="-0.06688725064450136 0.24445256247619251 -1.840815419889917"/>
+      <mass value="1.45988"/>
+      <inertia ixx="0.00109699" ixy="-0.000616726" ixz="-0.000574688" iyy="0.00309305" iyz="-0.000161381" izz="0.00309487"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.030411233356184415 0.029140462447480257 0.019095774333938085" rpy="-0.06688725064450136 0.24445256247619251 -1.840815419889917"/>
+      <geometry>
+        <mesh filename="sim_icub3_r_shoulder_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.030411233356184415 0.029140462447480257 0.019095774333938085" rpy="-0.06688725064450136 0.24445256247619251 -1.840815419889917"/>
+      <geometry>
+        <mesh filename="sim_icub3_r_shoulder_1_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_shoulder_pitch" type="revolute">
+    <origin xyz="-0.020835100000000002 -0.0397423 0.1052029" rpy="-0.25326164431680925 2.3014774394592079e-07 0.26179970938509745"/>
+    <axis xyz="1.499044390098182e-07 0.9999999783534812 -1.2401537036323317e-07"/>
+    <parent link="chest"/>
+    <child link="r_shoulder_1"/>
+    <limit effort="50000" lower="-1.53588974175501" upper="0.22689280275926285" velocity="120.0"/>
+    <dynamics damping="0.06" friction="0.0"/>
+  </joint>
+  <link name="r_shoulder_2">
+    <inertial>
+      <origin xyz="0.000711844151437005 -0.00028997131506725005 -0.027865575116629175" rpy="-0.07156446033079357 0.06196992338505823 -1.8462350402422587"/>
+      <mass value="0.322126"/>
+      <inertia ixx="0.000309774" ixy="3.44034e-05" ixz="2.39129e-05" iyy="0.00021568" iyz="-5.45925e-05" izz="0.000222102"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.02389326106684631 0.14153171676199228 -0.007252350207672734" rpy="-0.07156446033079357 0.06196992338505823 -1.8462350402422587"/>
+      <geometry>
+        <mesh filename="sim_icub3_r_shoulder_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dblue">
+        <color rgba="0 0 0.8 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.02389326106684631 0.14153171676199228 -0.007252350207672734" rpy="-0.07156446033079357 0.06196992338505823 -1.8462350402422587"/>
+      <geometry>
+        <mesh filename="sim_icub3_r_shoulder_2_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_shoulder_roll" type="revolute">
+    <origin xyz="0.007489008185044645 -0.11150041046657978 0.0004027858966975245" rpy="0.17453306234069352 -0.05374779257913059 -6.132332688804098e-07"/>
+    <axis xyz="-0.9999998262417886 4.210501434612913e-08 2.4630481182686846e-08"/>
+    <parent link="r_shoulder_1"/>
+    <child link="r_shoulder_2"/>
+    <limit effort="50000" lower="0.20943951023931956" upper="2.792526803190927" velocity="120.0"/>
+    <dynamics damping="0.06" friction="0.0"/>
+  </joint>
+  <link name="r_shoulder_3">
+    <inertial>
+      <origin xyz="-8.928496484206933e-05 -3.376971940446949e-05 -0.007594500252887257" rpy="-0.07156446033079357 0.06196992338505823 -1.8462350402422587"/>
+      <mass value="0.258699"/>
+      <inertia ixx="7.20362e-05" ixy="5.87638e-07" ixz="-2.8754e-06" iyy="7.22746e-05" iyz="-3.42816e-06" izz="0.000119776"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.030743207452236184 0.1415314977120317 0.047047631370218244" rpy="-0.07156446033079357 0.06196992338505823 -1.8462350402422587"/>
+      <geometry>
+        <mesh filename="sim_icub3_r_shoulder_3_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dgreen">
+        <color rgba="0.1 0.8 0.1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.030743207452236184 0.1415314977120317 0.047047631370218244" rpy="-0.07156446033079357 0.06196992338505823 -1.8462350402422587"/>
+      <geometry>
+        <mesh filename="sim_icub3_r_shoulder_3_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_shoulder_yaw" type="fixed">
+    <origin xyz="-0.006849946385389872 2.1904996058697002e-07 -0.05429998157789099" rpy="0 0 0"/>
+    <parent link="r_shoulder_2"/>
+    <child link="r_shoulder_3"/>
+    <limit effort="50000" lower="-0.8726646259971648" upper="1.3962634015954636" velocity="120.0"/>
+    <dynamics damping="0.06" friction="0.0"/>
+  </joint>
+  <link name="r_upper_arm">
+    <inertial>
+      <origin xyz="-4.827495476422694e-06 -0.001943485876269635 -0.04747357932833829" rpy="-0.07156446033079357 0.06196992338505823 -1.8462350402422587"/>
+      <mass value="2.06334"/>
+      <inertia ixx="0.00382639" ixy="-5.03894e-06" ixz="0.000205684" iyy="0.00368146" iyz="0.000261155" izz="0.00167002"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.030743125543818663 0.141531075879301 0.0695475727433718" rpy="-0.07156446033079357 0.06196992338505823 -1.8462350402422587"/>
+      <geometry>
+        <mesh filename="sim_icub3_r_upperarm_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.030743125543818663 0.141531075879301 0.0695475727433718" rpy="-0.07156446033079357 0.06196992338505823 -1.8462350402422587"/>
+      <geometry>
+        <mesh filename="sim_icub3_r_upperarm_prt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_arm_ft_sensor" type="continuous">
+    <origin xyz="0 4.2183273077367467e-07 -0.02249994137315358" rpy="0 0 0"/>
+    <axis xyz="-3.787621790776764e-08 2.805197706023475e-08 1.0000002566182309"/>
+    <parent link="r_shoulder_3"/>
+    <child link="r_upper_arm"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="base_link"/>
+  <joint name="base_link_fixed_joint" type="fixed">
+  <origin xyz="0 0 0" rpy="0 -0 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="root_link"/>
+  <child link="base_link"/>
+</joint>
+  <gazebo reference="r_arm_ft_sensor">
+<preserveFixedJoint>true</preserveFixedJoint>
+<!-- For compatibility with SDFormat < 4.4 -->
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo reference="l_arm_ft_sensor">
+<preserveFixedJoint>true</preserveFixedJoint>
+<!-- For compatibility with SDFormat < 4.4 -->
+<disableFixedJointLumping>true</disableFixedJointLumping>
+</gazebo>
+  <gazebo>
+<plugin name="controlboard_torso" filename="libgazebo_yarp_controlboard.so">
+  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_torso.ini</yarpConfigurationFile>
+</plugin>
+</gazebo>
+  <gazebo reference="torso_pitch">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="torso_roll">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="torso_yaw">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_shoulder_pitch">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_shoulder_roll">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="r_shoulder_yaw">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_shoulder_pitch">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_shoulder_roll">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_shoulder_yaw">
+    <implicitSpringDamper>1</implicitSpringDamper>
+</gazebo>
+  <gazebo reference="l_arm_ft_sensor">
+    <sensor name="l_arm_ft_sensor" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <force_torque>
+        <frame>child</frame>
+        <measure_direction>child_to_parent</measure_direction>
+      </force_torque>
+      <plugin name="left_arm_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
+  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_arm_ft.ini</yarpConfigurationFile>
+</plugin>
+    </sensor>
+  </gazebo>
+  <sensor name="l_arm_ft_sensor" type="force_torque">
+    <parent joint="l_arm_ft_sensor"/>
+    <force_torque>
+      <frame>child</frame>
+      <measure_direction>child_to_parent</measure_direction>
+    </force_torque>
+  </sensor>
+  <gazebo reference="r_arm_ft_sensor">
+    <sensor name="r_arm_ft_sensor" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <force_torque>
+        <frame>child</frame>
+        <measure_direction>child_to_parent</measure_direction>
+      </force_torque>
+      <plugin name="right_arm_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
+  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_arm_ft.ini</yarpConfigurationFile>
+</plugin>
+    </sensor>
+  </gazebo>
+  <sensor name="r_arm_ft_sensor" type="force_torque">
+    <parent joint="r_arm_ft_sensor"/>
+    <force_torque>
+      <frame>child</frame>
+      <measure_direction>child_to_parent</measure_direction>
+    </force_torque>
+  </sensor>
+  <gazebo>
+    <pose>0.0 0.0 0.8 0.0 0.0 0.0</pose>
+  </gazebo>
+</robot>
