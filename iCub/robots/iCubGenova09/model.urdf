@@ -376,7 +376,7 @@
   </link>
   <joint name="torso_yaw" type="revolute">
     <origin xyz="0 0 0.06447000000000001" rpy="0 0 0"/>
-    <axis xyz="0.0 0.0 1.0"/>
+    <axis xyz="0.0 0.0 -1.0"/>
     <parent link="torso_2"/>
     <child link="chest"/>
     <limit effort="50000" lower="-0.7504915783575618" upper="0.7504915783575618" velocity="120.0"/>
