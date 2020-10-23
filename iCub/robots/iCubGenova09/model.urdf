@@ -346,7 +346,7 @@
   </link>
   <joint name="torso_pitch" type="revolute">
     <origin xyz="0 0 0.07250000000000001" rpy="0 0 0"/>
-    <axis xyz="0.0 -1.0 0.0"/>
+    <axis xyz="0.0 1.0 0.0"/>
     <parent link="torso_1"/>
     <child link="torso_2"/>
     <limit effort="50000" lower="-0.3141592653589793" upper="0.7853981633974483" velocity="120.0"/>
