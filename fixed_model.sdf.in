@@ -8,7 +8,7 @@
 
     <joint name="fixed_base" type="fixed">
       <parent>world</parent>
-      <child>iCub::base_link</child>
+      <child>iCub::root_link</child>
     </joint>
   </model>
 </sdf>
