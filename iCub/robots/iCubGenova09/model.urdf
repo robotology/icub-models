@@ -75,7 +75,7 @@
   </link>
   <joint name="r_hip_roll" type="revolute">
     <origin xyz="-0.0473 -0.03310000000000001 -0.009000000000000008" rpy="0 0 0"/>
-    <axis xyz="1.0 0.0 0.0"/>
+    <axis xyz="-1.0 0.0 0.0"/>
     <parent link="r_hip_1"/>
     <child link="r_hip_2"/>
     <limit effort="50000" lower="-0.17453292519943295" upper="2.007128639793479" velocity="120.0"/>
