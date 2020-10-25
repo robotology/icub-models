@@ -133,7 +133,7 @@
   </link>
   <joint name="r_hip_yaw" type="revolute">
     <origin xyz="0 0.015000000000000006 -0.07090000000000007" rpy="0 0 0"/>
-    <axis xyz="0.0 0.0 1.0"/>
+    <axis xyz="0.0 0.0 -1.0"/>
     <parent link="r_hip_3"/>
     <child link="r_upper_leg"/>
     <limit effort="50000" lower="-1.3962634015954636" upper="1.3962634015954636" velocity="120.0"/>
@@ -223,7 +223,7 @@
   </link>
   <joint name="r_ankle_roll" type="revolute">
     <origin xyz="-0.052750000000000005 0.018200000000000008 -0.03500000000000003" rpy="0 0 0"/>
-    <axis xyz="1.0 0.0 0.0"/>
+    <axis xyz="-1.0 0.0 0.0"/>
     <parent link="r_ankle_1"/>
     <child link="r_ankle_2"/>
     <limit effort="50000" lower="-0.4363323129985824" upper="0.4363323129985824" velocity="120.0"/>
@@ -316,7 +316,7 @@
   </link>
   <joint name="torso_roll" type="revolute">
     <origin xyz="0 0 0.0605" rpy="0 0 0"/>
-    <axis xyz="1.0 0.0 0.0"/>
+    <axis xyz="-1.0 0.0 0.0"/>
     <parent link="root_link"/>
     <child link="torso_1"/>
     <limit effort="50000" lower="-0.4014257279586958" upper="0.4014257279586958" velocity="120.0"/>
@@ -1147,7 +1147,7 @@
   </link>
   <joint name="l_ankle_pitch" type="revolute">
     <origin xyz="0 -0.0005000000000000004 -0.255989" rpy="0 0 0"/>
-    <axis xyz="0.0 -1.0 0.0"/>
+    <axis xyz="0.0 1.0 0.0"/>
     <parent link="l_lower_leg"/>
     <child link="l_ankle_1"/>
     <limit effort="50000" lower="-0.7853981633974483" upper="0.7853981633974483" velocity="120.0"/>
