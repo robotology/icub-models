@@ -1656,6 +1656,6 @@
     </force_torque>
   </sensor>
   <gazebo>
-    <pose>0.0 0.0 0.8 0.0 0.0 0.0</pose>
+    <pose>0.0 0.0 0.64 0.0 0.0 0.0</pose>
   </gazebo>
 </robot>
