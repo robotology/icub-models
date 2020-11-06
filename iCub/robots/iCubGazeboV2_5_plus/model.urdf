@@ -1559,9 +1559,9 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0417858 0.0049978 0.000725075" rpy="3.14159264324 0.261799192098 0.0"/>
+      <origin xyz="-0.10624279747351179 -0.07010000018839523 -0.638744845567865" rpy="-1.832595507822573 0 -1.5707963267948983"/>
       <geometry>
-        <box size="0.16 0.072 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_r_sole_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -1816,9 +1816,9 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0417858 -0.0049978 0.000725075" rpy="3.14159264324 0.261799192098 0.0"/>
+      <origin xyz="-0.10624280452087159 0.07010000017001501 -0.6387448443895202" rpy="-1.8325955188932355 0 -1.570796326794913"/>
       <geometry>
-        <box size="0.16 0.072 0.001"/>
+        <mesh filename="package://iCub/meshes/simmechanics/2-5_plus/sim_sea_2-5_l_sole_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>

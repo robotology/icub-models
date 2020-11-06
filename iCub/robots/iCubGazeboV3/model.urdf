@@ -245,9 +245,9 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.10850000000000011 0.06484999999993908 0.9464470000000105" rpy="0 0 -1.5707963267948966"/>
+      <origin xyz="0.0 0.0 0.003" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_icub3_r_foot_front_prt.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.117 0.1 0.006"/>
       </geometry>
     </collision>
   </link>
@@ -273,9 +273,9 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.010749999999999881 0.0648499999999391 0.9464470000000105" rpy="0 0 -1.5707963267948966"/>
+      <origin xyz="0.0 0.0 0.003" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_icub3_r_foot_rear_prt.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.117 0.1 0.006"/>
       </geometry>
     </collision>
   </link>
@@ -1199,9 +1199,9 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.10854999999999998 -0.06475000000001183 0.9464469999999995" rpy="0 0 -1.5707963267948966"/>
+      <origin xyz="0.0 0.0 0.003" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_icub3_l_foot_front_prt.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.117 0.1 0.006"/>
       </geometry>
     </collision>
   </link>
@@ -1227,9 +1227,9 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.010700000000000012 -0.06475000000001183 0.9464469999999995" rpy="0 0 -1.5707963267948966"/>
+      <origin xyz="0.0 0.0 0.003" rpy="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_icub3_l_foot_rear_prt.stl" scale="0.001 0.001 0.001"/>
+        <box size="0.117 0.1 0.006"/>
       </geometry>
     </collision>
   </link>
