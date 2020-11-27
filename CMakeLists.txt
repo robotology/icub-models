@@ -48,8 +48,9 @@ endif()
 set(GAZEBO_SUPPORTED_MODELS "")
 list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5")
 list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5_plus")
+list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV3")
 
-SUBDIRLIST(ROBOTS_NAMES ${CMAKE_CURRENT_BINARY_DIR}/iCub/robots)
+SUBDIRLIST(ROBOTS_NAMES ${CMAKE_CURRENT_SOURCE_DIR}/iCub/robots)
 foreach(ROBOT_DIRNAME ${ROBOTS_NAMES})
   set(ROBOT_NAME ${ROBOT_DIRNAME})
   set(ROBOT_MODEL_CONFIG_FILE "${CMAKE_CURRENT_BINARY_DIR}/iCub/robots/${ROBOT_NAME}/model.config")
@@ -115,4 +116,6 @@ endforeach()
 
 # Install the whole iCub directory
 install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/iCub DESTINATION share)
+
+include(AddUninstallTarget.cmake)
 
