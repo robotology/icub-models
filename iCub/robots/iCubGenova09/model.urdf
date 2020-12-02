@@ -1588,7 +1588,7 @@
       <update_rate>100</update_rate>
       <force_torque>
         <frame>sensor</frame>
-        <measure_direction>child_to_parent</measure_direction>
+        <measure_direction>parent_to_child</measure_direction>
       </force_torque>
       <pose>0.13524999999999998 0.0 -0.04349999999999998 0.0 -0.0 -2.094395210586932</pose>
       <plugin name="left_foot_front_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
@@ -1600,7 +1600,7 @@
     <parent joint="l_foot_front_ft_sensor"/>
     <force_torque>
       <frame>sensor</frame>
-      <measure_direction>child_to_parent</measure_direction>
+      <measure_direction>parent_to_child</measure_direction>
     </force_torque>
     <origin rpy="0.0 -0.0 -2.094395210586932" xyz="0.13524999999999998 0.0 -0.04349999999999998"/>
   </sensor>
@@ -1610,7 +1610,7 @@
       <update_rate>100</update_rate>
       <force_torque>
         <frame>sensor</frame>
-        <measure_direction>child_to_parent</measure_direction>
+        <measure_direction>parent_to_child</measure_direction>
       </force_torque>
       <pose>0.016 0.0 -0.04349999999999998 0.0 -0.0 -2.094395210586932</pose>
       <plugin name="left_foot_rear_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
@@ -1622,7 +1622,7 @@
     <parent joint="l_foot_rear_ft_sensor"/>
     <force_torque>
       <frame>sensor</frame>
-      <measure_direction>child_to_parent</measure_direction>
+      <measure_direction>parent_to_child</measure_direction>
     </force_torque>
     <origin rpy="0.0 -0.0 -2.094395210586932" xyz="0.016 0.0 -0.04349999999999998"/>
   </sensor>
@@ -1654,7 +1654,7 @@
       <update_rate>100</update_rate>
       <force_torque>
         <frame>sensor</frame>
-        <measure_direction>child_to_parent</measure_direction>
+        <measure_direction>parent_to_child</measure_direction>
       </force_torque>
       <pose>0.13525 0.0 -0.04349999999999998 0.0 -0.0 -2.094395210586932</pose>
       <plugin name="right_foot_front_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
@@ -1666,7 +1666,7 @@
     <parent joint="r_foot_front_ft_sensor"/>
     <force_torque>
       <frame>sensor</frame>
-      <measure_direction>child_to_parent</measure_direction>
+      <measure_direction>parent_to_child</measure_direction>
     </force_torque>
     <origin rpy="0.0 -0.0 -2.094395210586932" xyz="0.13525 0.0 -0.04349999999999998"/>
   </sensor>
@@ -1676,7 +1676,7 @@
       <update_rate>100</update_rate>
       <force_torque>
         <frame>sensor</frame>
-        <measure_direction>child_to_parent</measure_direction>
+        <measure_direction>parent_to_child</measure_direction>
       </force_torque>
       <pose>0.016 0.0 -0.04349999999999998 0.0 -0.0 -2.094395210586932</pose>
       <plugin name="right_foot_rear_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
@@ -1688,7 +1688,7 @@
     <parent joint="r_foot_rear_ft_sensor"/>
     <force_torque>
       <frame>sensor</frame>
-      <measure_direction>child_to_parent</measure_direction>
+      <measure_direction>parent_to_child</measure_direction>
     </force_torque>
     <origin rpy="0.0 -0.0 -2.094395210586932" xyz="0.016 0.0 -0.04349999999999998"/>
   </sensor>
