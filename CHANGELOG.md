@@ -5,6 +5,12 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+
+## [1.18.1] - 2020-11-30
+
+### Fixed 
+- Fix the direction of some axis for the iCub3 models (https://github.com/robotology/icub-models-generator/pull/184). 
+
 ## [1.18.0] - 2020-11-30
 
 ### Added
