@@ -13,8 +13,8 @@ tipically used by software that uses either YARP, ROS or Gazebo. For this reason
 are installed as part of the `iCub` ROS package ([instructions](https://github.com/gerkey/ros1_external_use#installing-for-use-by-tools-like-roslaunch)) and following the [YARP guidelines on installing configuration files](http://www.yarp.it/yarp_data_dirs.html).
 
 To make sure that this models are found by the software even when they are not installed in
-system directories, tipically the [`YARP_DATA_DIRS`](http://www.yarp.it/yarp_data_dirs.html), 
-[`ROS_PACKAGE_PATH`](http://wiki.ros.org/ROS/EnvironmentVariables#ROS_PACKAGE_PATH), and the [`GAZEBO_MODEL_PATH`](http://gazebosim.org/tutorials?tut=components#EnvironmentVariables) enviromental variables are modified appropriatly.
+system directories, tipically the [`YARP_DATA_DIRS`](http://www.yarp.it/yarp_data_dirs.html) for [YARP](https://github.com/robotology/yarp), 
+[`ROS_PACKAGE_PATH`](http://wiki.ros.org/ROS/EnvironmentVariables#ROS_PACKAGE_PATH) for [ROS1](https://www.ros.org/), [`AMENT_PREFIX_PATH`](http://design.ros2.org/articles/ament.html) for [ROS2](https://index.ros.org/doc/ros2/) and the [`GAZEBO_MODEL_PATH`](http://gazebosim.org/tutorials?tut=components#EnvironmentVariables) for [SDFormat](http://sdformat.org/) enviromental variables are modified appropriatly.
 
 
 ### From the source repo
@@ -32,6 +32,7 @@ If `<icub-models>` is the location of the repo, some folders need to be appended
 ```sh
 export YARP_DATA_DIRS=${YARP_DATA_DIRS}:<icub-models>/build/iCub
 export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:<icub-models>/build
+export AMENT_PREFIX_PATH=${AMENT_PREFIX_PATH}:<icub-models>/build
 ```
 
 ### By installing the models
@@ -50,6 +51,7 @@ Once the models are installed into a given prefix, edit the env variables as fol
 ```sh
 export YARP_DATA_DIRS=${YARP_DATA_DIRS}:<prefix>/share/iCub
 export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:<prefix>/share
+export AMENT_PRERIX_PATH=${ROS_PACKAGE_PATH}:<prefix>/share
 ```
 ### Use the models with Gazebo
 In order to use these models in Gazebo, set up the simulation environment following the instructions provided in the [icub-gazebo](https://github.com/robotology/icub-gazebo) repository, and add the following line to your ``.bashrc``:
