@@ -51,7 +51,7 @@ Once the models are installed into a given prefix, edit the env variables as fol
 ```sh
 export YARP_DATA_DIRS=${YARP_DATA_DIRS}:<prefix>/share/iCub
 export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:<prefix>/share
-export AMENT_PRERIX_PATH=${ROS_PACKAGE_PATH}:<prefix>/share
+export AMENT_PREFIX_PATH=${AMENT_PREFIX_PATH}:<prefix>/share
 ```
 ### Use the models with Gazebo
 In order to use these models in Gazebo, set up the simulation environment following the instructions provided in the [icub-gazebo](https://github.com/robotology/icub-gazebo) repository, and add the following line to your ``.bashrc``:
