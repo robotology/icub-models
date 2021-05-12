@@ -20,11 +20,21 @@ endmacro()
 # Copy the iCub folder in the build tree
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iCub DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
+# Copy the components folder in the build tree
+#file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/components DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/iCub)
+
 # Copy the iCub_manual folder in the build tree
 SUBDIRLIST(subdirs ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual)
 foreach(subdir ${subdirs})
   file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/${subdir}/ DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/iCub/${subdir})
 endforeach()
+
+# Copy the components folder in the build tree
+SUBDIRLIST(subdirs ${CMAKE_CURRENT_SOURCE_DIR}/iCub_components)
+foreach(subdir ${subdirs})
+  file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iCub_components/${subdir}/ DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/iCub/${subdir})
+endforeach()
+
 
 # Copy the ros folder
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/ros DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/iCub)
@@ -110,6 +120,20 @@ foreach(ROBOT_NAME ${ROBOTS_NAMES})
   if(ROBOT_NAME IN_LIST GAZEBO_SUPPORTED_MODELS)
     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/robots/${ROBOT_NAME}/model.config
                    ${CMAKE_CURRENT_BINARY_DIR}/iCub/robots/${ROBOT_NAME}/model.config
+                   @ONLY)
+  endif()
+endforeach()
+
+# Deal with component models
+set(GAZEBO_SUPPORTED_MODELS "")
+list(APPEND GAZEBO_SUPPORTED_MODELS "left_hand_mk3")
+list(APPEND GAZEBO_SUPPORTED_MODELS "left_wrist_mk2")
+
+SUBDIRLIST(ROBOTS_NAMES ${CMAKE_CURRENT_SOURCE_DIR}/iCub_components/parts)
+foreach(ROBOT_NAME ${ROBOTS_NAMES})
+  if(ROBOT_NAME IN_LIST GAZEBO_SUPPORTED_MODELS)
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/iCub_components/parts/${ROBOT_NAME}/model.config
+                   ${CMAKE_CURRENT_BINARY_DIR}/iCub/parts/${ROBOT_NAME}/model.config
                    @ONLY)
   endif()
 endforeach()
