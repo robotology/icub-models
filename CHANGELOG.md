@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 The format of this document is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+
+## [1.20.0] - 2021-05-30
+
+### Changed
+The gains and damping parameters of `iCubGazeboV3` have been changed (https://github.com/robotology/icub-models-generator/pull/199).
+
 ## [1.19.0] - 2021-02-24
 
 ### Added 
