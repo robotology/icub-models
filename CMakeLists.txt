@@ -52,7 +52,8 @@ list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV3")
 
 # Note: these models don't need further configuration apart from 
 # model version in model.config. Only one configuration is generated for
-# these models.
+# these models, and no helper models (fixed, no_hans, and so on) are
+# generated.
 set(CONFIGURED_MODELS "")
 list(APPEND CONFIGURED_MODELS "left_hand_mk3")
 list(APPEND CONFIGURED_MODELS "left_wrist_mk2")
