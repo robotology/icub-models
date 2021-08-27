@@ -50,6 +50,14 @@ list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5")
 list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5_plus")
 list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV3")
 
+# Note: these models don't need further configuration apart from 
+# model version in model.config. Only one configuration is generated for
+# these models, and no helper models (fixed, no_hans, and so on) are
+# generated.
+set(CONFIGURED_MODELS "")
+list(APPEND CONFIGURED_MODELS "left_hand_mk3")
+list(APPEND CONFIGURED_MODELS "left_wrist_mk2")
+
 SUBDIRLIST(ROBOTS_NAMES ${CMAKE_CURRENT_SOURCE_DIR}/iCub/robots)
 foreach(ROBOT_DIRNAME ${ROBOTS_NAMES})
   set(ROBOT_NAME ${ROBOT_DIRNAME})
@@ -63,7 +71,11 @@ foreach(ROBOT_DIRNAME ${ROBOTS_NAMES})
   set(ROBOT_FEET_FIXED_MODEL_CONFIG_FILE "${ROBOT_FEET_FIXED_MODEL_FOLDER}/model.config")
   set(ROBOT_FEET_FIXED_MODEL_SDF_FILE "${ROBOT_FEET_FIXED_MODEL_FOLDER}/${ROBOT_NAME}_feet_fixed.sdf")
 
-  if(ROBOT_NAME IN_LIST GAZEBO_SUPPORTED_MODELS OR ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS)
+  if(ROBOT_NAME IN_LIST CONFIGURED_MODELS)
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/iCub/robots/${ROBOT_NAME}/model.config
+                   ${CMAKE_CURRENT_BINARY_DIR}/iCub/robots/${ROBOT_NAME}/model.config
+                   @ONLY)
+  elseif(ROBOT_NAME IN_LIST GAZEBO_SUPPORTED_MODELS OR ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS)
 
     set(ROBOT_NAME_CONFIG "${ROBOT_NAME} (no hands)")
     set(ROBOT_MODEL_CONFIG "model.urdf")
@@ -104,6 +116,16 @@ endforeach()
 # Deal with manually generated models
 set(GAZEBO_SUPPORTED_MODELS "")
 list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5_visuomanip")
+
+SUBDIRLIST(ROBOTS_NAMES ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/robots)
+foreach(ROBOT_NAME ${ROBOTS_NAMES})
+  if(ROBOT_NAME IN_LIST GAZEBO_SUPPORTED_MODELS)
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/robots/${ROBOT_NAME}/model.config
+                   ${CMAKE_CURRENT_BINARY_DIR}/iCub/robots/${ROBOT_NAME}/model.config
+                   @ONLY)
+  endif()
+endforeach()
+
 
 SUBDIRLIST(ROBOTS_NAMES ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/robots)
 foreach(ROBOT_NAME ${ROBOTS_NAMES})
