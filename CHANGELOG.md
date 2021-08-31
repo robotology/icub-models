@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 The format of this document is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+
+## [Unreleased]
+
+### Fixed
+* Fixed document on the use of `AMENT_PREFIX_PATH` environment variable (https://github.com/robotology/icub-models/pull/101).
+
 ## [1.21.0] - 2021-08-27
 
 ### Added
