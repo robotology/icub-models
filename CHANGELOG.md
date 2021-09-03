@@ -4,10 +4,27 @@ All notable changes to this project will be documented in this file.
 The format of this document is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 
+## [Unreleased]
+
+### Fixed
+* Fixed document on the use of `AMENT_PREFIX_PATH` environment variable (https://github.com/robotology/icub-models/pull/101).
+
+## [1.21.0] - 2021-08-27
+
+### Added
+* The `hand_mk3` and `wrist_mk2` containing the new version of iCub's hand and wrist, codenamed iCub hand Mk3 and iCub wrist Mk2, have been added to the repo. As this models are still in development, they could change in the future (https://github.com/robotology/icub-models-generator/pull/203, https://github.com/robotology/icub-models/pull/95).
+
+### Changed
+* The iCub3 models (`iCubGenova09` and `iCubGazeboV3`) have been updated with the new arm covers (https://github.com/robotology/icub-models-generator/pull/202).
+
+### Fixed 
+* The masses of iCub3 models (`iCubGenova09` and `iCubGazeboV3`) have been fixed to be more similar to the one of the real robot (https://github.com/robotology/icub-models-generator/pull/207).
+
+
 ## [1.20.0] - 2021-05-30
 
 ### Changed
-The gains and damping parameters of `iCubGazeboV3` have been changed (https://github.com/robotology/icub-models-generator/pull/199).
+* The gains and damping parameters of `iCubGazeboV3` have been changed (https://github.com/robotology/icub-models-generator/pull/199).
 
 ## [1.19.0] - 2021-02-24
 
