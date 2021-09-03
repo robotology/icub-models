@@ -6,8 +6,11 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+## [1.21.1] - 2021-09-03
+
 ### Fixed
 * Fixed document on the use of `AMENT_PREFIX_PATH` environment variable (https://github.com/robotology/icub-models/pull/101).
+* Fixed wrong default collision on the arms that slowed down Gazebo Classic simulation for iCub3 models (https://github.com/robotology/icub-models/issues/100, https://github.com/robotology/icub-models-generator/pull/208).
 
 ## [1.21.0] - 2021-08-27
 
