@@ -1224,7 +1224,7 @@ solid SIM_ICUB3_CHEST
       vertex -6.657138e+01 4.199242e+01 -1.354885e+02
     endloop
   endfacet
-  facet normal 6.924239e-16 7.331938e-01 -6.800197e-01
+  facet normal -2.308080e-16 7.331938e-01 -6.800197e-01
     outer loop
       vertex -4.400000e+01 7.557371e+00 -1.354885e+02
       vertex -7.339579e+01 -8.427983e+00 -1.527238e+02
@@ -1294,7 +1294,7 @@ solid SIM_ICUB3_CHEST
       vertex -7.019395e+01 6.093631e+01 -1.438308e+02
     endloop
   endfacet
-  facet normal -1.199107e-15 -6.348551e-01 -7.726312e-01
+  facet normal 7.994046e-16 -6.348551e-01 -7.726312e-01
     outer loop
       vertex -4.400000e+01 4.199242e+01 -1.354885e+02
       vertex -6.657138e+01 4.199242e+01 -1.354885e+02
@@ -1863,14 +1863,14 @@ solid SIM_ICUB3_CHEST
   endfacet
   facet normal 3.898713e-02 -7.522642e-01 6.577071e-01
     outer loop
-      vertex 1.477929e-12 -8.628594e+01 2.349147e+01
+      vertex 1.488587e-12 -8.628594e+01 2.349147e+01
       vertex -3.061764e+01 -8.771415e+01 2.367287e+01
       vertex -2.604408e+01 -1.002817e+02 9.027380e+00
     endloop
   endfacet
   facet normal -6.055331e-02 -6.606262e-01 7.482689e-01
     outer loop
-      vertex 1.477929e-12 -8.628594e+01 2.349147e+01
+      vertex 1.488587e-12 -8.628594e+01 2.349147e+01
       vertex -2.604408e+01 -1.002817e+02 9.027380e+00
       vertex 9.121440e-04 -1.033620e+02 8.415600e+00
     endloop
@@ -1886,7 +1886,7 @@ solid SIM_ICUB3_CHEST
     outer loop
       vertex 2.170629e-04 -7.931700e+01 3.992421e+01
       vertex -3.061764e+01 -8.771415e+01 2.367287e+01
-      vertex 1.477929e-12 -8.628594e+01 2.349147e+01
+      vertex 1.488587e-12 -8.628594e+01 2.349147e+01
     endloop
   endfacet
   facet normal -4.380376e-01 1.000363e-02 -8.989010e-01
@@ -1919,14 +1919,14 @@ solid SIM_ICUB3_CHEST
   endfacet
   facet normal 2.245558e-02 8.927179e-01 -4.500560e-01
     outer loop
-      vertex -2.842171e-14 -6.131274e+01 -1.354885e+02
+      vertex -4.263256e-14 -6.131274e+01 -1.354885e+02
       vertex -4.714432e+01 -8.197107e+01 -1.788180e+02
       vertex -3.420376e+01 -6.309209e+01 -1.407246e+02
     endloop
   endfacet
   facet normal 3.975557e-01 5.814950e-01 -7.097979e-01
     outer loop
-      vertex -2.842171e-14 -6.131274e+01 -1.354885e+02
+      vertex -4.263256e-14 -6.131274e+01 -1.354885e+02
       vertex 7.815512e-01 -8.830646e+01 -1.571651e+02
       vertex -4.714432e+01 -8.197107e+01 -1.788180e+02
     endloop
@@ -1966,7 +1966,7 @@ solid SIM_ICUB3_CHEST
       vertex -5.707104e+01 -4.366891e+01 6.565997e+01
     endloop
   endfacet
-  facet normal 9.514865e-17 -7.331562e-02 9.973088e-01
+  facet normal 4.757432e-17 -7.331562e-02 9.973088e-01
     outer loop
       vertex -1.255000e+01 -2.687768e+01 4.891151e+01
       vertex -2.350000e+01 -2.687768e+01 4.891151e+01
@@ -2025,7 +2025,7 @@ solid SIM_ICUB3_CHEST
   facet normal 1.513217e-01 1.712183e-07 -9.884846e-01
     outer loop
       vertex -1.738249e-05 -4.595020e+01 -1.354885e+02
-      vertex -2.842171e-14 -6.131274e+01 -1.354885e+02
+      vertex -4.263256e-14 -6.131274e+01 -1.354885e+02
       vertex -3.420376e+01 -6.309209e+01 -1.407246e+02
     endloop
   endfacet
@@ -2036,7 +2036,7 @@ solid SIM_ICUB3_CHEST
       vertex -2.350000e+01 -2.687768e+01 4.891151e+01
     endloop
   endfacet
-  facet normal 4.425294e-16 -2.949203e-01 9.555219e-01
+  facet normal 2.212647e-16 -2.949203e-01 9.555219e-01
     outer loop
       vertex -7.105427e-15 1.795808e+01 6.275000e+01
       vertex -2.350000e+01 -2.687768e+01 4.891151e+01
@@ -2066,14 +2066,14 @@ solid SIM_ICUB3_CHEST
   endfacet
   facet normal 3.692430e-01 -1.193484e-02 -9.292563e-01
     outer loop
-      vertex -2.842171e-14 3.466146e+01 -8.918849e+01
+      vertex -2.131628e-14 3.466146e+01 -8.918849e+01
       vertex -4.565303e+01 7.719114e+00 -1.069828e+02
       vertex -4.468263e+01 3.774159e+01 -1.069828e+02
     endloop
   endfacet
   facet normal 5.275638e-02 4.865614e-01 -8.720520e-01
     outer loop
-      vertex -2.842171e-14 3.466146e+01 -8.918849e+01
+      vertex -2.131628e-14 3.466146e+01 -8.918849e+01
       vertex 1.866554e-01 3.993316e+00 -1.062885e+02
       vertex -4.565303e+01 7.719114e+00 -1.069828e+02
     endloop
@@ -2101,7 +2101,7 @@ solid SIM_ICUB3_CHEST
   endfacet
   facet normal -9.352724e-03 -9.889873e-01 -1.477043e-01
     outer loop
-      vertex -2.842171e-14 3.466146e+01 -8.918849e+01
+      vertex -2.131628e-14 3.466146e+01 -8.918849e+01
       vertex -4.468263e+01 3.774159e+01 -1.069828e+02
       vertex -4.400000e+01 4.199242e+01 -1.354885e+02
     endloop
@@ -2123,7 +2123,7 @@ solid SIM_ICUB3_CHEST
   facet normal 1.562819e-01 -9.417997e-01 -2.976394e-01
     outer loop
       vertex 1.377819e+01 5.389340e+01 -1.428083e+02
-      vertex -2.842171e-14 3.466146e+01 -8.918849e+01
+      vertex -2.131628e-14 3.466146e+01 -8.918849e+01
       vertex -4.400000e+01 4.199242e+01 -1.354885e+02
     endloop
   endfacet
@@ -2508,7 +2508,7 @@ solid SIM_ICUB3_CHEST
   facet normal -3.532783e-02 -6.614268e-01 7.491772e-01
     outer loop
       vertex 3.061538e+01 -8.771276e+01 2.367546e+01
-      vertex 1.477929e-12 -8.628594e+01 2.349147e+01
+      vertex 1.488587e-12 -8.628594e+01 2.349147e+01
       vertex 9.121440e-04 -1.033620e+02 8.415600e+00
     endloop
   endfacet
@@ -2523,13 +2523,13 @@ solid SIM_ICUB3_CHEST
     outer loop
       vertex 2.428163e+01 -7.420899e+01 4.067376e+01
       vertex 2.170629e-04 -7.931700e+01 3.992421e+01
-      vertex 1.477929e-12 -8.628594e+01 2.349147e+01
+      vertex 1.488587e-12 -8.628594e+01 2.349147e+01
     endloop
   endfacet
   facet normal -4.048042e-02 -7.896459e-01 6.122260e-01
     outer loop
       vertex 2.428163e+01 -7.420899e+01 4.067376e+01
-      vertex 1.477929e-12 -8.628594e+01 2.349147e+01
+      vertex 1.488587e-12 -8.628594e+01 2.349147e+01
       vertex 3.061538e+01 -8.771276e+01 2.367546e+01
     endloop
   endfacet
@@ -2544,7 +2544,7 @@ solid SIM_ICUB3_CHEST
     outer loop
       vertex 3.420376e+01 -6.309209e+01 -1.407246e+02
       vertex 7.815512e-01 -8.830646e+01 -1.571651e+02
-      vertex -2.842171e-14 -6.131274e+01 -1.354885e+02
+      vertex -4.263256e-14 -6.131274e+01 -1.354885e+02
     endloop
   endfacet
   facet normal -3.454952e-01 7.891112e-01 -5.078745e-01
@@ -2564,7 +2564,7 @@ solid SIM_ICUB3_CHEST
   facet normal 0.000000e+00 0.000000e+00 -1.000000e+00
     outer loop
       vertex 3.519469e+01 -2.834251e+01 -1.354885e+02
-      vertex -2.842171e-14 -6.131274e+01 -1.354885e+02
+      vertex -4.263256e-14 -6.131274e+01 -1.354885e+02
       vertex -1.738249e-05 -4.595020e+01 -1.354885e+02
     endloop
   endfacet
@@ -2572,7 +2572,7 @@ solid SIM_ICUB3_CHEST
     outer loop
       vertex 3.519469e+01 -2.834251e+01 -1.354885e+02
       vertex 3.420376e+01 -6.309209e+01 -1.407246e+02
-      vertex -2.842171e-14 -6.131274e+01 -1.354885e+02
+      vertex -4.263256e-14 -6.131274e+01 -1.354885e+02
     endloop
   endfacet
   facet normal -1.282433e-01 -1.250240e-01 9.838306e-01
@@ -2589,7 +2589,7 @@ solid SIM_ICUB3_CHEST
       vertex 2.428163e+01 -7.420899e+01 4.067376e+01
     endloop
   endfacet
-  facet normal -2.060076e-17 -2.090395e-01 9.779072e-01
+  facet normal -6.180227e-17 -2.090395e-01 9.779072e-01
     outer loop
       vertex 2.350000e+01 -2.687768e+01 4.891151e+01
       vertex -1.255000e+01 -2.687768e+01 4.891151e+01
@@ -2638,7 +2638,7 @@ solid SIM_ICUB3_CHEST
       vertex -1.255000e+01 -2.687768e+01 4.891151e+01
     endloop
   endfacet
-  facet normal 0.000000e+00 -1.426457e-01 9.897738e-01
+  facet normal -6.928642e-17 -1.426457e-01 9.897738e-01
     outer loop
       vertex 2.634649e+01 1.817210e+01 5.540406e+01
       vertex -1.255000e+01 -2.687768e+01 4.891151e+01
@@ -2649,7 +2649,7 @@ solid SIM_ICUB3_CHEST
     outer loop
       vertex 4.468263e+01 3.774159e+01 -1.069828e+02
       vertex 1.866554e-01 3.993316e+00 -1.062885e+02
-      vertex -2.842171e-14 3.466146e+01 -8.918849e+01
+      vertex -2.131628e-14 3.466146e+01 -8.918849e+01
     endloop
   endfacet
   facet normal -1.522954e-02 -4.922559e-04 -9.998839e-01
@@ -2676,7 +2676,7 @@ solid SIM_ICUB3_CHEST
   facet normal -7.673694e-02 -9.320805e-01 -3.540301e-01
     outer loop
       vertex 4.468263e+01 3.774159e+01 -1.069828e+02
-      vertex -2.842171e-14 3.466146e+01 -8.918849e+01
+      vertex -2.131628e-14 3.466146e+01 -8.918849e+01
       vertex 1.377819e+01 5.389340e+01 -1.428083e+02
     endloop
   endfacet
@@ -3709,14 +3709,14 @@ solid SIM_ICUB3_CHEST
       vertex 8.885226e+01 -2.156785e+01 4.040873e+01
     endloop
   endfacet
-  facet normal 2.308080e-16 7.331938e-01 -6.800197e-01
+  facet normal 4.616160e-16 7.331938e-01 -6.800197e-01
     outer loop
       vertex 6.657138e+01 7.557371e+00 -1.354885e+02
       vertex 7.339579e+01 -8.427983e+00 -1.527238e+02
       vertex 4.400000e+01 7.557371e+00 -1.354885e+02
     endloop
   endfacet
-  facet normal -7.200514e-17 -1.691240e-01 -9.855948e-01
+  facet normal -1.080077e-16 -1.691240e-01 -9.855948e-01
     outer loop
       vertex 6.664338e+01 4.202861e+01 -1.414036e+02
       vertex 6.657138e+01 7.557371e+00 -1.354885e+02

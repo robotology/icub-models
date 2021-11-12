@@ -3,8 +3,16 @@ All notable changes to this project will be documented in this file.
 
 The format of this document is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-
 ## [Unreleased]
+
+## [1.22.0] - 2021-11-12
+
+### Changed
+* Update iCub3 with feet covers (https://github.com/robotology/icub-models-generator/pull/210).
+* Increase metacarpus joint limit of MK3 left hand's thumb (https://github.com/robotology/icub-models-generator/pull/211).
+
+### Fixed
+* Fixed compatibility of all iCub3 models with gazebo-yarp-plugins 4 (https://github.com/robotology/icub-models-generator/pull/21).
 
 ## [1.21.1] - 2021-09-03
 

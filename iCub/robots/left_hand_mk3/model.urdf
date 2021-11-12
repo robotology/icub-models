@@ -198,7 +198,7 @@
     <axis xyz="0.838671 -0.544639 0.0"/>
     <parent link="l_hand_palm_link"/>
     <child link="l_hand_metacarpus_link"/>
-    <limit effort="50000" lower="0.0" upper="1.0821041362364843" velocity="50000"/>
+    <limit effort="50000" lower="0.0" upper="1.3962634015954636" velocity="50000"/>
     <dynamics damping="1.0"/>
   </joint>
   <link name="l_hand_thumb_proximal_link">
