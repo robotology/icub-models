@@ -5,6 +5,12 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+## [1.22.1] - 2021-12-04
+
+### Fixed
+* Fix bug in iCub3 models that made `r_wrist_yaw` a continuous joint (https://github.com/robotology/icub-models-generator/pull/214).
+* Fix compatibility of `left_wrist_mk2` with gazebo-yarp-plugins 4 (https://github.com/robotology/icub-models-generator/pull/213).
+
 ## [1.22.0] - 2021-11-12
 
 ### Changed
