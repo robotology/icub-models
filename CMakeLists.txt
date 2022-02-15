@@ -34,13 +34,7 @@ file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/ros DESTINATION ${CMAKE_CURRENT_BINARY_DIR
 # is enabled
 option(ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS OFF)
 
-# Workaround for https://github.com/robotology/icub-models/issues/39 and
-# https://github.com/osrf/gazebo/issues/2728
-set(ICUB_MODELS_SDF_VERSION "1.5")
-find_package(GAZEBO QUIET)
-if(GAZEBO_FOUND AND GAZEBO_VERSION VERSION_GREATER_EQUAL 11.0)
-  set(ICUB_MODELS_SDF_VERSION "1.7")
-endif()
+set(ICUB_MODELS_SDF_VERSION "1.7")
 
 # Note: all the models run in Gazebo, but this two are the only one that
 # run with the default physics settings of Gazebo, see issue

@@ -5,6 +5,10 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+### Changed
+
+* All Gazebo models installed by icub-models are in SDF format version 1.7. This means that Gazebo >= 11 is required to load them.
+
 ## [1.22.1] - 2021-12-04
 
 ### Fixed
