@@ -60,6 +60,65 @@ export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:<prefix>/share/iCub/robots:<prefix
 Note that only the models that are known to work fine with the default physics engine settings of Gazebo (`iCubGazeboV2_5` and `iCubGazeboV2_5_plus`)
 are installed. If you want to make available in Gazebo all the models, enable the `ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS` CMake option.
 
+### Use the models from C++ helper library
+In order to use these models in `c++` application you can exploit the `icub-models` library.
+`icub-models` provides native `CMake` support which allows the library to be easily used in `CMake` projects.
+**icub-models** exports a CMake target called `icub-models::icub-models` which can be imported using the `find_package` CMake command and used by calling `target_link_libraries` as in the following example:
+```cmake
+cmake_minimum_required(VERSION 3.0)
+project(myproject)
+find_package(icub-models REQUIRED)
+add_executable(example example.cpp)
+target_link_libraries(example icub-models::icub-models)
+```
+
+The `example.cpp` will contains
+```cpp
+#include <iCubModels/iCubModels.h>
+#include <iostream>
+
+int main()
+{
+    std::cout << "Models have been installed in: " << iCubModels::getModelsPath() << std::endl;
+
+    std::cout << "Available robots: " << std::endl;
+    for (const auto& robot : iCubModels::getRobotNames())
+    {
+        std::cout << " - " << robot << ": " <<  iCubModels::getModelFile(robot) << std::endl;
+    }
+
+    return EXIT_SUCCESS;
+}
+```
+
+### Use the models from Python helper library
+In order to use these models in `python` application you can exploit the `icub-models` module.
+`icub-models` provides `python` bindings support thanks to `pybind11` library.  To compile the
+bindings please make sure you have installed `pybind11` in your system. If you are in Ubuntu Linux,
+you can install them with
+```
+sudo apt install python3-pybind11
+```
+Then you can enable the  bindings compilation with
+```
+cmake -DCMAKE_INSTALL_PREFIX=<path/where/you/want/to/install> \
+      -DCMAKE_BUILD_TYPE=Release \
+      -DICUB_MODELS_COMPILE_PYTHON_BINDINGS:BOOL=ON ..
+cmake --build . --config Release --target install
+```
+
+Then the following script can be used to locate the models
+```python
+import icub_models
+
+print(f"Models have been installed in: {icub_models.get_models_path()}")
+
+print(f"Available robots: {icub_models.get_robot_names()}")
+
+for robot_name in icub_models.get_robot_names():
+    print(f"{robot_name}: {icub_models.get_model_file(robot_name)}")
+```
+
 ## Change the orientation of the root frame
 The iCub robot `root frame` is defined as [`x-backward`][1], meaning that the x-axis points behind the robot. Nevertheless, in the robotics community, sometimes the root frame of a robot is defined as [`x-forward`][2]. As a consequence, to use the iCub models with software developed for the `x-forward` configuration (e.g. [IHMC-ORS][3]), might be necessary to quickly update the root frame orientation.  
 For this purpose, locate the joint `<joint name="base_fixed_joint" type="fixed">` in the `URDF` model and perform the following substitution in the `origin` section:
