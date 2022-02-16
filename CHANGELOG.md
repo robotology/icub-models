@@ -5,6 +5,10 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+### Added
+
+* Implement a machinery to easily access model locations on C++ and Python (https://github.com/robotology/icub-models/pull/130)
+
 ### Changed
 
 * All Gazebo models installed by icub-models are in SDF format version 1.7. This means that Gazebo >= 11 is required to load them.
