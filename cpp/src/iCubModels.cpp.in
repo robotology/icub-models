@@ -11,7 +11,8 @@ namespace iCubModels
 {
 std::string getModelsPath()
 {
-    return "@ICUB_MODELS_MODELS_PATH@";
+    std::string retstr = "@ICUB_MODELS_MODELS_PATH@";
+    return retstr;
 }
 
 std::unordered_set<std::string> getRobotNames()
