@@ -5,13 +5,21 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+## [1.23.0] - 2022-02-28
+
 ### Added
 
 * Implement a machinery to easily access model locations on C++ and Python (https://github.com/robotology/icub-models/pull/130)
 
 ### Changed
 
-* All Gazebo models installed by icub-models are in SDF format version 1.7. This means that Gazebo >= 11 is required to load them.
+* All Gazebo models installed by icub-models are in SDF format version 1.7. This means that Gazebo >= 11 is required to load them (https://github.com/robotology/icub-models/pull/130).
+* iCub3 models (`iCubGenova09` and `iCubGazeboV3`) now have an FT sensor installed in the right upper leg (https://github.com/robotology/icub-models-generator/pull/218)
+* The URDF colors of models is not random anymore (https://github.com/robotology/icub-models-generator/pull/217).
+
+### Fixed
+* Fix missing velocityControlImplementationType parameter in left_wrist_mk2 (https://github.com/robotology/icub-models-generator/pull/213).
+* Fix r_wrist_yaw of icub3 generated as continous joint (https://github.com/robotology/icub-models-generator/pull/214)
 
 ## [1.22.1] - 2021-12-04
 
