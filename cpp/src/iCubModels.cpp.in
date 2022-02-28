@@ -1,0 +1,36 @@
+/**
+ * @file iCubModels.cpp
+ * @authors Giulio Romualdi
+ * @copyright 2022 Istituto Italiano di Tecnologia Released under the terms of the Creative Commons
+ * Attribution Share Alike 4.0 International
+ */
+
+#include <iCubModels/iCubModels.h>
+
+namespace iCubModels
+{
+std::string getModelsPath()
+{
+    std::string retstr = "@ICUB_MODELS_MODELS_PATH@";
+    return retstr;
+}
+
+std::unordered_set<std::string> getRobotNames()
+{
+    return std::unordered_set<std::string>{@INSTALLED_URDF_MODELS@};
+}
+
+std::string getModelFile(const std::string& modelName)
+{
+    const std::unordered_set<std::string> robots = getRobotNames();
+    std::string modelFile;
+
+    if (robots.find(modelName) == robots.cend())
+    {
+        return modelFile;
+    }
+
+    modelFile = "@ICUB_MODELS_MODELS_PATH@/" + modelName + "/model.urdf";
+    return modelFile;
+}
+} // namespace iCubModels

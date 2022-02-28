@@ -2,9 +2,45 @@
 # Authors: Silvio Traversaro
 # CopyPolicy: Released under the terms of the LGPLv2.1 or later, see LGPL.TXT
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.8)
 
-project(icub-models)
+project(icub-models
+  VERSION 1.23.0)
+
+include(GNUInstallDirs)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_BINDIR}")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR}")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR}")
+
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+option(ICUB_MODELS_COMPILE_PYTHON_BINDINGS "Compile the python bindings for iCubModels" OFF)
+
+
+if(MSVC)
+    set(CMAKE_DEBUG_POSTFIX "d")
+endif()
+
+set(CMAKE_C_EXTENSIONS OFF)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+option(BUILD_SHARED_LIBS "Build libraries as shared as opposed to static" ON)
+
+# Enable RPATH support for installed binaries and libraries
+include(AddInstallRPATHSupport)
+add_install_rpath_support(BIN_DIRS "${CMAKE_INSTALL_FULL_BINDIR}"
+                          LIB_DIRS "${CMAKE_INSTALL_FULL_LIBDIR}"
+                          INSTALL_NAME_DIR "${CMAKE_INSTALL_FULL_LIBDIR}"
+                          USE_LINK_PATH)
+
+# Encourage user to specify a build type (e.g. Release, Debug, etc.), otherwise set it to Release.
+if(NOT CMAKE_CONFIGURATION_TYPES)
+    if(NOT CMAKE_BUILD_TYPE)
+        message(STATUS "Setting build type to 'Release' as none was specified.")
+        set_property(CACHE CMAKE_BUILD_TYPE PROPERTY VALUE "Release")
+    endif()
+endif()
 
 macro(SUBDIRLIST result curdir)
   file(GLOB children RELATIVE ${curdir} ${curdir}/*)
@@ -34,13 +70,7 @@ file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/ros DESTINATION ${CMAKE_CURRENT_BINARY_DIR
 # is enabled
 option(ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS OFF)
 
-# Workaround for https://github.com/robotology/icub-models/issues/39 and
-# https://github.com/osrf/gazebo/issues/2728
-set(ICUB_MODELS_SDF_VERSION "1.5")
-find_package(GAZEBO QUIET)
-if(GAZEBO_FOUND AND GAZEBO_VERSION VERSION_GREATER_EQUAL 11.0)
-  set(ICUB_MODELS_SDF_VERSION "1.7")
-endif()
+set(ICUB_MODELS_SDF_VERSION "1.7")
 
 # Note: all the models run in Gazebo, but this two are the only one that
 # run with the default physics settings of Gazebo, see issue
@@ -58,6 +88,8 @@ set(CONFIGURED_MODELS "")
 list(APPEND CONFIGURED_MODELS "left_hand_mk3")
 list(APPEND CONFIGURED_MODELS "left_wrist_mk2")
 
+set(INSTALLED_URDF_MODELS "")
+
 SUBDIRLIST(ROBOTS_NAMES ${CMAKE_CURRENT_SOURCE_DIR}/iCub/robots)
 foreach(ROBOT_DIRNAME ${ROBOTS_NAMES})
   set(ROBOT_NAME ${ROBOT_DIRNAME})
@@ -70,6 +102,8 @@ foreach(ROBOT_DIRNAME ${ROBOTS_NAMES})
   set(ROBOT_FEET_FIXED_MODEL_FOLDER "${CMAKE_CURRENT_BINARY_DIR}/iCub/robots/${ROBOT_NAME}_feet_fixed")
   set(ROBOT_FEET_FIXED_MODEL_CONFIG_FILE "${ROBOT_FEET_FIXED_MODEL_FOLDER}/model.config")
   set(ROBOT_FEET_FIXED_MODEL_SDF_FILE "${ROBOT_FEET_FIXED_MODEL_FOLDER}/${ROBOT_NAME}_feet_fixed.sdf")
+
+  list(APPEND INSTALLED_URDF_MODELS \"${ROBOT_NAME}\")
 
   if(ROBOT_NAME IN_LIST CONFIGURED_MODELS)
     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/iCub/robots/${ROBOT_NAME}/model.config
@@ -129,6 +163,9 @@ endforeach()
 
 SUBDIRLIST(ROBOTS_NAMES ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/robots)
 foreach(ROBOT_NAME ${ROBOTS_NAMES})
+
+  list(APPEND INSTALLED_URDF_MODELS \"${ROBOT_NAME}\")
+
   if(ROBOT_NAME IN_LIST GAZEBO_SUPPORTED_MODELS)
     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/robots/${ROBOT_NAME}/model.config
                    ${CMAKE_CURRENT_BINARY_DIR}/iCub/robots/${ROBOT_NAME}/model.config
@@ -136,8 +173,20 @@ foreach(ROBOT_NAME ${ROBOTS_NAMES})
   endif()
 endforeach()
 
+string(REPLACE ";" "," INSTALLED_URDF_MODELS "${INSTALLED_URDF_MODELS}")
+
 # Install the whole iCub directory
 install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/iCub DESTINATION share)
 
-include(AddUninstallTarget.cmake)
+add_subdirectory(cpp)
+add_subdirectory(bindings)
 
+
+include(InstallBasicPackageFiles)
+install_basic_package_files(${PROJECT_NAME}
+                            VERSION ${${PROJECT_NAME}_VERSION}
+                            COMPATIBILITY AnyNewerVersion
+                            VARS_PREFIX ${PROJECT_NAME}
+                            NO_CHECK_REQUIRED_COMPONENTS_MACRO)
+
+include(AddUninstallTarget)
