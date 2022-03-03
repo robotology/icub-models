@@ -91,6 +91,8 @@ int main()
 }
 ```
 
+***Note: The ABI and the API of the C++ helper library has breaking changes only at major releases of the `icub-models` package.***
+
 ### Use the models from Python helper library
 In order to use these models in `python` application you can exploit the `icub-models` module.
 `icub-models` provides `python` bindings support thanks to `pybind11` library.  To compile the
