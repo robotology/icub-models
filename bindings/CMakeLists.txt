@@ -4,9 +4,8 @@
 
 if(ICUB_MODELS_COMPILE_PYTHON_BINDINGS)
 
+    find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
     find_package(pybind11 REQUIRED)
-    find_package(Python3 COMPONENTS Interpreter REQUIRED)
-
 
     # define new line accordingly to the operating system
     if (WIN32)
