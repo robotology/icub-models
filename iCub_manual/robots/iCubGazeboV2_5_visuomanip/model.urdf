@@ -2353,7 +2353,7 @@
       <max_contacts>1</max_contacts>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 3.14159265358979 1.5707963267949"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/full_LeftLittle1.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://iCub/meshes/col_LeftLittle1.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </collision>
   </link>
