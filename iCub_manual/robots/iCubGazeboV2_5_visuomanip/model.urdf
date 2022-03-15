@@ -11,8 +11,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_root_link_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="green">
-        <color rgba="0 1 0 1"/>
+      <material name="root_link_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -38,8 +38,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_hip_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="black">
-        <color rgba="0 0 0 1"/>
+      <material name="r_hip_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -68,8 +68,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_hip_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="red">
-        <color rgba="1 0 0 1"/>
+      <material name="r_hip_2_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -98,8 +98,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_upper_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hip_3_color">
+        <color rgba="0.635 0.137 0.114 1"/>
       </material>
     </visual>
     <collision>
@@ -126,8 +126,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="yellow">
-        <color rgba="1 1 0 1"/>
+      <material name="r_upper_leg_color">
+        <color rgba="0.635 0.137 0.114 1"/>
       </material>
     </visual>
     <collision>
@@ -163,8 +163,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_shank_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="pink">
-        <color rgba="1 0 1 1"/>
+      <material name="r_lower_leg_color">
+        <color rgba="0.635 0.137 0.114 1"/>
       </material>
     </visual>
     <collision>
@@ -193,8 +193,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_ankle_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="cyan">
-        <color rgba="0 1 1 1"/>
+      <material name="r_ankle_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -223,8 +223,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_foot_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="green">
-        <color rgba="0 1 0 1"/>
+      <material name="r_ankle_2_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -253,8 +253,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_sole_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="white">
-        <color rgba="1 1 1 1"/>
+      <material name="r_foot_color">
+        <color rgba="0.635 0.137 0.114 1"/>
       </material>
     </visual>
     <collision>
@@ -281,8 +281,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_hip_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="dblue">
-        <color rgba="0 0 0.8 1"/>
+      <material name="l_hip_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -311,8 +311,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_hip_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="dgreen">
-        <color rgba="0.1 0.8 0.1 1"/>
+      <material name="l_hip_2_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -341,8 +341,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_upper_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="gray">
-        <color rgba="0.5 0.5 0.5 1"/>
+      <material name="l_hip_3_color">
+        <color rgba="0.635 0.137 0.114 1"/>
       </material>
     </visual>
     <collision>
@@ -369,8 +369,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_thigh_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="green">
-        <color rgba="0 1 0 1"/>
+      <material name="l_upper_leg_color">
+        <color rgba="0.635 0.137 0.114 1"/>
       </material>
     </visual>
     <collision>
@@ -406,8 +406,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_shank_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="black">
-        <color rgba="0 0 0 1"/>
+      <material name="l_lower_leg_color">
+        <color rgba="0.635 0.137 0.114 1"/>
       </material>
     </visual>
     <collision>
@@ -436,8 +436,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_ankle_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="red">
-        <color rgba="1 0 0 1"/>
+      <material name="l_ankle_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -466,8 +466,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_foot_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="l_ankle_2_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -496,8 +496,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_sole_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="yellow">
-        <color rgba="1 1 0 1"/>
+      <material name="l_foot_color">
+        <color rgba="0.635 0.137 0.114 1"/>
       </material>
     </visual>
     <collision>
@@ -524,8 +524,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_lap_belt_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="pink">
-        <color rgba="1 0 1 1"/>
+      <material name="torso_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -554,8 +554,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_lap_belt_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="cyan">
-        <color rgba="0 1 1 1"/>
+      <material name="torso_2_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -584,8 +584,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_chest_bb_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="green">
-        <color rgba="0 1 0 1"/>
+      <material name="chest_color">
+        <color rgba="0.635 0.137 0.114 1"/>
       </material>
     </visual>
     <collision>
@@ -614,8 +614,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_shoulder_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="white">
-        <color rgba="1 1 1 1"/>
+      <material name="r_shoulder_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -644,8 +644,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_shoulder_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="dblue">
-        <color rgba="0 0 0.8 1"/>
+      <material name="r_shoulder_2_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -674,8 +674,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_upper_arm_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="dgreen">
-        <color rgba="0.1 0.8 0.1 1"/>
+      <material name="r_shoulder_3_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -704,8 +704,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_elbow_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="gray">
-        <color rgba="0.5 0.5 0.5 1"/>
+      <material name="r_upper_arm_color">
+        <color rgba="0.635 0.137 0.114 1"/>
       </material>
     </visual>
     <collision>
@@ -732,8 +732,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_elbow_prosup_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="green">
-        <color rgba="0 1 0 1"/>
+      <material name="r_elbow_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -762,8 +762,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_forearm_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="black">
-        <color rgba="0 0 0 1"/>
+      <material name="r_forearm_color">
+        <color rgba="0.635 0.137 0.114 1"/>
       </material>
     </visual>
     <collision>
@@ -799,8 +799,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_wrist_pitch_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="red">
-        <color rgba="1 0 0 1"/>
+      <material name="r_wrist_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -829,8 +829,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightHandPalm.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_palm_color">
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <visual>
@@ -838,8 +838,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightTopCover.dae" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_top_color">
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -875,8 +875,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightThumb0.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_thumb_0_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -906,8 +906,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightThumb1.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_thumb_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -937,8 +937,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightThumb2.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_thumb_2_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -968,8 +968,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightThumb3.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_thumb_3_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1006,8 +1006,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightIndex0.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_index_0_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1037,8 +1037,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightIndex1.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_index_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1068,8 +1068,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightIndex2.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_index_2_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1099,8 +1099,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightIndex3.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_index_3_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1137,8 +1137,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightMiddle0.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_middle_0_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1168,8 +1168,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightMiddle1.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_middle_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1199,8 +1199,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightMiddle2.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_middle_2_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1230,8 +1230,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightMiddle3.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_middle_3_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1268,8 +1268,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightRing0.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_ring_0_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1299,8 +1299,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightRing1.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_ring_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1330,8 +1330,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightRing2.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_ring_2_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1361,8 +1361,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightRing3.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_ring_3_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1399,8 +1399,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightLittle0.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_little_0_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1430,8 +1430,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightLittle1.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_little_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1461,8 +1461,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightLittle2.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_little_2_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1492,8 +1492,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_RightLittle3.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_little_3_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1530,8 +1530,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_shoulder_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="yellow">
-        <color rgba="1 1 0 1"/>
+      <material name="l_shoulder_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1560,8 +1560,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_shoulder_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="pink">
-        <color rgba="1 0 1 1"/>
+      <material name="l_shoulder_2_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1590,8 +1590,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_upper_arm_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="cyan">
-        <color rgba="0 1 1 1"/>
+      <material name="l_shoulder_3_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1620,8 +1620,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_elbow_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="green">
-        <color rgba="0 1 0 1"/>
+      <material name="l_upper_arm_color">
+        <color rgba="0.635 0.137 0.114 1"/>
       </material>
     </visual>
     <collision>
@@ -1648,8 +1648,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_elbow_prosup_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="white">
-        <color rgba="1 1 1 1"/>
+      <material name="l_elbow_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1678,8 +1678,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_forearm_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="dblue">
-        <color rgba="0 0 0.8 1"/>
+      <material name="l_forearm_color">
+        <color rgba="0.635 0.137 0.114 1"/>
       </material>
     </visual>
     <collision>
@@ -1715,8 +1715,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_wrist_pitch_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="dgreen">
-        <color rgba="0.1 0.8 0.1 1"/>
+      <material name="l_wrist_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1745,8 +1745,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftHandPalm.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="l_hand_palm_color">
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <visual>
@@ -1754,8 +1754,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftTopCover.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="l_hand_top_color">
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -1791,8 +1791,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftThumb0.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_thumb_0_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1822,8 +1822,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftThumb1.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_thumb_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1853,8 +1853,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftThumb2.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_thumb_2_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1884,8 +1884,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftThumb3.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_thumb_3_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1922,8 +1922,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftIndex0.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_index_0_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1953,8 +1953,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftIndex1.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_index_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -1984,8 +1984,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftIndex2.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_index_2_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -2015,8 +2015,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftIndex3.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_index_3_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -2053,8 +2053,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftMiddle0.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_middle_0_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -2083,8 +2083,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftMiddle1.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_middle_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -2114,8 +2114,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftMiddle2.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_middle_2_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -2145,8 +2145,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftMiddle3.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_middle_3_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -2183,8 +2183,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftRing0.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_ring_0_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -2214,8 +2214,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftRing1.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_ring_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -2245,8 +2245,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftRing2.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_ring_2_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -2276,8 +2276,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftRing3.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_ring_3_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -2314,8 +2314,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftLittle0.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_little_0_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -2345,15 +2345,15 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftLittle1.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_little_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
       <max_contacts>1</max_contacts>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 3.14159265358979 1.5707963267949"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/full_LeftLittle1.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://iCub/meshes/col_LeftLittle1.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </collision>
   </link>
@@ -2376,8 +2376,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftLittle2.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_little_2_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -2407,8 +2407,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/full_LeftLittle3.dae" scale="1.0 1.0 1.0"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_hand_little_3_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -2445,8 +2445,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_neck_1_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="green">
-        <color rgba="0 1 0 1"/>
+      <material name="neck_1_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -2475,8 +2475,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_neck_2_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="black">
-        <color rgba="0 0 0 1"/>
+      <material name="neck_2_color">
+        <color rgba="0.9 0.9 0.9 1"/>
       </material>
     </visual>
     <collision>
@@ -2505,8 +2505,8 @@
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_head_prt-binary.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="red">
-        <color rgba="1 0 0 1"/>
+      <material name="head_color">
+        <color rgba="1 1 1 1"/>
       </material>
     </visual>
     <collision>
@@ -2556,8 +2556,8 @@
       <geometry>
         <sphere radius="0.02"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="l_eye_color">
+        <color rgba="1.0 1.0 1.0 1"/>
       </material>
     </visual>
     <visual>
@@ -2565,6 +2565,9 @@
       <geometry>
         <cylinder length="0.001" radius="0.005"/>
       </geometry>
+      <material name="l_eye_pupil_color">
+        <color rgba="0.1 0.1 0.1 1"/>
+      </material>
     </visual>
   </link>
   <joint name="l_eye_pan_joint" type="revolute">
@@ -2585,8 +2588,8 @@
       <geometry>
         <sphere radius="0.02"/>
       </geometry>
-      <material name="blue">
-        <color rgba="0 0 1 1"/>
+      <material name="r_eye_color">
+        <color rgba="1.0 1.0 1.0 1"/>
       </material>
     </visual>
     <visual>
@@ -2594,6 +2597,9 @@
       <geometry>
         <cylinder length="0.001" radius="0.005"/>
       </geometry>
+      <material name="r_eye_pupil_color">
+        <color rgba="0.1 0.1 0.1 1"/>
+      </material>
     </visual>
   </link>
   <joint name="r_eye_pan_joint" type="revolute">
