@@ -179,8 +179,6 @@ string(REPLACE ";" "," INSTALLED_URDF_MODELS "${INSTALLED_URDF_MODELS}")
 install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/iCub DESTINATION share)
 
 add_subdirectory(cpp)
-add_subdirectory(bindings)
-
 
 include(InstallBasicPackageFiles)
 install_basic_package_files(${PROJECT_NAME}
