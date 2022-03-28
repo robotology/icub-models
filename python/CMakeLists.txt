@@ -26,8 +26,13 @@ if(ICUB_MODELS_USES_PYTHON)
     install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/icub_models/__init__.py"
             DESTINATION ${PYTHON_INSTDIR})
 
-    # Install the __init__.py file
-    install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/icub_models/icub_models.py"
+    # Install the icub_models.py file inserting the relative path between
+    # ${PYTHON_INSTDIR} and ${CMAKE_INSTALL_DIR}
+    file(RELATIVE_PATH ICUB_MODELS_CXX_PYTHON_INSTALL_RELATIVE_DIR ${PYTHON_INSTDIR} ${CMAKE_INSTALL_PREFIX})
+    configure_file("${CMAKE_CURRENT_SOURCE_DIR}/icub_models/icub_models.py"
+                   "${CMAKE_CURRENT_BINARY_DIR}/icub_models/icub_models.py"
+                    @ONLY)
+    install(FILES "${CMAKE_CURRENT_BINARY_DIR}/icub_models/icub_models.py"
             DESTINATION ${PYTHON_INSTDIR})
 
     # Install pip metadata files to ensure that icub_models installed via CMake is listed by pip list
