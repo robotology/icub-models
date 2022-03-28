@@ -9,7 +9,7 @@ from typing import List
 
 def get_models_path() -> str:
     root = dirname(dirname(dirname(dirname(dirname(__file__)))))
-    return join(root, 'share', 'icub_models', 'iCub', 'robots')
+    return join(root, 'share', 'iCub', 'robots')
 
 def get_robot_names() -> List[str]:
     return listdir(get_models_path())

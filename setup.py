@@ -10,7 +10,7 @@ import os
 if __name__ == '__main__':
 
     all_files = glob('./iCub/**/*.*', recursive=True)
-    data_files = [(os.path.join('share', 'icub_models', os.path.split(path)[0]),
+    data_files = [(os.path.join('share', os.path.split(path)[0]),
                    [os.path.join(os.path.split(path)[0], os.path.split(path)[1])])
                   for path in all_files]
 
