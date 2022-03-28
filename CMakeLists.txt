@@ -14,7 +14,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR}"
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR}")
 
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
-option(ICUB_MODELS_COMPILE_PYTHON_BINDINGS "Compile the python bindings for iCubModels" OFF)
+option(ICUB_MODELS_USES_PYTHON "Install the python package" OFF)
 
 
 if(MSVC)
@@ -179,6 +179,7 @@ string(REPLACE ";" "," INSTALLED_URDF_MODELS "${INSTALLED_URDF_MODELS}")
 install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/iCub DESTINATION share)
 
 add_subdirectory(cpp)
+add_subdirectory(python)
 
 include(InstallBasicPackageFiles)
 install_basic_package_files(${PROJECT_NAME}
