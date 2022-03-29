@@ -2,18 +2,23 @@
 # @authors Giulio Romualdi
 # @copyright 2022 Istituto Italiano di Tecnologia Released under the terms of the Creative Commons Attribution Share Alike 4.0 International
 
+import os
 import pathlib
 from typing import List
 
 
 def get_models_path() -> pathlib.Path:
-    root = ""
     relative_path = "@ICUB_MODELS_CXX_PYTHON_INSTALL_RELATIVE_DIR@"
     # If relative_path starts with @, it is a not escaped string
     # from CMake, i.e. that means that the file was installed via setup.py
     # let's substitute relative_path with its default value
     if relative_path.startswith("@"):
-        root = pathlib.Path(__file__).parent.parent.parent.parent.parent
+        # This is required to handle the difference between the unix and
+        # windows folder structure
+        if os.name == "nt":
+            root = pathlib.Path(__file__).parent.parent.parent.parent
+        else:
+            root = pathlib.Path(__file__).parent.parent.parent.parent.parent
     else:
         root = pathlib.Path(__file__) / relative_path
 
