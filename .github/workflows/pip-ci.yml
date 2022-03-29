@@ -30,4 +30,7 @@ jobs:
       run: python --version
 
     - name: Installation
-      run: pip install .
+      run: pip install .[test]
+
+    - name: Test with pytest
+      run: pytest
