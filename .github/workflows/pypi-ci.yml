@@ -5,15 +5,9 @@ on:
     branches: [ '**' ]
     tags-ignore: [ '**' ]
   pull_request:
-  workflow_dispatch:
   release:
     types:
       - published
-  schedule:
-  # * is a special character in YAML so you have to quote this string
-  # Execute a "weekly" build at 2 AM UTC on Thursday
-  - cron:  '0 2 * * *'
-
 jobs:
 
   build_wheels:
@@ -32,6 +26,7 @@ jobs:
     steps:
 
       - uses: actions/checkout@master
+      - run: git fetch --prune --unshallow
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -45,6 +40,7 @@ jobs:
         run: python -m build --sdist --wheel --outdir dist/ .
 
       - name: Publish distribution 📦 to Test PyPI
+        if: github.event_name != 'pull_request' && github.event_name != 'release'
         uses: pypa/gh-action-pypi-publish@master
         with:
           password: ${{ secrets.TEST_PYPI_API_TOKEN }}
