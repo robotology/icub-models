@@ -5,6 +5,10 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+## [1.23.2] - 2020-03-31
+
+* Fix CMake configuration if Python library installation is enabled (https://github.com/robotology/icub-models/pull/146).
+
 ## [1.23.1] - 2022-03-30
 
 ### Changed

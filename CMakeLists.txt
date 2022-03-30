@@ -5,7 +5,7 @@
 cmake_minimum_required(VERSION 3.8)
 
 project(icub-models
-  VERSION 1.23.1)
+  VERSION 1.23.2)
 
 include(GNUInstallDirs)
 
