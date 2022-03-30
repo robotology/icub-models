@@ -5,6 +5,12 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+## [1.23.1] - 2022-03-30
+
+### Changed
+
+* The python module `icub_models` is now implemented in pure python. This removes the pybind11 dependency (https://github.com/robotology/icub-models/pull/143)
+
 ## [1.23.0] - 2022-02-28
 
 ### Added

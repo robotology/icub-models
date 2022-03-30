@@ -95,17 +95,11 @@ int main()
 
 ### Use the models from Python helper library
 In order to use these models in `python` application you can exploit the `icub-models` module.
-`icub-models` provides `python` bindings support thanks to `pybind11` library.  To compile the
-bindings please make sure you have installed `pybind11` in your system. If you are in Ubuntu Linux,
-you can install them with
-```
-sudo apt install python3-pybind11
-```
-Then you can enable the  bindings compilation with
+`icub-models` provides a `python` package to called `icub_models`. You can install it via `cmake`
 ```
 cmake -DCMAKE_INSTALL_PREFIX=<path/where/you/want/to/install> \
       -DCMAKE_BUILD_TYPE=Release \
-      -DICUB_MODELS_COMPILE_PYTHON_BINDINGS:BOOL=ON ..
+      -DICUB_MODELS_USES_PYTHON:BOOL=ON ..
 cmake --build . --config Release --target install
 ```
 
