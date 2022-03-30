@@ -2,47 +2,37 @@
 # This software may be modified and distributed under the terms of the
 # GNU Lesser General Public License v2.1 or any later version.
 
-if(ICUB_MODELS_COMPILE_PYTHON_BINDINGS)
+if(ICUB_MODELS_USES_PYTHON)
 
-    find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
-    find_package(pybind11 REQUIRED)
+  find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
 
-    # define new line accordingly to the operating system
-    if (WIN32)
-       set(NEW_LINE "\n\r")
-    else()
-       set(NEW_LINE "\n")
-    endif()
-
-    option(ICUB_MODELS_DETECT_ACTIVE_PYTHON_SITEPACKAGES
-        "Do you want icub-models to detect and use the active site-package directory? (it could be a system dir)"
-        FALSE)
+  option(ICUB_MODELS_DETECT_ACTIVE_PYTHON_SITEPACKAGES
+    "Do you want icub-models to detect and use the active site-package directory? (it could be a system dir)"
+    FALSE)
 
     # Install the resulting Python package for the active interpreter
     if(ICUB_MODELS_DETECT_ACTIVE_PYTHON_SITEPACKAGES)
         set(PYTHON_INSTDIR ${Python3_SITELIB}/icub_models)
     else()
-     execute_process(COMMAND ${Python3_EXECUTABLE} -c "from distutils import sysconfig; print(sysconfig.get_python_lib(1,0,prefix=''))"
-       OUTPUT_VARIABLE _PYTHON_INSTDIR)
+      execute_process(COMMAND ${Python3_EXECUTABLE} -c "from distutils import sysconfig; print(sysconfig.get_python_lib(1,0,prefix=''))"
+        OUTPUT_VARIABLE _PYTHON_INSTDIR)
 
-     string(STRIP ${_PYTHON_INSTDIR} _PYTHON_INSTDIR_CLEAN)
-     set(PYTHON_INSTDIR ${_PYTHON_INSTDIR_CLEAN}/icub_models)
+      string(STRIP ${_PYTHON_INSTDIR} _PYTHON_INSTDIR_CLEAN)
+      set(PYTHON_INSTDIR ${_PYTHON_INSTDIR_CLEAN}/icub_models)
     endif()
 
-    # Folder of the Python package within the build tree.
-    # It is used for the Python tests.
-    set(ICUB_MODELS_PYTHON_PACKAGE "${CMAKE_BINARY_DIR}/icub_models")
-
-    # Add the bindings directory
-    add_subdirectory(python)
-
-    # Create the __init__.py file
-    file(GENERATE
-         OUTPUT "${ICUB_MODELS_PYTHON_PACKAGE}/__init__.py"
-         CONTENT "from icub_models.bindings import *")
 
     # Install the __init__.py file
-    install(FILES "${ICUB_MODELS_PYTHON_PACKAGE}/__init__.py"
+    install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/icub_models/__init__.py"
+            DESTINATION ${PYTHON_INSTDIR})
+
+    # Install the icub_models.py file inserting the relative path between
+    # ${PYTHON_INSTDIR} and ${CMAKE_INSTALL_DIR}
+    file(RELATIVE_PATH ICUB_MODELS_CXX_PYTHON_INSTALL_RELATIVE_DIR ${PYTHON_INSTDIR} ${CMAKE_INSTALL_PREFIX})
+    configure_file("${CMAKE_CURRENT_SOURCE_DIR}/icub_models/icub_models.py"
+                   "${CMAKE_CURRENT_BINARY_DIR}/icub_models/icub_models.py"
+                    @ONLY)
+    install(FILES "${CMAKE_CURRENT_BINARY_DIR}/icub_models/icub_models.py"
             DESTINATION ${PYTHON_INSTDIR})
 
     # Install pip metadata files to ensure that icub_models installed via CMake is listed by pip list
