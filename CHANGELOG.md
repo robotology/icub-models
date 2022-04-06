@@ -5,7 +5,12 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+### Fixed 
+* In Python helper library, fix the get_models_path() when the `icub_models` package is installed with the robotology-superbuild (https://github.com/robotology/icub-models/pull/149).
+
 ## [1.23.2] - 2020-03-31
+
+### Fixed
 
 * Fix CMake configuration if Python library installation is enabled (https://github.com/robotology/icub-models/pull/146).
 
