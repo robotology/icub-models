@@ -20,7 +20,7 @@ def get_models_path() -> pathlib.Path:
         else:
             root = pathlib.Path(__file__).parent.parent.parent.parent.parent
     else:
-        root = pathlib.Path(__file__) / pathlib.Path(relative_path)
+        root = pathlib.Path(__file__).parent / pathlib.Path(relative_path)
 
     return (root / "share" / "iCub" / "robots").resolve()
 
