@@ -5,6 +5,8 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+## [1.23.3] - 2020-04-08
+
 ### Fixed
 * In Python helper library, fix the `get_models_path()` when the `icub_models` package is installed with the robotology-superbuild (https://github.com/robotology/icub-models/pull/149, https://github.com/robotology/icub-models/pull/150).
 * Fix the `PYTHON_ABSOLUTE_INSTDIR` when a relative `PYTHON_INSTDIR` is detected (https://github.com/robotology/icub-models/pull/150)
