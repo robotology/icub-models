@@ -4,7 +4,7 @@
 
 if(ICUB_MODELS_USES_PYTHON)
 
-  find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
+  find_package(Python3 COMPONENTS Interpreter REQUIRED)
 
   option(ICUB_MODELS_DETECT_ACTIVE_PYTHON_SITEPACKAGES
     "Do you want icub-models to detect and use the active site-package directory? (it could be a system dir)"
