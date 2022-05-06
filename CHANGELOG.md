@@ -5,13 +5,18 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
-## [1.23.3] - 2020-04-08
+## [1.23.4] - 2022-05-06
+
+### Fixed
+* Make the C++ helper library more robust to system that automatically make the library relocatable such as conda (https://github.com/robotology/icub-models/pull/154).
+
+## [1.23.3] - 2022-04-08
 
 ### Fixed
 * In Python helper library, fix the `get_models_path()` when the `icub_models` package is installed with the robotology-superbuild (https://github.com/robotology/icub-models/pull/149, https://github.com/robotology/icub-models/pull/150).
 * Fix the `PYTHON_ABSOLUTE_INSTDIR` when a relative `PYTHON_INSTDIR` is detected (https://github.com/robotology/icub-models/pull/150)
 
-## [1.23.2] - 2020-03-31
+## [1.23.2] - 2022-03-31
 
 ### Fixed
 
