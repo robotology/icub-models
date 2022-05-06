@@ -12,6 +12,11 @@ namespace iCubModels
 std::string getModelsPath()
 {
     std::string retstr = "@ICUB_MODELS_MODELS_PATH@";
+    // Sometimes the relocation of the C++ library in conda or similar systems is not working correctly
+    // and is leaving at the end of the retstr many \0 characters. To be sure not to return a faulty
+    // string, we remove all the trailing \0
+    // See https://github.com/ami-iit/bipedal-locomotion-framework/pull/526
+    retstr.erase(std::find(retstr.begin(), retstr.end(), '\0'), retstr.end());
     return retstr;
 }
 
