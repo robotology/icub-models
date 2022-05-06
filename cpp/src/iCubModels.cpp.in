@@ -37,7 +37,7 @@ std::string getModelFile(const std::string& modelName)
         return modelFile;
     }
 
-    modelFile = "@ICUB_MODELS_MODELS_PATH@/" + modelName + "/model.urdf";
+    modelFile = getModelsPath() +  "/" + modelName + "/model.urdf";
     return modelFile;
 }
 } // namespace iCubModels
