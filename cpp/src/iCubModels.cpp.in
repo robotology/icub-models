@@ -7,6 +7,8 @@
 
 #include <iCubModels/iCubModels.h>
 
+#include <algorithm>
+
 namespace iCubModels
 {
 std::string getModelsPath()
