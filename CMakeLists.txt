@@ -1,11 +1,11 @@
-# Copyright: (C) 2017 Fondazione Istituto Italiano di Tecnologia
+# Copyright: (C) 2022 Fondazione Istituto Italiano di Tecnologia
 # Authors: Silvio Traversaro
 # CopyPolicy: Released under the terms of the LGPLv2.1 or later, see LGPL.TXT
 
 cmake_minimum_required(VERSION 3.8)
 
 project(icub-models
-  VERSION 1.23.2)
+  VERSION 1.23.4)
 
 include(GNUInstallDirs)
 
