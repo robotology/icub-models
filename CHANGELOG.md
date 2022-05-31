@@ -5,6 +5,9 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+### Fixed
+* New tuned pidParams for icub3 gazebo model for walking simulations (https://github.com/robotology/icub-models-generator/pull/219).
+
 ## [1.23.4] - 2022-05-06
 
 ### Fixed

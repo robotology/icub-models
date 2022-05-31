@@ -91,6 +91,8 @@ int main()
 }
 ```
 
+***Note: The ABI and the API of the C++ helper library has breaking changes only at major releases of the `icub-models` package.***
+
 ### Use the models from Python helper library
 In order to use these models in `python` application you can exploit the `icub-models` module.
 `icub-models` provides a `python` package to called `icub_models`. You can install it via `cmake`
