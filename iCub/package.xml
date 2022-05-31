@@ -1,6 +1,6 @@
 <package>
   <name>iCub</name>
-  <version>1.21.1</version>
+  <version>1.24.0</version>
   <description>
     This is not an actual package, but rather a placeholder to 
     make sure that the share/iCub directory is found as the 
