@@ -1313,7 +1313,7 @@
   </link>
   <joint name="r_wrist_yaw" type="revolute">
     <origin xyz="0.0006341064996442103 -0.0194999 0.002366518317509704" rpy="0 0 0"/>
-    <axis xyz="2.220446049250313e-16 1.0000000000000002 0.0"/>
+    <axis xyz="-2.220446049250313e-16 -1.0000000000000002 0.0"/>
     <parent link="r_wrist_1"/>
     <child link="r_hand"/>
     <limit effort="50000" lower="-0.3490658503988659" upper="0.4363323129985824" velocity="50000"/>
