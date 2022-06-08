@@ -5,6 +5,10 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+## [1.24.1] - 2022-06-08
+
+* Fix r_wrist_yaw joint direction in several iCub 2.* models (https://github.com/robotology/icub-models/issues/156, https://github.com/robotology/icub-models-generator/pull/220).
+
 ## [1.24.0] - 2022-05-31
 
 ### Fixed
