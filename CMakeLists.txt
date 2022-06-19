@@ -189,3 +189,10 @@ install_basic_package_files(${PROJECT_NAME}
                             NO_CHECK_REQUIRED_COMPONENTS_MACRO)
 
 include(AddUninstallTarget)
+
+# Tests
+option(BUILD_TESTING "Create tests using CMake" OFF)
+if(BUILD_TESTING)
+    enable_testing()
+    add_subdirectory(tests)
+endif()
