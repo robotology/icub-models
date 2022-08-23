@@ -5,7 +5,16 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+## [1.25.0] - 2022-08-23
+
+### Changed
+
+* Update iCub3 model with new weight, add FT on left leg, increase shoulder pitch limits (https://github.com/robotology/icub-models-generator/pull/223).
+* iCub3: Decrease limit of hip roll after installation of hard stop on robot (https://github.com/robotology/icub-models-generator/pull/224).
+
 ## [1.24.1] - 2022-06-08
+
+### Fixed
 
 * Fix r_wrist_yaw joint direction in several iCub 2.* models (https://github.com/robotology/icub-models/issues/156, https://github.com/robotology/icub-models-generator/pull/220).
 
