@@ -1,4 +1,4 @@
-<robot name="iCubChangeNamed">
+<robot name="iCub">
   <link name="root_link">
     <inertial>
       <origin xyz="0.02488209999999999 0.00010394699999999017 -0.04408060000000001" rpy="1.5707963267948961 0 -1.5707963267948961"/>
