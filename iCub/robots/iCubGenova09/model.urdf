@@ -1517,6 +1517,11 @@
   <gazebo reference="r_wrist_yaw">
   <implicitSpringDamper>1</implicitSpringDamper>
 </gazebo>
+  <gazebo>
+  <plugin name="robotinterface" filename="libgazebo_yarp_robotinterface.so">
+    <yarpRobotInterfaceConfigurationFile>model://iCub/conf_icub3/icub.xml</yarpRobotInterfaceConfigurationFile>
+  </plugin>
+</gazebo>
   <gazebo reference="l_arm_ft_sensor">
     <sensor name="l_arm_ft_sensor" type="force_torque">
       <always_on>1</always_on>
