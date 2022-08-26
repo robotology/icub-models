@@ -6,12 +6,12 @@
         <param name="period">      10                          </param>
         <param name="name">       ${portprefix}/right_leg_hip     </param>
         
-        <action phase="startup" level="5" type="attach">
+        <action phase="startup" level="10" type="attach">
             <paramlist name="networks">
                 <elem name="FirstStrain">  icub_right_leg_ft </elem>
             </paramlist>
         </action>
 
-        <action phase="shutdown" level="5" type="detach" />
+        <action phase="shutdown" level="15" type="detach" />
     </device>
 

@@ -7,11 +7,11 @@
         <param name="name">     ${portprefix}/head/inertials       </param>
 
 
-        <action phase="startup" level="5" type="attach">
+        <action phase="startup" level="10" type="attach">
             <paramlist name="networks">
                 <elem name="SetOfIMUs"> head_inertial_hardware_device </elem>
             </paramlist>
         </action>
 
-        <action phase="shutdown" level="5" type="detach" />
+        <action phase="shutdown" level="15" type="detach" />
     </device> 

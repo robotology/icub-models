@@ -3,6 +3,7 @@
     
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-mc_nws_yarp" type="controlBoard_nws_yarp">
     <param name="name"> ${portprefix}/right_arm </param>
+    <param name="period">0.01</param>
     <action phase="startup" level="10" type="attach">
         <param name="device"> right_arm-mc_remapper </param>
     </action>
