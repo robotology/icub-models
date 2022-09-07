@@ -2875,7 +2875,7 @@
 </plugin>
 <plugin name="controlboard_left_arm" filename="libgazebo_yarp_controlboard.so">
     <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm.ini</yarpConfigurationFile>
-  </plugin>
+</plugin>
 <plugin name='controlboard_left_hand_thumb' filename='libgazebo_yarp_controlboard.so'>
     <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV3_visuomanip/gazebo_icub_left_hand_thumb.ini</yarpConfigurationFile>
   </plugin>
@@ -2919,6 +2919,9 @@
 <yarpConfigurationFile>model://iCub/conf_icub3/gazebo_icub_right_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
 <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
 </plugin>
+<plugin name="controlboard_right_arm" filename="libgazebo_yarp_controlboard.so">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_arm.ini</yarpConfigurationFile>
+</plugin>
 <plugin name='controlboard_right_hand_thumb' filename='libgazebo_yarp_controlboard.so'>
     <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV3_visuomanip/gazebo_icub_right_hand_thumb.ini</yarpConfigurationFile>
   </plugin>
@@ -2934,6 +2937,14 @@
   <plugin name='controlboard_right_hand_finger' filename='libgazebo_yarp_controlboard.so'>
     <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV3_visuomanip/gazebo_icub_right_hand_finger.ini</yarpConfigurationFile>
     <initialConfiguration>1.0471975511965976</initialConfiguration>
+  </plugin>
+  
+  <plugin name='mais_left_hand' filename='libgazebo_yarp_maissensor.so'>
+    <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV3_visuomanip/gazebo_icub_left_hand_mais.ini</yarpConfigurationFile>
+  </plugin>
+
+  <plugin name='mais_right_hand' filename='libgazebo_yarp_maissensor.so'>
+    <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV3_visuomanip/gazebo_icub_right_hand_mais.ini</yarpConfigurationFile>
   </plugin>
 </gazebo>
   <gazebo reference="r_shoulder_pitch">
@@ -3333,7 +3344,7 @@
 </gazebo>
   <gazebo reference="l_eye">
   <sensor name="left_camera_rgb" type="camera">
-    <pose>0.0 0.0 0.0 0.0 -1.57 1.57</pose>
+    <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
     <camera>
       <!-- please use these intrinsic parameters -->
       <!-- fx = fy = 343.12110728152936, cx = 160.0, cy = 120.0 -->
@@ -3352,7 +3363,7 @@
     <visualize>false</visualize>
   </sensor>
   <sensor name="left_camera_depth" type="depth">
-    <pose>0.0 0.0 0.0 0.0 -1.57 1.57</pose>
+    <pose>0.0 0.0 0.0 -1.57 -1.57 0</pose>
     <camera>
       <!-- please use these intrinsic parameters -->
       <!-- fx = fy = 343.12110728152936, cx = 160.0, cy = 120.0 -->
@@ -3376,7 +3387,7 @@
 </gazebo>
 <gazebo reference="r_eye">
   <sensor name="right_camera_rgb" type="camera">
-    <pose>0.0 0.0 0.0 0.0 -1.57 1.57</pose>
+    <pose>0.0 0.0 0.0 -1.57 -1.57 0</pose>
     <camera>
       <!-- please use these intrinsic parameters -->
       <!-- fx = fy = 343.12110728152936, cx = 160.0, cy = 120.0 -->
@@ -3402,4 +3413,3 @@
     <pose>0.0 0.0 0.64 0.0 0.0 0.0</pose>
   </gazebo>
 </robot>
-
