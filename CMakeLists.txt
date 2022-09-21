@@ -149,7 +149,7 @@ endforeach()
 
 # Deal with manually generated models
 set(GAZEBO_SUPPORTED_MODELS "")
-list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5_visuomanip")
+list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5_visuomanip" "iCubGazeboV3_visuomanip")
 
 SUBDIRLIST(ROBOTS_NAMES ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/robots)
 foreach(ROBOT_NAME ${ROBOTS_NAMES})
