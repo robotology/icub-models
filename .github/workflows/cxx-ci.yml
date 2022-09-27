@@ -85,6 +85,7 @@ jobs:
     # ============
 
     - name: Dependencies [macOS]
+      if: contains(matrix.os, 'macos')
       run: |
         brew install cmake
 
