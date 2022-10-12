@@ -46,7 +46,7 @@ jobs:
               fi
             fi
           done
-          echo "::set-output name=models::${model_name_list[@]}"
+          echo "models=${model_name_list[@]}" >> $GITHUB_OUTPUT
 
       - name: Get Token
         id: get_workflow_token
