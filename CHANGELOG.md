@@ -6,7 +6,7 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 ## [Unreleased]
 
 ### Fixed
-* Fix finding the `iCub` package in ROS2 ().
+* Fix finding the `iCub` package in ROS2 (https://github.com/robotology/icub-models/pull/178).
 
 ## [1.25.0] - 2022-08-23
 
