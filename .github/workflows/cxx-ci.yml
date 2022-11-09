@@ -74,6 +74,8 @@ jobs:
       run: |
         # Test ROS
         rospack list | grep "^iCub " | grep "iCub$"
+        # debug
+        ros2 pkg list
         # Test ROS2
         ros2 pkg list | grep "^iCub$"
 
