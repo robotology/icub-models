@@ -32,8 +32,8 @@ jobs:
       run: |
         # Workaround for https://github.com/conda-incubator/setup-miniconda/issues/186
         conda config --remove channels defaults
-        # Compilation related dependencies
-        mamba install cmake compilers make ninja pkg-config python
+        # Build and test dependencies (ROS packages to test that resouces are find correctly by ROS/ROS2)
+        mamba install -c conda-forge -c robostack -c robostack-humble cmake compilers make ninja pkg-config python ros-noetic-rospack ros-humble-ros2pkg
 
     - name: Print used environment [Conda]
       shell: bash -l {0}
@@ -62,6 +62,20 @@ jobs:
       run: |
         cd build
         cmake --build . --config ${{ matrix.build_type }}
+
+    - name: Install [Conda]
+      shell: bash -l {0}
+      run: |
+        cd build
+        cmake --install . --config ${{ matrix.build_type }}
+
+    - name: Test ROS Package can be found [Conda]
+      shell: bash -l {0}
+      run: |
+        # Test ROS
+        rospack list | grep "^iCub " | grep "iCub$"
+        # Test ROS2
+        ros2 pkg list | grep "^iCub$"
 
   build-with-system-dependencies:
     name: '[${{ matrix.os }}@${{ matrix.build_type }}]'
