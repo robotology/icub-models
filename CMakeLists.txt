@@ -178,12 +178,12 @@ string(REPLACE ";" "," INSTALLED_URDF_MODELS "${INSTALLED_URDF_MODELS}")
 # Install the whole iCub directory
 install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/iCub DESTINATION share)
 
-# Install empty iCub file in <prefix>/share/ament_index/resource_index/package 
+# Install empty iCub file in <prefix>/share/ament_index/resource_index/packages
 # so that iCub packages if found by ROS2
 # See https://github.com/robotology/icub-models/issues/177
 file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/iCub_empty_file "")
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/iCub_empty_file 
-        DESTINATION share/ament_index/resource_index/package
+        DESTINATION share/ament_index/resource_index/packages
         RENAME iCub)
 
 add_subdirectory(cpp)
