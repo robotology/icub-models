@@ -70,15 +70,19 @@ jobs:
         cd build
         cmake --install . --config ${{ matrix.build_type }}
 
-    - name: Test ROS Package can be found [Conda]
+    - name: Test ROS Package can be found [Conda/Linux&macOS]
       shell: bash -l {0}
       run: |
         # Test ROS
-        rospack list | grep "^iCub " | grep "iCub$"
-        # debug
-        ros2 pkg list
+        rospack find iCub
         # Test ROS2
-        ros2 pkg list | grep "^iCub$"
+        ros2 pkg prefix iCub
+
+    - name: Test ROS Package can be found [Conda/Windows]
+      shell: cmd /C CALL {0}
+      run: |
+        rospack find iCub
+        ros2 pkg prefix iCub
 
   build-with-system-dependencies:
     name: '[${{ matrix.os }}@${{ matrix.build_type }}]'
