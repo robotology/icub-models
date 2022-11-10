@@ -33,7 +33,8 @@ jobs:
         # Workaround for https://github.com/conda-incubator/setup-miniconda/issues/186
         conda config --remove channels defaults
         # Build and test dependencies (ROS packages to test that resouces are find correctly by ROS/ROS2)
-        mamba install -c conda-forge -c robostack -c robostack-humble cmake compilers make ninja pkg-config python ros-noetic-rospack ros-humble-ros2pkg
+        # ros-noetic-catkin is required otherwised ROS_PACKAGE_PATH is not defined and rospack list does not return anything
+        mamba install -c conda-forge -c robostack -c robostack-humble cmake compilers make ninja pkg-config python ros-noetic-rospack ros-noetic-catkin ros-humble-ros2pkg
 
     - name: Print used environment [Conda]
       shell: bash -l {0}
