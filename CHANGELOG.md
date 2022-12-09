@@ -5,7 +5,7 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
-# [1.26.0] - 2022-12-07
+# [1.26.0] - 2022-12-09
 
 ### Changed
 * Export frames in urdf for the sensors (imu and Ft sensors) (https://github.com/robotology/icub-models-generator/pull/227).
