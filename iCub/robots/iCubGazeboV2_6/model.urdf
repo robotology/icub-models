@@ -21,6 +21,13 @@
       </geometry>
     </collision>
   </link>
+  <link name="root_link_ems_gyro_eb5"/>
+  <joint name="root_link_ems_gyro_eb5_fixed_joint" type="fixed">
+    <origin xyz="0.0493308 -0.012577100000000023 -0.11569100000000002" rpy="3.141592653589793 1.2915440450258349 3.141592653589793"/>
+    <parent link="root_link"/>
+    <child link="root_link_ems_gyro_eb5"/>
+    <dynamics damping="0.1"/>
+  </joint>
   <link name="r_hip_1">
     <inertial>
       <origin xyz="-0.0005145000000000149 -0.038075299999999986 -7.099999999998774e-05" rpy="1.5707963267948961 0 1.5707963267948961"/>
@@ -81,6 +88,13 @@
     <limit effort="37.0" lower="-0.3490658503988659" upper="2.0943951023931953" velocity="7.64"/>
     <dynamics damping="1.0" friction="0.0"/>
   </joint>
+  <link name="r_upper_leg_ft_gyro_3b11"/>
+  <joint name="r_upper_leg_ft_gyro_3b11_fixed_joint" type="fixed">
+    <origin xyz="0.006563800000000002 -0.008586100000000013 -0.059281999999999946" rpy="0 0 1.5707963267948966"/>
+    <parent link="r_hip_2"/>
+    <child link="r_upper_leg_ft_gyro_3b11"/>
+    <dynamics damping="0.1"/>
+  </joint>
   <link name="r_hip_3">
     <inertial>
       <origin xyz="-0.00012300000000000505 -0.0002822999999999992 0.008718000000000031" rpy="-1.5707963267948961 0 -1.5707963267948961"/>
@@ -139,6 +153,20 @@
     <limit effort="37.0" lower="-1.3962634015954636" upper="1.3962634015954636" velocity="7.64"/>
     <dynamics damping="1.0" friction="0.0"/>
   </joint>
+  <link name="r_upper_leg_ems_gyro_eb8"/>
+  <joint name="r_upper_leg_ems_gyro_eb8_fixed_joint" type="fixed">
+    <origin xyz="-0.013078999999999993 0.04040709999999999 -0.035654999999999964" rpy="1.5707963267948966 1.5707963267948961 0"/>
+    <parent link="r_upper_leg"/>
+    <child link="r_upper_leg_ems_gyro_eb8"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_upper_leg_ems_gyro_eb11"/>
+  <joint name="r_upper_leg_ems_gyro_eb11_fixed_joint" type="fixed">
+    <origin xyz="-0.013081000000000016 -0.040406899999999996 -0.087979" rpy="1.5707963267948966 1.5707963267948961 0"/>
+    <parent link="r_upper_leg"/>
+    <child link="r_upper_leg_ems_gyro_eb11"/>
+    <dynamics damping="0.1"/>
+  </joint>
   <link name="r_upper_leg_back_contact"/>
   <joint name="r_upper_leg_back_contact_fixed_joint" type="fixed">
     <origin xyz="-0.051199800000000004 0 0.014599999999999946" rpy="0 1.5707963267948963 0"/>
@@ -182,6 +210,13 @@
     <child link="r_lower_leg"/>
     <limit effort="37.0" lower="-2.1642082724729685" upper="0.06981317007977318" velocity="7.64"/>
     <dynamics damping="1.0" friction="0.0"/>
+  </joint>
+  <link name="r_lower_leg_ems_gyro_eb9"/>
+  <joint name="r_lower_leg_ems_gyro_eb9_fixed_joint" type="fixed">
+    <origin xyz="0.04450330799999999 0.014343499999999974 -0.08830099999999996" rpy="3.1415926535897922 -1.3526297834539558 0"/>
+    <parent link="r_lower_leg"/>
+    <child link="r_lower_leg_ems_gyro_eb9"/>
+    <dynamics damping="0.1"/>
   </joint>
   <link name="r_lower_leg_skin_0"/>
   <joint name="r_lower_leg_skin_0_fixed_joint" type="fixed">
@@ -509,6 +544,13 @@
     <limit effort="37.0" lower="-0.4363323129985824" upper="0.4363323129985824" velocity="7.64"/>
     <dynamics damping="1.0" friction="0.0"/>
   </joint>
+  <link name="r_foot_ft_gyro_3b14"/>
+  <joint name="r_foot_ft_gyro_3b14_fixed_joint" type="fixed">
+    <origin xyz="0.0040000999999999926 -0.00860000000000001 -0.045282000000000044" rpy="0 0 1.5707963267948966"/>
+    <parent link="r_ankle_2"/>
+    <child link="r_foot_ft_gyro_3b14"/>
+    <dynamics damping="0.1"/>
+  </joint>
   <link name="r_foot">
     <inertial>
       <origin xyz="0.033600099999999994 0.005371899999999999 -0.001146999999999898" rpy="-1.5707963267948961 0 -1.5707963267948961"/>
@@ -808,6 +850,34 @@
     <child link="chest"/>
     <limit effort="50000" lower="-0.8726646259971648" upper="0.8726646259971648" velocity="50000"/>
     <dynamics damping="1.0" friction="0.0"/>
+  </joint>
+  <link name="chest_ems_gyro_eb1"/>
+  <joint name="chest_ems_gyro_eb1_fixed_joint" type="fixed">
+    <origin xyz="0.069201600190735 0.06454800000000001 -0.0635258" rpy="3.1415169122972952 -0.2617993091222473 0.0002926418802545251"/>
+    <parent link="chest"/>
+    <child link="chest_ems_gyro_eb1"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="chest_ems_gyro_eb2"/>
+  <joint name="chest_ems_gyro_eb2_fixed_joint" type="fixed">
+    <origin xyz="0.016037100190735 0.08755899999999998 -0.0653479" rpy="3.141590501042822 0.2617993198185103 3.1415843367812997"/>
+    <parent link="chest"/>
+    <child link="chest_ems_gyro_eb2"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="chest_ems_gyro_eb3"/>
+  <joint name="chest_ems_gyro_eb3_fixed_joint" type="fixed">
+    <origin xyz="-0.018641699809265 0.064521 -0.0770785" rpy="3.141109162025268 0.26110051647116095 -0.00030907146255546275"/>
+    <parent link="chest"/>
+    <child link="chest_ems_gyro_eb3"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="chest_ems_gyro_eb4"/>
+  <joint name="chest_ems_gyro_eb4_fixed_joint" type="fixed">
+    <origin xyz="-0.06657839980926501 0.08755899999999998 -0.0518054" rpy="-3.1415905047625503 -0.26179931981852844 3.141584339870295"/>
+    <parent link="chest"/>
+    <child link="chest_ems_gyro_eb4"/>
+    <dynamics damping="0.1"/>
   </joint>
   <link name="neck_1">
     <inertial>
@@ -1806,6 +1876,13 @@
     <limit effort="37.0" lower="-0.3490658503988659" upper="2.0943951023931953" velocity="7.64"/>
     <dynamics damping="1.0" friction="0.0"/>
   </joint>
+  <link name="l_upper_leg_ft_gyro_3b12"/>
+  <joint name="l_upper_leg_ft_gyro_3b12_fixed_joint" type="fixed">
+    <origin xyz="0.006669999999999995 -0.008524799999999999 -0.059281999999999946" rpy="0 0 1.5707963267948966"/>
+    <parent link="l_hip_2"/>
+    <child link="l_upper_leg_ft_gyro_3b12"/>
+    <dynamics damping="0.1"/>
+  </joint>
   <link name="l_hip_3">
     <inertial>
       <origin xyz="-0.00012290000000000217 -0.0002822999999999992 0.008718000000000031" rpy="-1.5707963267948961 0 -1.5707963267948961"/>
@@ -1864,6 +1941,20 @@
     <limit effort="37.0" lower="-1.3962634015954636" upper="1.3962634015954636" velocity="7.64"/>
     <dynamics damping="1.0" friction="0.0"/>
   </joint>
+  <link name="l_upper_leg_ems_gyro_eb6"/>
+  <joint name="l_upper_leg_ems_gyro_eb6_fixed_joint" type="fixed">
+    <origin xyz="-0.013081000000000016 -0.04040720000000002 -0.087979" rpy="1.5707963267948966 1.5707963267948961 0"/>
+    <parent link="l_upper_leg"/>
+    <child link="l_upper_leg_ems_gyro_eb6"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_upper_leg_ems_gyro_eb10"/>
+  <joint name="l_upper_leg_ems_gyro_eb10_fixed_joint" type="fixed">
+    <origin xyz="-0.013079 0.04040679999999998 -0.035654999999999964" rpy="-1.570796326794897 -1.570796326794896 0"/>
+    <parent link="l_upper_leg"/>
+    <child link="l_upper_leg_ems_gyro_eb10"/>
+    <dynamics damping="0.1"/>
+  </joint>
   <link name="l_upper_leg_back_contact"/>
   <joint name="l_upper_leg_back_contact_fixed_joint" type="fixed">
     <origin xyz="-0.051256699999999995 0 0.014599999999999946" rpy="0 1.5707963267948963 0"/>
@@ -1907,6 +1998,13 @@
     <child link="l_lower_leg"/>
     <limit effort="37.0" lower="-2.1642082724729685" upper="0.06981317007977318" velocity="7.64"/>
     <dynamics damping="1.0" friction="0.0"/>
+  </joint>
+  <link name="l_lower_leg_ems_gyro_eb7"/>
+  <joint name="l_lower_leg_ems_gyro_eb7_fixed_joint" type="fixed">
+    <origin xyz="0.04450335399999999 0.011818499999999968 -0.08830099999999996" rpy="3.1415926535897922 -1.3526297834539558 0"/>
+    <parent link="l_lower_leg"/>
+    <child link="l_lower_leg_ems_gyro_eb7"/>
+    <dynamics damping="0.1"/>
   </joint>
   <link name="l_ankle_1">
     <inertial>
@@ -1967,6 +2065,13 @@
     <child link="l_ankle_2"/>
     <limit effort="37.0" lower="-0.4363323129985824" upper="0.4363323129985824" velocity="7.64"/>
     <dynamics damping="1.0" friction="0.0"/>
+  </joint>
+  <link name="l_foot_ft_gyro_3b13"/>
+  <joint name="l_foot_ft_gyro_3b13_fixed_joint" type="fixed">
+    <origin xyz="0.0040001999999999885 -0.008600000000000003 -0.045282000000000044" rpy="0 0 1.5707963267948966"/>
+    <parent link="l_ankle_2"/>
+    <child link="l_foot_ft_gyro_3b13"/>
+    <dynamics damping="0.1"/>
   </joint>
   <link name="l_foot">
     <inertial>

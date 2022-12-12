@@ -5,6 +5,12 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+# [1.26.0] - 2022-12-09
+
+### Changed
+* Export frames in urdf for the sensors (imu and Ft sensors) (https://github.com/robotology/icub-models-generator/pull/227).
+* Migrate iCub3 models to use gazebo_yarp_robotinterface plugin (https://github.com/robotology/icub-models-generator/pull/222).
+
 ### Fixed
 * Fix finding the `iCub` package in ROS2 (https://github.com/robotology/icub-models/pull/178).
 
