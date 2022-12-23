@@ -5,7 +5,7 @@
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg_hip-FT_wrapper" type="multipleanalogsensorsserver">
         <param name="period">      10                          </param>
         <param name="name">       ${portprefix}/right_leg_hip     </param>
-        
+
         <action phase="startup" level="10" type="attach">
             <paramlist name="networks">
                 <elem name="FirstStrain">  icub_right_leg_ft </elem>
