@@ -2498,6 +2498,11 @@
   <gazebo reference="neck_yaw">
    <implicitSpringDamper>1</implicitSpringDamper>
 </gazebo>
+  <gazebo>
+  <plugin name="robotinterface" filename="libgazebo_yarp_robotinterface.so">
+    <yarpRobotInterfaceConfigurationFile>model://iCub/conf/icub.xml</yarpRobotInterfaceConfigurationFile>
+  </plugin>
+</gazebo>
   <link name="root_link_imu_frame"/>
   <joint name="root_link_imu_frame_fixed_joint" type="fixed">
   <origin xyz="0.08515499999999998 -0.011000000000000022 -0.11230899999999999" rpy="-2.0943952105869323 0 -1.5707963267948963"/>

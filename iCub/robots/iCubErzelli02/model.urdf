@@ -2498,6 +2498,11 @@
   <gazebo reference="neck_yaw">
    <implicitSpringDamper>1</implicitSpringDamper>
 </gazebo>
+  <gazebo>
+  <plugin name="robotinterface" filename="libgazebo_yarp_robotinterface.so">
+    <yarpRobotInterfaceConfigurationFile>model://iCub/conf/icub.xml</yarpRobotInterfaceConfigurationFile>
+  </plugin>
+</gazebo>
   <gazebo reference="l_leg_ft_sensor">
     <sensor name="l_leg_ft_sensor" type="force_torque">
       <always_on>1</always_on>
