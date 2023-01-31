@@ -403,11 +403,11 @@
     <limit effort="50000" lower="-0.7504915783575618" upper="0.7504915783575618" velocity="120.0"/>
     <dynamics damping="2.0" friction="0.0"/>
   </joint>
-  <link name="chest_imu_acc_1x1"/>
-  <joint name="chest_imu_acc_1x1_fixed_joint" type="fixed">
+  <link name="chest_imu_0"/>
+  <joint name="chest_imu_0_fixed_joint" type="fixed">
     <origin xyz="0.0894115 0.0175 0.09929950000000001" rpy="-1.5707963267948968 0 -1.5707963267948968"/>
     <parent link="chest"/>
-    <child link="chest_imu_acc_1x1"/>
+    <child link="chest_imu_0"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="chest_rgb_frame"/>
@@ -535,11 +535,11 @@
     <limit effort="50000" lower="-0.7853981633974483" upper="0.7853981633974483" velocity="120.0"/>
     <dynamics damping="2.0" friction="0.0"/>
   </joint>
-  <link name="head_imu_acc_1x1"/>
-  <joint name="head_imu_acc_1x1_fixed_joint" type="fixed">
+  <link name="head_imu_0"/>
+  <joint name="head_imu_0_fixed_joint" type="fixed">
     <origin xyz="0.0035000000000000005 0.0055 0.10133400000000001" rpy="3.141592653589793 0 -1.5707963267948966"/>
     <parent link="head"/>
-    <child link="head_imu_acc_1x1"/>
+    <child link="head_imu_0"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="r_shoulder_1">
@@ -1755,7 +1755,7 @@
     <origin rpy="0.0 -0.0 -2.094395210586932" xyz="0.0 0.0 0.022299999999999986"/>
   </sensor>
   <gazebo reference="head">
-    <sensor name="head_imu_acc_1x1" type="imu">
+    <sensor name="head_imu_0" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.0035000000000000005 0.0055 0.10133400000000001 3.141592653589793 -0.0 -1.5707963267948966</pose>
@@ -1764,7 +1764,7 @@
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="head_imu_acc_1x1" type="accelerometer">
+  <sensor name="head_imu_0" type="accelerometer">
     <parent link="head"/>
     <origin rpy="3.141592653589793 -0.0 -1.5707963267948966" xyz="0.0035000000000000005 0.0055 0.10133400000000001"/>
   </sensor>
@@ -1841,7 +1841,7 @@
     <origin rpy="-1.5707963267948968 -0.0 -1.5707963267948968" xyz="0.0894115 -0.0115 0.09929950000000001"/>
   </sensor>
   <gazebo reference="chest">
-    <sensor name="chest_imu_acc_1x1" type="imu">
+    <sensor name="chest_imu_0" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.0894115 0.0175 0.09929950000000001 -1.5707963267948968 -0.0 -1.5707963267948968</pose>
@@ -1850,7 +1850,7 @@
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="chest_imu_acc_1x1" type="accelerometer">
+  <sensor name="chest_imu_0" type="accelerometer">
     <parent link="chest"/>
     <origin rpy="-1.5707963267948968 -0.0 -1.5707963267948968" xyz="0.0894115 0.0175 0.09929950000000001"/>
   </sensor>

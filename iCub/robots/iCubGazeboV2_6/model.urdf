@@ -983,11 +983,11 @@
     <limit effort="50000" lower="-0.8726646259971648" upper="0.8726646259971648" velocity="50000"/>
     <dynamics damping="1.0" friction="0.0"/>
   </joint>
-  <link name="imu_frame"/>
-  <joint name="imu_frame_fixed_joint" type="fixed">
-    <origin xyz="0.023453700190734995 0.20544400000000002 -0.023077900000000023" rpy="1.5707963267948997 0 0"/>
+  <link name="head_imu_0"/>
+  <joint name="head_imu_0_fixed_joint" type="fixed">
+    <origin xyz="0.009500000190735 0.133444 0.009299999999999996" rpy="-1.5707963267948961 1.570796326794896 0"/>
     <parent link="head"/>
-    <child link="imu_frame"/>
+    <child link="head_imu_0"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="r_shoulder_1">
@@ -2678,18 +2678,18 @@
     <origin rpy="-6.358700866473837e-16 -1.3089970069677404 6.58301142551668e-16" xyz="-0.05089730176650909 1.3877787807814457e-17 0.029167029620599215"/>
   </sensor>
   <gazebo reference="head">
-    <sensor name="head_imu_acc_1x1" type="imu">
+    <sensor name="head_imu_0" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
-      <pose>0.023453700190734995 0.20544400000000002 -0.023077900000000023 1.5707963267948997 -3.4914813388431334e-15 0.0</pose>
+      <pose>0.009500000190735 0.133444 0.009299999999999996 -1.5707963267948963 1.5707963267948963 0.0</pose>
       <plugin name="iCub_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
     <yarpConfigurationFile>model://iCub/conf/gazebo_icub_inertial.ini</yarpConfigurationFile>
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="head_imu_acc_1x1" type="accelerometer">
+  <sensor name="head_imu_0" type="accelerometer">
     <parent link="head"/>
-    <origin rpy="1.5707963267948997 -3.4914813388431334e-15 0.0" xyz="0.023453700190734995 0.20544400000000002 -0.023077900000000023"/>
+    <origin rpy="-1.5707963267948963 1.5707963267948963 0.0" xyz="0.009500000190735 0.133444 0.009299999999999996"/>
   </sensor>
   <gazebo reference="root_link">
     <sensor name="root_link_ems_acc_eb5" type="imu">
