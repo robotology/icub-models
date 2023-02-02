@@ -1,4 +1,4 @@
-:warning: The ROS2 support is in beta :warning
+:warning: The ROS2 support is in beta :warning:
 
 This directory contains the files related for using `iCubGazeboV3` with ROS2. The contents of this directory are installed inside `iCub`.
 ros2 package. The location of `iCub` ros pacakge is discovered by running `roscd iCub`.
