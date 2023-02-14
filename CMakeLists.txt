@@ -43,7 +43,6 @@ if(NOT CMAKE_CONFIGURATION_TYPES)
 endif()
 
 macro(SUBDIRLIST result curdir)
-  file(GLOB children RELATIVE ${curdir} ${curdir}/*)
   set(dirlist "")
   foreach(child ${children})
     if(IS_DIRECTORY ${curdir}/${child})
@@ -57,14 +56,10 @@ endmacro()
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iCub DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 # Copy the iCub_manual folder in the build tree
-SUBDIRLIST(subdirs ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual)
-foreach(subdir ${subdirs})
-  file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/${subdir}/ DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/iCub/${subdir})
+file(GLOB file_and_directories_mantained_manually RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/*)
+foreach(file_and_directories_mantained_manually ${file_and_directories_mantained_manually})
+  file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/${file_and_directories_mantained_manually}/ DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/iCub/${file_and_directories_mantained_manually})
 endforeach()
-
-# Copy the ros and ros2 folder
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/ros DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/iCub)
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/ros2 DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/iCub)
 
 # Add the model.config just for a limited number of models that are known
 # to work in Gazebo, unless the ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS option
