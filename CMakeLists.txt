@@ -43,6 +43,7 @@ if(NOT CMAKE_CONFIGURATION_TYPES)
 endif()
 
 macro(SUBDIRLIST result curdir)
+  file(GLOB children RELATIVE ${curdir} ${curdir}/*)
   set(dirlist "")
   foreach(child ${children})
     if(IS_DIRECTORY ${curdir}/${child})
