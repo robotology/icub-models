@@ -5,6 +5,16 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+# [2.0.0] - 2023-03-08
+
+### Fixed
+
+* Make models compatible with the YARP 3.8 (https://github.com/robotology/icub-models/issues/171, https://github.com/robotology/icub-models/pull/188, https://github.com/robotology/icub-models-generator/pull/231).
+* Fix incompatibility between RViz2 and iCubGazeboV3 model ( https://github.com/robotology/icub-models-generator/issues/229 ).
+* Uniform IMUs sensor names (https://github.com/robotology/icub-models-generator/pull/235).
+* Add partial support to expose sensor data of iCubGazeboV3 on ROS2 (https://github.com/robotology/icub-models-generator/pull/228).
+
+
 # [1.26.0] - 2022-12-09
 
 ### Changed
