@@ -81,6 +81,13 @@
     <limit effort="50000" lower="-0.17453292519943295" upper="1.9547687622336491" velocity="120.0"/>
     <dynamics damping="2.0" friction="0.0"/>
   </joint>
+  <link name="r_leg_ft"/>
+  <joint name="r_leg_ft_fixed_joint" type="fixed">
+    <origin xyz="0.036699999999999997 0 -0.08969999999999995" rpy="3.141592653589793 0 -2.6179934742070086"/>
+    <parent link="r_hip_2"/>
+    <child link="r_leg_ft"/>
+    <dynamics damping="0.1"/>
+  </joint>
   <link name="r_hip_3">
     <inertial>
       <origin xyz="0.0024329000000000017 0.01233370000000001 -0.038242000000000054" rpy="0 0 -1.5707963267948966"/>
@@ -228,6 +235,20 @@
     <child link="r_ankle_2"/>
     <limit effort="50000" lower="-0.4363323129985824" upper="0.4363323129985824" velocity="120.0"/>
     <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="r_foot_front_ft"/>
+  <joint name="r_foot_front_ft_fixed_joint" type="fixed">
+    <origin xyz="0.13525 0 -0.04349999999999998" rpy="0 0 -2.094395210586932"/>
+    <parent link="r_ankle_2"/>
+    <child link="r_foot_front_ft"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_foot_rear_ft"/>
+  <joint name="r_foot_rear_ft_fixed_joint" type="fixed">
+    <origin xyz="0.016 0 -0.04349999999999998" rpy="0 0 -2.094395210586932"/>
+    <parent link="r_ankle_2"/>
+    <child link="r_foot_rear_ft"/>
+    <dynamics damping="0.1"/>
   </joint>
   <link name="r_foot_front">
     <inertial>
@@ -382,11 +403,11 @@
     <limit effort="50000" lower="-0.7504915783575618" upper="0.7504915783575618" velocity="120.0"/>
     <dynamics damping="2.0" friction="0.0"/>
   </joint>
-  <link name="chest_imu_acc_1x1"/>
-  <joint name="chest_imu_acc_1x1_fixed_joint" type="fixed">
+  <link name="chest_imu_0"/>
+  <joint name="chest_imu_0_fixed_joint" type="fixed">
     <origin xyz="0.0894115 0.0175 0.09929950000000001" rpy="-1.5707963267948968 0 -1.5707963267948968"/>
     <parent link="chest"/>
-    <child link="chest_imu_acc_1x1"/>
+    <child link="chest_imu_0"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="chest_rgb_frame"/>
@@ -514,11 +535,11 @@
     <limit effort="50000" lower="-0.7853981633974483" upper="0.7853981633974483" velocity="120.0"/>
     <dynamics damping="2.0" friction="0.0"/>
   </joint>
-  <link name="head_imu_acc_1x1"/>
-  <joint name="head_imu_acc_1x1_fixed_joint" type="fixed">
+  <link name="head_imu_0"/>
+  <joint name="head_imu_0_fixed_joint" type="fixed">
     <origin xyz="0.0035000000000000005 0.0055 0.10133400000000001" rpy="3.141592653589793 0 -1.5707963267948966"/>
     <parent link="head"/>
-    <child link="head_imu_acc_1x1"/>
+    <child link="head_imu_0"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="r_shoulder_1">
@@ -580,6 +601,13 @@
     <child link="r_shoulder_2"/>
     <limit effort="50000" lower="0.20943951023931956" upper="2.8448866807507573" velocity="120.0"/>
     <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="r_arm_ft"/>
+  <joint name="r_arm_ft_fixed_joint" type="fixed">
+    <origin xyz="-0.006849946385389872 2.1904996058697002e-07 -0.05429998157789099" rpy="3.141592644717707 0 1.5707964185756365"/>
+    <parent link="r_shoulder_2"/>
+    <child link="r_arm_ft"/>
+    <dynamics damping="0.1"/>
   </joint>
   <link name="r_shoulder_3">
     <inertial>
@@ -819,6 +847,13 @@
     <limit effort="50000" lower="0.20943951023931956" upper="2.8448866807507573" velocity="120.0"/>
     <dynamics damping="2.0" friction="0.0"/>
   </joint>
+  <link name="l_arm_ft"/>
+  <joint name="l_arm_ft_fixed_joint" type="fixed">
+    <origin xyz="-0.004350133156978318 3.632573233602887e-07 -0.05430003872406172" rpy="3.141592646862139 0 -1.5707962571980942"/>
+    <parent link="l_shoulder_2"/>
+    <child link="l_arm_ft"/>
+    <dynamics damping="0.1"/>
+  </joint>
   <link name="l_shoulder_3">
     <inertial>
       <origin xyz="-9.561931744893337e-05 3.089115052354319e-05 -0.007966608685190321" rpy="-0.12008543635729363 -0.22978873231718944 -1.2882780461440753"/>
@@ -1057,6 +1092,13 @@
     <limit effort="50000" lower="-0.17453292519943295" upper="1.9547687622336491" velocity="120.0"/>
     <dynamics damping="2.0" friction="0.0"/>
   </joint>
+  <link name="l_leg_ft"/>
+  <joint name="l_leg_ft_fixed_joint" type="fixed">
+    <origin xyz="0.036699999999999997 0 -0.08969999999999995" rpy="3.141592653589793 0 2.6179934742070086"/>
+    <parent link="l_hip_2"/>
+    <child link="l_leg_ft"/>
+    <dynamics damping="0.1"/>
+  </joint>
   <link name="l_hip_3">
     <inertial>
       <origin xyz="0.0024416999999999998 -0.012306900000000003 -0.03819900000000004" rpy="0 0 -1.5707963267948966"/>
@@ -1204,6 +1246,20 @@
     <child link="l_ankle_2"/>
     <limit effort="50000" lower="-0.4363323129985824" upper="0.4363323129985824" velocity="120.0"/>
     <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="l_foot_front_ft"/>
+  <joint name="l_foot_front_ft_fixed_joint" type="fixed">
+    <origin xyz="0.13524999999999998 0 -0.04349999999999998" rpy="0 0 -2.094395210586932"/>
+    <parent link="l_ankle_2"/>
+    <child link="l_foot_front_ft"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_foot_rear_ft"/>
+  <joint name="l_foot_rear_ft_fixed_joint" type="fixed">
+    <origin xyz="0.016 0 -0.04349999999999998" rpy="0 0 -2.094395210586932"/>
+    <parent link="l_ankle_2"/>
+    <child link="l_foot_rear_ft"/>
+    <dynamics damping="0.1"/>
   </joint>
   <link name="l_foot_rear">
     <inertial>
@@ -1523,7 +1579,7 @@
   </plugin>
 </gazebo>
   <gazebo reference="l_arm_ft_sensor">
-    <sensor name="l_arm_ft_sensor" type="force_torque">
+    <sensor name="l_arm_ft" type="force_torque">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <force_torque>
@@ -1536,7 +1592,7 @@
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="l_arm_ft_sensor" type="force_torque">
+  <sensor name="l_arm_ft" type="force_torque">
     <parent joint="l_arm_ft_sensor"/>
     <force_torque>
       <frame>sensor</frame>
@@ -1545,7 +1601,7 @@
     <origin rpy="3.141592646862139 -3.10468332187885e-08 -1.5707962571980942" xyz="3.469446951953614e-18 0.0 0.0"/>
   </sensor>
   <gazebo reference="r_arm_ft_sensor">
-    <sensor name="r_arm_ft_sensor" type="force_torque">
+    <sensor name="r_arm_ft" type="force_torque">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <force_torque>
@@ -1558,7 +1614,7 @@
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="r_arm_ft_sensor" type="force_torque">
+  <sensor name="r_arm_ft" type="force_torque">
     <parent joint="r_arm_ft_sensor"/>
     <force_torque>
       <frame>sensor</frame>
@@ -1567,7 +1623,7 @@
     <origin rpy="3.141592644717707 4.094299285979593e-08 1.5707964185756365" xyz="3.469446951953614e-18 0.0 0.0"/>
   </sensor>
   <gazebo reference="l_leg_ft_sensor">
-    <sensor name="l_leg_ft_sensor" type="force_torque">
+    <sensor name="l_leg_ft" type="force_torque">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <force_torque>
@@ -1580,7 +1636,7 @@
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="l_leg_ft_sensor" type="force_torque">
+  <sensor name="l_leg_ft" type="force_torque">
     <parent joint="l_leg_ft_sensor"/>
     <force_torque>
       <frame>sensor</frame>
@@ -1589,7 +1645,7 @@
     <origin rpy="3.141592653589793 -0.0 2.6179934742070086" xyz="0.0 0.0 0.0"/>
   </sensor>
   <gazebo reference="l_foot_front_ft_sensor">
-    <sensor name="l_foot_front_ft_sensor" type="force_torque">
+    <sensor name="l_foot_front_ft" type="force_torque">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <force_torque>
@@ -1602,7 +1658,7 @@
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="l_foot_front_ft_sensor" type="force_torque">
+  <sensor name="l_foot_front_ft" type="force_torque">
     <parent joint="l_foot_front_ft_sensor"/>
     <force_torque>
       <frame>sensor</frame>
@@ -1611,7 +1667,7 @@
     <origin rpy="0.0 -0.0 -2.094395210586932" xyz="0.0 0.0 0.022299999999999986"/>
   </sensor>
   <gazebo reference="l_foot_rear_ft_sensor">
-    <sensor name="l_foot_rear_ft_sensor" type="force_torque">
+    <sensor name="l_foot_rear_ft" type="force_torque">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <force_torque>
@@ -1624,7 +1680,7 @@
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="l_foot_rear_ft_sensor" type="force_torque">
+  <sensor name="l_foot_rear_ft" type="force_torque">
     <parent joint="l_foot_rear_ft_sensor"/>
     <force_torque>
       <frame>sensor</frame>
@@ -1633,7 +1689,7 @@
     <origin rpy="0.0 -0.0 -2.094395210586932" xyz="0.0 0.0 0.022299999999999986"/>
   </sensor>
   <gazebo reference="r_leg_ft_sensor">
-    <sensor name="r_leg_ft_sensor" type="force_torque">
+    <sensor name="r_leg_ft" type="force_torque">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <force_torque>
@@ -1646,7 +1702,7 @@
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="r_leg_ft_sensor" type="force_torque">
+  <sensor name="r_leg_ft" type="force_torque">
     <parent joint="r_leg_ft_sensor"/>
     <force_torque>
       <frame>sensor</frame>
@@ -1655,7 +1711,7 @@
     <origin rpy="3.141592653589793 0.0 -2.6179934742070086" xyz="0.0 0.0 0.0"/>
   </sensor>
   <gazebo reference="r_foot_front_ft_sensor">
-    <sensor name="r_foot_front_ft_sensor" type="force_torque">
+    <sensor name="r_foot_front_ft" type="force_torque">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <force_torque>
@@ -1668,7 +1724,7 @@
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="r_foot_front_ft_sensor" type="force_torque">
+  <sensor name="r_foot_front_ft" type="force_torque">
     <parent joint="r_foot_front_ft_sensor"/>
     <force_torque>
       <frame>sensor</frame>
@@ -1677,7 +1733,7 @@
     <origin rpy="0.0 -0.0 -2.094395210586932" xyz="0.0 0.0 0.022299999999999986"/>
   </sensor>
   <gazebo reference="r_foot_rear_ft_sensor">
-    <sensor name="r_foot_rear_ft_sensor" type="force_torque">
+    <sensor name="r_foot_rear_ft" type="force_torque">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <force_torque>
@@ -1690,7 +1746,7 @@
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="r_foot_rear_ft_sensor" type="force_torque">
+  <sensor name="r_foot_rear_ft" type="force_torque">
     <parent joint="r_foot_rear_ft_sensor"/>
     <force_torque>
       <frame>sensor</frame>
@@ -1699,7 +1755,7 @@
     <origin rpy="0.0 -0.0 -2.094395210586932" xyz="0.0 0.0 0.022299999999999986"/>
   </sensor>
   <gazebo reference="head">
-    <sensor name="head_imu_acc_1x1" type="imu">
+    <sensor name="head_imu_0" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.0035000000000000005 0.0055 0.10133400000000001 3.141592653589793 -0.0 -1.5707963267948966</pose>
@@ -1708,7 +1764,7 @@
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="head_imu_acc_1x1" type="accelerometer">
+  <sensor name="head_imu_0" type="accelerometer">
     <parent link="head"/>
     <origin rpy="3.141592653589793 -0.0 -1.5707963267948966" xyz="0.0035000000000000005 0.0055 0.10133400000000001"/>
   </sensor>
@@ -1785,7 +1841,7 @@
     <origin rpy="-1.5707963267948968 -0.0 -1.5707963267948968" xyz="0.0894115 -0.0115 0.09929950000000001"/>
   </sensor>
   <gazebo reference="chest">
-    <sensor name="chest_imu_acc_1x1" type="imu">
+    <sensor name="chest_imu_0" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.0894115 0.0175 0.09929950000000001 -1.5707963267948968 -0.0 -1.5707963267948968</pose>
@@ -1794,7 +1850,7 @@
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="chest_imu_acc_1x1" type="accelerometer">
+  <sensor name="chest_imu_0" type="accelerometer">
     <parent link="chest"/>
     <origin rpy="-1.5707963267948968 -0.0 -1.5707963267948968" xyz="0.0894115 0.0175 0.09929950000000001"/>
   </sensor>

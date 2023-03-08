@@ -3,8 +3,8 @@
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_foot-FT_remapper" type="multipleanalogsensorsremapper">
     <param name="SixAxisForceTorqueSensorsNames">
-          (r_foot_rear_ft_sensor
-           r_foot_front_ft_sensor)
+          (r_foot_rear_ft
+           r_foot_front_ft)
     </param>
     <action phase="startup" level="5" type="attach">
          <paramlist name="networks">

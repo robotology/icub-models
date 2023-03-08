@@ -243,11 +243,11 @@
     <limit effort="50000" lower="-0.8726646259971648" upper="0.8726646259971648" velocity="50000"/>
     <dynamics damping="0.06" friction="0.0"/>
   </joint>
-  <link name="imu_frame"/>
-  <joint name="imu_frame_fixed_joint" type="fixed">
+  <link name="head_imu_0"/>
+  <joint name="head_imu_0_fixed_joint" type="fixed">
     <origin xyz="0.009500000190735 0.133444 0.009299999999999996" rpy="-1.5707963267948961 1.570796326794896 0"/>
     <parent link="head"/>
-    <child link="imu_frame"/>
+    <child link="head_imu_0"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="r_shoulder_1">
@@ -339,6 +339,13 @@
     <child link="r_shoulder_3"/>
     <limit effort="50000" lower="-0.6457718232379019" upper="1.3962634015954636" velocity="50000"/>
     <dynamics damping="0.06" friction="0.0"/>
+  </joint>
+  <link name="r_arm_ft"/>
+  <joint name="r_arm_ft_fixed_joint" type="fixed">
+    <origin xyz="-0.05089730176650909 0 0.029167029620599215" rpy="0 -1.3089970069677397 0"/>
+    <parent link="r_shoulder_3"/>
+    <child link="r_arm_ft"/>
+    <dynamics damping="0.1"/>
   </joint>
   <link name="r_upper_arm">
     <inertial>
@@ -760,6 +767,13 @@
     <limit effort="50000" lower="-0.6457718232379019" upper="1.3962634015954636" velocity="50000"/>
     <dynamics damping="0.06" friction="0.0"/>
   </joint>
+  <link name="l_arm_ft"/>
+  <joint name="l_arm_ft_fixed_joint" type="fixed">
+    <origin xyz="0.05093014324520106 0 0.029175829465900395" rpy="0 -1.3089970069677395 3.1415926535897927"/>
+    <parent link="l_shoulder_3"/>
+    <child link="l_arm_ft"/>
+    <dynamics damping="0.1"/>
+  </joint>
   <link name="l_upper_arm">
     <inertial>
       <origin xyz="-0.006120999999999996 -0.00018899999999999473 0.02936839999999999" rpy="0 -1.30899700696774 -3.1415926535897922"/>
@@ -1176,6 +1190,13 @@
     <origin xyz="-0.0008575000000000041 0 -0.07429999999999995" rpy="3.141592653589793 0 0"/>
     <parent link="r_hip_2"/>
     <child link="r_hip_3"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="r_leg_ft"/>
+  <joint name="r_leg_ft_fixed_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="r_hip_3"/>
+    <child link="r_leg_ft"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="r_upper_leg">
@@ -1634,6 +1655,13 @@
     <child link="r_sole"/>
     <dynamics damping="0.1"/>
   </joint>
+  <link name="r_foot_ft"/>
+  <joint name="r_foot_ft_fixed_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="r_foot"/>
+    <child link="r_foot_ft"/>
+    <dynamics damping="0.1"/>
+  </joint>
   <link name="l_hip_1">
     <inertial>
       <origin xyz="-0.0005107999999999918 0.03809229999999998 -8.299999999999974e-05" rpy="1.5707963267948961 0 1.5707963267948961"/>
@@ -1720,6 +1748,13 @@
     <origin xyz="-0.0008575000000000041 0 -0.07429999999999995" rpy="3.141592653589793 0 0"/>
     <parent link="l_hip_2"/>
     <child link="l_hip_3"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_leg_ft"/>
+  <joint name="l_leg_ft_fixed_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="l_hip_3"/>
+    <child link="l_leg_ft"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="l_upper_leg">
@@ -1910,6 +1945,13 @@
     <origin xyz="0.021450226059648844 0 0.006691276652475486" rpy="-3.1415926535897634 0.2617991920983335 0"/>
     <parent link="l_foot"/>
     <child link="l_sole"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="l_foot_ft"/>
+  <joint name="l_foot_ft_fixed_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="l_foot"/>
+    <child link="l_foot_ft"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="base_link"/>
@@ -2127,140 +2169,145 @@
   <gazebo reference="neck_yaw">
    <implicitSpringDamper>1</implicitSpringDamper>
 </gazebo>
+  <gazebo>
+  <plugin name="robotinterface" filename="libgazebo_yarp_robotinterface.so">
+    <yarpRobotInterfaceConfigurationFile>model://iCub/conf/icub.xml</yarpRobotInterfaceConfigurationFile>
+  </plugin>
+</gazebo>
   <gazebo reference="l_leg_ft_sensor">
-    <sensor name="l_leg_ft_sensor" type="force_torque">
+    <sensor name="l_leg_ft" type="force_torque">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <force_torque>
-        <frame>child</frame>
+        <frame>sensor</frame>
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
-      <pose>0.0 0.0 0.0 0.0 -0.0 0.0</pose>
+      <pose>0.0 -1.3877787807814457e-17 0.0 2.220446049250313e-16 -2.220446049250314e-16 2.220446049250313e-16</pose>
       <plugin name="left_leg_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
   <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_leg_ft.ini</yarpConfigurationFile>
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="l_leg_ft_sensor" type="force_torque">
+  <sensor name="l_leg_ft" type="force_torque">
     <parent joint="l_leg_ft_sensor"/>
     <force_torque>
-      <frame>child</frame>
+      <frame>sensor</frame>
       <measure_direction>child_to_parent</measure_direction>
     </force_torque>
-    <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <origin rpy="2.220446049250313e-16 -2.220446049250314e-16 2.220446049250313e-16" xyz="0.0 -1.3877787807814457e-17 0.0"/>
   </sensor>
   <gazebo reference="r_leg_ft_sensor">
-    <sensor name="r_leg_ft_sensor" type="force_torque">
+    <sensor name="r_leg_ft" type="force_torque">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <force_torque>
-        <frame>child</frame>
+        <frame>sensor</frame>
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
-      <pose>0.0 0.0 0.0 0.0 -0.0 0.0</pose>
+      <pose>0.0 0.0 0.0 2.220446049250313e-16 -2.220446049250314e-16 2.220446049250313e-16</pose>
       <plugin name="right_leg_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
   <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_leg_ft.ini</yarpConfigurationFile>
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="r_leg_ft_sensor" type="force_torque">
+  <sensor name="r_leg_ft" type="force_torque">
     <parent joint="r_leg_ft_sensor"/>
     <force_torque>
-      <frame>child</frame>
+      <frame>sensor</frame>
       <measure_direction>child_to_parent</measure_direction>
     </force_torque>
-    <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <origin rpy="2.220446049250313e-16 -2.220446049250314e-16 2.220446049250313e-16" xyz="0.0 0.0 0.0"/>
   </sensor>
   <gazebo reference="l_foot_ft_sensor">
-    <sensor name="l_foot_ft_sensor" type="force_torque">
+    <sensor name="l_foot_ft" type="force_torque">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <force_torque>
-        <frame>child</frame>
+        <frame>sensor</frame>
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
-      <pose>0.0 0.0 0.0 0.0 -0.0 0.0</pose>
+      <pose>2.7755575615628914e-17 0.0 0.0 8.326672905715809e-17 7.89941954365876e-17 -1.1102230252060279e-16</pose>
       <plugin name="left_foot_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
   <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_foot_ft.ini</yarpConfigurationFile>
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="l_foot_ft_sensor" type="force_torque">
+  <sensor name="l_foot_ft" type="force_torque">
     <parent joint="l_foot_ft_sensor"/>
     <force_torque>
-      <frame>child</frame>
+      <frame>sensor</frame>
       <measure_direction>child_to_parent</measure_direction>
     </force_torque>
-    <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <origin rpy="8.326672905715809e-17 7.89941954365876e-17 -1.1102230252060279e-16" xyz="2.7755575615628914e-17 0.0 0.0"/>
   </sensor>
   <gazebo reference="r_foot_ft_sensor">
-    <sensor name="r_foot_ft_sensor" type="force_torque">
+    <sensor name="r_foot_ft" type="force_torque">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <force_torque>
-        <frame>child</frame>
+        <frame>sensor</frame>
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
-      <pose>0.0 0.0 0.0 0.0 -0.0 0.0</pose>
+      <pose>-2.7755575615628914e-17 0.0 -1.1102230246251565e-16 -1.234981408297681e-16 -2.7755575615628907e-17 -9.476347689503035e-17</pose>
       <plugin name="right_foot_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
   <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_foot_ft.ini</yarpConfigurationFile>
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="r_foot_ft_sensor" type="force_torque">
+  <sensor name="r_foot_ft" type="force_torque">
     <parent joint="r_foot_ft_sensor"/>
     <force_torque>
-      <frame>child</frame>
+      <frame>sensor</frame>
       <measure_direction>child_to_parent</measure_direction>
     </force_torque>
-    <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <origin rpy="-1.234981408297681e-16 -2.7755575615628907e-17 -9.476347689503035e-17" xyz="-2.7755575615628914e-17 0.0 -1.1102230246251565e-16"/>
   </sensor>
   <gazebo reference="l_arm_ft_sensor">
-    <sensor name="l_arm_ft_sensor" type="force_torque">
+    <sensor name="l_arm_ft" type="force_torque">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <force_torque>
-        <frame>child</frame>
+        <frame>sensor</frame>
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
-      <pose>0.0 0.0 0.0 0.0 -0.0 0.0</pose>
+      <pose>0.05093014324520106 1.3877787807814457e-17 0.029175829465900395 -4.3625653762663687e-16 -1.3089970069677406 -3.1415926535897922</pose>
       <plugin name="left_arm_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
   <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_arm_ft.ini</yarpConfigurationFile>
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="l_arm_ft_sensor" type="force_torque">
+  <sensor name="l_arm_ft" type="force_torque">
     <parent joint="l_arm_ft_sensor"/>
     <force_torque>
-      <frame>child</frame>
+      <frame>sensor</frame>
       <measure_direction>child_to_parent</measure_direction>
     </force_torque>
-    <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <origin rpy="-4.3625653762663687e-16 -1.3089970069677406 -3.1415926535897922" xyz="0.05093014324520106 1.3877787807814457e-17 0.029175829465900395"/>
   </sensor>
   <gazebo reference="r_arm_ft_sensor">
-    <sensor name="r_arm_ft_sensor" type="force_torque">
+    <sensor name="r_arm_ft" type="force_torque">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <force_torque>
-        <frame>child</frame>
+        <frame>sensor</frame>
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
-      <pose>0.0 0.0 0.0 0.0 -0.0 0.0</pose>
+      <pose>-0.05089730176650909 1.3877787807814457e-17 0.029167029620599215 -6.358700866473837e-16 -1.3089970069677404 6.58301142551668e-16</pose>
       <plugin name="right_arm_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
   <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_arm_ft.ini</yarpConfigurationFile>
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="r_arm_ft_sensor" type="force_torque">
+  <sensor name="r_arm_ft" type="force_torque">
     <parent joint="r_arm_ft_sensor"/>
     <force_torque>
-      <frame>child</frame>
+      <frame>sensor</frame>
       <measure_direction>child_to_parent</measure_direction>
     </force_torque>
-    <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <origin rpy="-6.358700866473837e-16 -1.3089970069677404 6.58301142551668e-16" xyz="-0.05089730176650909 1.3877787807814457e-17 0.029167029620599215"/>
   </sensor>
   <gazebo reference="head">
-    <sensor name="head_imu_acc_1x1" type="imu">
+    <sensor name="head_imu_0" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.009500000190735 0.133444 0.009299999999999996 -1.5707963267948963 1.5707963267948963 0.0</pose>
@@ -2269,7 +2316,7 @@
 </plugin>
     </sensor>
   </gazebo>
-  <sensor name="head_imu_acc_1x1" type="accelerometer">
+  <sensor name="head_imu_0" type="accelerometer">
     <parent link="head"/>
     <origin rpy="-1.5707963267948963 1.5707963267948963 0.0" xyz="0.009500000190735 0.133444 0.009299999999999996"/>
   </sensor>

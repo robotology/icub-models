@@ -2524,11 +2524,11 @@
     <limit effort="50000" lower="-0.872664625997" upper="0.872664625997" velocity="50000"/>
     <dynamics damping="1.0" friction="0.0"/>
   </joint>
-  <link name="imu_frame"/>
-  <joint name="imu_frame_fixed_joint" type="fixed">
-    <origin xyz="0.00950000019074 0.133444 0.0093" rpy="-1.57079632679 1.57079632679 0"/>
+  <link name="head_imu_0"/>
+  <joint name="head_imu_0_fixed_joint" type="fixed">
+    <origin xyz="0.009500000190735 0.133444 0.009299999999999996" rpy="-1.5707963267948961 1.570796326794896 0"/>
     <parent link="head"/>
-    <child link="imu_frame"/>
+    <child link="head_imu_0"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="eyes_tilt_frame">
@@ -2681,12 +2681,36 @@
   <mu2>1</mu2>
   <fdir1>0 0 0</fdir1>
 </gazebo>
+<gazebo reference="head">
+  <sensor name="head_imu_0" type="imu">
+    <always_on>1</always_on>
+    <update_rate>100</update_rate>
+    <pose>0.009500000190735 0.133444 0.009299999999999996 -1.5707963267948963 1.5707963267948963 0.0</pose>
+    <plugin name="iCub_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
+      <yarpConfigurationFile>model://iCub/conf/gazebo_icub_inertial.ini</yarpConfigurationFile>
+    </plugin>
+  </sensor>
+</gazebo>
+<sensor name="head_imu_0" type="accelerometer">
+  <parent link="head"/>
+  <origin rpy="-1.5707963267948963 1.5707963267948963 0.0" xyz="0.009500000190735 0.133444 0.009299999999999996"/>
+</sensor>
 <gazebo>
   <plugin name="controlboard_torso" filename="libgazebo_yarp_controlboard.so">
-    <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_torso.ini</yarpConfigurationFile>
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_torso.ini</yarpConfigurationFile>
   </plugin>
-  <plugin name="controlboard_head" filename="libgazebo_yarp_controlboard.so">
-    <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_head.ini</yarpConfigurationFile>
+ <plugin name="controlboard_head" filename="libgazebo_yarp_controlboard.so">
+   <yarpConfigurationFile>model://iCub/conf/gazebo_icub_head_without_eyes.ini</yarpConfigurationFile>
+ </plugin>
+ <plugin name="controlboard_head" filename="libgazebo_yarp_controlboard.so">
+   <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_eyes.ini</yarpConfigurationFile>
+ </plugin>
+  <plugin name="controlboard_left_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
+    <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
+  </plugin>
+  <plugin name='controlboard_left_hand_finger' filename='libgazebo_yarp_controlboard.so'>
+    <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_left_hand_finger.ini</yarpConfigurationFile>
   </plugin>
   <plugin name='controlboard_left_hand_thumb' filename='libgazebo_yarp_controlboard.so'>
     <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_left_hand_thumb.ini</yarpConfigurationFile>
@@ -2700,16 +2724,15 @@
   <plugin name='controlboard_left_hand_pinky' filename='libgazebo_yarp_controlboard.so'>
     <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_left_hand_pinky.ini</yarpConfigurationFile>
   </plugin>
-  <plugin name='controlboard_left_hand_finger' filename='libgazebo_yarp_controlboard.so'>
-    <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_left_hand_finger.ini</yarpConfigurationFile>
-    <initialConfiguration>1.0471975511965976</initialConfiguration>
+  <plugin name='mais_left_hand' filename='libgazebo_yarp_maissensor.so'>
+    <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_left_hand_mais.ini</yarpConfigurationFile>
   </plugin>
-  <plugin name="controlboard_left_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_no_hand.ini</yarpConfigurationFile>
+  <plugin name="controlboard_right_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
     <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
   </plugin>
-  <plugin name="controlboard_left_arm" filename="libgazebo_yarp_controlboard.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm.ini</yarpConfigurationFile>
+  <plugin name='controlboard_right_hand_finger' filename='libgazebo_yarp_controlboard.so'>
+    <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_right_hand_finger.ini</yarpConfigurationFile>
   </plugin>
   <plugin name='controlboard_right_hand_thumb' filename='libgazebo_yarp_controlboard.so'>
     <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_right_hand_thumb.ini</yarpConfigurationFile>
@@ -2723,34 +2746,12 @@
   <plugin name='controlboard_right_hand_pinky' filename='libgazebo_yarp_controlboard.so'>
     <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_right_hand_pinky.ini</yarpConfigurationFile>
   </plugin>
-  <plugin name='controlboard_right_hand_finger' filename='libgazebo_yarp_controlboard.so'>
-    <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_right_hand_finger.ini</yarpConfigurationFile>
-    <initialConfiguration>1.0471975511965976</initialConfiguration>
-  </plugin>
-  <plugin name="controlboard_right_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_arm_no_hand.ini</yarpConfigurationFile>
-    <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
-  </plugin>
-  <plugin name="controlboard_right_arm" filename="libgazebo_yarp_controlboard.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_arm.ini</yarpConfigurationFile>
-  </plugin>
-  <plugin name='mais_left_hand' filename='libgazebo_yarp_maissensor.so'>
-    <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_left_hand_mais.ini</yarpConfigurationFile>
-  </plugin>
-
   <plugin name='mais_right_hand' filename='libgazebo_yarp_maissensor.so'>
     <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_right_hand_mais.ini</yarpConfigurationFile>
   </plugin>
-</gazebo>
-<gazebo reference="head">
-  <sensor name="head_imu_acc_1x1" type="imu">
-    <always_on>1</always_on>
-    <update_rate>100</update_rate>
-     <pose>0.00950000019074 0.133444 0.0093 -1.57079632679 1.57079632679 0.0</pose>
-     <plugin name="iCub_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
-       <yarpConfigurationFile>model://iCub/conf/gazebo_icub_inertial.ini</yarpConfigurationFile>
-     </plugin>
-  </sensor>
+  <plugin name="robotinterface" filename="libgazebo_yarp_robotinterface.so"> ￼
+    <yarpRobotInterfaceConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/icub.xml</yarpRobotInterfaceConfigurationFile>
+  </plugin>
 </gazebo>
 <gazebo reference="r_hip_pitch">
    <implicitSpringDamper>1</implicitSpringDamper>
@@ -3006,8 +3007,8 @@
     <always_on>1</always_on>
     <update_rate>30</update_rate>
     <visualize>false</visualize>
-    <plugin filename="libgazebo_yarp_depthCamera.so" name="left_camera_depth_plugin">
-      <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_left_depth_camera.ini</yarpConfigurationFile>
+    <plugin filename="libgazebo_yarp_depthCamera.so" name="left_camera_rgbd_plugin">
+      <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_left_camera_rgbd.ini</yarpConfigurationFile>
     </plugin>
 </sensor>
 </gazebo>
@@ -3021,6 +3022,7 @@
       <image>
         <width>320</width>
         <height>240</height>
+        <format>R8G8B8</format>
       </image>
       <clip>
         <near>0.1</near>
@@ -3030,8 +3032,8 @@
     <always_on>1</always_on>
     <update_rate>30</update_rate>
     <visualize>false</visualize>
-    <plugin filename="libgazebo_yarp_camera.so" name="right_camera_plugin">
-      <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_right_rgb_camera.ini</yarpConfigurationFile>
+    <plugin filename="libgazebo_yarp_camera.so" name="right_camera_rgb_plugin">
+      <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_right_camera_rgb.ini</yarpConfigurationFile>
     </plugin>
   </sensor>
 </gazebo>

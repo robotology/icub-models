@@ -57,13 +57,10 @@ endmacro()
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iCub DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 # Copy the iCub_manual folder in the build tree
-SUBDIRLIST(subdirs ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual)
-foreach(subdir ${subdirs})
-  file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/${subdir}/ DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/iCub/${subdir})
+file(GLOB file_and_directories_mantained_manually RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/*)
+foreach(file_and_directories_mantained_manually ${file_and_directories_mantained_manually})
+  file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/${file_and_directories_mantained_manually}/ DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/iCub/${file_and_directories_mantained_manually})
 endforeach()
-
-# Copy the ros folder
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/ros DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/iCub)
 
 # Add the model.config just for a limited number of models that are known
 # to work in Gazebo, unless the ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS option
@@ -80,7 +77,7 @@ list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5")
 list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5_plus")
 list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV3")
 
-# Note: these models don't need further configuration apart from 
+# Note: these models don't need further configuration apart from
 # model version in model.config. Only one configuration is generated for
 # these models, and no helper models (fixed, no_hans, and so on) are
 # generated.
@@ -182,7 +179,7 @@ install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/iCub DESTINATION share)
 # so that iCub packages if found by ROS2
 # See https://github.com/robotology/icub-models/issues/177
 file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/iCub_empty_file "")
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/iCub_empty_file 
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/iCub_empty_file
         DESTINATION share/ament_index/resource_index/packages
         RENAME iCub)
 
