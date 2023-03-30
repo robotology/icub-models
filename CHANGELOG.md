@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 The format of this document is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
+* Harmonize iCubGazeboV2_5_visuomanip RGB cameras port name (https://github.com/robotology/icub-models/pull/196)
 
 # [1.26.0] - 2022-12-09
 
