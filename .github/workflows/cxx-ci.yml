@@ -86,37 +86,40 @@ jobs:
         rospack find iCub
         ros2 pkg prefix iCub
 
-  build-with-system-dependencies:
-    name: '[${{ matrix.os }}@${{ matrix.build_type }}]'
+  build-with-apt-dependencies:
+    name: '[apt:${{ matrix.docker_image }}@${{ matrix.build_type }}]'
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         build_type: [Release]
-        os: [ubuntu-18.04, ubuntu-20.04, macos-latest]
+        os:
+          - ubuntu-latest
+        docker_image:
+          - "ubuntu:20.04"
+          - "ubuntu:22.04"
+          - "debian:sid"
+    container:
+      image: ${{ matrix.docker_image }}
 
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v3
  
     # Print environment variables to simplify development and debugging
     - name: Environment Variables
       shell: bash
       run: env
 
-    # ============
-    # DEPENDENCIES
-    # ============
-
-    - name: Dependencies [macOS]
-      if: contains(matrix.os, 'macos')
+    - name: Dependencies [apt]
       run: |
-        brew install cmake
+        # See  https://stackoverflow.com/questions/44331836/apt-get-install-tzdata-noninteractive,
+        # only required by Ubuntu 20.04
+        export DEBIAN_FRONTEND=noninteractive
+        apt-get -y update
+        apt-get -y install \
+            git build-essential cmake
 
-    # ===================
-    # CMAKE-BASED PROJECT
-    # ===================
-
-    - name: Configure [Ubuntu/macOS]
+    - name: Configure [apt]
       shell: bash
       run: |
         mkdir -p build
