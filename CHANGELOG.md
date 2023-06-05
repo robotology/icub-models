@@ -5,6 +5,14 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+# [2.1.0] - 2023-06-05
+
+### Changed
+
+* For consistency with the robot, now iCub simulated models publish their Force-Torque Sensors measurements via the [`multipleanalogsensorsserver`](https://www.yarp.it/latest//classMultipleAnalogSensorsServer.html) YARP device (https://github.com/robotology/icub-models/issues/198, https://github.com/robotology/icub-models-generator/pull/239, https://github.com/robotology/robots-configuration/pull/517).  The `name`  parameter passed to this device is: `/<robotPortPrefix>/<partName>/FT`.  This means that for each part there will be a `multipleanalogsensorsserver` device that will open the following YARP ports (these YARP ports are not meant to be accessed directly, but should be accessed instead via the [`multipleanalogsensorsclient`](https://www.yarp.it/git-master/classMultipleAnalogSensorsClient.html) device):
+  * `/<robotPortPrefix>/<partName>/FT/measures:o` : that publishes sensors information for the part, using the structure defined in https://github.com/robotology/yarp/blob/master/src/devices/multipleAnalogSensorsMsgs/multipleAnalogSensorsSerializations.thrift
+  * `/<robotPortPrefix>/<partName>/FT/rpc:o` : that expose several information related to the part via a YARP RPC port
+
 # [2.0.1] - 2023-03-31
 
 ### Fixed
