@@ -20,14 +20,12 @@
     <xi:include href="wrappers/motorControl/head-mc_remapper.xml" />
     <xi:include href="wrappers/motorControl/torso-mc_remapper.xml" />
     <!--  ANALOG SENSORS FT -->
-    <xi:include href="wrappers/FT/left_foot-FT_remapper.xml" />
-    <xi:include href="wrappers/FT/right_foot-FT_remapper.xml" />
-    <xi:include href="wrappers/FT/left_foot-FT_wrapper.xml" />
-    <xi:include href="wrappers/FT/right_foot-FT_wrapper.xml" />
+    <xi:include href="wrappers/FT/left_leg-FT_remapper.xml" />
+    <xi:include href="wrappers/FT/right_leg-FT_remapper.xml" />
+    <xi:include href="wrappers/FT/left_leg-FT_wrapper.xml" />
+    <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
-    <xi:include href="wrappers/FT/right_leg_hip-FT_wrapper.xml" />
-    <xi:include href="wrappers/FT/left_leg_hip-FT_wrapper.xml" />
     
     <!-- INERTIAL SENSOR-->
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
