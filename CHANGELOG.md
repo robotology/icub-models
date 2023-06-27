@@ -5,6 +5,17 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+# [2.2.0] - 2023-06-27
+
+### Fixed
+
+* Fix Gazebo Classic simulation of iCub 2.* and 3 models, that stopped working since the 2.1.0 release (https://github.com/robotology/icub-models-generator/pull/240). Note that this fix highlighted a bug in icub-models that was introduced in 1.26.0, namely that the names of the FT sensors in the iCub models is not consistent with the real robot. This issue will be fixed in a future release, see https://github.com/robotology/icub-models-generator/issues/242 for more details.
+
+### Changed
+
+* Tune position PID gains for torso for iCub 2.* (https://github.com/robotology/icub-models-generator/pull/241).
+
+
 # [2.1.0] - 2023-06-05
 
 ### Changed
