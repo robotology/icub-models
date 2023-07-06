@@ -75,6 +75,8 @@ set(ICUB_MODELS_SDF_VERSION "1.7")
 set(GAZEBO_SUPPORTED_MODELS "")
 list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5")
 list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5_plus")
+list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_6")
+list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_7")
 list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV3")
 
 # Note: these models don't need further configuration apart from
