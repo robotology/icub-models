@@ -4,10 +4,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-FT_remapper" type="multipleanalogsensorsremapper">
         <param name="SixAxisForceTorqueSensorsNames">
-          (l_leg_ft_sensor l_foot_ft_sensor)
-        </param>
-        <param name="TemperatureSensorsNames">
-          (l_leg_ft_sensor l_foot_ft_sensor)
+          (l_leg_ft l_foot_ft)
         </param>
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
