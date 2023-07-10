@@ -5,7 +5,13 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
-# [2.2.0] - 2023-06-27
+# [2.2.2] - 2023-07-10
+
+### Fixed
+
+* Fix version number in CMake and package.xml files.
+
+# [2.2.1] - 2023-07-10
 
 ### Fixed
 
@@ -15,6 +21,9 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 * Tune position PID gains for torso for iCub 2.* (https://github.com/robotology/icub-models-generator/pull/241).
 
+# [2.2.0] - 2023-06-27
+
+**Due to an error, this release did not contained improvements.**
 
 # [2.1.0] - 2023-06-05
 
