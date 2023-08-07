@@ -203,7 +203,7 @@
   </joint>
   <link name="l_hand_thumb_proximal_link">
     <inertial>
-      <origin xyz="0.007942237973736329 -5.9058138708734456e-05 -0.001045447354816556" rpy="0 0 0"/>
+      <origin xyz="0.007942237973736326 -5.9058138708734456e-05 -0.001045447354816556" rpy="0 0 0"/>
       <mass value="0.00972892"/>
       <inertia ixx="7.30894e-07" ixy="-1.72738e-09" ixz="-2.79201e-07" iyy="1.01435e-06" iyz="6.0045e-10" izz="8.85583e-07"/>
     </inertial>
@@ -224,8 +224,8 @@
     </collision>
   </link>
   <joint name="l_hand_thumb_rotation_joint" type="revolute">
-    <origin xyz="0.04079150000000001 -0.048141699999999996 -4.558000000000036e-05" rpy="-1.919861924123965 0.17453290528622997 -1.4311699319115785"/>
-    <axis xyz="1.000000323780413 -2.554693535849738e-07 6.571824263261195e-08"/>
+    <origin xyz="0.04079150000000001 -0.048141699999999996 -4.558000000000036e-05" rpy="-1.9198619241239645 0.17453290528623008 -1.4311699319115785"/>
+    <axis xyz="1.0000003237804127 -2.554693537237517e-07 6.571824259405435e-08"/>
     <parent link="l_hand_metacarpus_link"/>
     <child link="l_hand_thumb_proximal_link"/>
     <limit effort="50000" lower="-1.2217304763960306" upper="0.0" velocity="50000"/>
@@ -255,7 +255,7 @@
   </link>
   <joint name="l_hand_thumb_proximal_joint" type="revolute">
     <origin xyz="0.021999958515447667 0 0.003500025233931968" rpy="0 0 0"/>
-    <axis xyz="2.628557918787494e-08 -1.0000002854169352 -2.183550824779987e-07"/>
+    <axis xyz="2.6285579160119366e-08 -1.0000002854169352 -2.1835508227251483e-07"/>
     <parent link="l_hand_thumb_proximal_link"/>
     <child link="l_hand_thumb_medial_link"/>
     <limit effort="50000" lower="0.0" upper="1.4835298641951802" velocity="50000"/>
@@ -263,12 +263,12 @@
   </joint>
   <link name="l_hand_thumb_fingertip_link">
     <inertial>
-      <origin xyz="0.010517869126825619 8.912381595140711e-06 -0.003989284736807208" rpy="0 0 0"/>
+      <origin xyz="0.010517869126825605 8.912381595133773e-06 -0.003989284736807201" rpy="0 0 0"/>
       <mass value="0.0169365"/>
       <inertia ixx="0.01" ixy="1.68813e-09" ixz="-2.86966e-08" iyy="0.01" iyz="-1.92473e-09" izz="0.01"/>
     </inertial>
     <visual>
-      <origin xyz="-0.0029999461796957755 0 0.0030000193982093123" rpy="0 0 0"/>
+      <origin xyz="-0.0029999461796957824 0 0.0030000193982093193" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_l_hand_distal_thumb_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -277,15 +277,15 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.0029999461796957755 0 0.0030000193982093123" rpy="0 0 0"/>
+      <origin xyz="-0.0029999461796957824 0 0.0030000193982093193" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://iCub/meshes/simmechanics/sim_l_hand_distal_thumb_prt.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
   <joint name="l_hand_thumb_distal_joint" type="revolute">
-    <origin xyz="0.020000016253208935 0 0.0014999980937911578" rpy="0 0 0"/>
-    <axis xyz="2.628557918787494e-08 -1.0000002854169352 -2.183550824779987e-07"/>
+    <origin xyz="0.020000016253208942 0 0.0014999980937911508" rpy="0 0 0"/>
+    <axis xyz="2.6285579160119366e-08 -1.0000002854169352 -2.1835508227251483e-07"/>
     <parent link="l_hand_thumb_medial_link"/>
     <child link="l_hand_thumb_fingertip_link"/>
     <limit effort="50000" lower="0.0" upper="0.9599310885968813" velocity="50000"/>
