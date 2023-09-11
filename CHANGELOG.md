@@ -5,6 +5,13 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+# [2.3.0] - 2023-09-11
+
+### Fixed
+
+* Fix location of `*_foot_*` links in iCub3 models (https://github.com/robotology/icub-models-generator/pull/243).
+* Fixed publication of xsens imu on iCubGazeboV2_7 (https://github.com/robotology/icub-models-generator/pull/246).
+
 # [2.2.2] - 2023-07-10
 
 ### Fixed
