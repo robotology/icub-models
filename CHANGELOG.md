@@ -8,6 +8,9 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 ### Changed
 * Enable publishing of robot joints in ROS 2 via `controlBoard_nws_ros2` for `iCubGazeboV2_5_visuomanip` (https://github.com/robotology/icub-models/pull/211).
 
+### Fixed
+* Fixed wrong simulated finger hall effect sensors port names prefix for `iCubGazeboV2_5_visuomanip` (https://github.com/robotology/icub-models/pull/215).
+
 # [2.3.0] - 2023-09-11
 
 ### Fixed
