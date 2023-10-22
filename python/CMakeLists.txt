@@ -11,15 +11,18 @@ if(ICUB_MODELS_USES_PYTHON)
     FALSE)
 
     # Install the resulting Python package for the active interpreter
-    if(ICUB_MODELS_DETECT_ACTIVE_PYTHON_SITEPACKAGES)
-        set(PYTHON_INSTDIR ${Python3_SITELIB}/icub_models)
-    else()
-      execute_process(COMMAND ${Python3_EXECUTABLE} -c "from distutils import sysconfig; print(sysconfig.get_python_lib(1,0,prefix=''))"
-        OUTPUT_VARIABLE _PYTHON_INSTDIR)
-
-      string(STRIP ${_PYTHON_INSTDIR} _PYTHON_INSTDIR_CLEAN)
-      set(PYTHON_INSTDIR ${_PYTHON_INSTDIR_CLEAN}/icub_models)
+    if(NOT DEFINED ICUB_MODELS_PYTHON_INSTALL_DIR)
+      if(ICUB_MODELS_DETECT_ACTIVE_PYTHON_SITEPACKAGES)
+        set(ICUB_MODELS_PYTHON_INSTALL_DIR ${Python3_SITELIB})
+      else()
+        execute_process(COMMAND ${Python3_EXECUTABLE} -c "from distutils import sysconfig; print(sysconfig.get_python_lib(1,0,prefix=''))"
+          OUTPUT_VARIABLE _PYTHON_INSTDIR)
+        string(STRIP ${_PYTHON_INSTDIR} _PYTHON_INSTDIR_CLEAN)
+        set(ICUB_MODELS_PYTHON_INSTALL_DIR ${_PYTHON_INSTDIR_CLEAN})
+      endif()
     endif()
+    set(PYTHON_INSTDIR ${ICUB_MODELS_PYTHON_INSTALL_DIR}/icub_models)
+
 
 
     # Install the __init__.py file
