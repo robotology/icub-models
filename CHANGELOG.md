@@ -5,6 +5,11 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+# [2.4.1] - 2023-10-30
+
+### Fixed
+* Fixed version number in CMakeLists.txt and package.xml (https://github.com/robotology/icub-models/pull/222).
+
 # [2.4.0] - 2023-10-30
 
 ### Changed
