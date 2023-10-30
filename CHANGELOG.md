@@ -5,6 +5,20 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+### Changed
+* Enable publishing of robot joints in ROS 2 via `controlBoard_nws_ros2` for `iCubGazeboV2_5_visuomanip` (https://github.com/robotology/icub-models/pull/211).
+* CMake: Permit to explictly specify Python installation directory by setting the `ICUB_MODELS_PYTHON_INSTALL_DIR` CMake variable (https://github.com/robotology/icub-models/pull/218).
+
+### Fixed
+* Fixed wrong simulated finger hall effect sensors port names prefix for `iCubGazeboV2_5_visuomanip` (https://github.com/robotology/icub-models/pull/215).
+
+# [2.3.0] - 2023-09-11
+
+### Fixed
+
+* Fix location of `*_foot_*` links in iCub3 models (https://github.com/robotology/icub-models-generator/pull/243).
+* Fixed publication of xsens imu on iCubGazeboV2_7 (https://github.com/robotology/icub-models-generator/pull/246).
+
 # [2.2.2] - 2023-07-10
 
 ### Fixed
