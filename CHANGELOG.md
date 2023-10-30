@@ -5,12 +5,20 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+# [2.4.0] - 2023-10-30
+
 ### Changed
 * Enable publishing of robot joints in ROS 2 via `controlBoard_nws_ros2` for `iCubGazeboV2_5_visuomanip` (https://github.com/robotology/icub-models/pull/211).
 * CMake: Permit to explictly specify Python installation directory by setting the `ICUB_MODELS_PYTHON_INSTALL_DIR` CMake variable (https://github.com/robotology/icub-models/pull/218).
+* Delete unused files (https://github.com/robotology/icub-models-generator/pull/236).
+* Remove iCubGenova04_plus model  and rename iCubGazeboV2_5_plus to iCubGazeboV2_5_KIT_007 (https://github.com/robotology/icub-models-generator/pull/250).
 
 ### Fixed
 * Fixed wrong simulated finger hall effect sensors port names prefix for `iCubGazeboV2_5_visuomanip` (https://github.com/robotology/icub-models/pull/215).
+* Fixed compatibility with Python 3.12 and various issues with recent Python versions (https://github.com/robotology/icub-models/pull/217, https://github.com/robotology/icub-models/pull/218, https://github.com/robotology/icub-models/pull/219).
+* Change `*_hand_fingers` to `*_hand_finger` in `iCubGazeboV2_5_visuomanip` for consistency with the real robot (https://github.com/robotology/icub-models/pull/213).
+* Fix location of collision element in iCubGazeboV3 model (https://github.com/robotology/icub-models-generator/pull/251).
+
 
 # [2.3.0] - 2023-09-11
 
