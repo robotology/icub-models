@@ -10,7 +10,7 @@ The model contained in this repo are licensed under the [Creative Commons Attrib
 
 You can easily install the `icub-models` and the C++ and Python helper libraries via [`conda-forge`](https://conda-forge.org) using the following command
 ~~~
-conda install -c conda-forge idyntree
+conda install -c conda-forge icub-models
 ~~~
 
 If you are not familiar with conda or conda-forge, you can read an introduction document in [conda-forge overview](https://github.com/robotology/robotology-superbuild/blob/master/doc/conda-forge.md#conda-forge-overview).
@@ -21,7 +21,7 @@ If you use apt to install your dependencies or if you are install `icub-models` 
 
 ### Build from source (advanced)
 
-If you want to build icub-models directly from source of from the repo, you can check the documentation in [`doc/build-from-source.md`](doc/build-from-source.md).
+If you want to build icub-models directly from source of from the repo, you can check the documentation in [`build-from-source.md`](doc/build-from-source.md).
 
 ## Model Details
 
