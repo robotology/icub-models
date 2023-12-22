@@ -1,6 +1,6 @@
 # icub-models
 
-Repository containing models [automatically](https://github.com/robotology-playground/icub-model-generator/blob/master/.travis.yml#L76) generated from the CAD file by [icub-model-generator](https://github.com/robotology-playground/icub-model-generator).
+Repository containing URDF and SDF models of iCub humanoid robot.
 
 The model contained in this repo are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0) ](https://creativecommons.org/licenses/by-sa/4.0/).
 
@@ -31,10 +31,12 @@ The model contained in `icub-models` are listed in the following table. Most mod
 |:--------------------:|:------------:|:-------------------------------:|
 | `iCubErzelli02`      | `package://iCub/robots/iCubErzelli02/model.urdf` | v2.5.5           |
 | `iCubGazeboV2_5`     | `package://iCub/robots/iCubGazeboV2_5/model.urdf` | v2.5.5, joint damping, and inertias of some links increased in a non realistic way to run smoothly in Gazebo Classic (ODE). |
+| `iCubGazeboV2_5_visuomanip` | `package://iCub/robots/iCubGazeboV2_5/model.urdf`  | v2.5.5 with hands and eyes, base_link fixed to the ground and legs disabled. |
 | `iCubGazeboV2_5_KIT_007`| `package://iCub/robots/iCubGazeboV2_5_KIT_007/model.urdf` | v2.5 + [KIT_007](https://icub-tech-iit.github.io/documentation/upgrade_kits/ankle_for_stairs/support/) with backpack, joint damping, and inertias of some links increased in a non realistic way to run smoothly in Gazebo Classic (ODE). |
 | `iCubGazeboV2_6`     | `package://iCub/robots/iCubGazeboV2_6/model.urdf` | v2.6 with  joint damping, and inertias of some links increased in a non realistic way to run smoothly in Gazebo Classic (ODE). |
 | `iCubGazeboV2_7`     | `package://iCub/robots/iCubGazeboV2_7/model.urdf` | v2.7 with  joint damping, and inertias of some links increased in a non realistic way to run smoothly in Gazebo Classic (ODE). |
 | `iCubGazeboV3`       | `package://iCub/robots/iCubGazeboV3/model.urdf` | v3 with  joint damping, and inertias of some links increased in a non realistic way to run smoothly in Gazebo Classic (ODE). |
+| `iCubGazeboV3_visuomanip` | `package://iCub/robots/iCubGazeboV3_visuomanip/model.urdf`  | v3 with hands and eyes |
 | `iCubGenova02`       | `package://iCub/robots/iCubGenova02/model.urdf` | v2.5.5 + [KIT_007](https://icub-tech-iit.github.io/documentation/upgrade_kits/ankle_for_stairs/support/) with backpack           |
 | `iCubGenova03`       | `package://iCub/robots/iCubGenova03/model.urdf`           | v2 with legs v1 and feet v2.5   |
 | `iCubLisboa01`       | `package://iCub/robots/iCubLisboa01/model.urdf`           | v1 with head v2                 |
@@ -99,7 +101,11 @@ int main()
 
 ### Use the models from C++ using YARP
 
-To find the model using YARP
+To find the model in C++ using YARP, you just need to make sure that `YARP_ROBOT_NAME` environment variable is set, and search for the `model.urdf` file:
+
+~~~
+std::string modelAbsolutePath =yarp::os::ResourceFinder::getResourceFinderSingleton().findFileByName("model.urdf");
+~~~
 
 ### Use the models from Python icub-models library
 
