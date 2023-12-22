@@ -4,6 +4,25 @@ Repository containing models [automatically](https://github.com/robotology-playg
 
 The model contained in this repo are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0) ](https://creativecommons.org/licenses/by-sa/4.0/).
 
+## Installation
+
+### conda (recommended) 
+
+You can easily install the `icub-models` and the C++ and Python helper libraries via [`conda-forge`](https://conda-forge.org) using the following command
+~~~
+conda install -c conda-forge idyntree
+~~~
+
+If you are not familiar with conda or conda-forge, you can read an introduction document in [conda-forge overview](https://github.com/robotology/robotology-superbuild/blob/master/doc/conda-forge.md#conda-forge-overview).
+
+### robotology-superbuild (advanced)
+
+If you use apt to install your dependencies or if you are install `icub-models` for use as part of [iCub humanoid robot software installation](https://icub-tech-iit.github.io/documentation/sw_installation/), you may want to install icub-models through the [robotology-superbuild](https://github.com/robotology/robotology-superbuild), an easy way to download, compile and install the robotology software on multiple operating systems, using the [CMake](https://www.cmake.org) build system and its extension [YCM](http://robotology.github.io/ycm). `icub-models` is always installed by `robotology-superbuild`.
+
+### Build from source (advanced)
+
+If you want to build icub-models directly from source of from the repo, you can check the documentation in [`doc/build-from-source.md`](doc/build-from-source.md).
+
 ## Usage
 
 The model in the repo can be used either directly from the repo, or by installing them.
