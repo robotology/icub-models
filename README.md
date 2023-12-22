@@ -1,6 +1,6 @@
 # icub-models
 
-Repository containing URDF and SDF models of iCub humanoid robot.
+Repository containing URDF and SDF models of iCub humanoid robots.
 
 The model contained in this repo are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0) ](https://creativecommons.org/licenses/by-sa/4.0/).
 
@@ -25,7 +25,7 @@ If you want to build icub-models directly from source of from the repo, you can 
 
 ## Model Details
 
-The model contained in `icub-models` are listed in the following table. Most model is identified by a name like `iCub<Something><Number>`, that we refer as `YARP_ROBOT_NAME` as historically  on iCub robot setups the robot to use was identified by setting the `YARP_ROBOT_NAME` env variable to that name.
+The models contained in `icub-models` are listed in the following table. Most models are identified by a name like `iCub<Something><Number>`, that we refer as `YARP_ROBOT_NAME`. Historically, on iCub robot setups, the `YARP_ROBOT_NAME` env variable identified the specific robot to use.
 
 |  `YARP_ROBOT_NAME`   | `package:/`-URI     | Notes                           |
 |:--------------------:|:------------:|:-------------------------------:|
@@ -54,7 +54,7 @@ Models contained in `icub-models` can be used using the `package:/`-URI listed i
 Note that only the models that are known to work fine with the default physics engine settings of Classic Gazebo (the one that start with `iCubGazebo`)
 are installed. If you want to make available in Gazebo all the models, enable the `ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS` CMake option.
 
-To include the model in a Classic Gazebo world, include it with the following SDF :
+To include the model in a Classic Gazebo world, use the following SDF:
 
 ~~~xml
 <include>
@@ -63,7 +63,7 @@ To include the model in a Classic Gazebo world, include it with the following SD
 </include>
 ~~~
 
-the `model:/` used to include the model follow the structure `model://<name>`, where `<name>` is `iCubGazeboV2_5`, `iCubGazeboV2_7` or a similar identifier. Note that you can also use the structure `model://iCub/robots/<name>`.
+The `model:/` string is used to include the model, following the structure `model://<name>`, where `<name>` is `iCubGazeboV2_5`, `iCubGazeboV2_7` or a similar identifier. Note that you can also use the structure `model://iCub/robots/<name>`.
 
 ### Use the models from C++ helper library
 

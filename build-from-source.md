@@ -1,6 +1,7 @@
 # Build icub-models from source
 
-To install the icub-models, execute:
+To install the icub-models, execute the following commands from within the ``icub-models`` folder:
+
 
 ```sh
 mkdir build
