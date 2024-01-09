@@ -2545,6 +2545,22 @@
     <yarpRobotInterfaceConfigurationFile>model://iCub/conf/icub.xml</yarpRobotInterfaceConfigurationFile>
   </plugin>
 </gazebo>
+  <link name="root_link_imu_frame"/>
+  <joint name="root_link_imu_frame_fixed_joint" type="fixed">
+  <origin xyz="0.08515499999999998 -0.011000000000000022 -0.11230899999999999" rpy="-2.0943952105869323 0 -1.5707963267948963"/>
+  <parent link="root_link"/>
+  <child link="root_link_imu_frame"/>
+</joint>
+  <gazebo reference="root_link">
+  <sensor name="root_link_imu_acc" type="imu">
+    <always_on>1</always_on>
+    <update_rate>400</update_rate>
+    <pose>0.08515499999999998 -0.011000000000000022 -0.11230899999999999 -2.0943952105869323 -3.885780586188048e-16 -1.5707963267948963</pose>
+    <plugin name="root_link_xsens_imu_plugin" filename="libgazebo_yarp_imu.so">
+      <yarpConfigurationFile>model://iCub/conf/gazebo_icub_xsens_inertial.ini</yarpConfigurationFile>
+    </plugin>
+   </sensor>
+ </gazebo>
   <gazebo reference="l_leg_ft_sensor">
     <sensor name="l_leg_ft" type="force_torque">
       <always_on>1</always_on>
