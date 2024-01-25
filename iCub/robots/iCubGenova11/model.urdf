@@ -985,7 +985,7 @@
   </joint>
   <link name="head_imu_0"/>
   <joint name="head_imu_0_fixed_joint" type="fixed">
-    <origin xyz="0.009500000190735 0.133444 0.009299999999999996" rpy="-1.5707963267948961 1.570796326794896 0"/>
+    <origin xyz="0.023453700190734995 0.20544400000000002 -0.023077900000000023" rpy="1.5707963267948997 0 0"/>
     <parent link="head"/>
     <child link="head_imu_0"/>
     <dynamics damping="0.1"/>
@@ -2697,7 +2697,7 @@
     <sensor name="head_imu_0" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
-      <pose>0.009500000190735 0.133444 0.009299999999999996 -1.5707963267948963 1.5707963267948963 0.0</pose>
+      <pose>0.023453700190734995 0.20544400000000002 -0.023077900000000023 1.5707963267948997 -3.4914813388431334e-15 0.0</pose>
       <plugin name="iCub_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
     <yarpConfigurationFile>model://iCub/conf/gazebo_icub_inertial.ini</yarpConfigurationFile>
 </plugin>
@@ -2705,7 +2705,7 @@
   </gazebo>
   <sensor name="head_imu_0" type="accelerometer">
     <parent link="head"/>
-    <origin rpy="-1.5707963267948963 1.5707963267948963 0.0" xyz="0.009500000190735 0.133444 0.009299999999999996"/>
+    <origin rpy="1.5707963267948997 -3.4914813388431334e-15 0.0" xyz="0.023453700190734995 0.20544400000000002 -0.023077900000000023"/>
   </sensor>
   <gazebo reference="root_link">
     <sensor name="root_link_ems_acc_eb5" type="imu">
