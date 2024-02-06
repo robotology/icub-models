@@ -39,8 +39,10 @@ The models contained in `icub-models` are listed in the following table. Most mo
 | `iCubGazeboV3_visuomanip` | `package://iCub/robots/iCubGazeboV3_visuomanip/model.urdf`  | v3 with hands and eyes |
 | `iCubGenova02`       | `package://iCub/robots/iCubGenova02/model.urdf` | v2.5.5 + [KIT_007](https://icub-tech-iit.github.io/documentation/upgrade_kits/ankle_for_stairs/support/) with backpack           |
 | `iCubGenova03`       | `package://iCub/robots/iCubGenova03/model.urdf`           | v2 with legs v1 and feet v2.5   |
+| `iCubGenova11`       | `package://iCub/robots/iCubGenova11/model.urdf`           | v2.7   |
 | `iCubLisboa01`       | `package://iCub/robots/iCubLisboa01/model.urdf`           | v1 with head v2                 |
 | `iCubNancy01`        | `package://iCub/robots/iCubNancy01/model.urdf`           | v2.5 with arms v1 and head v2   |
+| `iCubWaterloo11`       | `package://iCub/robots/iCubWaterloo11/model.urdf`           | v2.7   |
 
 
 ## Usage
