@@ -5,6 +5,18 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+# [2.5.0] - 2024-02-06
+
+### Added
+
+* Added `iCubWaterloo01` model (https://github.com/robotology/icub-models-generator/pull/257).
+* Added `iCubGenova11` model (https://github.com/robotology/icub-models-generator/pull/252).
+
+### Fixed
+
+* Fixed wrong orientation for head IMU frame in iCub 2.6 and 2.7 models (https://github.com/robotology/icub-models/issues/231, https://github.com/robotology/icub-models-generator/pull/258).
+
+
 # [2.4.1] - 2023-10-30
 
 ### Fixed
