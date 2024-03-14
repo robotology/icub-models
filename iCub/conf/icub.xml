@@ -31,6 +31,8 @@
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
     <xi:include href="wrappers/inertials/left_arm-inertials_wrapper.xml" />
     <xi:include href="wrappers/inertials/right_arm-inertials_wrapper.xml" />
+    <xi:include href="wrappers/inertials/alljoints-inertials_remapper.xml" />
+    <xi:include href="wrappers/inertials/alljoints-inertials_wrapper.xml" />
     <!--  NOT USED RIGHT NOW
     <xi:include href="wrappers/inertials/waist-inertials_wrapper.xml" /> -->    
     </devices>
