@@ -2638,7 +2638,7 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <force_torque>
-        <frame>sensor</frame>
+        <frame>child</frame>
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
       <pose>0.05093014324520106 1.3877787807814457e-17 0.029175829465900395 -4.3625653762663687e-16 -1.3089970069677406 -3.1415926535897922</pose>
@@ -2650,7 +2650,7 @@
   <sensor name="l_arm_ft" type="force_torque">
     <parent joint="l_arm_ft_sensor"/>
     <force_torque>
-      <frame>sensor</frame>
+      <frame>child</frame>
       <measure_direction>child_to_parent</measure_direction>
     </force_torque>
     <origin rpy="-4.3625653762663687e-16 -1.3089970069677406 -3.1415926535897922" xyz="0.05093014324520106 1.3877787807814457e-17 0.029175829465900395"/>
@@ -2660,7 +2660,7 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <force_torque>
-        <frame>sensor</frame>
+        <frame>child</frame>
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
       <pose>-0.05089730176650909 1.3877787807814457e-17 0.029167029620599215 -6.358700866473837e-16 -1.3089970069677404 6.58301142551668e-16</pose>
@@ -2672,7 +2672,7 @@
   <sensor name="r_arm_ft" type="force_torque">
     <parent joint="r_arm_ft_sensor"/>
     <force_torque>
-      <frame>sensor</frame>
+      <frame>child</frame>
       <measure_direction>child_to_parent</measure_direction>
     </force_torque>
     <origin rpy="-6.358700866473837e-16 -1.3089970069677404 6.58301142551668e-16" xyz="-0.05089730176650909 1.3877787807814457e-17 0.029167029620599215"/>
