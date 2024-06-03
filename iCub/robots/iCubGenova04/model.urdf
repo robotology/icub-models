@@ -1080,11 +1080,11 @@
     <limit effort="50000" lower="-0.6457718232379019" upper="1.3962634015954636" velocity="50000"/>
     <dynamics damping="0.06" friction="0.0"/>
   </joint>
-  <link name="r_arm_ft"/>
-  <joint name="r_arm_ft_fixed_joint" type="fixed">
+  <link name="r_arm_ft_imu"/>
+  <joint name="r_arm_ft_imu_fixed_joint" type="fixed">
     <origin xyz="-0.05089730176650909 0 0.029167029620599215" rpy="0 -1.3089970069677397 0"/>
     <parent link="r_shoulder_3"/>
-    <child link="r_arm_ft"/>
+    <child link="r_arm_ft_imu"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="r_upper_arm">
@@ -1507,11 +1507,11 @@
     <limit effort="50000" lower="-0.6457718232379019" upper="1.3962634015954636" velocity="50000"/>
     <dynamics damping="0.06" friction="0.0"/>
   </joint>
-  <link name="l_arm_ft"/>
-  <joint name="l_arm_ft_fixed_joint" type="fixed">
+  <link name="l_arm_ft_imu"/>
+  <joint name="l_arm_ft_imu_fixed_joint" type="fixed">
     <origin xyz="0.05093014324520106 0 0.029175829465900395" rpy="0 -1.3089970069677395 3.1415926535897927"/>
     <parent link="l_shoulder_3"/>
-    <child link="l_arm_ft"/>
+    <child link="l_arm_ft_imu"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="l_upper_arm">
@@ -2638,7 +2638,7 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <force_torque>
-        <frame>sensor</frame>
+        <frame>child</frame>
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
       <pose>0.05093014324520106 1.3877787807814457e-17 0.029175829465900395 -4.3625653762663687e-16 -1.3089970069677406 -3.1415926535897922</pose>
@@ -2650,7 +2650,7 @@
   <sensor name="l_arm_ft" type="force_torque">
     <parent joint="l_arm_ft_sensor"/>
     <force_torque>
-      <frame>sensor</frame>
+      <frame>child</frame>
       <measure_direction>child_to_parent</measure_direction>
     </force_torque>
     <origin rpy="-4.3625653762663687e-16 -1.3089970069677406 -3.1415926535897922" xyz="0.05093014324520106 1.3877787807814457e-17 0.029175829465900395"/>
@@ -2660,7 +2660,7 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <force_torque>
-        <frame>sensor</frame>
+        <frame>child</frame>
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
       <pose>-0.05089730176650909 1.3877787807814457e-17 0.029167029620599215 -6.358700866473837e-16 -1.3089970069677404 6.58301142551668e-16</pose>
@@ -2672,7 +2672,7 @@
   <sensor name="r_arm_ft" type="force_torque">
     <parent joint="r_arm_ft_sensor"/>
     <force_torque>
-      <frame>sensor</frame>
+      <frame>child</frame>
       <measure_direction>child_to_parent</measure_direction>
     </force_torque>
     <origin rpy="-6.358700866473837e-16 -1.3089970069677404 6.58301142551668e-16" xyz="-0.05089730176650909 1.3877787807814457e-17 0.029167029620599215"/>
@@ -2690,6 +2690,34 @@
   <sensor name="head_imu_0" type="accelerometer">
     <parent link="head"/>
     <origin rpy="-1.5707963267948963 1.5707963267948963 0.0" xyz="0.009500000190735 0.133444 0.009299999999999996"/>
+  </sensor>
+  <gazebo reference="l_shoulder_3">
+    <sensor name="l_arm_ft_imu" type="imu">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <pose>0.05093014324520106 1.3877787807814457e-17 0.029175829465900395 -4.3625653762663687e-16 -1.3089970069677406 -3.1415926535897922</pose>
+      <plugin name="iCub_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_inertial.ini</yarpConfigurationFile>
+</plugin>
+    </sensor>
+  </gazebo>
+  <sensor name="l_arm_ft_imu" type="accelerometer">
+    <parent link="l_shoulder_3"/>
+    <origin rpy="-4.3625653762663687e-16 -1.3089970069677406 -3.1415926535897922" xyz="0.05093014324520106 1.3877787807814457e-17 0.029175829465900395"/>
+  </sensor>
+  <gazebo reference="r_shoulder_3">
+    <sensor name="r_arm_ft_imu" type="imu">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <pose>-0.05089730176650909 1.3877787807814457e-17 0.029167029620599215 -6.358700866473837e-16 -1.3089970069677404 6.58301142551668e-16</pose>
+      <plugin name="iCub_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_arm_inertial.ini</yarpConfigurationFile>
+</plugin>
+    </sensor>
+  </gazebo>
+  <sensor name="r_arm_ft_imu" type="accelerometer">
+    <parent link="r_shoulder_3"/>
+    <origin rpy="-6.358700866473837e-16 -1.3089970069677404 6.58301142551668e-16" xyz="-0.05089730176650909 1.3877787807814457e-17 0.029167029620599215"/>
   </sensor>
   <gazebo reference="root_link">
     <sensor name="root_link_ems_acc_eb5" type="imu">
