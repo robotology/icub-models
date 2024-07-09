@@ -403,6 +403,13 @@
     <limit effort="50000" lower="-0.7504915783575618" upper="0.7504915783575618" velocity="120.0"/>
     <dynamics damping="2.0" friction="0.0"/>
   </joint>
+  <link name="chest_depth_frame"/>
+  <joint name="chest_depth_frame_fixed_joint" type="fixed">
+    <origin xyz="0.0894115 0.0175 0.09929950000000001" rpy="-1.5707963267948968 0 -1.5707963267948968"/>
+    <parent link="chest"/>
+    <child link="chest_depth_frame"/>
+    <dynamics damping="0.1"/>
+  </joint>
   <link name="chest_imu_0"/>
   <joint name="chest_imu_0_fixed_joint" type="fixed">
     <origin xyz="0.0894115 0.0175 0.09929950000000001" rpy="-1.5707963267948968 0 -1.5707963267948968"/>
@@ -534,6 +541,13 @@
     <child link="head"/>
     <limit effort="50000" lower="-0.7853981633974483" upper="0.7853981633974483" velocity="120.0"/>
     <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <link name="imu_frame"/>
+  <joint name="imu_frame_fixed_joint" type="fixed">
+    <origin xyz="0.0035000000000000005 0.0055 0.10133400000000001" rpy="3.141592653589793 0 -1.5707963267948966"/>
+    <parent link="head"/>
+    <child link="imu_frame"/>
+    <dynamics damping="0.1"/>
   </joint>
   <link name="head_imu_0"/>
   <joint name="head_imu_0_fixed_joint" type="fixed">
