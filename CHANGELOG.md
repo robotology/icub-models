@@ -1,7 +1,6 @@
 # Changelog
-All notable changes to this project will be documented in this file.
 
-The format of this document is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+This file documents notable changes to this project done before June 2024. For changes after that date, plase refers to the release notes of each release at https://github.com/robotology/icub-models/releases .
 
 ## [Unreleased]
 
