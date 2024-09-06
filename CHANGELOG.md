@@ -5,6 +5,18 @@ The format of this document is based on [Keep a Changelog](https://keepachangelo
 
 ## [Unreleased]
 
+# [2.6.0] - 2024-06-03
+
+### Added
+* icub2_5: Add alljoints-inertials_wrapper/remapper (https://github.com/robotology/icub-models-generator/pull/264)
+* Add left/right_arm FT IMU in iCubGazeboV2_* models (https://github.com/robotology/icub-models-generator/pull/259)
+
+### Fixed 
+* iCubV2_*: Fix measure of arm ft sensors (https://github.com/robotology/icub-models-generator/pull/265).
+
+### Removed
+* Remove iCubParis01 and iCubParis02 (https://github.com/robotology/icub-models-generator/pull/273).
+
 # [2.5.0] - 2024-02-06
 
 ### Added
