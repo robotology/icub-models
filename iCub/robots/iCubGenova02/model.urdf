@@ -28,6 +28,13 @@
     <child link="root_link_ems_gyro_eb5"/>
     <dynamics damping="0.1"/>
   </joint>
+  <link name="root_link_imu_frame"/>
+  <joint name="root_link_imu_frame_fixed_joint" type="fixed">
+    <origin xyz="0.08515499999999998 -0.011000000000000022 -0.11230899999999999" rpy="-2.0943952105869323 0 -1.5707963267948963"/>
+    <parent link="root_link"/>
+    <child link="root_link_imu_frame"/>
+    <dynamics damping="0.1"/>
+  </joint>
   <link name="root_link_imu_acc"/>
   <joint name="root_link_imu_acc_fixed_joint" type="fixed">
     <origin xyz="0.08515499999999998 -0.011000000000000022 -0.11230899999999999" rpy="-2.0943952105869323 0 -1.5707963267948963"/>
@@ -243,6 +250,13 @@
     <limit effort="50000" lower="-0.8726646259971648" upper="0.8726646259971648" velocity="50000"/>
     <dynamics damping="0.06" friction="0.0"/>
   </joint>
+  <link name="imu_frame"/>
+  <joint name="imu_frame_fixed_joint" type="fixed">
+    <origin xyz="0.009500000190735 0.133444 0.009299999999999996" rpy="-1.5707963267948961 1.570796326794896 0"/>
+    <parent link="head"/>
+    <child link="imu_frame"/>
+    <dynamics damping="0.1"/>
+  </joint>
   <link name="head_imu_0"/>
   <joint name="head_imu_0_fixed_joint" type="fixed">
     <origin xyz="0.009500000190735 0.133444 0.009299999999999996" rpy="-1.5707963267948961 1.570796326794896 0"/>
@@ -339,6 +353,13 @@
     <child link="r_shoulder_3"/>
     <limit effort="50000" lower="-0.6457718232379019" upper="1.3962634015954636" velocity="50000"/>
     <dynamics damping="0.06" friction="0.0"/>
+  </joint>
+  <link name="r_arm_ft"/>
+  <joint name="r_arm_ft_fixed_joint" type="fixed">
+    <origin xyz="-0.05089730176650909 0 0.029167029620599215" rpy="0 -1.3089970069677397 0"/>
+    <parent link="r_shoulder_3"/>
+    <child link="r_arm_ft"/>
+    <dynamics damping="0.1"/>
   </joint>
   <link name="r_arm_ft_imu"/>
   <joint name="r_arm_ft_imu_fixed_joint" type="fixed">
@@ -766,6 +787,13 @@
     <child link="l_shoulder_3"/>
     <limit effort="50000" lower="-0.6457718232379019" upper="1.3962634015954636" velocity="50000"/>
     <dynamics damping="0.06" friction="0.0"/>
+  </joint>
+  <link name="l_arm_ft"/>
+  <joint name="l_arm_ft_fixed_joint" type="fixed">
+    <origin xyz="0.05093014324520106 0 0.029175829465900395" rpy="0 -1.3089970069677395 3.1415926535897927"/>
+    <parent link="l_shoulder_3"/>
+    <child link="l_arm_ft"/>
+    <dynamics damping="0.1"/>
   </joint>
   <link name="l_arm_ft_imu"/>
   <joint name="l_arm_ft_imu_fixed_joint" type="fixed">
