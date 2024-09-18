@@ -3,7 +3,8 @@
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-mais_wrapper" type="multipleanalogsensorsserver">
     <param name="period">       10                         </param>
-    <param name="name">       /icub/right_hand/MAIS      </param>
+    <param name="name">       /icubSim/right_hand/MAIS      </param>
+
         
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
