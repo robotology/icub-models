@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
-<robot name="iCubGazeboV3" build="1" portprefix="/icubSim" xmlns:xi="http://www.w3.org/2001/XInclude">
+<robot name="iCubGazeboV2_5" build="1" portprefix="/icubSim" xmlns:xi="http://www.w3.org/2001/XInclude">
     <devices>
 
     <!-- MOTOR CONTROLLERS -->
@@ -32,6 +32,13 @@
 
         <!-- this wrapper is inherited from automatically generated models -->
         <xi:include href="../../../iCub/conf/wrappers/inertials/head-inertials_wrapper.xml" />
+
+    <!-- -->
+
+    <!-- MAIS (i.e. ENCODER ARRAY) SENSORS -->
+
+        <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" />
+        <xi:include href="wrappers/MAIS/right_arm-mais_wrapper.xml" />
 
     <!-- -->
 
