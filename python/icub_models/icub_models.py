@@ -35,4 +35,4 @@ def get_model_file(robot_name: str) -> pathlib.Path:
     if model_file.is_file():
         return model_file
     else:
-        return pathlib.Path("...")
+        raise FileNotFoundError(f"Model file for robot {robot_name} not found.")
