@@ -19,9 +19,9 @@ jobs:
         os: [ubuntu-20.04, macos-latest, windows-2019]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
-    - uses: conda-incubator/setup-miniconda@v2
+    - uses: conda-incubator/setup-miniconda@v3
       with:
         miniforge-variant: Mambaforge
         miniforge-version: latest
@@ -103,8 +103,8 @@ jobs:
       image: ${{ matrix.docker_image }}
 
     steps:
-    - uses: actions/checkout@v3
- 
+    - uses: actions/checkout@v4
+
     # Print environment variables to simplify development and debugging
     - name: Environment Variables
       shell: bash
@@ -125,7 +125,7 @@ jobs:
         mkdir -p build
         cd build
         cmake -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install ..
-        
+
     - name: Build
       shell: bash
       run: |
