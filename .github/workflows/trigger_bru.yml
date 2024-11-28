@@ -57,7 +57,7 @@ jobs:
           repository: robotology/blender-robotics-utils
 
       - name: Repository dispatch to blender-robotics-utils
-        uses: peter-evans/repository-dispatch@v1
+        uses: peter-evans/repository-dispatch@v3
         if:  steps.set_model_list.outputs.models != ''
         env:
           GITHUB_APPS_TOKEN: ${{ steps.get_workflow_token.outputs.token }}
