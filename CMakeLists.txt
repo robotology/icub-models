@@ -77,7 +77,6 @@ list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5")
 list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5_plus")
 list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_6")
 list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_7")
-list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV3")
 
 # Note: these models don't need further configuration apart from
 # model version in model.config. Only one configuration is generated for
@@ -148,7 +147,7 @@ endforeach()
 
 # Deal with manually generated models
 set(GAZEBO_SUPPORTED_MODELS "")
-list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5_visuomanip" "iCubGazeboV3_visuomanip")
+list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_5_visuomanip")
 
 SUBDIRLIST(ROBOTS_NAMES ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/robots)
 foreach(ROBOT_NAME ${ROBOTS_NAMES})
