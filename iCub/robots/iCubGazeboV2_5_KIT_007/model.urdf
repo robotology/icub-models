@@ -2062,6 +2062,73 @@
   <fdir1>0 0 0</fdir1>
 </gazebo>
   <gazebo>
+<plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
+  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_torso.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
+  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_head_without_eyes.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
+  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
+  <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
+</plugin>
+<plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
+  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
+  <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
+</plugin>
+<plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
+  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_leg.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
+  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_leg.ini</yarpConfigurationFile>
+</plugin>
+</gazebo>
+  <gazebo>
+<plugin name="gzyarp::ForceTorque" filename="gz-sim-yarp-forcetorque-system">
+  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_arm_ft.ini</yarpConfigurationFile>
+</plugin>
+</gazebo>
+  <gazebo>
+<plugin name="gzyarp::ForceTorque" filename="gz-sim-yarp-forcetorque-system">
+  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_arm_ft.ini</yarpConfigurationFile>
+</plugin>
+</gazebo>
+  <gazebo>
+<plugin name="gzyarp::ForceTorque" filename="gz-sim-yarp-forcetorque-system">
+  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_leg_ft.ini</yarpConfigurationFile>
+</plugin>
+</gazebo>
+  <gazebo>
+<plugin name="gzyarp::ForceTorque" filename="gz-sim-yarp-forcetorque-system">
+  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_leg_ft.ini</yarpConfigurationFile>
+</plugin>
+</gazebo>
+  <gazebo>
+<plugin name="gzyarp::ForceTorque" filename="gz-sim-yarp-forcetorque-system">
+  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_foot_ft.ini</yarpConfigurationFile>
+</plugin>
+</gazebo>
+  <gazebo>
+<plugin name="gzyarp::ForceTorque" filename="gz-sim-yarp-forcetorque-system">
+  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_foot_ft.ini</yarpConfigurationFile>
+</plugin>
+</gazebo>
+  <gazebo>
+<plugin name="gzyarp::Imu" filename="gz-sim-yarp-imu-system">
+  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_arm_inertial.ini</yarpConfigurationFile>
+</plugin>
+</gazebo>
+  <gazebo>
+<plugin name="gzyarp::Imu" filename="gz-sim-yarp-imu-system">
+  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_inertial.ini</yarpConfigurationFile>
+</plugin>
+</gazebo>
+  <gazebo>
+<plugin name="gzyarp::Imu" filename="gz-sim-yarp-imu-system">
+  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_inertial.ini</yarpConfigurationFile>
+</plugin>
+</gazebo>
+  <gazebo>
 <plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
   <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_left_leg_mtb.ini</yarpConfigurationFile>
 </plugin>
@@ -2201,6 +2268,17 @@
   <plugin name="robotinterface" filename="libgazebo_yarp_robotinterface.so">
     <yarpRobotInterfaceConfigurationFile>model://iCub/conf/icub.xml</yarpRobotInterfaceConfigurationFile>
   </plugin>
+</gazebo>
+  <gazebo>
+  <plugin name="gzyarp::RobotInterface" filename="gz-sim-yarp-robotinterface-system">
+    <yarpRobotInterfaceConfigurationFile>model://iCub/conf/icub.xml</yarpRobotInterfaceConfigurationFile>
+  </plugin>
+</gazebo>
+  <gazebo>
+  <plugin filename="gz-sim-forcetorque-system" name="gz::sim::systems::ForceTorque"/>
+</gazebo>
+  <gazebo>
+  <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu"/>
 </gazebo>
   <gazebo reference="l_leg_ft_sensor">
     <sensor name="l_leg_ft" type="force_torque">
