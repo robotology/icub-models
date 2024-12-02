@@ -1,6 +1,6 @@
 :warning: The ROS2 support is in beta :warning:
 
-This directory contains the files related for using `iCubGazeboV3` with ROS2. The contents of this directory are installed inside `iCub`.
+This directory contains the files related for using `iCubGazeboV*` with ROS2. The contents of this directory are installed inside `iCub`.
 ros2 package. The location of `iCub` ros pacakge is discovered by running `roscd iCub`.
 The `launch` directory contains `launch.py` file `robot_state_publisher.launch.py`. The robot model
 that will be used depends `YARP_ROBOT_NAME` set in `.bashrc`.
@@ -13,7 +13,7 @@ Right now are published on ROS2 topics:
 
 The steps to run rviz visualization correctly are:
 
-- Edit `iCubGazeboV3/model.urdf` putting  [`icub_ROS2.xml`](https://github.com/robotology/robots-configuration/blob/devel/iCub/conf_icub3/wrappers/icub_ROS2.xml) `robotinterface` xml file used at startup.
+- Edit `iCubGazeboV*/model.urdf` putting  `icub_ros2.xml` `robotinterface` xml file used at startup.
 - Ensure that the robot is started correctly with ros configuration files for motor control boards.
 - On starting the robot, one should see `/<prefix>/joint_states` ros topic by running `ros2 topic list`.
   Also, ensure that the `/<prefix>/joint_states` streams all the robot joint angles by running

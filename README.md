@@ -35,8 +35,6 @@ The models contained in `icub-models` are listed in the following table. Most mo
 | `iCubGazeboV2_5_KIT_007`| `package://iCub/robots/iCubGazeboV2_5_KIT_007/model.urdf` | v2.5 + [KIT_007](https://icub-tech-iit.github.io/documentation/upgrade_kits/ankle_for_stairs/support/) with backpack, joint damping, and inertias of some links increased in a non realistic way to run smoothly in Gazebo Classic (ODE). |
 | `iCubGazeboV2_6`     | `package://iCub/robots/iCubGazeboV2_6/model.urdf` | v2.6 with  joint damping, and inertias of some links increased in a non realistic way to run smoothly in Gazebo Classic (ODE). |
 | `iCubGazeboV2_7`     | `package://iCub/robots/iCubGazeboV2_7/model.urdf` | v2.7 with  joint damping, and inertias of some links increased in a non realistic way to run smoothly in Gazebo Classic (ODE). |
-| `iCubGazeboV3`       | `package://iCub/robots/iCubGazeboV3/model.urdf` | v3 with  joint damping, and inertias of some links increased in a non realistic way to run smoothly in Gazebo Classic (ODE). |
-| `iCubGazeboV3_visuomanip` | `package://iCub/robots/iCubGazeboV3_visuomanip/model.urdf`  | v3 with hands and eyes |
 | `iCubGenova02`       | `package://iCub/robots/iCubGenova02/model.urdf` | v2.5.5 + [KIT_007](https://icub-tech-iit.github.io/documentation/upgrade_kits/ankle_for_stairs/support/) with backpack           |
 | `iCubGenova03`       | `package://iCub/robots/iCubGenova03/model.urdf`           | v2 with legs v1 and feet v2.5   |
 | `iCubGenova11`       | `package://iCub/robots/iCubGenova11/model.urdf`           | v2.7   |
