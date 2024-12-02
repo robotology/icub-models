@@ -13,7 +13,7 @@ Right now are published on ROS2 topics:
 
 The steps to run rviz visualization correctly are:
 
-- Edit `iCubGazeboV*/model.urdf` putting  [`icub_ROS2.xml`](https://github.com/robotology/robots-configuration/blob/devel/iCub/conf_icub3/wrappers/icub_ROS2.xml) `robotinterface` xml file used at startup.
+- Edit `iCubGazeboV*/model.urdf` putting  `icub_ros2.xml` `robotinterface` xml file used at startup.
 - Ensure that the robot is started correctly with ros configuration files for motor control boards.
 - On starting the robot, one should see `/<prefix>/joint_states` ros topic by running `ros2 topic list`.
   Also, ensure that the `/<prefix>/joint_states` streams all the robot joint angles by running
