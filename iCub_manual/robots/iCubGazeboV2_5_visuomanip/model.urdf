@@ -2753,6 +2753,55 @@
     <yarpRobotInterfaceConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/icub.xml</yarpRobotInterfaceConfigurationFile>
   </plugin>
 </gazebo>
+<gazebo>
+  <plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_torso.ini</yarpConfigurationFile>
+  </plugin>
+  <plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_head_without_eyes.ini</yarpConfigurationFile>
+  </plugin>
+  <plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
+    <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_eyes.ini</yarpConfigurationFile>
+  </plugin>
+  <plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
+    <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
+  </plugin>
+  <plugin name='gzyarp::ControlBoard' filename='gz-sim-yarp-controlboard-system'>
+    <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_left_hand.ini</yarpConfigurationFile>
+  </plugin>
+  <plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
+    <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
+  </plugin>
+  <plugin name='gzyarp::ControlBoard' filename='gz-sim-yarp-controlboard-system'>
+    <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_right_hand.ini</yarpConfigurationFile>
+  </plugin>
+  <plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_leg.ini</yarpConfigurationFile>
+  </plugin>
+  <plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_leg.ini</yarpConfigurationFile>
+  </plugin>
+</gazebo>
+<gazebo>
+  <plugin name="gzyarp::Camera" filename="gz-sim-yarp-camera-system">
+    <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_left_camera_rgbd.ini</yarpConfigurationFile>
+  </plugin>
+  <plugin name="gzyarp::Camera" filename="gz-sim-yarp-camera-system">
+    <yarpConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/gazebo_icub_right_camera_rgb.ini</yarpConfigurationFile>
+  </plugin>
+</gazebo>
+<gazebo>
+  <plugin name="gzyarp::Imu" filename="gz-sim-yarp-imu-system">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_inertial.ini</yarpConfigurationFile>
+  </plugin>
+</gazebo>
+<gazebo>
+  <plugin name="gzyarp::RobotInterface" filename="gz-sim-yarp-robotinterface-system">
+    <yarpRobotInterfaceConfigurationFile>model://iCub/conf_manual/iCubGazeboV2_5_visuomanip/icub_gz-sim.xml</yarpRobotInterfaceConfigurationFile>
+  </plugin>
+</gazebo>
 <gazebo reference="r_hip_pitch">
    <implicitSpringDamper>1</implicitSpringDamper>
 </gazebo>
