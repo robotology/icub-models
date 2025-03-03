@@ -49,12 +49,12 @@ The models contained in `icub-models` are listed in the following table. Most mo
 
 Models contained in `icub-models` can be used using the `package:/`-URI listed in previous table. This URI always follow the structure `package://iCub/robots/<name>/model.urdf`, where `<name>` is `iCubErzelli02`, `iCubGazeboV2_5` or a similar identifier.
 
-### Use the models with Classic Gazebo
+### Use the models with Classic or Modern Gazebo
 
 Note that only the models that are known to work fine with the default physics engine settings of Classic Gazebo (the one that start with `iCubGazebo`)
 are installed. If you want to make available in Gazebo all the models, enable the `ICUB_MODELS_INSTALL_ALL_GAZEBO_MODELS` CMake option.
 
-To include the model in a Classic Gazebo world, use the following SDF:
+To include the model in a Classic or Modern Gazebo, use the following SDF:
 
 ~~~xml
 <include>
