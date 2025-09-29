@@ -15,7 +15,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_root_link.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_root_link.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -24,7 +24,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_root_link.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_root_link.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -48,7 +48,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_torso_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_torso_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -57,7 +57,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_torso_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_torso_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -81,7 +81,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_hip_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_hip_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -90,7 +90,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_hip_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_hip_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -114,7 +114,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_hip_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_hip_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -123,7 +123,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_hip_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_hip_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -147,7 +147,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_hip_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_hip_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -156,7 +156,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_hip_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_hip_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -177,7 +177,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_upper_thigh.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_upper_thigh.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -186,7 +186,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_upper_thigh.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_upper_thigh.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -210,7 +210,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_thigh.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_thigh.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -219,7 +219,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_thigh.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_thigh.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -243,7 +243,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_shank.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_shank.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -252,7 +252,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_shank.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_shank.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -276,7 +276,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_ankle.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_ankle.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -285,7 +285,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_ankle.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_ankle.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -309,7 +309,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_foot.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_foot.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -318,7 +318,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_foot.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_foot.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -339,7 +339,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_sole.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_sole.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -369,7 +369,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_hip_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_hip_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -378,7 +378,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_hip_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_hip_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -399,7 +399,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_upper_thigh.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_upper_thigh.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -408,7 +408,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_upper_thigh.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_upper_thigh.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -432,7 +432,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_thigh.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_thigh.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -441,7 +441,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_thigh.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_thigh.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -465,7 +465,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_shank.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_shank.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -474,7 +474,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_shank.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_shank.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -498,7 +498,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_ankle.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_ankle.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -507,7 +507,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_ankle.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_ankle.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -531,7 +531,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_foot.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_foot.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -540,7 +540,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_foot.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_foot.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -561,7 +561,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_sole.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_sole.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -591,7 +591,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_torso_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_torso_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -600,7 +600,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_torso_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_torso_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -624,7 +624,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_chest.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_chest.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -633,7 +633,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_chest.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_chest.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -654,7 +654,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_neck_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_neck_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -663,7 +663,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_neck_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_neck_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -687,7 +687,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_shoulder_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_shoulder_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -696,7 +696,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_shoulder_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_shoulder_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -720,7 +720,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_shoulder_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_shoulder_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -729,7 +729,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_shoulder_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_shoulder_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -753,7 +753,7 @@
     <visual>
       <origin xyz="0.1096325812838068 5.733434560480061e-15 -0.0293759616191354" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_shoulder_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_shoulder_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -762,7 +762,7 @@
     <collision>
       <origin xyz="0.1096325812838068 5.733434560480061e-15 -0.0293759616191354" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_shoulder_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_shoulder_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -786,7 +786,7 @@
     <visual>
       <origin xyz="0.015000000000000369 7.148337477502769e-16 -6.938893903907228e-18" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_upper_arm.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_upper_arm.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -795,7 +795,7 @@
     <collision>
       <origin xyz="0.015000000000000369 7.148337477502769e-16 -6.938893903907228e-18" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_upper_arm.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_upper_arm.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -816,7 +816,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_elbow.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_elbow.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -825,7 +825,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_elbow.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_elbow.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -849,7 +849,7 @@
     <visual>
       <origin xyz="0.259390457536811 -1.0061396160665481e-16 -0.08503260632747903" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_elbow_prosup.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_elbow_prosup.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -858,7 +858,7 @@
     <collision>
       <origin xyz="0.259390457536811 -1.0061396160665481e-16 -0.08503260632747903" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_elbow_prosup.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_elbow_prosup.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -882,7 +882,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_forearm.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_forearm.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -891,7 +891,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_forearm.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_forearm.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -915,7 +915,7 @@
     <visual>
       <origin xyz="0.3997580624679941 -7.037206368560876e-6 -0.10711485000612947" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_wrist_pitch.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_wrist_pitch.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -924,7 +924,7 @@
     <collision>
       <origin xyz="0.3997580624679941 -7.037206368560876e-6 -0.10711485000612947" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_wrist_pitch.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_wrist_pitch.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -948,7 +948,7 @@
     <visual>
       <origin xyz="0.39975806246799406 1.2663481374630692e-16 -0.10711485000612934" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_hand.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_hand.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -957,7 +957,7 @@
     <collision>
       <origin xyz="0.39975806246799406 1.2663481374630692e-16 -0.10711485000612934" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_r_hand.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_r_hand.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -981,7 +981,7 @@
     <visual>
       <origin xyz="-0.10963258128380474 -1.2650817893380464e-14 -0.029375961619134947" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_shoulder_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_shoulder_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -990,7 +990,7 @@
     <collision>
       <origin xyz="-0.10963258128380474 -1.2650817893380464e-14 -0.029375961619134947" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_shoulder_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_shoulder_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -1014,7 +1014,7 @@
     <visual>
       <origin xyz="0.014999999999999934 -4.0758438291099496e-16 6.938893903907228e-18" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_upper_arm.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_upper_arm.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -1023,7 +1023,7 @@
     <collision>
       <origin xyz="0.014999999999999934 -4.0758438291099496e-16 6.938893903907228e-18" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_upper_arm.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_upper_arm.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -1044,7 +1044,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_elbow.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_elbow.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -1053,7 +1053,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_elbow.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_elbow.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -1077,7 +1077,7 @@
     <visual>
       <origin xyz="-0.25939045753681134 -2.7755575615628914e-17 -0.08503260632747642" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_elbow_prosup.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_elbow_prosup.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -1086,7 +1086,7 @@
     <collision>
       <origin xyz="-0.25939045753681134 -2.7755575615628914e-17 -0.08503260632747642" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_elbow_prosup.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_elbow_prosup.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -1110,7 +1110,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_forearm.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_forearm.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -1119,7 +1119,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_forearm.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_forearm.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.635 0.137 0.114 1"/>
@@ -1143,7 +1143,7 @@
     <visual>
       <origin xyz="-0.39975806246799395 -7.037206368528081e-6 -0.1071148500061294" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_wrist_pitch.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_wrist_pitch.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -1152,7 +1152,7 @@
     <collision>
       <origin xyz="-0.39975806246799395 -7.037206368528081e-6 -0.1071148500061294" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_wrist_pitch.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_wrist_pitch.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -1176,7 +1176,7 @@
     <visual>
       <origin xyz="-0.39968041675446386 -3.157196726277789e-16 -0.10740462775401342" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_hand.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_hand.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -1185,7 +1185,7 @@
     <collision>
       <origin xyz="-0.39968041675446386 -3.157196726277789e-16 -0.10740462775401342" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_sea_2-5_l_hand.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_sea_2-5_l_hand.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -1209,7 +1209,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_neck_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_neck_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -1218,7 +1218,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_neck_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_neck_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -1242,7 +1242,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_neck_3.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_neck_3.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -1251,7 +1251,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_neck_3.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_neck_3.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.9 0.9 0.9 1"/>
@@ -1275,7 +1275,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_head.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_head.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1284,7 +1284,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_head.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_head.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1308,7 +1308,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_eyes_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_eyes_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -1317,7 +1317,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_eyes_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_eyes_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -1341,7 +1341,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_l_eye_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_l_eye_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -1350,7 +1350,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_l_eye_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_l_eye_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -1374,7 +1374,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_r_eye_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_r_eye_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -1383,7 +1383,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://iCub/meshes/simmechanics/sim_ibbbbeba_r_eye_2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://iCub/meshes_creo2urdf/simmechanics/sim_ibbbbeba_r_eye_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -2523,7 +2523,7 @@
       <yarpConfigurationFile>model://iCub/conf/gazebo_icub_head_without_eyes.ini</yarpConfigurationFile>
     </plugin>
     <plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
-      <yarpConfigurationFile>model://iCub/conf_models/gazebo_icub_eyes.ini</yarpConfigurationFile>
+      <yarpConfigurationFile>model://iCub/conf_creo2urdf/gazebo_icub_eyes.ini</yarpConfigurationFile>
     </plugin>
     <plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
       <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
@@ -2608,7 +2608,7 @@
       <yarpConfigurationFile>model://iCub/conf/gazebo_icub_head_without_eyes.ini</yarpConfigurationFile>
     </plugin>
     <plugin name="controlboard_head" filename="libgazebo_yarp_controlboard.so">
-      <yarpConfigurationFile>model://iCub/conf_models/gazebo_icub_eyes.ini</yarpConfigurationFile>
+      <yarpConfigurationFile>model://iCub/conf_creo2urdf/gazebo_icub_eyes.ini</yarpConfigurationFile>
     </plugin>
     <plugin name="controlboard_left_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
       <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
@@ -2726,12 +2726,12 @@
   </gazebo>
   <gazebo>
     <plugin name="robotinterface" filename="libgazebo_yarp_robotinterface.so">
-      <yarpRobotInterfaceConfigurationFile>model://iCub/conf_models/icub_with_eyes.xml</yarpRobotInterfaceConfigurationFile>
+      <yarpRobotInterfaceConfigurationFile>model://iCub/conf_creo2urdf/icub_with_eyes.xml</yarpRobotInterfaceConfigurationFile>
     </plugin>
   </gazebo>
   <gazebo>
     <plugin name="gzyarp::RobotInterface" filename="gz-sim-yarp-robotinterface-system">
-      <yarpRobotInterfaceConfigurationFile>model://iCub/conf_models/icub_with_eyes.xml</yarpRobotInterfaceConfigurationFile>
+      <yarpRobotInterfaceConfigurationFile>model://iCub/conf_creo2urdf/icub_with_eyes.xml</yarpRobotInterfaceConfigurationFile>
     </plugin>
   </gazebo>
   <gazebo>

@@ -8,7 +8,7 @@ originRPY: [0.0,-1.90,-3.14]
 # Meshes options
 scale: [0.001, 0.001, 0.001]
 forcelowercase: Yes
-filenameformat: "package://iCub/meshes/simmechanics/%s.stl"
+filenameformat: "package://iCub/meshes_creo2urdf/simmechanics/%s.stl"
 
 # Rename options (map Creo names to URDF names)
 rename:
@@ -1665,7 +1665,7 @@ XMLBlobs:
           <yarpConfigurationFile>model://iCub/conf/gazebo_icub_head_without_eyes.ini</yarpConfigurationFile>
         </plugin>
         <plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
-          <yarpConfigurationFile>model://iCub/conf_models/gazebo_icub_eyes.ini</yarpConfigurationFile>
+          <yarpConfigurationFile>model://iCub/conf_creo2urdf/gazebo_icub_eyes.ini</yarpConfigurationFile>
         </plugin>
         <plugin name="gzyarp::ControlBoard" filename="gz-sim-yarp-controlboard-system">
           <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
@@ -1761,7 +1761,7 @@ XMLBlobs:
           <yarpConfigurationFile>model://iCub/conf/gazebo_icub_head_without_eyes.ini</yarpConfigurationFile>
         </plugin>
         <plugin name="controlboard_head" filename="libgazebo_yarp_controlboard.so">
-          <yarpConfigurationFile>model://iCub/conf_models/gazebo_icub_eyes.ini</yarpConfigurationFile>
+          <yarpConfigurationFile>model://iCub/conf_creo2urdf/gazebo_icub_eyes.ini</yarpConfigurationFile>
         </plugin>
         <plugin name="controlboard_left_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
           <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
@@ -1912,13 +1912,13 @@ XMLBlobs:
   - |
         <gazebo>
           <plugin name="robotinterface" filename="libgazebo_yarp_robotinterface.so">
-            <yarpRobotInterfaceConfigurationFile>model://iCub/conf/icub_with_eyes.xml</yarpRobotInterfaceConfigurationFile>
+            <yarpRobotInterfaceConfigurationFile>model://iCub/conf_creo2urdf/icub_with_eyes.xml</yarpRobotInterfaceConfigurationFile>
           </plugin>
         </gazebo>
   - |
         <gazebo>
           <plugin name="gzyarp::RobotInterface" filename="gz-sim-yarp-robotinterface-system">
-            <yarpRobotInterfaceConfigurationFile>model://iCub/conf/icub_with_eyes.xml</yarpRobotInterfaceConfigurationFile>
+            <yarpRobotInterfaceConfigurationFile>model://iCub/conf_creo2urdf/icub_with_eyes.xml</yarpRobotInterfaceConfigurationFile>
           </plugin>
         </gazebo>
   - |

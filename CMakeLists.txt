@@ -62,10 +62,10 @@ foreach(file_and_directories_mantained_manually ${file_and_directories_mantained
   file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iCub_manual/${file_and_directories_mantained_manually}/ DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/iCub/${file_and_directories_mantained_manually})
 endforeach()
 
-# Copy the iCub_models folder in the build tree (see https://github.com/icub-tech-iit/study-icub-headedge/issues/230#issuecomment-3328628981)
-file(GLOB file_and_directories_generated_manually RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/iCub_models ${CMAKE_CURRENT_SOURCE_DIR}/iCub_models/*)
+# Copy the iCub_creo2urdf folder in the build tree (see https://github.com/icub-tech-iit/study-icub-headedge/issues/230#issuecomment-3328628981)
+file(GLOB file_and_directories_generated_manually RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/iCub_creo2urdf ${CMAKE_CURRENT_SOURCE_DIR}/iCub_creo2urdf/*)
 foreach(file_and_directories_generated_manually ${file_and_directories_generated_manually})
-  file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iCub_models/${file_and_directories_generated_manually}/ DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/iCub/${file_and_directories_generated_manually})
+  file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iCub_creo2urdf/${file_and_directories_generated_manually}/ DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/iCub/${file_and_directories_generated_manually})
 endforeach()
 
 # Add the model.config just for a limited number of models that are known
@@ -169,7 +169,7 @@ set(GAZEBO_SUPPORTED_MODELS "")
 list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_10")
 foreach(ROBOT_NAME ${ROBOTS_NAMES})
   if(ROBOT_NAME IN_LIST GAZEBO_SUPPORTED_MODELS)
-    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/iCub_models/robots/${ROBOT_NAME}/model.config
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/iCub_creo2urdf/robots/${ROBOT_NAME}/model.config
                    ${CMAKE_CURRENT_BINARY_DIR}/iCub/robots/${ROBOT_NAME}/model.config
                    @ONLY)
   endif()
