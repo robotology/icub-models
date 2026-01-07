@@ -2410,12 +2410,6 @@
     <parent link="head"/>
     <child link="imu_frame"/>
   </joint>
-  <link name="eyes_tilt"/>
-  <joint name="eyes_tilt_fixed_joint" type="fixed">
-    <origin xyz="0 0 0" rpy="0 -0 -5.466875474265756e-32"/>
-    <parent link="eyes_tilt_frame"/>
-    <child link="eyes_tilt"/>
-  </joint>
   <link name="l_eye_pan"/>
   <joint name="l_eye_pan_fixed_joint" type="fixed">
     <origin xyz="0 0 0" rpy="0 -0 4.399848597301645e-31"/>

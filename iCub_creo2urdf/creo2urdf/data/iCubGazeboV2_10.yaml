@@ -116,9 +116,6 @@ exportedFrames:
   - frameName: SCSYS_R_EYE_2
     frameReferenceLink: r_eye
     exportedFrameName: r_eye_pan
-  - frameName: SCSYS_EYES_1
-    frameReferenceLink: eyes_tilt_frame
-    exportedFrameName: eyes_tilt
   - frameName: SCSYS_L_SOLE
     frameReferenceLink: l_foot
     exportedFrameName: l_sole
