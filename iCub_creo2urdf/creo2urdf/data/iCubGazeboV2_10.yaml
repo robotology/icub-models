@@ -632,11 +632,6 @@ forceTorqueSensors:
     linkName: l_hip_3
     frameName: SCSYS_L_UPPER_LEG_FT45
     sensorName: l_leg_ft
-    sensorBlobs:
-    - |
-        <plugin name="left_leg_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-          <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_leg_ft.ini</yarpConfigurationFile>
-        </plugin>
   - jointName: r_leg_ft_sensor
     directionChildToParent: Yes
     exportFrameInURDF: Yes
@@ -644,11 +639,6 @@ forceTorqueSensors:
     linkName: r_hip_3
     frameName: SCSYS_R_UPPER_LEG_FT45
     sensorName: r_leg_ft
-    sensorBlobs:
-    - |
-        <plugin name="right_leg_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-          <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_leg_ft.ini</yarpConfigurationFile>
-        </plugin>
   - jointName: l_foot_ft_sensor
     directionChildToParent: Yes
     exportFrameInURDF: Yes
@@ -656,11 +646,6 @@ forceTorqueSensors:
     linkName: l_foot
     frameName: SCSYS_L_FOOT_FT45
     sensorName: l_foot_ft
-    sensorBlobs:
-    - |
-        <plugin name="left_foot_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-          <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_foot_ft.ini</yarpConfigurationFile>
-        </plugin>
   - jointName: r_foot_ft_sensor
     directionChildToParent: Yes
     exportFrameInURDF: Yes
@@ -668,11 +653,6 @@ forceTorqueSensors:
     linkName: r_foot
     frameName: SCSYS_R_FOOT_FT45
     sensorName: r_foot_ft
-    sensorBlobs:
-    - |
-        <plugin name="right_foot_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-          <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_foot_ft.ini</yarpConfigurationFile>
-        </plugin>
   - jointName: l_arm_ft_sensor
     directionChildToParent: Yes
     exportFrameInURDF: Yes
@@ -680,11 +660,6 @@ forceTorqueSensors:
     frameName: SCSYS_L_UPPER_ARM_FT45
     linkName: l_shoulder_3
     sensorName: l_arm_ft
-    sensorBlobs:
-    - |
-        <plugin name="left_arm_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-          <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_arm_ft.ini</yarpConfigurationFile>
-        </plugin>
   - jointName: r_arm_ft_sensor
     directionChildToParent: Yes
     exportFrameInURDF: Yes
@@ -692,11 +667,6 @@ forceTorqueSensors:
     frameName: SCSYS_R_UPPER_ARM_FT45
     linkName: r_shoulder_3
     sensorName: r_arm_ft
-    sensorBlobs:
-    - |
-        <plugin name="right_arm_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-          <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_arm_ft.ini</yarpConfigurationFile>
-        </plugin>
 
 sensors:
   - frameName: SCSYS_HEAD_IMU
@@ -705,42 +675,24 @@ sensors:
     exportFrameInURDF: Yes
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
-            <yarpConfigurationFile>model://iCub/conf/gazebo_icub_inertial.ini</yarpConfigurationFile>
-        </plugin>
   - frameName: SCSYS_L_UPPER_ARM_FT45
     linkName: l_shoulder_3
     sensorName: l_arm_ft_imu
     exportFrameInURDF: Yes
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
-            <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_inertial.ini</yarpConfigurationFile>
-        </plugin>
   - frameName: SCSYS_R_UPPER_ARM_FT45
     linkName: r_shoulder_3
     sensorName: r_arm_ft_imu
     exportFrameInURDF: Yes
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
-            <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_arm_inertial.ini</yarpConfigurationFile>
-        </plugin>
   - frameName: SCSYS_ROOT_LINK_EMS_ACC_EB5
     linkName: root_link
     sensorName: root_link_ems_acc_eb5
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_ROOT_LINK_EMS_GYRO_EB5
     linkName: root_link
     sensorName: root_link_ems_gyro_eb5
@@ -753,9 +705,6 @@ sensors:
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_CHEST_EMS_GYRO_EB1
     linkName: chest
     sensorName: chest_ems_gyro_eb1
@@ -768,9 +717,6 @@ sensors:
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_CHEST_EMS_GYRO_EB2
     linkName: chest
     sensorName: chest_ems_gyro_eb2
@@ -783,9 +729,6 @@ sensors:
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_CHEST_EMS_GYRO_EB3
     linkName: chest
     sensorName: chest_ems_gyro_eb3
@@ -798,9 +741,6 @@ sensors:
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_CHEST_EMS_GYRO_EB4
     linkName: chest
     sensorName: chest_ems_gyro_eb4
@@ -813,153 +753,102 @@ sensors:
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_CHEST_MTB_ACC_0B8
     linkName: chest
     sensorName: chest_mtb_acc_0b8
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_CHEST_MTB_ACC_0B9
     linkName: chest
     sensorName: chest_mtb_acc_0b9
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_CHEST_MTB_ACC_0B10
     linkName: chest
     sensorName: chest_mtb_acc_0b10
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_UPPER_ARM_MTB_ACC_2B10
     linkName: r_upper_arm
     sensorName: r_upper_arm_mtb_acc_2b10
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_UPPER_ARM_MTB_ACC_2B11
     linkName: r_upper_arm
     sensorName: r_upper_arm_mtb_acc_2b11
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_UPPER_ARM_MTB_ACC_2B12
     linkName: r_upper_arm
     sensorName: r_upper_arm_mtb_acc_2b12
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_UPPER_ARM_MTB_ACC_2B13
     linkName: r_upper_arm
     sensorName: r_upper_arm_mtb_acc_2b13
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_FOREARM_MTB_ACC_2B7
     linkName: r_forearm
     sensorName: r_forearm_mtb_acc_2b7
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_FOREARM_MTB_ACC_2B8
     linkName: r_forearm
     sensorName: r_forearm_mtb_acc_2b8
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_FOREARM_MTB_ACC_2B9
     linkName: r_forearm
     sensorName: r_forearm_mtb_acc_2b9
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_UPPER_ARM_MTB_ACC_1B10
     linkName: l_upper_arm
     sensorName: l_upper_arm_mtb_acc_1b10
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_UPPER_ARM_MTB_ACC_1B11
     linkName: l_upper_arm
     sensorName: l_upper_arm_mtb_acc_1b11
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_UPPER_ARM_MTB_ACC_1B12
     linkName: l_upper_arm
     sensorName: l_upper_arm_mtb_acc_1b12
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_UPPER_ARM_MTB_ACC_1B13
     linkName: l_upper_arm
     sensorName: l_upper_arm_mtb_acc_1b13
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_FOREARM_MTB_ACC_1B7
     linkName: l_forearm
     sensorName: l_forearm_mtb_acc_1b7
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_FOREARM_MTB_ACC_1B8
     linkName: l_forearm
     sensorName: l_forearm_mtb_acc_1b8
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
     sensorType: "accelerometer"
   - frameName: SCSYS_L_FOREARM_MTB_ACC_1B9
     linkName: l_forearm
@@ -967,27 +856,18 @@ sensors:
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_UPPER_LEG_EMS_ACC_EB8
     linkName: r_upper_leg
     sensorName: r_upper_leg_ems_acc_eb8
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_UPPER_LEG_EMS_ACC_EB11
     linkName: r_upper_leg
     sensorName: r_upper_leg_ems_acc_eb11
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_UPPER_LEG_EMS_GYRO_EB8
     linkName: r_upper_leg
     sensorName: r_upper_leg_ems_gyro_eb8
@@ -1006,72 +886,48 @@ sensors:
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_UPPER_LEG_MTB_ACC_11B2
     linkName: r_upper_leg
     sensorName: r_upper_leg_mtb_acc_11b2
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_UPPER_LEG_MTB_ACC_11B3
     linkName: r_upper_leg
     sensorName: r_upper_leg_mtb_acc_11b3
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_UPPER_LEG_MTB_ACC_11B4
     linkName: r_upper_leg
     sensorName: r_upper_leg_mtb_acc_11b4
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_UPPER_LEG_MTB_ACC_11B5
     linkName: r_upper_leg
     sensorName: r_upper_leg_mtb_acc_11b5
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_UPPER_LEG_MTB_ACC_11B6
     linkName: r_upper_leg
     sensorName: r_upper_leg_mtb_acc_11b6
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_UPPER_LEG_MTB_ACC_11B7
     linkName: r_upper_leg
     sensorName: r_upper_leg_mtb_acc_11b7
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_LOWER_LEG_EMS_ACC_EB9
     linkName: r_lower_leg
     sensorName: r_lower_leg_ems_acc_eb9
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_LOWER_LEG_EMS_GYRO_EB9
     linkName: r_lower_leg
     sensorName: r_lower_leg_ems_gyro_eb9
@@ -1084,72 +940,48 @@ sensors:
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_LOWER_LEG_MTB_ACC_11B9
     linkName: r_lower_leg
     sensorName: r_lower_leg_mtb_acc_11b9
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_LOWER_LEG_MTB_ACC_11B10
     linkName: r_lower_leg
     sensorName: r_lower_leg_mtb_acc_11b10
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_LOWER_LEG_MTB_ACC_11B11
     linkName: r_lower_leg
     sensorName: r_lower_leg_mtb_acc_11b11
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_FOOT_MTB_ACC_11B12
     linkName: r_foot
     sensorName: r_foot_mtb_acc_11b12
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_FOOT_MTB_ACC_11B13
     linkName: r_foot
     sensorName: r_foot_mtb_acc_11b13
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_UPPER_LEG_EMS_ACC_EB6
     linkName: l_upper_leg
     sensorName: l_upper_leg_ems_acc_eb6
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_UPPER_LEG_EMS_ACC_EB10
     linkName: l_upper_leg
     sensorName: l_upper_leg_ems_acc_eb10
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_UPPER_LEG_EMS_GYRO_EB6
     linkName: l_upper_leg
     sensorName: l_upper_leg_ems_gyro_eb6
@@ -1168,72 +1000,48 @@ sensors:
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_UPPER_LEG_MTB_ACC_10B2
     linkName: l_upper_leg
     sensorName: l_upper_leg_mtb_acc_10b2
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_UPPER_LEG_MTB_ACC_10B3
     linkName: l_upper_leg
     sensorName: l_upper_leg_mtb_acc_10b3
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_UPPER_LEG_MTB_ACC_10B4
     linkName: l_upper_leg
     sensorName: l_upper_leg_mtb_acc_10b4
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_UPPER_LEG_MTB_ACC_10B5
     linkName: l_upper_leg
     sensorName: l_upper_leg_mtb_acc_10b5
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_UPPER_LEG_MTB_ACC_10B6
     linkName: l_upper_leg
     sensorName: l_upper_leg_mtb_acc_10b6
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_UPPER_LEG_MTB_ACC_10B7
     linkName: l_upper_leg
     sensorName: l_upper_leg_mtb_acc_10b7
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_LOWER_LEG_EMS_ACC_EB7
     linkName: l_lower_leg
     sensorName: l_lower_leg_ems_acc_eb7
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_LOWER_LEG_EMS_GYRO_EB7
     linkName: l_lower_leg
     sensorName: l_lower_leg_ems_gyro_eb7
@@ -1246,54 +1054,36 @@ sensors:
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_LOWER_LEG_MTB_ACC_10B9
     linkName: l_lower_leg
     sensorName: l_lower_leg_mtb_acc_10b9
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_LOWER_LEG_MTB_ACC_10B10
     linkName: l_lower_leg
     sensorName: l_lower_leg_mtb_acc_10b10
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_LOWER_LEG_MTB_ACC_10B11
     linkName: l_lower_leg
     sensorName: l_lower_leg_mtb_acc_10b11
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_FOOT_MTB_ACC_10B12
     linkName: l_foot
     sensorName: l_foot_mtb_acc_10b12
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_FOOT_MTB_ACC_10B13
     linkName: l_foot
     sensorName: l_foot_mtb_acc_10b13
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
     sensorType: "accelerometer"
   - frameName: SCSYS_R_UPPER_LEG_FT-IMU_3B11
     linkName: r_hip_2
@@ -1301,9 +1091,6 @@ sensors:
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_UPPER_LEG_FT-IMU_3B11
     linkName: r_hip_2
     sensorName: r_upper_leg_ft_gyro_3b11
@@ -1316,9 +1103,6 @@ sensors:
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_R_FOOT_FT-IMU_3B14
     linkName: r_ankle_2
     sensorName: r_foot_ft_gyro_3b14
@@ -1331,9 +1115,6 @@ sensors:
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_UPPER_LEG_FT-IMU_3B12
     linkName: l_hip_2
     sensorName: l_upper_leg_ft_gyro_3b12
@@ -1346,9 +1127,6 @@ sensors:
     exportFrameInURDF: No
     sensorType: "accelerometer"
     updateRate: "100"
-    sensorBlobs:
-    - |
-        <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so" />
   - frameName: SCSYS_L_FOOT_FT-IMU_3B13
     linkName: l_ankle_2
     sensorName: l_foot_ft_gyro_3b13
@@ -1738,50 +1516,6 @@ XMLBlobs:
       </plugin>
       </gazebo>
   - |
-        <gazebo>
-        <plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
-          <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_left_leg_mtb.ini</yarpConfigurationFile>
-        </plugin>
-        <plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
-          <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_right_leg_mtb.ini</yarpConfigurationFile>
-        </plugin>
-        <plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
-          <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_left_arm_mtb.ini</yarpConfigurationFile>
-        </plugin>
-        <plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
-          <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_right_arm_mtb.ini</yarpConfigurationFile>
-        </plugin>
-        <plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
-          <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_torso_mtb.ini</yarpConfigurationFile>
-        </plugin>
-        <plugin name="controlboard_torso" filename="libgazebo_yarp_controlboard.so">
-          <yarpConfigurationFile>model://iCub/conf/gazebo_icub_torso.ini</yarpConfigurationFile>
-        </plugin>
-        <plugin name="controlboard_head_without_eyes" filename="libgazebo_yarp_controlboard.so">
-          <yarpConfigurationFile>model://iCub/conf/gazebo_icub_head_without_eyes.ini</yarpConfigurationFile>
-        </plugin>
-        <plugin name="controlboard_head" filename="libgazebo_yarp_controlboard.so">
-          <yarpConfigurationFile>model://iCub/conf_creo2urdf/gazebo_icub_eyes.ini</yarpConfigurationFile>
-        </plugin>
-        <plugin name="controlboard_left_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
-          <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
-          <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
-        </plugin>
-        <plugin name="controlboard_right_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
-          <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
-          <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
-        </plugin>
-        <plugin name="controlboard_right_leg" filename="libgazebo_yarp_controlboard.so">
-          <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_leg.ini</yarpConfigurationFile>
-        </plugin>
-        <plugin name="controlboard_left_leg" filename="libgazebo_yarp_controlboard.so">
-          <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_leg.ini</yarpConfigurationFile>
-        </plugin>
-        <plugin name="apply_external_wrench" filename="libgazebo_yarp_externalwrench.so" >
-          <robotNamefromConfigFile>model://iCub/conf/gazebo_icub_robotname.ini</robotNamefromConfigFile>
-        </plugin>
-        </gazebo>
-  - |
         <gazebo reference="r_hip_pitch">
            <implicitSpringDamper>1</implicitSpringDamper>
         </gazebo>
@@ -1911,12 +1645,6 @@ XMLBlobs:
         </gazebo>
   - |
         <gazebo>
-          <plugin name="robotinterface" filename="libgazebo_yarp_robotinterface.so">
-            <yarpRobotInterfaceConfigurationFile>model://iCub/conf_creo2urdf/icub_with_eyes.xml</yarpRobotInterfaceConfigurationFile>
-          </plugin>
-        </gazebo>
-  - |
-        <gazebo>
           <plugin name="gzyarp::RobotInterface" filename="gz-sim-yarp-robotinterface-system">
             <yarpRobotInterfaceConfigurationFile>model://iCub/conf_creo2urdf/icub_with_eyes.xml</yarpRobotInterfaceConfigurationFile>
           </plugin>
@@ -1944,9 +1672,6 @@ XMLBlobs:
              <always_on>1</always_on>
              <update_rate>400</update_rate>
              <pose>0.08515499999999998 -0.011000000000000022 -0.11230899999999999 -2.0943952105869323 -3.885780586188048e-16 -1.5707963267948963</pose>
-             <plugin name="root_link_xsens_imu_plugin" filename="libgazebo_yarp_imu.so">
-               <yarpConfigurationFile>model://iCub/conf/gazebo_icub_xsens_inertial.ini</yarpConfigurationFile>
-             </plugin>
             </sensor>
           </gazebo>
   - |
