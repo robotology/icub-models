@@ -747,30 +747,6 @@ sensors:
     exportFrameInURDF: Yes
     sensorType: "gyroscope"
     updateRate: "100"
-  - frameName: SCSYS_CHEST_MTB_ACC_0B7
-    linkName: chest
-    sensorName: chest_mtb_acc_0b7
-    exportFrameInURDF: No
-    sensorType: "accelerometer"
-    updateRate: "100"
-  - frameName: SCSYS_CHEST_MTB_ACC_0B8
-    linkName: chest
-    sensorName: chest_mtb_acc_0b8
-    exportFrameInURDF: No
-    sensorType: "accelerometer"
-    updateRate: "100"
-  - frameName: SCSYS_CHEST_MTB_ACC_0B9
-    linkName: chest
-    sensorName: chest_mtb_acc_0b9
-    exportFrameInURDF: No
-    sensorType: "accelerometer"
-    updateRate: "100"
-  - frameName: SCSYS_CHEST_MTB_ACC_0B10
-    linkName: chest
-    sensorName: chest_mtb_acc_0b10
-    exportFrameInURDF: No
-    sensorType: "accelerometer"
-    updateRate: "100"
   - frameName: SCSYS_R_UPPER_ARM_MTB_ACC_2B10
     linkName: r_upper_arm
     sensorName: r_upper_arm_mtb_acc_2b10
