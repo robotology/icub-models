@@ -2492,46 +2492,6 @@
   <yarpConfigurationFile>model://iCub/conf/gazebo_icub_inertial.ini</yarpConfigurationFile>
 </plugin>
 </gazebo>
-  <gazebo>
-<plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
-  <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_left_leg_mtb.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
-  <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_right_leg_mtb.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
-  <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_left_arm_mtb.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
-  <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_right_arm_mtb.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="iCub_yarp_gazebo_plugin_ACCpart" filename="libgazebo_yarp_distributedinertials.so">
-  <yarpConfigurationFile>model://iCub/conf/MTB/gazebo_icub_torso_mtb.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="controlboard_torso" filename="libgazebo_yarp_controlboard.so">
-  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_torso.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="controlboard_head_without_eyes" filename="libgazebo_yarp_controlboard.so">
-  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_head_without_eyes.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="controlboard_left_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
-  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
-  <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
-</plugin>
-<plugin name="controlboard_right_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
-  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_arm_no_hand_for_no_hand_model.ini</yarpConfigurationFile>
-  <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
-</plugin>
-<plugin name="controlboard_right_leg" filename="libgazebo_yarp_controlboard.so">
-  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_leg.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="controlboard_left_leg" filename="libgazebo_yarp_controlboard.so">
-  <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_leg.ini</yarpConfigurationFile>
-</plugin>
-<plugin name="apply_external_wrench" filename="libgazebo_yarp_externalwrench.so">
-  <robotNamefromConfigFile>model://iCub/conf/gazebo_icub_robotname.ini</robotNamefromConfigFile>
-</plugin>
-</gazebo>
   <gazebo reference="r_hip_pitch">
    <implicitSpringDamper>1</implicitSpringDamper>
 </gazebo>
@@ -2629,11 +2589,6 @@
    <implicitSpringDamper>1</implicitSpringDamper>
 </gazebo>
   <gazebo>
-  <plugin name="robotinterface" filename="libgazebo_yarp_robotinterface.so">
-    <yarpRobotInterfaceConfigurationFile>model://iCub/conf/icub.xml</yarpRobotInterfaceConfigurationFile>
-  </plugin>
-</gazebo>
-  <gazebo>
   <plugin name="gzyarp::RobotInterface" filename="gz-sim-yarp-robotinterface-system">
     <yarpRobotInterfaceConfigurationFile>model://iCub/conf/icub.xml</yarpRobotInterfaceConfigurationFile>
   </plugin>
@@ -2653,9 +2608,6 @@
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
       <pose>0.0 -1.3877787807814457e-17 0.0 2.220446049250313e-16 -2.220446049250314e-16 2.220446049250313e-16</pose>
-      <plugin name="left_leg_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_leg_ft.ini</yarpConfigurationFile>
-</plugin>
     </sensor>
   </gazebo>
   <sensor name="l_leg_ft" type="force_torque">
@@ -2675,9 +2627,6 @@
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
       <pose>0.0 0.0 0.0 2.220446049250313e-16 -2.220446049250314e-16 2.220446049250313e-16</pose>
-      <plugin name="right_leg_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_leg_ft.ini</yarpConfigurationFile>
-</plugin>
     </sensor>
   </gazebo>
   <sensor name="r_leg_ft" type="force_torque">
@@ -2697,9 +2646,6 @@
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
       <pose>0.0 0.0 0.0 2.220446049250313e-16 -2.220446049250314e-16 2.220446049250313e-16</pose>
-      <plugin name="left_foot_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_foot_ft.ini</yarpConfigurationFile>
-</plugin>
     </sensor>
   </gazebo>
   <sensor name="l_foot_ft" type="force_torque">
@@ -2719,9 +2665,6 @@
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
       <pose>0.0 0.0 0.0 2.220446049250313e-16 -2.220446049250314e-16 2.220446049250313e-16</pose>
-      <plugin name="right_foot_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_foot_ft.ini</yarpConfigurationFile>
-</plugin>
     </sensor>
   </gazebo>
   <sensor name="r_foot_ft" type="force_torque">
@@ -2741,9 +2684,6 @@
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
       <pose>0.05093014324520106 1.3877787807814457e-17 0.029175829465900395 -4.3625653762663687e-16 -1.3089970069677406 -3.1415926535897922</pose>
-      <plugin name="left_arm_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_left_arm_ft.ini</yarpConfigurationFile>
-</plugin>
     </sensor>
   </gazebo>
   <sensor name="l_arm_ft" type="force_torque">
@@ -2763,9 +2703,6 @@
         <measure_direction>child_to_parent</measure_direction>
       </force_torque>
       <pose>-0.05089730176650909 1.3877787807814457e-17 0.029167029620599215 -6.358700866473837e-16 -1.3089970069677404 6.58301142551668e-16</pose>
-      <plugin name="right_arm_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_arm_ft.ini</yarpConfigurationFile>
-</plugin>
     </sensor>
   </gazebo>
   <sensor name="r_arm_ft" type="force_torque">
@@ -2781,9 +2718,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.023453700190734995 0.20544400000000002 -0.023077900000000023 -1.5707963267948997 -3.713525943768165e-15 -3.141592653589793</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_inertial.ini</yarpConfigurationFile>
-</plugin>
     </sensor>
   </gazebo>
   <sensor name="head_imu_0" type="accelerometer">
@@ -2795,9 +2729,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.05093014324520106 1.3877787807814457e-17 0.029175829465900395 -4.3625653762663687e-16 -1.3089970069677406 -3.1415926535897922</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_arm_inertial.ini</yarpConfigurationFile>
-</plugin>
     </sensor>
   </gazebo>
   <sensor name="l_arm_ft_imu" type="accelerometer">
@@ -2809,9 +2740,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.05089730176650909 1.3877787807814457e-17 0.029167029620599215 -6.358700866473837e-16 -1.3089970069677404 6.58301142551668e-16</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
-    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_arm_inertial.ini</yarpConfigurationFile>
-</plugin>
     </sensor>
   </gazebo>
   <sensor name="r_arm_ft_imu" type="accelerometer">
@@ -2823,7 +2751,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.0493308 -0.012577100000000023 -0.11569100000000002 -3.141592653589793 1.2915440450258353 3.141592653589793</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="root_link_ems_acc_eb5" type="accelerometer">
@@ -2846,7 +2773,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.064785500190735 0.064043 -0.06470909999999999 3.1415169122972952 -0.2617993091222473 0.0002926418802545251</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="chest_ems_acc_eb1" type="accelerometer">
@@ -2869,7 +2795,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.020453300190735 0.08806299999999999 -0.0641645 3.141590501042822 0.2617993198185102 3.1415843367812997</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="chest_ems_acc_eb2" type="accelerometer">
@@ -2892,7 +2817,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.023058799809265 0.064019 -0.07589850000000001 3.141109162025268 0.2611005164711609 -0.00030907146255546275</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="chest_ems_acc_eb3" type="accelerometer">
@@ -2915,7 +2839,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.06216209980926501 0.08806299999999999 -0.0529887 -3.1415905047625503 -0.26179931981852844 3.141584339870295</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="chest_ems_acc_eb4" type="accelerometer">
@@ -2938,7 +2861,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.060753999809265005 -0.0017836000000000032 0.0442341 0.8751677714915177 0.11636373439232388 -1.4859735024675946</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="chest_mtb_acc_0b7" type="accelerometer">
@@ -2950,7 +2872,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.045704699809265004 -0.0018460000000000004 0.0567427 0.5009600846888734 0.10731368898312439 -1.477832529104222</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="chest_mtb_acc_0b8" type="accelerometer">
@@ -2962,7 +2883,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.043903600190735 -0.0017841000000000037 0.0577221 -0.5009599289728343 0.10731540424780746 -1.663760174692588</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="chest_mtb_acc_0b9" type="accelerometer">
@@ -2974,7 +2894,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.059428600190735 -0.0018543000000000032 0.0457981 -0.8751681534754429 0.11636202547856245 -1.6556180750511105</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="chest_mtb_acc_0b10" type="accelerometer">
@@ -2986,7 +2905,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.041219399999999996 0.029588000000000003 0.029527899999999982 1.5707954636460495 1.5707838122500957 -2.682571611648293</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_upper_arm_mtb_acc_2b10" type="accelerometer">
@@ -2998,7 +2916,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.0430568 0.028679999999999983 0.07606039999999997 -1.5707961469548437 -1.5705035074059788 0.45902172521853346</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_upper_arm_mtb_acc_2b11" type="accelerometer">
@@ -3010,7 +2927,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.043055399999999994 0.028680999999999984 0.004992199999999981 -1.1117744216835481 -1.5707963267948963 0.0</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_upper_arm_mtb_acc_2b12" type="accelerometer">
@@ -3022,7 +2938,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.010593236999999991 0.028350000000000042 -0.010737999999999998 1.5707963270155092 -0.00021452036204109946 2.4780367445076594</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_upper_arm_mtb_acc_2b13" type="accelerometer">
@@ -3034,7 +2949,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.07687278473420911 0.005497000000000016 -0.011047912606820772 0.261799499979578 0.0003704130423281237 1.571258168627349</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_forearm_mtb_acc_2b7" type="accelerometer">
@@ -3046,7 +2960,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.051418615079553955 0.015786000000000022 0.04075215372773191 -0.6611439460918275 0.14782524846115597 0.0920701147029676</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_forearm_mtb_acc_2b8" type="accelerometer">
@@ -3058,7 +2971,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.02163799567592114 0.027924000000000004 -0.013249025401848176 -1.7668262673154445 0.2611912256456084 0.054048344372003315</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_forearm_mtb_acc_2b9" type="accelerometer">
@@ -3070,7 +2982,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.04305539999999998 -0.028681000000000012 0.029527899999999982 -1.5707965066353287 -1.5705035074059785 2.682570928371256</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_upper_arm_mtb_acc_1b10" type="accelerometer">
@@ -3082,7 +2993,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.04121809999999999 -0.029589000000000004 0.07606039999999997 -1.5707965066353287 -1.5705035074059785 2.682570928371256</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_upper_arm_mtb_acc_1b11" type="accelerometer">
@@ -3094,7 +3004,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.04121939999999998 -0.02958800000000003 0.0049920999999999854 -1.570797189926001 -1.5707838122500954 2.6825716116085734</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_upper_arm_mtb_acc_1b12" type="accelerometer">
@@ -3106,7 +3015,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.010592709000000004 -0.028350999999999987 -0.008691400000000002 -1.5707963265742841 0.0002145203620417656 -2.478036744507659</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_upper_arm_mtb_acc_1b13" type="accelerometer">
@@ -3118,7 +3026,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.07687278473420911 -0.005482999999999988 -0.011047912606820772 0.261799499979528 0.0003704130423280127 -1.570334484962444</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_forearm_mtb_acc_1b7" type="accelerometer">
@@ -3130,7 +3037,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.05142417406065745 -0.0180279 0.040750725843601086 -0.6611439460918274 0.1478252484611559 -3.049522538886825</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_forearm_mtb_acc_1b8" type="accelerometer">
@@ -3142,7 +3048,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.022099187499622495 0.025657000000000013 -0.015117424321177507 1.766821342184715 0.261099829847155 3.0875254820176163</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_forearm_mtb_acc_1b9" type="accelerometer">
@@ -3154,7 +3059,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.012575099999999999 0.04040709999999999 -0.040226999999999985 1.5707963267948972 1.5707963267948961 0.0</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_upper_leg_ems_acc_eb8" type="accelerometer">
@@ -3166,7 +3070,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.012577100000000015 -0.040406899999999996 -0.08340699999999998 1.5707963267948972 1.5707963267948961 0.0</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_upper_leg_ems_acc_eb11" type="accelerometer">
@@ -3200,7 +3103,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.043588627999999977 -0.030194899999999983 0.048939999999999984 2.526708438028075 -1.5704448425270146 -0.2228738249803637</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_upper_leg_mtb_acc_11b1" type="accelerometer">
@@ -3212,7 +3114,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.053946699999999986 -0.006406499999999982 0.03905600000000001 -3.129402120569715 -1.570381814956552 -0.2739898525693509</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_upper_leg_mtb_acc_11b2" type="accelerometer">
@@ -3224,7 +3125,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.053831299999999985 -0.013021400000000002 0.0039859999999999896 -2.8773108545103274 -1.5703518030956078 -0.2642818239915216</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_upper_leg_mtb_acc_11b3" type="accelerometer">
@@ -3236,7 +3136,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.0322719 0.04226749999999999 -0.005044999999999994 -1.873909988092778 -1.570257713256341 -0.08085890295708932</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_upper_leg_mtb_acc_11b4" type="accelerometer">
@@ -3248,7 +3147,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.053831299999999985 0.016478599999999996 0.0039859999999999896 -2.8773108545103274 -1.5703518030956078 -0.2642818239915216</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_upper_leg_mtb_acc_11b5" type="accelerometer">
@@ -3260,7 +3158,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.043751799999999993 -0.015759400000000007 -0.026565000000000033 1.9541027553387757e-17 1.5703672368014803 -3.141592653589793</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_upper_leg_mtb_acc_11b6" type="accelerometer">
@@ -3272,7 +3169,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.04375179999999998 0.016238599999999992 -0.026566000000000006 0.26425252390070647 1.5703518066171935 -2.8773401047797322</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_upper_leg_mtb_acc_11b7" type="accelerometer">
@@ -3284,7 +3180,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.04351374599999999 0.01383959999999998 -0.09276499999999999 -3.1415926535897922 -1.3526297834539558 -8.476849710455595e-16</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_lower_leg_ems_acc_eb9" type="accelerometer">
@@ -3307,7 +3202,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.05362923999999998 -0.015195799999999995 -0.0043179999999999885 -1.5707969943117426 -1.5706802100981876 -1.8151418254260296</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_lower_leg_mtb_acc_11b8" type="accelerometer">
@@ -3319,7 +3213,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.05375166999999999 0.01572289999999999 -0.0043179999999999885 -1.5707962918857017 -1.5706802104434696 -1.2217307214946516</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_lower_leg_mtb_acc_11b9" type="accelerometer">
@@ -3331,7 +3224,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.027894499999999982 -0.0422139 -0.04346800000000001 1.8325955062747417 -1.5707963267948963 0.0</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_lower_leg_mtb_acc_11b10" type="accelerometer">
@@ -3343,7 +3235,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.0164801 0.04224899999999997 -0.09295800000000004 -1.5707936954714847 -1.5706802103471817 -0.26180181049562956</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_lower_leg_mtb_acc_11b11" type="accelerometer">
@@ -3355,7 +3246,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.10347939999999997 -0.000812199999999999 -0.001214999999999966 1.4648752297108978e-16 2.2204452113283224e-16 -1.5707960430308967</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_foot_mtb_acc_11b12" type="accelerometer">
@@ -3367,7 +3257,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.07847939999999999 -0.011812200000000009 -0.001214999999999966 2.220446049250314e-16 2.220446049250313e-16 -1.5707963267948966</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="r_foot_mtb_acc_11b13" type="accelerometer">
@@ -3379,7 +3268,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.012577000000000012 -0.04040720000000002 -0.08340699999999998 1.5707963267948972 1.5707963267948961 0.0</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_upper_leg_ems_acc_eb6" type="accelerometer">
@@ -3391,7 +3279,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.012575000000000003 0.04040679999999998 -0.040226999999999985 -1.5707963267948968 -1.5707963267948963 0.0</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_upper_leg_ems_acc_eb10" type="accelerometer">
@@ -3425,7 +3312,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.042001689999999994 0.03156479999999999 0.04913199999999998 -1.5707955185655114 -1.5706802103355728 -0.7330390947129777</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_upper_leg_mtb_acc_10b1" type="accelerometer">
@@ -3437,7 +3323,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.05352114999999998 0.007765700000000014 0.03925200000000001 -1.5707963863768455 -1.5706802103927162 -1.3089969473954748</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_upper_leg_mtb_acc_10b2" type="accelerometer">
@@ -3449,7 +3334,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.053784999999999986 0.015070600000000003 0.0041819999999999635 3.141592653589793 -1.5707963267948961 0.0</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_upper_leg_mtb_acc_10b3" type="accelerometer">
@@ -3461,7 +3345,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.05378499999999998 -0.014429400000000002 0.0041819999999999635 3.141592653589793 -1.5707963267948961 0.0</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_upper_leg_mtb_acc_10b4" type="accelerometer">
@@ -3473,7 +3356,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.03412954999999998 -0.0414999 -0.004858000000000029 1.9547688910448342 -1.5707963267948961 0.0</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_upper_leg_mtb_acc_10b5" type="accelerometer">
@@ -3485,7 +3367,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.043785 0.017810999999999994 -0.02641099999999999 -1.5707963267919405 1.5707743139371833 1.570796326789853</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_upper_leg_mtb_acc_10b6" type="accelerometer">
@@ -3497,7 +3378,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>-0.04378500000000001 -0.014191800000000011 -0.02641099999999999 1.5707963267982468 1.5706473388946958 -1.5707963267919158</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_upper_leg_mtb_acc_10b7" type="accelerometer">
@@ -3509,7 +3389,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.04351379199999999 0.011314499999999963 -0.09276499999999999 -3.1415926535897922 -1.3526297834539558 -8.476849710455595e-16</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_lower_leg_ems_acc_eb7" type="accelerometer">
@@ -3532,7 +3411,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.053133529999999984 0.017184099999999994 -0.0043179999999999885 -2.8972464875193467 -1.5707963267948963 0.0</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_lower_leg_mtb_acc_10b8" type="accelerometer">
@@ -3544,7 +3422,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.054451899999999984 -0.013799100000000009 -0.0043179999999999885 -1.5707963664504991 -1.5706802104435666 -1.919861927351539</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_lower_leg_mtb_acc_10b9" type="accelerometer">
@@ -3556,7 +3433,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.025915199999999996 0.04274479999999997 -0.04346800000000001 -1.5707936954714847 -1.5706802103471817 -0.26180181049562956</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_lower_leg_mtb_acc_10b10" type="accelerometer">
@@ -3568,7 +3444,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.018459299999999977 -0.041718700000000025 -0.09295800000000004 1.5707953192782331 -1.5707699978643246 0.26180018702487956</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_lower_leg_mtb_acc_10b11" type="accelerometer">
@@ -3580,7 +3455,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.10552739999999997 0.0008122000000000129 -0.001214999999999966 0.0 -0.0 1.5707963267948966</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_foot_mtb_acc_10b12" type="accelerometer">
@@ -3592,7 +3466,6 @@
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.08052739999999997 0.011812200000000002 -0.001214999999999966 0.0 -0.0 1.5707963267948966</pose>
-      <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
   <sensor name="l_foot_mtb_acc_10b13" type="accelerometer">
