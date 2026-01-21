@@ -2410,12 +2410,6 @@
     <parent link="head"/>
     <child link="imu_frame"/>
   </joint>
-  <link name="eyes_tilt"/>
-  <joint name="eyes_tilt_fixed_joint" type="fixed">
-    <origin xyz="0 0 0" rpy="0 -0 -5.466875474265756e-32"/>
-    <parent link="eyes_tilt_frame"/>
-    <child link="eyes_tilt"/>
-  </joint>
   <link name="l_eye_pan"/>
   <joint name="l_eye_pan_fixed_joint" type="fixed">
     <origin xyz="0 0 0" rpy="0 -0 4.399848597301645e-31"/>
@@ -2587,7 +2581,7 @@
     <origin rpy="-3.14159 1.29154 3.14159 " xyz="0.0493308 -0.0125771 -0.115691"/>
   </sensor>
   <gazebo reference="root_link">
-    <sensor name="root_link_ems_gyro_eb5" type="gyroscope">
+    <sensor name="root_link_ems_gyro_eb5" type="imu">
       <always_on>1</always_on>
       <update_rate>100.000000</update_rate>
       <pose>0.0493308 -0.0125771 -0.115691 -3.14159 1.29154 3.14159 </pose>
@@ -2609,7 +2603,7 @@
     <origin rpy="1.5708 0.00028267 -2.87979 " xyz="-0.0647855 0.0647091 -0.114543"/>
   </sensor>
   <gazebo reference="chest">
-    <sensor name="chest_ems_gyro_eb1" type="gyroscope">
+    <sensor name="chest_ems_gyro_eb1" type="imu">
       <always_on>1</always_on>
       <update_rate>100.000000</update_rate>
       <pose>-0.0692016 0.0635258 -0.115048 1.5708 0.00028267 -2.87979 </pose>
@@ -2631,7 +2625,7 @@
     <origin rpy="-1.5708 8.03342e-06 0.261799 " xyz="-0.0204533 0.0641645 -0.138563"/>
   </sensor>
   <gazebo reference="chest">
-    <sensor name="chest_ems_gyro_eb2" type="gyroscope">
+    <sensor name="chest_ems_gyro_eb2" type="imu">
       <always_on>1</always_on>
       <update_rate>100.000000</update_rate>
       <pose>-0.0160371 0.0653479 -0.138059 -1.5708 8.03342e-06 0.261799 </pose>
@@ -2653,7 +2647,7 @@
     <origin rpy="1.57039 -0.000298596 2.88049 " xyz="0.0230588 0.0758982 -0.114519"/>
   </sensor>
   <gazebo reference="chest">
-    <sensor name="chest_ems_gyro_eb3" type="gyroscope">
+    <sensor name="chest_ems_gyro_eb3" type="imu">
       <always_on>1</always_on>
       <update_rate>100.000000</update_rate>
       <pose>0.0186417 0.0770787 -0.115021 1.57039 -0.000298596 2.88049 </pose>
@@ -2675,7 +2669,7 @@
     <origin rpy="-1.5708 8.03044e-06 -0.261799 " xyz="0.0621621 0.0529887 -0.138563"/>
   </sensor>
   <gazebo reference="chest">
-    <sensor name="chest_ems_gyro_eb4" type="gyroscope">
+    <sensor name="chest_ems_gyro_eb4" type="imu">
       <always_on>1</always_on>
       <update_rate>100.000000</update_rate>
       <pose>0.0665784 0.0518054 -0.138059 -1.5708 8.03044e-06 -0.261799 </pose>
@@ -2862,7 +2856,7 @@
     <origin rpy="0 1.5708 -1.5708 " xyz="-0.0125771 -0.0404072 -0.083407"/>
   </sensor>
   <gazebo reference="r_upper_leg">
-    <sensor name="r_upper_leg_ems_gyro_eb8" type="gyroscope">
+    <sensor name="r_upper_leg_ems_gyro_eb8" type="imu">
       <always_on>1</always_on>
       <update_rate>100.000000</update_rate>
       <pose>-0.013079 0.0404072 -0.035655 0 1.5708 -1.5708 </pose>
@@ -2873,7 +2867,7 @@
     <origin rpy="0 1.5708 -1.5708 " xyz="-0.013079 0.0404072 -0.035655"/>
   </sensor>
   <gazebo reference="r_upper_leg">
-    <sensor name="r_upper_leg_ems_gyro_eb11" type="gyroscope">
+    <sensor name="r_upper_leg_ems_gyro_eb11" type="imu">
       <always_on>1</always_on>
       <update_rate>100.000000</update_rate>
       <pose>-0.013081 -0.0404072 -0.087979 0 1.5708 -1.5708 </pose>
@@ -2972,7 +2966,7 @@
     <origin rpy="-3.14159 -1.35263 1.93219e-14 " xyz="0.0435138 0.0138396 -0.0927643"/>
   </sensor>
   <gazebo reference="r_lower_leg">
-    <sensor name="r_lower_leg_ems_gyro_eb9" type="gyroscope">
+    <sensor name="r_lower_leg_ems_gyro_eb9" type="imu">
       <always_on>1</always_on>
       <update_rate>100.000000</update_rate>
       <pose>0.0445033 0.0143435 -0.0883006 -3.14159 -1.35263 1.93219e-14 </pose>
@@ -3071,7 +3065,7 @@
     <origin rpy="3.13249 -1.5708 -1.55265 " xyz="-0.0125751 0.0404072 -0.040227"/>
   </sensor>
   <gazebo reference="l_upper_leg">
-    <sensor name="l_upper_leg_ems_gyro_eb6" type="gyroscope">
+    <sensor name="l_upper_leg_ems_gyro_eb6" type="imu">
       <always_on>1</always_on>
       <update_rate>100.000000</update_rate>
       <pose>-0.013081 -0.0404072 -0.087979 0.00910113 1.5708 1.58894 </pose>
@@ -3082,7 +3076,7 @@
     <origin rpy="0.00910113 1.5708 1.58894 " xyz="-0.013081 -0.0404072 -0.087979"/>
   </sensor>
   <gazebo reference="l_upper_leg">
-    <sensor name="l_upper_leg_ems_gyro_eb10" type="gyroscope">
+    <sensor name="l_upper_leg_ems_gyro_eb10" type="imu">
       <always_on>1</always_on>
       <update_rate>100.000000</update_rate>
       <pose>-0.013079 0.0404072 -0.035655 3.13249 -1.5708 -1.55265 </pose>
@@ -3181,7 +3175,7 @@
     <origin rpy="3.14159 -1.35263 -7.81822e-14 " xyz="0.0435138 0.0113146 -0.0927643"/>
   </sensor>
   <gazebo reference="l_lower_leg">
-    <sensor name="l_lower_leg_ems_gyro_eb7" type="gyroscope">
+    <sensor name="l_lower_leg_ems_gyro_eb7" type="imu">
       <always_on>1</always_on>
       <update_rate>100.000000</update_rate>
       <pose>0.0445033 0.0118185 -0.0883006 3.14159 -1.35263 -7.81822e-14 </pose>
@@ -3269,7 +3263,7 @@
     <origin rpy="-1.67306e-16 -4.38741e-15 1.5708 " xyz="0.00656384 -0.00858611 -0.059282"/>
   </sensor>
   <gazebo reference="r_hip_2">
-    <sensor name="r_upper_leg_ft_gyro_3b11" type="gyroscope">
+    <sensor name="r_upper_leg_ft_gyro_3b11" type="imu">
       <always_on>1</always_on>
       <update_rate>100.000000</update_rate>
       <pose>0.00656384 -0.00858611 -0.059282 -1.67306e-16 -4.38741e-15 1.5708 </pose>
@@ -3291,7 +3285,7 @@
     <origin rpy="3.12262e-29 -4.37653e-15 1.5708 " xyz="0.00400013 -0.0086 -0.045282"/>
   </sensor>
   <gazebo reference="r_ankle_2">
-    <sensor name="r_foot_ft_gyro_3b14" type="gyroscope">
+    <sensor name="r_foot_ft_gyro_3b14" type="imu">
       <always_on>1</always_on>
       <update_rate>100.000000</update_rate>
       <pose>0.00400013 -0.0086 -0.045282 3.12262e-29 -4.37653e-15 1.5708 </pose>
@@ -3313,7 +3307,7 @@
     <origin rpy="-2.22045e-16 -4.00448e-15 1.5708 " xyz="0.00666999 -0.00852482 -0.059282"/>
   </sensor>
   <gazebo reference="l_hip_2">
-    <sensor name="l_upper_leg_ft_gyro_3b12" type="gyroscope">
+    <sensor name="l_upper_leg_ft_gyro_3b12" type="imu">
       <always_on>1</always_on>
       <update_rate>100.000000</update_rate>
       <pose>0.00666999 -0.00852482 -0.059282 -2.22045e-16 -4.00448e-15 1.5708 </pose>
@@ -3335,7 +3329,7 @@
     <origin rpy="-2.22045e-16 -3.68286e-15 1.5708 " xyz="0.00400013 -0.0086 -0.045282"/>
   </sensor>
   <gazebo reference="l_ankle_2">
-    <sensor name="l_foot_ft_gyro_3b13" type="gyroscope">
+    <sensor name="l_foot_ft_gyro_3b13" type="imu">
       <always_on>1</always_on>
       <update_rate>100.000000</update_rate>
       <pose>0.00400013 -0.0086 -0.045282 -2.22045e-16 -3.68286e-15 1.5708 </pose>
