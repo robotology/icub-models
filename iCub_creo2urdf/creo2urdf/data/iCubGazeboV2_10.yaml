@@ -1155,11 +1155,13 @@ reverseRotationAxis:
   l_shoulder_yaw
   l_shoulder_pitch
   r_shoulder_roll
-  l_hip_yaw
-  l_knee
-  l_ankle_pitch
+  r_hip_roll
+  r_knee
+  r_ankle_pitch
   l_hip_pitch
-  r_ankle_roll
+  l_hip_roll
+  r_hip_yaw
+  l_ankle_roll
   r_wrist_pitch
   l_wrist_pitch
   l_wrist_yaw
