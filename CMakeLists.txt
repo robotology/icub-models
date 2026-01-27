@@ -167,6 +167,7 @@ endforeach()
 # Deal with manually generated models (see https://github.com/icub-tech-iit/study-icub-headedge/issues/230#issuecomment-3328628981)
 set(GAZEBO_SUPPORTED_MODELS "")
 list(APPEND GAZEBO_SUPPORTED_MODELS "iCubGazeboV2_10")
+list(APPEND GAZEBO_SUPPORTED_MODELS "iCubStanford01")
 foreach(ROBOT_NAME ${ROBOTS_NAMES})
   if(ROBOT_NAME IN_LIST GAZEBO_SUPPORTED_MODELS)
     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/iCub_creo2urdf/robots/${ROBOT_NAME}/model.config
