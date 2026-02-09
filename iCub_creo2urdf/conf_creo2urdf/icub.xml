@@ -13,11 +13,11 @@
     <xi:include href="../conf/wrappers/motorControl/head-mc_wrapper.xml" />
     <xi:include href="../conf/wrappers/motorControl/torso-mc_wrapper.xml" />
 
-    <xi:include href="../conf/wrappers/motorControl/left_arm-mc_remapper.xml" />
-    <xi:include href="../conf/wrappers/motorControl/right_arm-mc_remapper.xml" />
     <xi:include href="../conf/wrappers/motorControl/left_leg-mc_remapper.xml" />
     <xi:include href="../conf/wrappers/motorControl/right_leg-mc_remapper.xml" />
     <xi:include href="../conf_manual/iCubGazeboV2_5_visuomanip/wrappers/motorControl/head-mc_remapper.xml" />
+    <xi:include href="../conf_manual/iCubGazeboV2_5_visuomanip/wrappers/motorControl/left_arm-mc_remapper_gz-sim.xml" />
+    <xi:include href="../conf_manual/iCubGazeboV2_5_visuomanip/wrappers/motorControl/right_arm-mc_remapper_gz-sim.xml" />
     <xi:include href="../conf/wrappers/motorControl/torso-mc_remapper.xml" />
     <!--  ANALOG SENSORS FT -->
     <xi:include href="../conf/wrappers/FT/left_leg-FT_wrapper.xml" />
