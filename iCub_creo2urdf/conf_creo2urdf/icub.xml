@@ -27,7 +27,7 @@
     <xi:include href="../conf/wrappers/FT/left_arm-FT_wrapper.xml" />
     <xi:include href="../conf/wrappers/FT/right_arm-FT_wrapper.xml" />
 
-    <!-- INERTIAL SENSOR-->
+    <!-- INERTIAL SENSORS -->
     <xi:include href="../conf/wrappers/inertials/head-inertials_wrapper.xml" />
     <xi:include href="../conf/wrappers/inertials/left_arm-inertials_wrapper.xml" />
     <xi:include href="../conf/wrappers/inertials/right_arm-inertials_wrapper.xml" />
@@ -36,4 +36,8 @@
     <!--  NOT USED RIGHT NOW
     <xi:include href="../conf/wrappers/inertials/waist-inertials_wrapper.xml" /> -->    
     </devices>
+
+    <!-- CAMERA -->
+    <xi:include href="../conf_manual/iCubGazeboV2_5_visuomanip/wrappers/camera/left_camera-rgb_wrapper_gz-sim.xml" />
+    <xi:include href="../conf_manual/iCubGazeboV2_5_visuomanip/wrappers/camera/right_camera-rgb_wrapper.xml" />
 </robot>
